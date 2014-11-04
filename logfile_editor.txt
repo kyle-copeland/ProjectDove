@@ -1,7 +1,8 @@
 [Core] Info:    Initializing OpenAL...
 [Core] Info:        OpenAL Drivers not found. Using 64 Bit software fallback.
 [Core] Info:        Available devices:
-[Core]              Speakers (Realtek High Definition Audio) (Default)
+[Core]              Speakers and Headphones (IDT High Definition Audio CODEC) (Default),
+[Core]              Communications Headphones (IDT High Definition Audio CODEC)
 [Core] Info:        Current device: OpenAL Soft
 [Core] Info:        256 sources available
 [Core] Info:    Assembly loaded: FarseerDuality
@@ -59,7 +60,6 @@
 [Edit] Info:        PackageManagerFrontend...
 [Edit] Info:        ProjectView...
 [Edit] Info:        SceneView...
-[Core] Warning: Unexpected picking result: ColorRGBA (80, 80, 80, 0 / #50505000)
-[Core] Warning: Unexpected picking result: ColorRGBA (64, 64, 64, 0 / #40404000)
-[Core] Warning: Unexpected picking result: ColorRGBA (64, 64, 64, 0 / #40404000)
 [Core] Info:    Assembly loaded: Ionic.Zip
+[Edit] Info:    Saving user data...
+[Core] Info:    DualityApp terminated
