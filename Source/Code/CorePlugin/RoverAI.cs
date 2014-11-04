@@ -17,8 +17,8 @@ namespace Dove_Game
         public float speed { get; set; }
         void ICmpUpdatable.OnUpdate()
         {
-            Transform t = this.GameObj.Transform;
-            t.MoveBy(Vector2.UnitX * speed * Time.TimeMult);
+            RigidBody r = this.GameObj.RigidBody;
+            r.LinearVelocity = Vector2.UnitX * speed;
         }
 
         void ICmpCollisionListener.OnCollisionBegin(Component sender, CollisionEventArgs args)

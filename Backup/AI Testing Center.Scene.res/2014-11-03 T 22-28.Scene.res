@@ -21,14 +21,14 @@
             <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
             <parentTransform />
             <pos dataType="Struct" type="OpenTK.Vector3">
-              <X dataType="Float">-0.8249525</X>
-              <Y dataType="Float">-0.7343029</Y>
-              <Z dataType="Float">-901.154968</Z>
+              <X dataType="Float">0</X>
+              <Y dataType="Float">0</Y>
+              <Z dataType="Float">-600</Z>
             </pos>
             <posAbs dataType="Struct" type="OpenTK.Vector3">
-              <X dataType="Float">-0.8249525</X>
-              <Y dataType="Float">-0.7343029</Y>
-              <Z dataType="Float">-901.154968</Z>
+              <X dataType="Float">0</X>
+              <Y dataType="Float">0</Y>
+              <Z dataType="Float">-600</Z>
             </posAbs>
             <scale dataType="Float">1</scale>
             <scaleAbs dataType="Float">1</scaleAbs>
@@ -88,7 +88,7 @@
                 </item>
               </_items>
               <_size dataType="Int">2</_size>
-              <_version dataType="Int">29984</_version>
+              <_version dataType="Int">28472</_version>
             </passes>
             <perspective dataType="Enum" type="Duality.Drawing.PerspectiveMode" name="Parallax" value="1" />
             <visibilityMask dataType="Enum" type="Duality.Drawing.VisibilityFlag" name="All" value="4294967295" />
@@ -727,7 +727,7 @@
             <colCat dataType="Enum" type="Duality.Components.Physics.CollisionCategory" name="Cat1" value="1" />
             <colWith dataType="Enum" type="Duality.Components.Physics.CollisionCategory" name="All" value="2147483647" />
             <continous dataType="Bool">false</continous>
-            <explicitMass dataType="Float">50</explicitMass>
+            <explicitMass dataType="Float">58.78</explicitMass>
             <fixedAngle dataType="Bool">true</fixedAngle>
             <gameobj dataType="ObjectRef">918099952</gameobj>
             <ignoreGravity dataType="Bool">false</ignoreGravity>
@@ -776,7 +776,7 @@
             </shapes>
           </item>
           <item dataType="Struct" type="Dove_Game.FloatAI" id="1151299421">
-            <_x003C_force_x003E_k__BackingField dataType="Float">10</_x003C_force_x003E_k__BackingField>
+            <_x003C_force_x003E_k__BackingField dataType="Float">25</_x003C_force_x003E_k__BackingField>
             <active dataType="Bool">true</active>
             <gameobj dataType="ObjectRef">918099952</gameobj>
             <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />

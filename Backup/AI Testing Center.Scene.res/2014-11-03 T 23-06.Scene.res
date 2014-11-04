@@ -776,7 +776,7 @@
             </shapes>
           </item>
           <item dataType="Struct" type="Dove_Game.FloatAI" id="1151299421">
-            <_x003C_force_x003E_k__BackingField dataType="Float">10</_x003C_force_x003E_k__BackingField>
+            <_x003C_force_x003E_k__BackingField dataType="Float">4.5</_x003C_force_x003E_k__BackingField>
             <active dataType="Bool">true</active>
             <gameobj dataType="ObjectRef">918099952</gameobj>
             <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />

@@ -16,7 +16,8 @@ namespace Dove_Game
     [RequiredComponent(typeof(RigidBody))]
     public class Celes : Component,ICmpUpdatable
     {
-        public int distance { get; set; }
+        public float distance { get; set; }
+        public float force { get; set; }
         void ICmpUpdatable.OnUpdate()
         {
             RigidBody body = this.GameObj.RigidBody;
@@ -24,13 +25,16 @@ namespace Dove_Game
 
             if(DualityApp.Keyboard[Key.Left])
             {
-                transform.MoveBy(Vector2.UnitX * -1.0f * distance);
+                body.LinearVelocity = Vector2.UnitX * distance * -1.0f;
             }
             else if(DualityApp.Keyboard[Key.Right])
             {
-                transform.MoveBy(Vector2.UnitX * distance);
+                body.LinearVelocity = Vector2.UnitX * distance;
             }
-          
+            else if(DualityApp.Keyboard[Key.Space])
+            {
+                body.ApplyLocalImpulse(Vector2.UnitY * -force * body.Mass);
+            }
         }
     }
 }

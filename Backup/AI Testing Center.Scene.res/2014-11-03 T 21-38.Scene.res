@@ -21,14 +21,14 @@
             <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
             <parentTransform />
             <pos dataType="Struct" type="OpenTK.Vector3">
-              <X dataType="Float">-0.8249525</X>
-              <Y dataType="Float">-0.7343029</Y>
-              <Z dataType="Float">-901.154968</Z>
+              <X dataType="Float">0</X>
+              <Y dataType="Float">0</Y>
+              <Z dataType="Float">-600</Z>
             </pos>
             <posAbs dataType="Struct" type="OpenTK.Vector3">
-              <X dataType="Float">-0.8249525</X>
-              <Y dataType="Float">-0.7343029</Y>
-              <Z dataType="Float">-901.154968</Z>
+              <X dataType="Float">0</X>
+              <Y dataType="Float">0</Y>
+              <Z dataType="Float">-600</Z>
             </posAbs>
             <scale dataType="Float">1</scale>
             <scaleAbs dataType="Float">1</scaleAbs>
@@ -88,7 +88,7 @@
                 </item>
               </_items>
               <_size dataType="Int">2</_size>
-              <_version dataType="Int">29984</_version>
+              <_version dataType="Int">28472</_version>
             </passes>
             <perspective dataType="Enum" type="Duality.Drawing.PerspectiveMode" name="Parallax" value="1" />
             <visibilityMask dataType="Enum" type="Duality.Drawing.VisibilityFlag" name="All" value="4294967295" />
@@ -146,13 +146,13 @@
             <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
             <parentTransform />
             <pos dataType="Struct" type="OpenTK.Vector3">
-              <X dataType="Float">108.651482</X>
-              <Y dataType="Float">161.413651</Y>
+              <X dataType="Float">82.74425</X>
+              <Y dataType="Float">131.805374</Y>
               <Z dataType="Float">-5</Z>
             </pos>
             <posAbs dataType="Struct" type="OpenTK.Vector3">
-              <X dataType="Float">108.651482</X>
-              <Y dataType="Float">161.413651</Y>
+              <X dataType="Float">82.74425</X>
+              <Y dataType="Float">131.805374</Y>
               <Z dataType="Float">-5</Z>
             </posAbs>
             <scale dataType="Float">1</scale>
@@ -665,13 +665,13 @@
             <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
             <parentTransform />
             <pos dataType="Struct" type="OpenTK.Vector3">
-              <X dataType="Float">-481.662384</X>
-              <Y dataType="Float">-136.519577</Y>
+              <X dataType="Float">-392.837555</X>
+              <Y dataType="Float">105.898132</Y>
               <Z dataType="Float">-5</Z>
             </pos>
             <posAbs dataType="Struct" type="OpenTK.Vector3">
-              <X dataType="Float">-481.662384</X>
-              <Y dataType="Float">-136.519577</Y>
+              <X dataType="Float">-392.837555</X>
+              <Y dataType="Float">105.898132</Y>
               <Z dataType="Float">-5</Z>
             </posAbs>
             <scale dataType="Float">1</scale>
@@ -727,15 +727,15 @@
             <colCat dataType="Enum" type="Duality.Components.Physics.CollisionCategory" name="Cat1" value="1" />
             <colWith dataType="Enum" type="Duality.Components.Physics.CollisionCategory" name="All" value="2147483647" />
             <continous dataType="Bool">false</continous>
-            <explicitMass dataType="Float">50</explicitMass>
-            <fixedAngle dataType="Bool">true</fixedAngle>
+            <explicitMass dataType="Float">58.78</explicitMass>
+            <fixedAngle dataType="Bool">false</fixedAngle>
             <gameobj dataType="ObjectRef">918099952</gameobj>
             <ignoreGravity dataType="Bool">false</ignoreGravity>
             <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
             <joints dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Components.Physics.JointInfo]]" id="3058299620">
-              <_items dataType="Array" type="Duality.Components.Physics.JointInfo[]" id="2444494788" length="4" />
+              <_items dataType="Array" type="Duality.Components.Physics.JointInfo[]" id="2444494788" />
               <_size dataType="Int">0</_size>
-              <_version dataType="Int">2</_version>
+              <_version dataType="Int">0</_version>
             </joints>
             <linearDamp dataType="Float">0.3</linearDamp>
             <linearVel dataType="Struct" type="OpenTK.Vector2">
@@ -775,15 +775,15 @@
               <_version dataType="Int">2</_version>
             </shapes>
           </item>
-          <item dataType="Struct" type="Dove_Game.FloatAI" id="1151299421">
-            <_x003C_force_x003E_k__BackingField dataType="Float">10</_x003C_force_x003E_k__BackingField>
+          <item dataType="Struct" type="Dove_Game.RoverAI" id="1057510245">
+            <_x003C_speed_x003E_k__BackingField dataType="Float">2</_x003C_speed_x003E_k__BackingField>
             <active dataType="Bool">true</active>
             <gameobj dataType="ObjectRef">918099952</gameobj>
             <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
           </item>
         </_items>
         <_size dataType="Int">4</_size>
-        <_version dataType="Int">6</_version>
+        <_version dataType="Int">4</_version>
       </compList>
       <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="201988058" surrogate="true">
         <header />
@@ -792,13 +792,13 @@
             <item dataType="ObjectRef">2678576548</item>
             <item dataType="ObjectRef">12134630</item>
             <item dataType="ObjectRef">3195988282</item>
-            <item dataType="Type" id="2719185092" value="Dove_Game.FloatAI" />
+            <item dataType="ObjectRef">3675635302</item>
           </keys>
           <values dataType="Array" type="Duality.Component[]" id="2130002710">
             <item dataType="ObjectRef">3278414884</item>
             <item dataType="ObjectRef">625535333</item>
             <item dataType="ObjectRef">3980876476</item>
-            <item dataType="ObjectRef">1151299421</item>
+            <item dataType="ObjectRef">1057510245</item>
           </values>
         </body>
       </compMap>
