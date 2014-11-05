@@ -4,14 +4,14 @@
   <Plugin_CamView>
     <CamView_0>
       <Perspective>Parallax</Perspective>
-      <FocusDist>500</FocusDist>
+      <FocusDist>0.01</FocusDist>
       <BgColorArgb>4210752</BgColorArgb>
       <SnapToGridSize>
         <X>0</X>
         <Y>0</Y>
         <Z>0</Z>
       </SnapToGridSize>
-      <ActiveState>Duality.Editor.Plugins.CamView.CamViewStates.SceneEditorCamViewState</ActiveState>
+      <ActiveState>Duality.Editor.Plugins.CamView.CamViewStates.GameViewCamViewState</ActiveState>
       <States>
         <Duality.Editor.Plugins.CamView.CamViewStates.GameViewCamViewState>
           <ActiveLayers />
@@ -136,7 +136,7 @@
     </DockWindow>
   </DockWindows>
   <FloatWindows Count="2">
-    <FloatWindow ID="0" Bounds="550, 595, 300, 300" ZOrderIndex="0">
+    <FloatWindow ID="0" Bounds="550, 468, 300, 300" ZOrderIndex="0">
       <NestedPanes Count="1">
         <Pane ID="0" RefID="1" PrevPane="-1" Alignment="Right" Proportion="0.5" />
       </NestedPanes>
