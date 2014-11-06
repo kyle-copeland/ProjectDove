@@ -16,8 +16,8 @@ namespace Dove_Game
     [RequiredComponent(typeof(RigidBody))]
     public class PlayerOne : Component, ICmpUpdatable, ICmpCollisionListener
     {
-        private Vector2 vectorMove; //Keeps track of direction, for forward movement when attacking.
-        private int lastFrame;
+        private Vector2 vectorMove; // Keeps track of direction for forward movement when attacking.
+        private int lastFrame;  // Keeps track of last frame rendered for smoother animation blending.
 
         void ICmpUpdatable.OnUpdate()
         {
@@ -66,7 +66,7 @@ namespace Dove_Game
                 playerMovement.MoveBy(vectorMove * Time.TimeMult);
             }
 
-            // All custom frame sequences end in 27, the current default animation. Reset after an attack animation.
+            // All custom frame sequences end in 27, the current default animation for the Goku SpriteSheet. Reset after an attack animation.
             if(playerSprite.CurrentFrame != lastFrame && playerSprite.CurrentFrame == 27)
             {
                 playerSprite.CustomFrameSequence = new List<int>() { 27 };
@@ -88,7 +88,7 @@ namespace Dove_Game
                     temp.doDamage(10);
                 }
 
-                // Else, push the character back and do damage if user collided with an enemy.
+                // Else, push the character back and apply damage if user collided with an enemy.
                 else
                 {
                     Transform playerMovement = this.GameObj.Transform;
@@ -99,7 +99,6 @@ namespace Dove_Game
 
         void ICmpCollisionListener.OnCollisionEnd(Component sender, CollisionEventArgs args)
         {
-            //resetSprite();
             Console.WriteLine("Placeholder code.");
         }
 

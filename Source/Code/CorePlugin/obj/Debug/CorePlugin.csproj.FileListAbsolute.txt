@@ -25,3 +25,4 @@ C:\Users\Christopher Nguyen\Desktop\ProjectDove\Source\Code\CorePlugin\bin\Debug
 C:\Users\Christopher Nguyen\Desktop\ProjectDove\Source\Code\CorePlugin\bin\Debug\NVorbis.xml
 C:\Users\Christopher Nguyen\Desktop\ProjectDove\Source\Code\CorePlugin\obj\Debug\GamePlugin.core.dll
 C:\Users\Christopher Nguyen\Desktop\ProjectDove\Source\Code\CorePlugin\obj\Debug\GamePlugin.core.pdb
+C:\Users\Christopher Nguyen\Desktop\ProjectDove\Source\Code\CorePlugin\obj\Debug\CorePlugin.csprojResolveAssemblyReference.cache
