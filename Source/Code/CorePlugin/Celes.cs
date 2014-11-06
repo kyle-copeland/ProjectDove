@@ -14,14 +14,19 @@ namespace Dove_Game
 {
 	[Serializable]
     [RequiredComponent(typeof(RigidBody))]
-    public class Celes : Component,ICmpUpdatable
+    public class Celes : Component,ICmpUpdatable, ICmpInitializable
     {
         public float distance { get; set; }
+        private int healthPts;
+
         public float force { get; set; }
         void ICmpUpdatable.OnUpdate()
         {
             RigidBody body = this.GameObj.RigidBody;
             Transform transform = this.GameObj.Transform;
+
+            if (healthPts <= 0)
+                this.GameObj.Dispose();
 
             if(DualityApp.Keyboard[Key.Left])
             {
@@ -35,6 +40,21 @@ namespace Dove_Game
             {
                 body.ApplyLocalImpulse(Vector2.UnitY * -force * body.Mass);
             }
+        }
+
+        public void doDamage(int dmg)
+        {
+            healthPts -= dmg;
+        }
+
+        void ICmpInitializable.OnInit(Component.InitContext context)
+        {
+            healthPts = 10;
+        }
+
+        void ICmpInitializable.OnShutdown(Component.ShutdownContext context)
+        {
+            Console.WriteLine("Placeholder code.");
         }
     }
 }

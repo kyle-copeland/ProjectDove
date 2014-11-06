@@ -6,43 +6,103 @@
 namespace GameRes
 {
 	public static class Data {
-		public static Duality.ContentRef<Duality.Resources.Scene> AI_Testing_Center_Scene { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Scene>(@"Data\AI Testing Center.Scene.res"); }}
-		public static Duality.ContentRef<Duality.Resources.Material> Background_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Background.Material.res"); }}
-		public static Duality.ContentRef<Duality.Resources.Pixmap> Background_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Background.Pixmap.res"); }}
-		public static Duality.ContentRef<Duality.Resources.Texture> Background_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Background.Texture.res"); }}
-		public static Duality.ContentRef<Duality.Resources.Material> Block_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Block.Material.res"); }}
-		public static Duality.ContentRef<Duality.Resources.Pixmap> Block_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Block.Pixmap.res"); }}
-		public static Duality.ContentRef<Duality.Resources.Texture> Block_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Block.Texture.res"); }}
-		public static Duality.ContentRef<Duality.Resources.Material> Celes_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Celes.Material.res"); }}
-		public static Duality.ContentRef<Duality.Resources.Pixmap> Celes_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Celes.Pixmap.res"); }}
-		public static Duality.ContentRef<Duality.Resources.Texture> Celes_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Celes.Texture.res"); }}
-		public static Duality.ContentRef<Duality.Resources.Material> scroll_screenshot_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\scroll-screenshot.Material.res"); }}
-		public static Duality.ContentRef<Duality.Resources.Pixmap> scroll_screenshot_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\scroll-screenshot.Pixmap.res"); }}
-		public static Duality.ContentRef<Duality.Resources.Texture> scroll_screenshot_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\scroll-screenshot.Texture.res"); }}
-		public static Duality.ContentRef<Duality.Resources.Scene> TestThwomp_Scene { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Scene>(@"Data\TestThwomp.Scene.res"); }}
-		public static Duality.ContentRef<Duality.Resources.Material> Thwomp_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Thwomp.Material.res"); }}
-		public static Duality.ContentRef<Duality.Resources.Pixmap> Thwomp_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Thwomp.Pixmap.res"); }}
-		public static Duality.ContentRef<Duality.Resources.Texture> Thwomp_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Thwomp.Texture.res"); }}
-		public static Duality.ContentRef<Duality.Resources.Prefab> White_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\White.Prefab.res"); }}
+		public static class Characters {
+			public static class Enemies {
+				public static Duality.ContentRef<Duality.Resources.Material> Thwomp_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\Enemies\Thwomp.Material.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Pixmap> Thwomp_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\Enemies\Thwomp.Pixmap.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Texture> Thwomp_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Characters\Enemies\Thwomp.Texture.res"); }}
+				public static void LoadAll() {
+					Thwomp_Material.MakeAvailable();
+					Thwomp_Pixmap.MakeAvailable();
+					Thwomp_Texture.MakeAvailable();
+				}
+			}
+			public static class PlayerOne {
+				public static void LoadAll() {
+				}
+			}
+			public static class Side_Characters {
+				public static Duality.ContentRef<Duality.Resources.Material> Celes_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\Side Characters\Celes.Material.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Pixmap> Celes_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\Side Characters\Celes.Pixmap.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Texture> Celes_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Characters\Side Characters\Celes.Texture.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Material> Goku_2d_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\Side Characters\Goku_2d.Material.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Pixmap> Goku_2d_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\Side Characters\Goku_2d.Pixmap.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Texture> Goku_2d_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Characters\Side Characters\Goku_2d.Texture.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Material> Goku_Aura_2d_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\Side Characters\Goku_Aura_2d.Material.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Pixmap> Goku_Aura_2d_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\Side Characters\Goku_Aura_2d.Pixmap.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Texture> Goku_Aura_2d_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Characters\Side Characters\Goku_Aura_2d.Texture.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Material> goku_static_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\Side Characters\goku_static.Material.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Pixmap> goku_static_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\Side Characters\goku_static.Pixmap.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Texture> goku_static_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Characters\Side Characters\goku_static.Texture.res"); }}
+				public static void LoadAll() {
+					Celes_Material.MakeAvailable();
+					Celes_Pixmap.MakeAvailable();
+					Celes_Texture.MakeAvailable();
+					Goku_2d_Material.MakeAvailable();
+					Goku_2d_Pixmap.MakeAvailable();
+					Goku_2d_Texture.MakeAvailable();
+					Goku_Aura_2d_Material.MakeAvailable();
+					Goku_Aura_2d_Pixmap.MakeAvailable();
+					Goku_Aura_2d_Texture.MakeAvailable();
+					goku_static_Material.MakeAvailable();
+					goku_static_Pixmap.MakeAvailable();
+					goku_static_Texture.MakeAvailable();
+				}
+			}
+			public static void LoadAll() {
+				Enemies.LoadAll();
+				PlayerOne.LoadAll();
+				Side_Characters.LoadAll();
+			}
+		}
+		public static class Prefabs {
+			public static Duality.ContentRef<Duality.Resources.Prefab> White_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\White.Prefab.res"); }}
+			public static void LoadAll() {
+				White_Prefab.MakeAvailable();
+			}
+		}
+		public static class Scenes {
+			public static class Backgrounds {
+				public static Duality.ContentRef<Duality.Resources.Material> Mario_Sky_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Scenes\Backgrounds\Mario_Sky.Material.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Pixmap> Mario_Sky_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Scenes\Backgrounds\Mario_Sky.Pixmap.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Texture> Mario_Sky_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Scenes\Backgrounds\Mario_Sky.Texture.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Material> Test_ScrollMap_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Scenes\Backgrounds\Test_ScrollMap.Material.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Pixmap> Test_ScrollMap_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Scenes\Backgrounds\Test_ScrollMap.Pixmap.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Texture> Test_ScrollMap_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Scenes\Backgrounds\Test_ScrollMap.Texture.res"); }}
+				public static void LoadAll() {
+					Mario_Sky_Material.MakeAvailable();
+					Mario_Sky_Pixmap.MakeAvailable();
+					Mario_Sky_Texture.MakeAvailable();
+					Test_ScrollMap_Material.MakeAvailable();
+					Test_ScrollMap_Pixmap.MakeAvailable();
+					Test_ScrollMap_Texture.MakeAvailable();
+				}
+			}
+			public static class Components {
+				public static Duality.ContentRef<Duality.Resources.Material> Mario_BrickPlatform_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Scenes\Components\Mario_BrickPlatform.Material.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Pixmap> Mario_BrickPlatform_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Scenes\Components\Mario_BrickPlatform.Pixmap.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Texture> Mario_BrickPlatform_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Scenes\Components\Mario_BrickPlatform.Texture.res"); }}
+				public static void LoadAll() {
+					Mario_BrickPlatform_Material.MakeAvailable();
+					Mario_BrickPlatform_Pixmap.MakeAvailable();
+					Mario_BrickPlatform_Texture.MakeAvailable();
+				}
+			}
+			public static Duality.ContentRef<Duality.Resources.Scene> AI_Testing_Center_Scene { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Scene>(@"Data\Scenes\AI Testing Center.Scene.res"); }}
+			public static Duality.ContentRef<Duality.Resources.Scene> PlayerOneTest_Scene { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Scene>(@"Data\Scenes\PlayerOneTest.Scene.res"); }}
+			public static Duality.ContentRef<Duality.Resources.Scene> TestThwomp_Scene { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Scene>(@"Data\Scenes\TestThwomp.Scene.res"); }}
+			public static void LoadAll() {
+				Backgrounds.LoadAll();
+				Components.LoadAll();
+				AI_Testing_Center_Scene.MakeAvailable();
+				PlayerOneTest_Scene.MakeAvailable();
+				TestThwomp_Scene.MakeAvailable();
+			}
+		}
 		public static void LoadAll() {
-			AI_Testing_Center_Scene.MakeAvailable();
-			Background_Material.MakeAvailable();
-			Background_Pixmap.MakeAvailable();
-			Background_Texture.MakeAvailable();
-			Block_Material.MakeAvailable();
-			Block_Pixmap.MakeAvailable();
-			Block_Texture.MakeAvailable();
-			Celes_Material.MakeAvailable();
-			Celes_Pixmap.MakeAvailable();
-			Celes_Texture.MakeAvailable();
-			scroll_screenshot_Material.MakeAvailable();
-			scroll_screenshot_Pixmap.MakeAvailable();
-			scroll_screenshot_Texture.MakeAvailable();
-			TestThwomp_Scene.MakeAvailable();
-			Thwomp_Material.MakeAvailable();
-			Thwomp_Pixmap.MakeAvailable();
-			Thwomp_Texture.MakeAvailable();
-			White_Prefab.MakeAvailable();
+			Characters.LoadAll();
+			Prefabs.LoadAll();
+			Scenes.LoadAll();
 		}
 	}
 

@@ -49,6 +49,7 @@
     <Compile Include="Enums.cs" />
     <Compile Include="FloatAI.cs" />
     <Compile Include="InputController.cs" />
+    <Compile Include="PlayerOne.cs" />
     <Compile Include="Thwomp.cs" />
     <Compile Include="Wall.cs" />
     <Compile Include="RoverAI.cs" />

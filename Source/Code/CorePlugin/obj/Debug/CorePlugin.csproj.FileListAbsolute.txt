@@ -12,3 +12,16 @@ C:\Users\Kyle Copeland\Projects\Dove Game\Source\Code\CorePlugin\bin\Debug\NVorb
 C:\Users\Kyle Copeland\Projects\Dove Game\Source\Code\CorePlugin\obj\Debug\GamePlugin.core.dll
 C:\Users\Kyle Copeland\Projects\Dove Game\Source\Code\CorePlugin\obj\Debug\GamePlugin.core.pdb
 C:\Users\Kyle Copeland\Projects\Dove Game\Source\Code\CorePlugin\obj\Debug\CorePlugin.csprojResolveAssemblyReference.cache
+C:\Users\Christopher Nguyen\Desktop\ProjectDove\Source\Code\CorePlugin\bin\Debug\GamePlugin.core.dll
+C:\Users\Christopher Nguyen\Desktop\ProjectDove\Source\Code\CorePlugin\bin\Debug\GamePlugin.core.pdb
+C:\Users\Christopher Nguyen\Desktop\ProjectDove\Source\Code\CorePlugin\bin\Debug\GamePlugin.core.xml
+C:\Users\Christopher Nguyen\Desktop\ProjectDove\Source\Code\CorePlugin\bin\Debug\Duality.dll
+C:\Users\Christopher Nguyen\Desktop\ProjectDove\Source\Code\CorePlugin\bin\Debug\OpenTK.dll
+C:\Users\Christopher Nguyen\Desktop\ProjectDove\Source\Code\CorePlugin\bin\Debug\NVorbis.dll
+C:\Users\Christopher Nguyen\Desktop\ProjectDove\Source\Code\CorePlugin\bin\Debug\Duality.pdb
+C:\Users\Christopher Nguyen\Desktop\ProjectDove\Source\Code\CorePlugin\bin\Debug\Duality.xml
+C:\Users\Christopher Nguyen\Desktop\ProjectDove\Source\Code\CorePlugin\bin\Debug\OpenTK.pdb
+C:\Users\Christopher Nguyen\Desktop\ProjectDove\Source\Code\CorePlugin\bin\Debug\OpenTK.xml
+C:\Users\Christopher Nguyen\Desktop\ProjectDove\Source\Code\CorePlugin\bin\Debug\NVorbis.xml
+C:\Users\Christopher Nguyen\Desktop\ProjectDove\Source\Code\CorePlugin\obj\Debug\GamePlugin.core.dll
+C:\Users\Christopher Nguyen\Desktop\ProjectDove\Source\Code\CorePlugin\obj\Debug\GamePlugin.core.pdb
