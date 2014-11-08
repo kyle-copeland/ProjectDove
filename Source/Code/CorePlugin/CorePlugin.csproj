@@ -47,16 +47,24 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Enums.cs" />
-    <Compile Include="FloatAI.cs" />
-    <Compile Include="InputController.cs" />
-    <Compile Include="PlayerOne.cs" />
-    <Compile Include="Thwomp.cs" />
-    <Compile Include="Wall.cs" />
-    <Compile Include="RoverAI.cs" />
+    <Compile Include="AI_Logic\FloatAI.cs" />
+    <Compile Include="Test_Logic\InputController.cs" />
+    <Compile Include="PlayerOne\PlayerOne.cs" />
+    <Compile Include="Enemies\Mario_World\Thwomp.cs" />
+    <Compile Include="Scene_Components\Test_World\Wall.cs" />
+    <Compile Include="AI_Logic\RoverAI.cs" />
     <Compile Include="CorePlugin.cs" />
-    <Compile Include="Celes.cs" />
+    <Compile Include="SideCharacters\Celes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\GameRes.cs" />
+    <Compile Include="Test_Logic\Kamehameha.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Enemies\DBZ_World\" />
+    <Folder Include="Enemies\Zelda_World\" />
+    <Folder Include="Scene_Components\DBZ_World\" />
+    <Folder Include="Scene_Components\Mario_World\" />
+    <Folder Include="Scene_Components\Zelda_World\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

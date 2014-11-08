@@ -28,6 +28,9 @@ namespace GameRes
 				public static Duality.ContentRef<Duality.Resources.Material> Goku_2d_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\Side Characters\Goku_2d.Material.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Pixmap> Goku_2d_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\Side Characters\Goku_2d.Pixmap.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Texture> Goku_2d_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Characters\Side Characters\Goku_2d.Texture.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Material> Goku_2d_2_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\Side Characters\Goku_2d_2.Material.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Pixmap> Goku_2d_2_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\Side Characters\Goku_2d_2.Pixmap.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Texture> Goku_2d_2_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Characters\Side Characters\Goku_2d_2.Texture.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Material> Goku_Aura_2d_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\Side Characters\Goku_Aura_2d.Material.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Pixmap> Goku_Aura_2d_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\Side Characters\Goku_Aura_2d.Pixmap.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Texture> Goku_Aura_2d_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Characters\Side Characters\Goku_Aura_2d.Texture.res"); }}
@@ -41,6 +44,9 @@ namespace GameRes
 					Goku_2d_Material.MakeAvailable();
 					Goku_2d_Pixmap.MakeAvailable();
 					Goku_2d_Texture.MakeAvailable();
+					Goku_2d_2_Material.MakeAvailable();
+					Goku_2d_2_Pixmap.MakeAvailable();
+					Goku_2d_2_Texture.MakeAvailable();
 					Goku_Aura_2d_Material.MakeAvailable();
 					Goku_Aura_2d_Pixmap.MakeAvailable();
 					Goku_Aura_2d_Texture.MakeAvailable();

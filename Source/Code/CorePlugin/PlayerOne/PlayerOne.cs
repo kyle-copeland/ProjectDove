@@ -57,7 +57,7 @@ namespace Dove_Game
             else if (DualityApp.Keyboard[Key.S])
             {
                 // Modify frame sequence to render punch sequence animation
-                playerSprite.CustomFrameSequence = new List<int>() { 18, 19, 20, 27 };
+                playerSprite.CustomFrameSequence = new List<int>() { 24, 25, 26, 33 };
                 playerSprite.AnimLoopMode = AnimSpriteRenderer.LoopMode.Loop;
                 playerSprite.AnimDuration = 1;
                 playerSprite.UpdateVisibleFrames();
@@ -67,9 +67,9 @@ namespace Dove_Game
             }
 
             // All custom frame sequences end in 27, the current default animation for the Goku SpriteSheet. Reset after an attack animation.
-            if(playerSprite.CurrentFrame != lastFrame && playerSprite.CurrentFrame == 27)
+            if(playerSprite.CurrentFrame != lastFrame && playerSprite.CurrentFrame == 33)
             {
-                playerSprite.CustomFrameSequence = new List<int>() { 27 };
+                playerSprite.CustomFrameSequence = new List<int>() { 33 };
                 playerSprite.AnimLoopMode = AnimSpriteRenderer.LoopMode.Once;
             }
 
