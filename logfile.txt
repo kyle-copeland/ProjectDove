@@ -1,7 +1,8 @@
 [Core] Info:    Initializing OpenAL...
 [Core] Info:        OpenAL Drivers not found. Using 64 Bit software fallback.
 [Core] Info:        Available devices:
-[Core]              Speakers (Realtek High Definition Audio) (Default)
+[Core]              Speakers and Headphones (IDT High Definition Audio CODEC) (Default),
+[Core]              Communications Headphones (IDT High Definition Audio CODEC)
 [Core] Info:        Current device: OpenAL Soft
 [Core] Info:        256 sources available
 [Core] Info:    Assembly loaded: FarseerDuality
@@ -15,8 +16,8 @@
 [Core] Info:    Assembly loaded: System.Configuration
 [Core] Info:    Assembly loaded: System.Xml.Linq
 [Core] Info:    DualityApp initialized
-[Core]          Debug Mode: True
-[Core]          Command line arguments: 
+[Core]          Debug Mode: False
+[Core]          Command line arguments: editor, debug
 [Core]          Is64BitProcess: True
 [Core] Info:    Initializing core plugins...
 [Core] Info:        Compatibility.core...
@@ -24,13 +25,19 @@
 [Core] Info:    Initializing default content..
 [Core] Info:        Assembly loaded: NVorbis
 [Core] Info:    ..done
-[Core] Info:    Loading Ressource 'Data\AI Testing Center.Scene.res'...
-[Core] Info:        Loading Ressource 'Data\White.Prefab.res'...
-[Core] Info:    Loading Ressource 'Data\Celes.Material.res'...
-[Core] Info:        Loading Ressource 'Data\Celes.Texture.res'...
-[Core] Info:            Loading Ressource 'Data\Celes.Pixmap.res'...
-[Core] Info:    Loading Ressource 'Data\scroll-screenshot.Material.res'...
-[Core] Info:        Loading Ressource 'Data\scroll-screenshot.Texture.res'...
-[Core] Info:            Loading Ressource 'Data\scroll-screenshot.Pixmap.res'...
-[Core] Info:    Loading Ressource 'Default\Texture\White.Material.res'...
-[Core] Info:    DualityApp terminated
+[Core] Info:    Loading Ressource 'Data\Scenes\TestThwomp.Scene.res'...
+[Core] Info:        Loading Ressource 'Data\Prefabs\Goku_2d_2.Prefab.res'...
+[Core] ERROR:   NullReferenceException at Void InputController.Duality.ICmpUpdatable.OnUpdate(): Object reference not set to an instance of an object.
+[Core]          CallStack:
+[Core]             at Dove_Game.InputController.Duality.ICmpUpdatable.OnUpdate()
+[Core]             at Duality.GameObject.IterateComponents[T](Action`1 forEach, Predicate`1 where) in c:\Stuff\svn\Projects\Duality\master\Duality\GameObject.cs:line 716
+[Core]             at Duality.Resources.Scene.<Update>b__7() in c:\Stuff\svn\Projects\Duality\master\Duality\Resources\Scene.cs:line 432
+[Core]             at Duality.DualityApp.EditorGuard(Action action) in c:\Stuff\svn\Projects\Duality\master\Duality\DualityApp.cs:line 1222
+[Core]             at Duality.Resources.Scene.Update() in c:\Stuff\svn\Projects\Duality\master\Duality\Resources\Scene.cs:line 427
+[Core]             at Duality.DualityApp.Update() in c:\Stuff\svn\Projects\Duality\master\Duality\DualityApp.cs:line 479
+[Core]             at Duality.Launcher.DualityLauncher.OnUpdateFrame(FrameEventArgs e) in c:\Stuff\work\duality\master\DualityLauncher\Program.cs:line 66
+[Core]             at OpenTK.GameWindow.RaiseUpdateFrame(Double elapsed, Double& timestamp) in c:\Stuff\svn\Projects\AdamsLair.OpenTK\Source\OpenTK\GameWindow.cs:line 495
+[Core]             at OpenTK.GameWindow.DispatchUpdateAndRenderFrame(Object sender, EventArgs e) in c:\Stuff\svn\Projects\AdamsLair.OpenTK\Source\OpenTK\GameWindow.cs:line 456
+[Core]             at OpenTK.GameWindow.Run(Double updates_per_second, Double frames_per_second) in c:\Stuff\svn\Projects\AdamsLair.OpenTK\Source\OpenTK\GameWindow.cs:line 423
+[Core]             at Duality.Launcher.DualityLauncher.Main(String[] args) in c:\Stuff\work\duality\master\DualityLauncher\Program.cs:line 160
+[Core] ERROR:   DualityApp terminated unexpectedly

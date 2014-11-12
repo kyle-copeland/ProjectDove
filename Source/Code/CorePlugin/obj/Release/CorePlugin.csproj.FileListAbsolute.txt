@@ -23,6 +23,5 @@ C:\Users\Owner\Documents\GitHub\ProjectDove\Source\Code\CorePlugin\bin\Release\D
 C:\Users\Owner\Documents\GitHub\ProjectDove\Source\Code\CorePlugin\bin\Release\OpenTK.pdb
 C:\Users\Owner\Documents\GitHub\ProjectDove\Source\Code\CorePlugin\bin\Release\OpenTK.xml
 C:\Users\Owner\Documents\GitHub\ProjectDove\Source\Code\CorePlugin\bin\Release\NVorbis.xml
-C:\Users\Owner\Documents\GitHub\ProjectDove\Source\Code\CorePlugin\obj\Release\CorePlugin.csprojResolveAssemblyReference.cache
 C:\Users\Owner\Documents\GitHub\ProjectDove\Source\Code\CorePlugin\obj\Release\GamePlugin.core.dll
 C:\Users\Owner\Documents\GitHub\ProjectDove\Source\Code\CorePlugin\obj\Release\GamePlugin.core.pdb

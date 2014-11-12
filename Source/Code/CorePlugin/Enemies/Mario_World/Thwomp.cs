@@ -5,20 +5,34 @@ using System.Text;
 
 using Duality;
 using OpenTK;
-using System.Timers;
+using OpenTK.Input;
 
 namespace Dove_Game
 {
     [Serializable]
-    public class Thwomp : Component, ICmpCollisionListener
+    public class Thwomp : Component, ICmpUpdatable, ICmpCollisionListener
     {
-        private System.Timers.Timer aTimer;
+        public float ThwompSpeed { get; set; }
+
+        void ICmpUpdatable.OnUpdate()
+        {
+            if (DualityApp.Keyboard.KeyPressed(Key.Space) && this.GameObj.Transform.Vel.Length == 0)
+            {
+                this.GameObj.RigidBody.ApplyLocalImpulse(Vector2.UnitY * ThwompSpeed);
+            }
+        }
+
 
         void ICmpCollisionListener.OnCollisionBegin(Component sender, CollisionEventArgs args)
         {
             if (args.CollideWith.Name == "Ceiling")
             {
                 this.GameObj.RigidBody.LinearVelocity = (Vector2.UnitY * 0);
+            }
+
+            else if (args.CollideWith.Name == "Goku_2d_2")
+            {
+                this.GameObj.RigidBody.ApplyLocalImpulse(-Vector2.UnitY * 100);
             }
         }
 
