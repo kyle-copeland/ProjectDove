@@ -46,6 +46,8 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AI_Logic\ChargeAI.cs" />
+    <Compile Include="AI_Logic\JumpRover.cs" />
     <Compile Include="Enemies\Mario_World\Firespin.cs" />
     <Compile Include="Enums.cs" />
     <Compile Include="AI_Logic\FloatAI.cs" />
