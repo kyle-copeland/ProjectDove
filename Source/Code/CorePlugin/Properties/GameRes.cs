@@ -91,6 +91,7 @@ namespace GameRes
 				}
 			}
 			public static class Components {
+				public static Duality.ContentRef<Dove_Game.BulletBlueprint> BulletBlueprint_BulletBlueprint { get { return Duality.ContentProvider.RequestContent<Dove_Game.BulletBlueprint>(@"Data\Scenes\Components\BulletBlueprint.BulletBlueprint.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Material> Fireball_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Scenes\Components\Fireball.Material.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Pixmap> Fireball_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Scenes\Components\Fireball.Pixmap.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Texture> Fireball_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Scenes\Components\Fireball.Texture.res"); }}
@@ -101,6 +102,7 @@ namespace GameRes
 				public static Duality.ContentRef<Duality.Resources.Pixmap> Mario_BrickPlatform_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Scenes\Components\Mario_BrickPlatform.Pixmap.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Texture> Mario_BrickPlatform_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Scenes\Components\Mario_BrickPlatform.Texture.res"); }}
 				public static void LoadAll() {
+					BulletBlueprint_BulletBlueprint.MakeAvailable();
 					Fireball_Material.MakeAvailable();
 					Fireball_Pixmap.MakeAvailable();
 					Fireball_Texture.MakeAvailable();
