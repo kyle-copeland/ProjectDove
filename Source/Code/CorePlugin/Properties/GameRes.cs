@@ -17,6 +17,10 @@ namespace GameRes
 					Thwomp_Texture.MakeAvailable();
 				}
 			}
+			public static class PlayerOne {
+				public static void LoadAll() {
+				}
+			}
 			public static class Side_Characters {
 				public static Duality.ContentRef<Duality.Resources.Material> Celes_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\Side Characters\Celes.Material.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Pixmap> Celes_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\Side Characters\Celes.Pixmap.res"); }}
@@ -53,6 +57,7 @@ namespace GameRes
 			}
 			public static void LoadAll() {
 				Enemies.LoadAll();
+				PlayerOne.LoadAll();
 				Side_Characters.LoadAll();
 			}
 		}

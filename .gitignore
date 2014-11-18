@@ -1,8 +1,0 @@
-*.dll
-*.pdb
-*.cache
-*.user
-*.txt
-Backup/
-Source/Code/ProjectPlugins.suo
-EditorUserData.xml
