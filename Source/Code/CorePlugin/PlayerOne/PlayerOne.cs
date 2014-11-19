@@ -23,7 +23,7 @@ namespace Dove_Game
 
         // Material and resource references for special attacks.
         private ContentRef<Material> kameBlast = GameRes.Data.Scenes.Components.KameBlast_Material;
-        private ContentRef<SpecialAttack_Goku> Sag_Goku = GameRes.Data.Scenes.SpecialAttacks.SSGoku_SpecialAttack_Goku;
+        private ContentRef<SpecialAttack_Goku> Sag_Goku = GameRes.Data.Scenes.SpecialAttacks.SSGoku_SpecialAttack_Goku_SpecialAttack_Goku;
 
         // Maintain direction and currently executing special attack for fluid attack animation blending.
         public static Direction direction;

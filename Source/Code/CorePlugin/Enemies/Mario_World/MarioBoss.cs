@@ -19,7 +19,7 @@ namespace Dove_Game
     {
         public float distance { get; set; }
         private float weaponTimer = 0.0f;
-        private float weaponDelay = 500.0f;
+        private float weaponDelay = 200.0f;
         private ContentRef<BulletBlueprint> bulletType = null;
 
         public ContentRef<BulletBlueprint> BulletType
@@ -35,7 +35,7 @@ namespace Dove_Game
             this.weaponTimer = MathF.Max(0.0f, this.weaponTimer - Time.MsPFMult * Time.TimeMult);
             
             this.FireBullet(body, transform, Vector2.Zero, 0.0f);
-            this.Move();
+           // this.Move();
         }
 
         private void Move()
@@ -59,7 +59,7 @@ namespace Dove_Game
             if (this.weaponTimer > 0.0f) return;
             this.weaponTimer += this.weaponDelay;
             Bullet bullet = this.bulletType.Res.CreateBullet();
-            bullet.Fire(body.LinearVelocity, transform.GetWorldPoint(localPos), transform.Angle + localAngle);
+            bullet.Fire(body.LinearVelocity, transform.GetWorldPoint(localPos), transform.Angle + localAngle, new Vector2(50,0));
             Scene.Current.AddObject(bullet.GameObj);
         }
     }

@@ -5,12 +5,12 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
     <StartAction>Program</StartAction>
-    <StartProgram>C:\Users\Owner\Documents\GitHub\ProjectDove\DualityLauncher.exe</StartProgram>
-    <StartWorkingDirectory>C:\Users\Owner\Documents\GitHub\ProjectDove</StartWorkingDirectory>
+    <StartProgram>C:\Users\Kyle Copeland\Projects\ProjectDove\DualityLauncher.exe</StartProgram>
+    <StartWorkingDirectory>C:\Users\Kyle Copeland\Projects\ProjectDove</StartWorkingDirectory>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
     <StartAction>Program</StartAction>
-    <StartProgram>C:\Users\Owner\Documents\GitHub\ProjectDove\DualityLauncher.exe</StartProgram>
-    <StartWorkingDirectory>C:\Users\Owner\Documents\GitHub\ProjectDove</StartWorkingDirectory>
+    <StartProgram>C:\Users\Kyle Copeland\Projects\ProjectDove\DualityLauncher.exe</StartProgram>
+    <StartWorkingDirectory>C:\Users\Kyle Copeland\Projects\ProjectDove</StartWorkingDirectory>
   </PropertyGroup>
 </Project>

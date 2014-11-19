@@ -21,14 +21,11 @@ namespace Dove_Game
             this.lifetime -= Time.MsPFMult * Time.TimeMult;
             if (this.lifetime <= 0) this.GameObj.DisposeLater();
         }
-        public void Fire(Vector2 sourceDragVel, Vector2 position, float angle)
+        public void Fire(Vector2 sourceDragVel, Vector2 position, float angle, Vector2 direction)
         {
             Transform transform = this.GameObj.Transform;
             RigidBody body = this.GameObj.RigidBody;
 
-            Vector2 direction = new Random().NextVector2().Normalized  * 30;
-            direction.Y = -Math.Abs(direction.Y);
-            Console.WriteLine(direction);
             body.LinearVelocity = direction;
             transform.Pos = new Vector3(position, -2.0f);      
         }

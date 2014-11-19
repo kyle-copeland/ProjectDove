@@ -40,6 +40,8 @@ namespace Dove_Game
             body.AddShape(circleShape);
             body.CollisionCategory = CollisionCategory.Cat3;
             body.CollidesWith &= ~CollisionCategory.Cat3;
+            body.CollidesWith &= ~CollisionCategory.Cat1;
+            body.IgnoreGravity = true;
             
             sprite.SharedMaterial = spriteMaterial;
             sprite.Rect = Rect.AlignCenter(0.0f, 0.0f, spriteSize.X, spriteSize.Y);

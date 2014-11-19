@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="AI_Logic\ChargeAI.cs" />
     <Compile Include="AI_Logic\JumpRover.cs" />
+    <Compile Include="Enemies\Enemy.cs" />
     <Compile Include="Enemies\Mario_World\Firespin.cs" />
     <Compile Include="Enemies\Mario_World\MarioBoss.cs" />
     <Compile Include="Enums.cs" />

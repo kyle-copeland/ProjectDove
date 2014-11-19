@@ -12,31 +12,11 @@ namespace Dove_Game
 {
     [Serializable]
     [RequiredComponent(typeof(RigidBody))]
-    public class RoverAI : Component, ICmpUpdatable, ICmpCollisionListener
+    public class RoverAI : Enemies.Enemy,ICmpUpdatable
     {
-        public float speed { get; set; }
         void ICmpUpdatable.OnUpdate()
         {
-            RigidBody r = this.GameObj.RigidBody;
-            r.LinearVelocity = Vector2.UnitX * speed;
-        }
-
-        void ICmpCollisionListener.OnCollisionBegin(Component sender, CollisionEventArgs args)
-        {
-            RigidBodyCollisionEventArgs bodyArgs = args as RigidBodyCollisionEventArgs;
-            if (bodyArgs == null) return;
-            if(bodyArgs.CollideWith.GetComponent<Wall>() != null)
-            {
-                speed *= -1.0f;
-            }
-
-        }
-
-        void ICmpCollisionListener.OnCollisionEnd(Component sender, CollisionEventArgs args)
-        {
-        }
-        void ICmpCollisionListener.OnCollisionSolve(Component sender, CollisionEventArgs args)
-        {
+            this.Move();
         }
     }
 }
