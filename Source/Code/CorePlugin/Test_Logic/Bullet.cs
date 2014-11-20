@@ -8,19 +8,29 @@ using Duality.Components;
 using Duality.Components.Physics;
 using Duality.Resources;
 using OpenTK;
+using Dove_Game.Test_Logic;
+using OpenTK.Input;
+using Dove_Game.Enemies;
 namespace Dove_Game
 {
     [Serializable]
-    [RequiredComponent(typeof(Transform))]
     [RequiredComponent(typeof(RigidBody))]
-    public class Bullet : Component, ICmpUpdatable
+    public class Bullet : SpecialAttack
     {
-        private float lifetime = 800.0f;
-        void ICmpUpdatable.OnUpdate()
+        // Set lifetime and direction of special attack.
+        public void InitFrom(BulletBlueprint bbp, Direction direction)
         {
-            this.lifetime -= Time.MsPFMult * Time.TimeMult;
-            if (this.lifetime <= 0) this.GameObj.DisposeLater();
+            Lifetime = bbp.Lifetime;
+            AttackDirection = direction;
         }
+
+        // Dispose special attack after duration ends.
+        public override void OnUpdate()
+        {
+            Lifetime -= Time.MsPFMult * Time.TimeMult;
+            if (Lifetime <= 0) this.GameObj.DisposeLater();
+        }
+
         public void Fire(Vector2 sourceDragVel, Vector2 position, float angle, Vector2 direction)
         {
             Transform transform = this.GameObj.Transform;
@@ -28,6 +38,26 @@ namespace Dove_Game
 
             body.LinearVelocity = direction;
             transform.Pos = new Vector3(position, -2.0f);      
+        }
+
+        // If the attack hits an enemy, apply damage.
+        public override void OnCollisionBegin(Component sender, CollisionEventArgs args)
+        {
+            PlayerOne temp = args.CollideWith.GetComponent<PlayerOne>();
+            if (temp != null)
+            {
+                temp.doDamage(10);
+            }
+        }
+
+        public override void OnCollisionEnd(Component sender, CollisionEventArgs args)
+        {
+            Console.WriteLine("Placeholder code.");
+        }
+
+        public override void OnCollisionSolve(Component sender, CollisionEventArgs args)
+        {
+            Console.WriteLine("Placeholder code.");
         }
     }
 }

@@ -9,50 +9,33 @@ using Duality.Components.Physics;
 using OpenTK;
 
 using OpenTK.Input;
+using Dove_Game.Enemies;
 
 namespace Dove_Game
 {
-	[Serializable]
+    [Serializable]
     [RequiredComponent(typeof(RigidBody))]
-    public class Celes : Component,ICmpUpdatable, ICmpInitializable
+    public class Celes : Enemy
     {
-        public float distance { get; set; }
-        private int healthPts;
-
-        public float force { get; set; }
-        void ICmpUpdatable.OnUpdate()
+        public override void OnUpdate()
         {
-            RigidBody body = this.GameObj.RigidBody;
-            Transform transform = this.GameObj.Transform;
-
-            if (healthPts <= 0)
+            if (HealthPoints <= 0)
                 this.GameObj.Dispose();
-
-            if(DualityApp.Keyboard[Key.Left])
-            {
-                body.LinearVelocity = Vector2.UnitX * distance * -1.0f;
-            }
-            else if(DualityApp.Keyboard[Key.Right])
-            {
-                body.LinearVelocity = Vector2.UnitX * distance;
-            }
-            else if(DualityApp.Keyboard[Key.Space])
-            {
-                body.ApplyLocalImpulse(Vector2.UnitY * -force * body.Mass);
-            }
         }
 
-        public void doDamage(int dmg)
+        public override void OnCollisionBegin(Component sender, CollisionEventArgs args)
         {
-            healthPts -= dmg;
+            PlayerOne mainCharacter = args.CollideWith.GetComponent<PlayerOne>();
+            if (mainCharacter != null && !mainCharacter.isAttacking)
+                mainCharacter.doDamage(10);
         }
 
-        void ICmpInitializable.OnInit(Component.InitContext context)
+        public override void OnCollisionEnd(Component sender, CollisionEventArgs args)
         {
-            healthPts = 10;
+            Console.WriteLine("Placeholder code.");
         }
 
-        void ICmpInitializable.OnShutdown(Component.ShutdownContext context)
+        public override void OnCollisionSolve(Component sender, CollisionEventArgs args)
         {
             Console.WriteLine("Placeholder code.");
         }

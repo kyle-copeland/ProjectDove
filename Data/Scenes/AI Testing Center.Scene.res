@@ -205,8 +205,8 @@
             <angularDamp dataType="Float">0.3</angularDamp>
             <angularVel dataType="Float">0</angularVel>
             <bodyType dataType="Enum" type="Duality.Components.Physics.BodyType" name="Dynamic" value="1" />
-            <colCat dataType="Enum" type="Duality.Components.Physics.CollisionCategory" name="Cat2" value="2" />
-            <colWith dataType="Enum" type="Duality.Components.Physics.CollisionCategory" name="Cat1, Cat3, Cat4, Cat5, Cat6, Cat7, Cat8, Cat9, Cat10, Cat11, Cat12, Cat13, Cat14, Cat15, Cat16, Cat17, Cat18, Cat19, Cat20, Cat21, Cat22, Cat23, Cat24, Cat25, Cat26, Cat27, Cat28, Cat29, Cat30, Cat31" value="2147483645" />
+            <colCat dataType="Enum" type="Duality.Components.Physics.CollisionCategory" name="Cat3" value="4" />
+            <colWith dataType="Enum" type="Duality.Components.Physics.CollisionCategory" name="Cat1, Cat2, Cat4, Cat5" value="27" />
             <continous dataType="Bool">false</continous>
             <explicitMass dataType="Float">58.78</explicitMass>
             <fixedAngle dataType="Bool">true</fixedAngle>
@@ -258,10 +258,16 @@
           </item>
           <item dataType="Struct" type="Dove_Game.RoverAI" id="4275461210">
             <active dataType="Bool">true</active>
+            <currentSA />
             <gameobj dataType="ObjectRef">4136050917</gameobj>
-            <Health dataType="Int">1</Health>
+            <healthPts dataType="Int">50</healthPts>
             <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
-            <MovementSpeed dataType="Int">3</MovementSpeed>
+            <lastFrame dataType="Int">0</lastFrame>
+            <movementSpeed dataType="Int">3</movementSpeed>
+            <vectorMove dataType="Struct" type="OpenTK.Vector2">
+              <X dataType="Float">0</X>
+              <Y dataType="Float">0</Y>
+            </vectorMove>
           </item>
         </_items>
         <_size dataType="Int">4</_size>
@@ -365,9 +371,9 @@
             <angularDamp dataType="Float">0.3</angularDamp>
             <angularVel dataType="Float">0</angularVel>
             <bodyType dataType="Enum" type="Duality.Components.Physics.BodyType" name="Static" value="0" />
-            <colCat dataType="Enum" type="Duality.Components.Physics.CollisionCategory" name="Cat1" value="1" />
+            <colCat dataType="Enum" type="Duality.Components.Physics.CollisionCategory" name="Cat5" value="16" />
             <colWith dataType="Enum" type="Duality.Components.Physics.CollisionCategory" name="All" value="2147483647" />
-            <continous dataType="Bool">true</continous>
+            <continous dataType="Bool">false</continous>
             <explicitMass dataType="Float">0</explicitMass>
             <fixedAngle dataType="Bool">false</fixedAngle>
             <gameobj dataType="ObjectRef">3348187270</gameobj>
@@ -447,7 +453,7 @@
       <active dataType="Bool">true</active>
       <children />
       <compList dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Component]]" id="1548247659">
-        <_items dataType="Array" type="Duality.Component[]" id="1021974134" length="4">
+        <_items dataType="Array" type="Duality.Component[]" id="1021974134">
           <item dataType="Struct" type="Duality.Components.Transform" id="3501771421">
             <active dataType="Bool">false</active>
             <angle dataType="Float">0</angle>
@@ -512,8 +518,8 @@
             <angularDamp dataType="Float">0.3</angularDamp>
             <angularVel dataType="Float">0</angularVel>
             <bodyType dataType="Enum" type="Duality.Components.Physics.BodyType" name="Static" value="0" />
-            <colCat dataType="Enum" type="Duality.Components.Physics.CollisionCategory" name="Cat3" value="4" />
-            <colWith dataType="Enum" type="Duality.Components.Physics.CollisionCategory" name="All" value="2147483647" />
+            <colCat dataType="Enum" type="Duality.Components.Physics.CollisionCategory" name="Cat4" value="8" />
+            <colWith dataType="Enum" type="Duality.Components.Physics.CollisionCategory" name="Cat3" value="4" />
             <continous dataType="Bool">false</continous>
             <explicitMass dataType="Float">0</explicitMass>
             <fixedAngle dataType="Bool">false</fixedAngle>
@@ -559,9 +565,14 @@
               <_version dataType="Int">7</_version>
             </shapes>
           </item>
+          <item dataType="Struct" type="Dove_Game.Scene_Components.Test_World.Ground" id="760415827">
+            <active dataType="Bool">true</active>
+            <gameobj dataType="ObjectRef">1141456489</gameobj>
+            <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
+          </item>
         </_items>
-        <_size dataType="Int">3</_size>
-        <_version dataType="Int">7</_version>
+        <_size dataType="Int">4</_size>
+        <_version dataType="Int">8</_version>
       </compList>
       <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="706845896" surrogate="true">
         <header />
@@ -570,11 +581,13 @@
             <item dataType="ObjectRef">2678576548</item>
             <item dataType="ObjectRef">1079841040</item>
             <item dataType="ObjectRef">3195988282</item>
+            <item dataType="Type" id="408663726" value="Dove_Game.Scene_Components.Test_World.Ground" />
           </keys>
           <values dataType="Array" type="Duality.Component[]" id="1940831968">
             <item dataType="ObjectRef">3501771421</item>
             <item dataType="ObjectRef">2783623057</item>
             <item dataType="ObjectRef">4204233013</item>
+            <item dataType="ObjectRef">760415827</item>
           </values>
         </body>
       </compMap>
@@ -594,7 +607,7 @@
       <active dataType="Bool">true</active>
       <children />
       <compList dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Component]]" id="2123802773">
-        <_items dataType="Array" type="Duality.Component[]" id="1082793078" length="4">
+        <_items dataType="Array" type="Duality.Component[]" id="1082793078">
           <item dataType="Struct" type="Duality.Components.Transform" id="1993217739">
             <active dataType="Bool">false</active>
             <angle dataType="Float">0</angle>
@@ -659,8 +672,8 @@
             <angularDamp dataType="Float">0.3</angularDamp>
             <angularVel dataType="Float">0</angularVel>
             <bodyType dataType="Enum" type="Duality.Components.Physics.BodyType" name="Static" value="0" />
-            <colCat dataType="Enum" type="Duality.Components.Physics.CollisionCategory" name="Cat3" value="4" />
-            <colWith dataType="Enum" type="Duality.Components.Physics.CollisionCategory" name="All" value="2147483647" />
+            <colCat dataType="Enum" type="Duality.Components.Physics.CollisionCategory" name="Cat4" value="8" />
+            <colWith dataType="Enum" type="Duality.Components.Physics.CollisionCategory" name="Cat3" value="4" />
             <continous dataType="Bool">false</continous>
             <explicitMass dataType="Float">0</explicitMass>
             <fixedAngle dataType="Bool">false</fixedAngle>
@@ -706,9 +719,14 @@
               <_version dataType="Int">3</_version>
             </shapes>
           </item>
+          <item dataType="Struct" type="Dove_Game.Scene_Components.Test_World.Ground" id="3546829441">
+            <active dataType="Bool">true</active>
+            <gameobj dataType="ObjectRef">3927870103</gameobj>
+            <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
+          </item>
         </_items>
-        <_size dataType="Int">3</_size>
-        <_version dataType="Int">5</_version>
+        <_size dataType="Int">4</_size>
+        <_version dataType="Int">6</_version>
       </compList>
       <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="2393767624" surrogate="true">
         <header />
@@ -717,11 +735,13 @@
             <item dataType="ObjectRef">2678576548</item>
             <item dataType="ObjectRef">1079841040</item>
             <item dataType="ObjectRef">3195988282</item>
+            <item dataType="ObjectRef">408663726</item>
           </keys>
           <values dataType="Array" type="Duality.Component[]" id="1475616992">
             <item dataType="ObjectRef">1993217739</item>
             <item dataType="ObjectRef">1275069375</item>
             <item dataType="ObjectRef">2695679331</item>
+            <item dataType="ObjectRef">3546829441</item>
           </values>
         </body>
       </compMap>
@@ -813,7 +833,7 @@
             <angularDamp dataType="Float">0.3</angularDamp>
             <angularVel dataType="Float">0</angularVel>
             <bodyType dataType="Enum" type="Duality.Components.Physics.BodyType" name="Dynamic" value="1" />
-            <colCat dataType="Enum" type="Duality.Components.Physics.CollisionCategory" name="Cat1" value="1" />
+            <colCat dataType="Enum" type="Duality.Components.Physics.CollisionCategory" name="Cat2" value="2" />
             <colWith dataType="Enum" type="Duality.Components.Physics.CollisionCategory" name="All" value="2147483647" />
             <continous dataType="Bool">false</continous>
             <explicitMass dataType="Float">50</explicitMass>

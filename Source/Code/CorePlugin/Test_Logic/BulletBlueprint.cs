@@ -10,19 +10,19 @@ using Duality.Components.Physics;
 using Duality.Components.Renderers;
 
 using OpenTK;
+using Dove_Game.Test_Logic;
 namespace Dove_Game
 {
     [Serializable]
     public class BulletBlueprint : Resource
     {
-
-        private ContentRef<Material> spriteMaterial = null;
-        public ContentRef<Material> SpriteMaterial
+        // Lifetime is set to 2 seconds
+        private float lifetime = 800.0f;
+        public float Lifetime
         {
-            get { return this.spriteMaterial; }
-            set { this.spriteMaterial = value; }
+            get { return lifetime; }
         }
-        public Bullet CreateBullet()
+        public Bullet CreateBullet(Direction direction)
         {
             GameObject obj = new GameObject("Bullet");
             Transform transform = obj.AddComponent<Transform>();
@@ -30,7 +30,7 @@ namespace Dove_Game
             SpriteRenderer sprite = obj.AddComponent<SpriteRenderer>();
             Bullet bullet = obj.AddComponent<Bullet>();
 
-            Material spriteMaterial = this.spriteMaterial.Res ?? Material.SolidBlack.Res;
+            Material spriteMaterial = ContentRefs.rocketBullet.Res ?? Material.SolidBlack.Res;
             Vector2 spriteSize = spriteMaterial.MainTexture.IsAvailable ? spriteMaterial.MainTexture.Res.Size : new Vector2(20, 20);
             float spriteRadius = MathF.Max(spriteSize.X, spriteSize.Y) * 0.25f;
 
@@ -38,14 +38,14 @@ namespace Dove_Game
             CircleShapeInfo circleShape = new CircleShapeInfo(spriteRadius, Vector2.Zero, 1.0f);
             circleShape.IsSensor = false;
             body.AddShape(circleShape);
-            body.CollisionCategory = CollisionCategory.Cat3;
-            body.CollidesWith &= ~CollisionCategory.Cat3;
-            body.CollidesWith &= ~CollisionCategory.Cat1;
+            body.CollisionCategory = CollisionCategory.Cat2;
+            body.CollidesWith = CollisionCategory.Cat1;
             body.IgnoreGravity = true;
             
             sprite.SharedMaterial = spriteMaterial;
             sprite.Rect = Rect.AlignCenter(0.0f, 0.0f, spriteSize.X, spriteSize.Y);
-   
+
+            bullet.InitFrom(this, direction);
             return bullet;
         }
     }

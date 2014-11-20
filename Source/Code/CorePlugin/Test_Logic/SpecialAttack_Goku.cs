@@ -19,11 +19,11 @@ namespace Dove_Game.Test_Logic
         private float lifetime = 2000.0f;
         public float Lifetime
         {
-            get { return this.lifetime; }
+            get { return lifetime; }
         }
 
         // Given Goku's position, create, initialize, and return the kamehameha object relative to that position.
-        public Kamehameha CreateKamehameha(float gokuPosX, float gokuPosY, ContentRef<Material> sm)
+        public Kamehameha CreateKamehameha(float gokuPosX, float gokuPosY, ContentRef<Material> sm, Direction direction)
         {
             Vector2 gokuPos = new Vector2(gokuPosX, gokuPosY);
 
@@ -65,15 +65,15 @@ namespace Dove_Game.Test_Logic
 
             // Attach the polygon rigid body to the game object's rigid body and set collision category.
             body.AddShape(polyShape);
-            body.CollisionCategory = CollisionCategory.Cat3;
-            body.CollidesWith &= ~CollisionCategory.Cat3;
+            body.CollisionCategory = CollisionCategory.Cat2;
+            body.CollidesWith = CollisionCategory.Cat3;
 
             // Create the rectangle space that the object occupies
             sprite.SharedMaterial = spriteMaterial;
             sprite.Rect = Rect.AlignLeft(gokuPos.X, gokuPos.Y, spriteSize.X, spriteSize.Y);
             
             // Set lifetime and blueprint for this object
-            kame.InitFrom(this);
+            kame.InitFrom(this, direction);
 
             return kame;
         }

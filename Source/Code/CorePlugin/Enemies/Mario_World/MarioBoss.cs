@@ -10,57 +10,81 @@ using Duality.Resources;
 
 using OpenTK;
 using OpenTK.Input;
+using Dove_Game.Enemies;
+using Dove_Game.Test_Logic;
 
 namespace Dove_Game
 {
 	[Serializable]
     [RequiredComponent(typeof(RigidBody))]
-    public class MarioBoss : Component,ICmpUpdatable
+    public class MarioBoss : Enemy
     {
         public float distance { get; set; }
-        private float weaponTimer = 0.0f;
-        private float weaponDelay = 200.0f;
-        private ContentRef<BulletBlueprint> bulletType = null;
 
-        public ContentRef<BulletBlueprint> BulletType
+        public override void OnUpdate()
         {
-            get { return this.bulletType; }
-            set { this.bulletType = value; }
+            WeaponTimer -= Time.MsPFMult * Time.TimeMult;
+            if(WeaponTimer <= 0.0f)
+                FireBullet(Vector2.Zero, 0.0f);
+
+            MoveTowardsPlayerOne();
         }
-        void ICmpUpdatable.OnUpdate()
+
+        private void MoveTowardsPlayerOne()
+        {
+            PlayerOne playerOne = Scene.Current.FindComponent<PlayerOne>();
+
+            if (playerOne != null)
+            {
+                float mainPosition = playerOne.GameObj.Transform.Pos.X;
+                float bossPosition = this.GameObj.Transform.Pos.X;
+                float relativeOffset = 150.0f;
+
+                if (bossPosition - relativeOffset > mainPosition && MovementSpeed > 0)
+                {
+                    MovementSpeed *= -1;
+                    CharDirection = Direction.Left;
+                }
+
+                else if (bossPosition + relativeOffset < mainPosition && MovementSpeed < 0)
+                {
+                    MovementSpeed *= -1;
+                    CharDirection = Direction.Right;
+                }
+            }
+
+            Move(Vector2.UnitX);
+        }
+
+        private void FireBullet(Vector2 localPos, float localAngle)
         {
             RigidBody body = this.GameObj.RigidBody;
             Transform transform = this.GameObj.Transform;
 
-            this.weaponTimer = MathF.Max(0.0f, this.weaponTimer - Time.MsPFMult * Time.TimeMult);
-            
-            this.FireBullet(body, transform, Vector2.Zero, 0.0f);
-           // this.Move();
+            WeaponTimer = WeaponDelay;
+            Bullet rocketBullet = ContentRefs.BBP_rocketBullet.Res.CreateBullet(CharDirection);
+            rocketBullet.Fire(body.LinearVelocity, transform.GetWorldPoint(localPos), transform.Angle + localAngle, new Vector2(50,0));
+            Scene.Current.AddObject(rocketBullet.GameObj);
         }
 
-        private void Move()
+        // On collision with anything, reverse direction. Deal damage if colliding with main character.
+        public override void OnCollisionBegin(Component sender, CollisionEventArgs args)
         {
-            PlayerOne playerOne = Scene.Current.FindComponent<PlayerOne>();
-            bool moveLeft = playerOne.GameObj.Transform.Pos.X - this.GameObj.Transform.Pos.X < 0;
-            RigidBody body = this.GameObj.RigidBody;
-            Vector2 direction = Vector2.UnitX * distance;
-            if(moveLeft)
-            {
-                body.ApplyLocalImpulse(-direction);
-            }
-            else
-            {
-                body.ApplyLocalImpulse(direction);
-            }
+            PlayerOne mainCharacter = args.CollideWith.GetComponent<PlayerOne>();
+            if (mainCharacter != null && !mainCharacter.isAttacking)
+                mainCharacter.doDamage(10);
+
+            // MovementSpeed *= -1;
         }
 
-        private void FireBullet(RigidBody body, Transform transform, Vector2 localPos, float localAngle)
+        public override void OnCollisionEnd(Component sender, CollisionEventArgs args)
         {
-            if (this.weaponTimer > 0.0f) return;
-            this.weaponTimer += this.weaponDelay;
-            Bullet bullet = this.bulletType.Res.CreateBullet();
-            bullet.Fire(body.LinearVelocity, transform.GetWorldPoint(localPos), transform.Angle + localAngle, new Vector2(50,0));
-            Scene.Current.AddObject(bullet.GameObj);
+            Console.WriteLine("Placeholder code.");
+        }
+
+        public override void OnCollisionSolve(Component sender, CollisionEventArgs args)
+        {
+            Console.WriteLine("Placeholder code.");
         }
     }
 }

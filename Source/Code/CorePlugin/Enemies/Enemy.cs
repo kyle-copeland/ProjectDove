@@ -7,55 +7,43 @@ using Duality;
 using Duality.Components.Physics;
 
 using OpenTK;
+using Dove_Game.Test_Logic;
 namespace Dove_Game.Enemies
 {
-    public abstract class Enemy : Component,ICmpInitializable, ICmpCollisionListener
+    [Serializable]
+    [RequiredComponent(typeof(RigidBody))]
+    // Base class characterizing components as enemies.
+    public abstract class Enemy : Character 
     {
-        protected int MovementSpeed = 3;
-        protected int Health = 3;
+        private int movementSpeed = 3;
+        private float weaponTimer = 0.0f;
+        private float weaponDelay = 50.0f;
+
+        public float WeaponTimer { get { return this.weaponTimer; } set { this.weaponTimer = value; } }
+        public float WeaponDelay { get { return this.weaponDelay; } set { this.weaponDelay = value; } }
+        public int MovementSpeed { get { return this.movementSpeed; } set { this.movementSpeed = value; } }
  
         //Basic movement will be left and right
-        public virtual void Move()
+        public virtual void Move(Vector2 unitDirection)
         {
+            CharDirection = Direction.Right;
             RigidBody body = this.GameObj.RigidBody;
-            body.LinearVelocity = Vector2.UnitX * MovementSpeed;
+            body.LinearVelocity = unitDirection * MovementSpeed;
         }
 
         //Initialize Collision Types
         //All Enemies will be of collision category 2
-        void ICmpInitializable.OnInit(Component.InitContext context)
+        public override void OnInit(Component.InitContext context)
         {
-            this.GameObj.RigidBody.CollisionCategory = CollisionCategory.Cat2;
-            this.GameObj.RigidBody.CollidesWith &= ~CollisionCategory.Cat2;
+            HealthPoints = 50;
+            this.GameObj.RigidBody.CollisionCategory = CollisionCategory.Cat3;
+            this.GameObj.RigidBody.CollidesWith = CollisionCategory.Cat1 | CollisionCategory.Cat2 | CollisionCategory.Cat4 | CollisionCategory.Cat5;
         }
 
-        void ICmpCollisionListener.OnCollisionBegin(Component sender, CollisionEventArgs args)
+        public override void OnShutdown(Component.ShutdownContext context)
         {
-           if (hitByBullet(args))
-            {
-                Health--;
-                if (Health == 0)
-                    this.GameObj.DisposeLater();
-            }
-            else if (hit(args))
-                MovementSpeed *= -1;
+            Console.WriteLine("Placeholder code.");
         }
-
-        private bool hitByBullet(CollisionEventArgs args)
-        {
-            return args.CollideWith.RigidBody.CollisionCategory == CollisionCategory.Cat3;
-        }
-        
-        private bool hit(CollisionEventArgs args)
-        {
-            return args.CollideWith != null;
-        }
-
-        void ICmpCollisionListener.OnCollisionEnd(Component sender, CollisionEventArgs args) {}
-        void ICmpCollisionListener.OnCollisionSolve(Component sender, CollisionEventArgs args) {}
-        void ICmpInitializable.OnShutdown(Component.ShutdownContext context) { }
- 
-        
     }
 
 

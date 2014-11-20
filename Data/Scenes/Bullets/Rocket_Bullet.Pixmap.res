@@ -1,0 +1,20 @@
+﻿<root dataType="Struct" type="Duality.Resources.Pixmap" id="129723834">
+  <animCols dataType="Int">0</animCols>
+  <animFrameBorder dataType="Int">0</animFrameBorder>
+  <animRows dataType="Int">0</animRows>
+  <atlas />
+  <layers dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Resources.Pixmap+Layer]]" id="427169525">
+    <_items dataType="Array" type="Duality.Resources.Pixmap+Layer[]" id="1100841590" length="4">
+      <item dataType="Struct" type="Duality.Resources.Pixmap+Layer" id="2824927200" custom="true">
+        <body>
+          <version dataType="Int">3</version>
+          <pixelData dataType="Array" type="System.Byte[]" id="3329633244">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</pixelData>
+        </body>
+      </item>
+    </_items>
+    <_size dataType="Int">1</_size>
+    <_version dataType="Int">2</_version>
+  </layers>
+  <sourcePath dataType="String">Source\Media\Mario_Bullet.png</sourcePath>
+</root>
+<!-- XmlFormatterBase Document Separator -->

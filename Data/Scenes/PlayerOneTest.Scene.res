@@ -198,8 +198,8 @@
             <angularDamp dataType="Float">0.3</angularDamp>
             <angularVel dataType="Float">0</angularVel>
             <bodyType dataType="Enum" type="Duality.Components.Physics.BodyType" name="Dynamic" value="1" />
-            <colCat dataType="Enum" type="Duality.Components.Physics.CollisionCategory" name="Cat1" value="1" />
-            <colWith dataType="Enum" type="Duality.Components.Physics.CollisionCategory" name="All" value="2147483647" />
+            <colCat dataType="Enum" type="Duality.Components.Physics.CollisionCategory" name="Cat3" value="4" />
+            <colWith dataType="Enum" type="Duality.Components.Physics.CollisionCategory" name="Cat1, Cat2, Cat4, Cat5" value="27" />
             <continous dataType="Bool">false</continous>
             <explicitMass dataType="Float">0</explicitMass>
             <fixedAngle dataType="Bool">false</fixedAngle>
@@ -246,12 +246,17 @@
             </shapes>
           </item>
           <item dataType="Struct" type="Dove_Game.Celes" id="1500407990">
-            <_x003C_distance_x003E_k__BackingField dataType="Float">0</_x003C_distance_x003E_k__BackingField>
-            <_x003C_force_x003E_k__BackingField dataType="Float">0</_x003C_force_x003E_k__BackingField>
             <active dataType="Bool">true</active>
+            <currentSA />
             <gameobj dataType="ObjectRef">2424607957</gameobj>
-            <healthPts dataType="Int">10</healthPts>
+            <healthPts dataType="Int">50</healthPts>
             <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
+            <lastFrame dataType="Int">0</lastFrame>
+            <movementSpeed dataType="Int">3</movementSpeed>
+            <vectorMove dataType="Struct" type="OpenTK.Vector2">
+              <X dataType="Float">0</X>
+              <Y dataType="Float">0</Y>
+            </vectorMove>
           </item>
         </_items>
         <_size dataType="Int">4</_size>

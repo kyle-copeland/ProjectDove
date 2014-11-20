@@ -11,53 +11,59 @@ using OpenTK.Input;
 using Duality.Components.Renderers;
 using Duality.Resources;
 using Dove_Game.Test_Logic;
+using Dove_Game.Enemies;
+
+// Collision Categories:
+// Player One       Category 1
+// Skills           Category 2
+// Enemies          Category 3
+// Level Components Category 4
+// Platforms        Category 5
 
 namespace Dove_Game
 {
     [Serializable]
     [RequiredComponent(typeof(RigidBody))]
-    public class PlayerOne : Component, ICmpUpdatable, ICmpCollisionListener
+    public class PlayerOne : Character
     {
-        private Vector2 vectorMove; // Keeps track of direction for forward movement when attacking.
-        private int lastFrame;  // Keeps track of last frame rendered for smoother animation blending.
+        // Specifies whether the main character is attacking or not.
+        private bool attacking;
 
-        // Material and resource references for special attacks.
-        private ContentRef<Material> kameBlast = GameRes.Data.Scenes.Components.KameBlast_Material;
-        private ContentRef<SpecialAttack_Goku> Sag_Goku = GameRes.Data.Scenes.SpecialAttacks.SSGoku_SpecialAttack_Goku_SpecialAttack_Goku;
+        public bool isAttacking { get { return this.attacking; } set { this.attacking = value; } }
 
-        // Maintain direction and currently executing special attack for fluid attack animation blending.
-        public static Direction direction;
-        private SpecialAttack currentSA;
-        void ICmpUpdatable.OnUpdate()
+        public override void OnUpdate()
         {
+            if (HealthPoints <= 0)
+                this.GameObj.DisposeLater();
+        
             RigidBody playerOne = this.GameObj.RigidBody;
             Transform playerMovement = this.GameObj.Transform;
             AnimSpriteRenderer playerSprite = this.GameObj.GetComponent<AnimSpriteRenderer>();
-            
-            if (currentSA == null)
+
+            if (CurrentSpecialAttack == null)
             {
                 // Move left
                 if (DualityApp.Keyboard[Key.Left])
                 {
-                    direction = Direction.Left;
-                    vectorMove = Vector2.UnitX * -1.0f;
-                    playerMovement.MoveBy(vectorMove * Time.TimeMult);
+                    CharDirection = Direction.Left;
+                    MovementVector = Vector2.UnitX * -1.0f;
+                    playerMovement.MoveBy(MovementVector * Time.TimeMult);
                 }
 
                 // Move right
                 else if (DualityApp.Keyboard[Key.Right])
                 {
-                    direction = Direction.Right;
-                    vectorMove = Vector2.UnitX * 1.0f;
-                    playerMovement.MoveBy(vectorMove * Time.TimeMult);
+                    CharDirection = Direction.Right;
+                    MovementVector = Vector2.UnitX * 1.0f;
+                    playerMovement.MoveBy(MovementVector * Time.TimeMult);
                 }
 
                 // Move up
                 else if (DualityApp.Keyboard[Key.Up])
                 {
-                    direction = Direction.Up;
-                    vectorMove = Vector2.UnitY * -1.0f;
-                    playerMovement.MoveBy(vectorMove * Time.TimeMult);
+                    CharDirection = Direction.Up;
+                    MovementVector = Vector2.UnitY * -1.0f;
+                    playerMovement.MoveBy(MovementVector * Time.TimeMult);
                 }
 
                 // Move down
@@ -76,9 +82,10 @@ namespace Dove_Game
                     playerSprite.AnimLoopMode = AnimSpriteRenderer.LoopMode.Loop;
                     playerSprite.AnimDuration = 1;
                     playerSprite.UpdateVisibleFrames();
+                    isAttacking = true;
 
                     // Move toward current direction and display attack.
-                    playerMovement.MoveBy(vectorMove * Time.TimeMult);
+                    playerMovement.MoveBy(MovementVector * Time.TimeMult);
                 }
 
                 // Kamehameha special skill
@@ -92,72 +99,81 @@ namespace Dove_Game
                     // Pause animation on blast frame for dramatic effect and create kamehameha.
                     if (playerSprite.CurrentFrame == 1)
                     {
+                        isAttacking = true;
                         playerSprite.AnimPaused = true;
-                        currentSA = SummonKamehameha();
+                        CurrentSpecialAttack = SummonKamehameha();
                     }
                 }
 
                 // All custom frame sequences end in 27, the current default animation for the Goku SpriteSheet. Reset after an attack animation.
-                if (playerSprite.CurrentFrame != lastFrame && playerSprite.CurrentFrame == 33)
+                if (playerSprite.CurrentFrame != LastFrame && playerSprite.CurrentFrame == 33)
                 {
+                    isAttacking = false;
                     playerSprite.CustomFrameSequence = new List<int>() { 33 };
                     playerSprite.AnimLoopMode = AnimSpriteRenderer.LoopMode.Once;
                 }
 
-                lastFrame = playerSprite.CurrentFrame;
+                LastFrame = playerSprite.CurrentFrame;
             }
 
             // Continue animation sequence after special attack ends.
-            else if(currentSA.Lifetime <= 0.0f)
+            else if (CurrentSpecialAttack.Lifetime <= 0.0f)
             {
                 playerSprite.AnimPaused = false;
-                currentSA = null;
+                CurrentSpecialAttack = null;
             }
         }
 
         // Creates the Kamehameha and adds it to the scene
         public SpecialAttack SummonKamehameha()
         {
-            SpecialAttack_Goku sgoku = this.Sag_Goku.Res;
+            SpecialAttack_Goku sgoku = ContentRefs.SS_Goku.Res;
             Transform playerMovement = this.GameObj.Transform;
-            if (sgoku == null) 
+            if (sgoku == null)
                 return null;
 
-            Kamehameha kame = sgoku.CreateKamehameha(playerMovement.Pos.X, playerMovement.Pos.Y, kameBlast);
+            Kamehameha kame = sgoku.CreateKamehameha(playerMovement.Pos.X, playerMovement.Pos.Y, ContentRefs.kameBlast, CharDirection);
             Scene.Current.AddObject(kame.GameObj);
             return kame;
         }
 
         // Collision detection
-        void ICmpCollisionListener.OnCollisionBegin(Component sender, CollisionEventArgs args)
+        public override void OnCollisionBegin(Component sender, CollisionEventArgs args)
         {
-            Celes temp = args.CollideWith.GetComponent<Celes>();
-            if(temp != null)
+            Enemy foe = args.CollideWith.GetComponent<Enemy>();
+            if (foe != null)
             {
                 // If user attacked, do damage to the collision object.
                 if (DualityApp.Keyboard[Key.S])
                 {
-                    temp.doDamage(10);
+                    foe.doDamage(20);
                 }
 
-                // Else, push the character back and apply damage if user collided with an enemy.
-                else
-                {
-                    Transform playerMovement = this.GameObj.Transform;
-                    playerMovement.MoveBy(vectorMove * -1.0f * 10.0f);
-                }
+                Transform playerMovement = this.GameObj.Transform;
+                playerMovement.MoveBy(MovementVector * -1.0f * 10.0f);
             }
         }
 
-        void ICmpCollisionListener.OnCollisionEnd(Component sender, CollisionEventArgs args)
+        public override void OnCollisionEnd(Component sender, CollisionEventArgs args)
         {
             Console.WriteLine("Placeholder code.");
         }
 
-        void ICmpCollisionListener.OnCollisionSolve(Component sender, CollisionEventArgs args)
+        public override void OnCollisionSolve(Component sender, CollisionEventArgs args)
         {
             Console.WriteLine("Placeholder code.");
         }
 
+        public override void OnInit(Component.InitContext context)
+        {
+            HealthPoints = int.MaxValue;
+            this.GameObj.RigidBody.CollisionCategory = CollisionCategory.Cat1;
+            this.GameObj.RigidBody.CollidesWith = CollisionCategory.Cat3 | CollisionCategory.Cat2 | CollisionCategory.Cat4 | CollisionCategory.Cat5;
+        }
+
+        public override void OnShutdown(Component.ShutdownContext context)
+        {
+            Console.WriteLine("Placeholder code.");
+        }
     }
 }

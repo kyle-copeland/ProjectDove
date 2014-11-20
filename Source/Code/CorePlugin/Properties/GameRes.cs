@@ -17,6 +17,10 @@ namespace GameRes
 					Thwomp_Texture.MakeAvailable();
 				}
 			}
+			public static class PlayerOne {
+				public static void LoadAll() {
+				}
+			}
 			public static class Side_Characters {
 				public static Duality.ContentRef<Duality.Resources.Material> Celes_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\Side Characters\Celes.Material.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Pixmap> Celes_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\Side Characters\Celes.Pixmap.res"); }}
@@ -53,6 +57,7 @@ namespace GameRes
 			}
 			public static void LoadAll() {
 				Enemies.LoadAll();
+				PlayerOne.LoadAll();
 				Side_Characters.LoadAll();
 			}
 		}
@@ -87,8 +92,14 @@ namespace GameRes
 			}
 			public static class Bullets {
 				public static Duality.ContentRef<Dove_Game.BulletBlueprint> BulletBlueprint_BulletBlueprint { get { return Duality.ContentProvider.RequestContent<Dove_Game.BulletBlueprint>(@"Data\Scenes\Bullets\BulletBlueprint.BulletBlueprint.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Material> Rocket_Bullet_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Scenes\Bullets\Rocket_Bullet.Material.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Pixmap> Rocket_Bullet_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Scenes\Bullets\Rocket_Bullet.Pixmap.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Texture> Rocket_Bullet_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Scenes\Bullets\Rocket_Bullet.Texture.res"); }}
 				public static void LoadAll() {
 					BulletBlueprint_BulletBlueprint.MakeAvailable();
+					Rocket_Bullet_Material.MakeAvailable();
+					Rocket_Bullet_Pixmap.MakeAvailable();
+					Rocket_Bullet_Texture.MakeAvailable();
 				}
 			}
 			public static class Components {
@@ -114,9 +125,11 @@ namespace GameRes
 				}
 			}
 			public static class SpecialAttacks {
-				public static Duality.ContentRef<Dove_Game.Test_Logic.SpecialAttack_Goku> SSGoku_SpecialAttack_Goku_SpecialAttack_Goku { get { return Duality.ContentProvider.RequestContent<Dove_Game.Test_Logic.SpecialAttack_Goku>(@"Data\Scenes\SpecialAttacks\SSGoku_SpecialAttack_Goku.SpecialAttack_Goku.res"); }}
+				public static Duality.ContentRef<Dove_Game.BulletBlueprint> RocketBullet_BulletBlueprint { get { return Duality.ContentProvider.RequestContent<Dove_Game.BulletBlueprint>(@"Data\Scenes\SpecialAttacks\RocketBullet.BulletBlueprint.res"); }}
+				public static Duality.ContentRef<Dove_Game.Test_Logic.SpecialAttack_Goku> SSGoku_SpecialAttack_Goku { get { return Duality.ContentProvider.RequestContent<Dove_Game.Test_Logic.SpecialAttack_Goku>(@"Data\Scenes\SpecialAttacks\SSGoku.SpecialAttack_Goku.res"); }}
 				public static void LoadAll() {
-					SSGoku_SpecialAttack_Goku_SpecialAttack_Goku.MakeAvailable();
+					RocketBullet_BulletBlueprint.MakeAvailable();
+					SSGoku_SpecialAttack_Goku.MakeAvailable();
 				}
 			}
 			public static Duality.ContentRef<Duality.Resources.Scene> AI_Testing_Center_Scene { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Scene>(@"Data\Scenes\AI Testing Center.Scene.res"); }}

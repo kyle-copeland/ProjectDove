@@ -124,9 +124,16 @@
         </item>
         <item dataType="Struct" type="Dove_Game.PlayerOne" id="4206881394">
           <active dataType="Bool">true</active>
+          <currentSA />
           <gameobj dataType="ObjectRef">2809610830</gameobj>
           <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
+          <kameBlast dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
+            <contentPath dataType="String">Data\Scenes\Components\KameBlast.Material.res</contentPath>
+          </kameBlast>
           <lastFrame dataType="Int">0</lastFrame>
+          <Sag_Goku dataType="Struct" type="Duality.ContentRef`1[[Dove_Game.Test_Logic.SpecialAttack_Goku]]">
+            <contentPath dataType="String">Data\Scenes\SpecialAttacks\SSGoku.SpecialAttack_Goku.res</contentPath>
+          </Sag_Goku>
           <vectorMove dataType="Struct" type="OpenTK.Vector2">
             <X dataType="Float">0</X>
             <Y dataType="Float">0</Y>

@@ -1,7 +1,7 @@
 ﻿<root dataType="Struct" type="Duality.Resources.Scene" id="129723834">
   <globalGravity dataType="Struct" type="OpenTK.Vector2">
     <X dataType="Float">0</X>
-    <Y dataType="Float">33</Y>
+    <Y dataType="Float">0</Y>
   </globalGravity>
   <serializeObj dataType="Array" type="Duality.GameObject[]" id="427169525">
     <item dataType="Struct" type="Duality.GameObject" id="1220341424">
@@ -166,7 +166,7 @@
             <angularDamp dataType="Float">0</angularDamp>
             <angularVel dataType="Float">0</angularVel>
             <bodyType dataType="Enum" type="Duality.Components.Physics.BodyType" name="Static" value="0" />
-            <colCat dataType="Enum" type="Duality.Components.Physics.CollisionCategory" name="Cat1" value="1" />
+            <colCat dataType="Enum" type="Duality.Components.Physics.CollisionCategory" name="Cat4" value="8" />
             <colWith dataType="Enum" type="Duality.Components.Physics.CollisionCategory" name="All" value="2147483647" />
             <continous dataType="Bool">false</continous>
             <explicitMass dataType="Float">0</explicitMass>
@@ -310,7 +310,7 @@
                 <_version dataType="Int">1</_version>
               </childIndex>
               <componentType dataType="ObjectRef">2960589070</componentType>
-              <prop dataType="PropertyInfo" id="2434802398" value="P:Dove_Game.Thwomp:ThwompSpeed" />
+              <prop />
               <val dataType="Float">150</val>
             </item>
           </_items>
@@ -396,7 +396,7 @@
             <angularDamp dataType="Float">0</angularDamp>
             <angularVel dataType="Float">0</angularVel>
             <bodyType dataType="Enum" type="Duality.Components.Physics.BodyType" name="Static" value="0" />
-            <colCat dataType="Enum" type="Duality.Components.Physics.CollisionCategory" name="Cat1" value="1" />
+            <colCat dataType="Enum" type="Duality.Components.Physics.CollisionCategory" name="Cat4" value="8" />
             <colWith dataType="Enum" type="Duality.Components.Physics.CollisionCategory" name="All" value="2147483647" />
             <continous dataType="Bool">false</continous>
             <explicitMass dataType="Float">0</explicitMass>

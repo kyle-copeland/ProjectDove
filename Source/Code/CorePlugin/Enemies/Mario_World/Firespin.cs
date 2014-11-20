@@ -5,28 +5,34 @@ using System.Text;
 
 using Duality;
 using OpenTK;
+using Dove_Game.Enemies;
 
 namespace Dove_Game
 {
     [Serializable]
-    public class Firespin : Component, ICmpUpdatable, ICmpCollisionListener
+    public class Firespin : EnvironmentEnemy
     {
-        public float FirespinSpeed { get; set; }
-
-        void ICmpUpdatable.OnUpdate()
-        {
-            this.GameObj.RigidBody.AngularVelocity = FirespinSpeed;
-        }
-
-        void ICmpCollisionListener.OnCollisionBegin(Component sender, CollisionEventArgs args)
+        public override void OnUpdate()
         {
         }
 
-        void ICmpCollisionListener.OnCollisionEnd(Component sender, CollisionEventArgs args)
+        public override void OnInit(Component.InitContext context)
+        {
+            base.OnInit(context); 
+            this.GameObj.RigidBody.AngularVelocity = MovementSpeed;
+        }
+        public override void OnCollisionBegin(Component sender, CollisionEventArgs args)
+        {
+            PlayerOne temp = args.CollideWith.GetComponent<PlayerOne>();
+            if (temp != null)
+                temp.doDamage(50);
+        }
+
+        public override void OnCollisionEnd(Component sender, CollisionEventArgs args)
         {
         }
 
-        void ICmpCollisionListener.OnCollisionSolve(Component sender, CollisionEventArgs args)
+        public override void OnCollisionSolve(Component sender, CollisionEventArgs args)
         {
         }
 
