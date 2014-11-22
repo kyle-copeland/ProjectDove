@@ -23,12 +23,14 @@ namespace Dove_Game.Enemies
         public float WeaponDelay { get { return this.weaponDelay; } set { this.weaponDelay = value; } }
         public int MovementSpeed { get { return this.movementSpeed; } set { this.movementSpeed = value; } }
  
-        //Basic movement will be left and right
         public virtual void Move(Vector2 unitDirection)
         {
             CharDirection = Direction.Right;
             RigidBody body = this.GameObj.RigidBody;
-            body.LinearVelocity = unitDirection * MovementSpeed;
+            if (unitDirection.X != 0)
+                body.LinearVelocity = new Vector2(unitDirection.X * MovementSpeed, body.LinearVelocity.Y);
+            else
+                body.LinearVelocity = new Vector2(body.LinearVelocity.X,unitDirection.Y * MovementSpeed);
         }
 
         //Initialize Collision Types

@@ -22,7 +22,7 @@ namespace Dove_Game
         {
             get { return lifetime; }
         }
-        public Bullet CreateBullet(Direction direction)
+        public Bullet CreateBullet(Direction direction, ContentRef<Material> bulletMaterial)
         {
             GameObject obj = new GameObject("Bullet");
             Transform transform = obj.AddComponent<Transform>();
@@ -30,8 +30,8 @@ namespace Dove_Game
             SpriteRenderer sprite = obj.AddComponent<SpriteRenderer>();
             Bullet bullet = obj.AddComponent<Bullet>();
 
-            Material spriteMaterial = ContentRefs.rocketBullet.Res ?? Material.SolidBlack.Res;
-            Vector2 spriteSize = spriteMaterial.MainTexture.IsAvailable ? spriteMaterial.MainTexture.Res.Size : new Vector2(20, 20);
+            Material spriteMaterial = bulletMaterial.Res ?? Material.SolidBlack.Res;
+            Vector2 spriteSize = bulletMaterial.Res.MainTexture.IsAvailable ? spriteMaterial.MainTexture.Res.Size : new Vector2(20, 20);
             float spriteRadius = MathF.Max(spriteSize.X, spriteSize.Y) * 0.25f;
 
             body.ClearShapes();
@@ -41,7 +41,7 @@ namespace Dove_Game
             body.CollisionCategory = CollisionCategory.Cat2;
             body.CollidesWith = CollisionCategory.Cat1;
             body.IgnoreGravity = true;
-            
+            body.FixedAngle = true;
             sprite.SharedMaterial = spriteMaterial;
             sprite.Rect = Rect.AlignCenter(0.0f, 0.0f, spriteSize.X, spriteSize.Y);
 

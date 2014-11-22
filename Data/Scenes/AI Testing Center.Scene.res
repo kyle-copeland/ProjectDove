@@ -259,6 +259,7 @@
           <item dataType="Struct" type="Dove_Game.RoverAI" id="4275461210">
             <active dataType="Bool">true</active>
             <currentSA />
+            <direction dataType="Enum" type="Dove_Game.Direction" name="Left" value="0" />
             <gameobj dataType="ObjectRef">4136050917</gameobj>
             <healthPts dataType="Int">50</healthPts>
             <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
@@ -268,6 +269,8 @@
               <X dataType="Float">0</X>
               <Y dataType="Float">0</Y>
             </vectorMove>
+            <weaponDelay dataType="Float">50</weaponDelay>
+            <weaponTimer dataType="Float">0</weaponTimer>
           </item>
         </_items>
         <_size dataType="Int">4</_size>
@@ -885,7 +888,7 @@
             </shapes>
           </item>
           <item dataType="Struct" type="Dove_Game.FloatAI" id="1151299421">
-            <_x003C_force_x003E_k__BackingField dataType="Float">10</_x003C_force_x003E_k__BackingField>
+            <_x003C_force_x003E_k__BackingField dataType="Float">15</_x003C_force_x003E_k__BackingField>
             <active dataType="Bool">true</active>
             <gameobj dataType="ObjectRef">918099952</gameobj>
             <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />

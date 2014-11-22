@@ -17,10 +17,6 @@ namespace GameRes
 					Thwomp_Texture.MakeAvailable();
 				}
 			}
-			public static class PlayerOne {
-				public static void LoadAll() {
-				}
-			}
 			public static class Side_Characters {
 				public static Duality.ContentRef<Duality.Resources.Material> Celes_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\Side Characters\Celes.Material.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Pixmap> Celes_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\Side Characters\Celes.Pixmap.res"); }}
@@ -57,7 +53,6 @@ namespace GameRes
 			}
 			public static void LoadAll() {
 				Enemies.LoadAll();
-				PlayerOne.LoadAll();
 				Side_Characters.LoadAll();
 			}
 		}
@@ -92,11 +87,13 @@ namespace GameRes
 			}
 			public static class Bullets {
 				public static Duality.ContentRef<Dove_Game.BulletBlueprint> BulletBlueprint_BulletBlueprint { get { return Duality.ContentProvider.RequestContent<Dove_Game.BulletBlueprint>(@"Data\Scenes\Bullets\BulletBlueprint.BulletBlueprint.res"); }}
+				public static Duality.ContentRef<Dove_Game.BulletBlueprint> DefaultBullet_BulletBlueprint { get { return Duality.ContentProvider.RequestContent<Dove_Game.BulletBlueprint>(@"Data\Scenes\Bullets\DefaultBullet.BulletBlueprint.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Material> Rocket_Bullet_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Scenes\Bullets\Rocket_Bullet.Material.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Pixmap> Rocket_Bullet_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Scenes\Bullets\Rocket_Bullet.Pixmap.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Texture> Rocket_Bullet_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Scenes\Bullets\Rocket_Bullet.Texture.res"); }}
 				public static void LoadAll() {
 					BulletBlueprint_BulletBlueprint.MakeAvailable();
+					DefaultBullet_BulletBlueprint.MakeAvailable();
 					Rocket_Bullet_Material.MakeAvailable();
 					Rocket_Bullet_Pixmap.MakeAvailable();
 					Rocket_Bullet_Texture.MakeAvailable();

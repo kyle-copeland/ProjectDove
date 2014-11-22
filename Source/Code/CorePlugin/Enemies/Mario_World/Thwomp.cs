@@ -49,15 +49,9 @@ namespace Dove_Game
             this.GameObj.Transform.MoveBy((Vector2.UnitY * MovementSpeed) * 10.0f);
         }
 
-        public override void OnCollisionEnd(Component sender, CollisionEventArgs args)
-        {
+        public override void OnCollisionEnd(Component sender, CollisionEventArgs args) {}
 
-        }
-
-        public override void OnCollisionSolve(Component sender, CollisionEventArgs args)
-        {
-
-        }
+        public override void OnCollisionSolve(Component sender, CollisionEventArgs args) {}
     }
 
 }
