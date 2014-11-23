@@ -27,6 +27,23 @@ namespace Dove_Game
             this.bulletBlueprint = Test_Logic.ContentRefs.BBP_rocketBullet;
             this.bulletMaterial = Test_Logic.ContentRefs.rocketBullet;
         }
+
+        private class Jump : BossAttack
+        {
+            public override void attack(Boss boss)
+            {
+ 	            Console.WriteLine("Jump");
+            }
+        }
+
+        private class FireballRainbow : BossAttack
+        {
+            public override void attack(Boss boss)
+            {
+                Console.WriteLine("Fireball Rainbow");
+            }
+        }
+ 
     }
 }
   

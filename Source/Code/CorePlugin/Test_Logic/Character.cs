@@ -18,7 +18,7 @@ namespace Dove_Game.Test_Logic
         private int healthPts;
         private Vector2 vectorMove;
         private SpecialAttack currentSA;
-        private Direction direction;
+        private Direction direction = Direction.Right;
 
         public int LastFrame                        { get { return this.lastFrame; } set { this.lastFrame = value; } }
         public int HealthPoints                     { get { return this.healthPts; } set { this.healthPts = value; } }

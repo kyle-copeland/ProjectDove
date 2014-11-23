@@ -207,7 +207,7 @@
             <bodyType dataType="Enum" type="Duality.Components.Physics.BodyType" name="Dynamic" value="1" />
             <colCat dataType="Enum" type="Duality.Components.Physics.CollisionCategory" name="Cat3" value="4" />
             <colWith dataType="Enum" type="Duality.Components.Physics.CollisionCategory" name="Cat1, Cat2, Cat4, Cat5" value="27" />
-            <continous dataType="Bool">false</continous>
+            <continous dataType="Bool">true</continous>
             <explicitMass dataType="Float">58.78</explicitMass>
             <fixedAngle dataType="Bool">true</fixedAngle>
             <gameobj dataType="ObjectRef">4136050917</gameobj>
@@ -220,7 +220,7 @@
             </joints>
             <linearDamp dataType="Float">0.3</linearDamp>
             <linearVel dataType="Struct" type="OpenTK.Vector2">
-              <X dataType="Float">0</X>
+              <X dataType="Float">20</X>
               <Y dataType="Float">0</Y>
             </linearVel>
             <revolutions dataType="Float">0</revolutions>
@@ -262,19 +262,20 @@
             <direction dataType="Enum" type="Dove_Game.Direction" name="Left" value="0" />
             <gameobj dataType="ObjectRef">4136050917</gameobj>
             <healthPts dataType="Int">50</healthPts>
+            <impulse dataType="Float">10</impulse>
             <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
             <lastFrame dataType="Int">0</lastFrame>
-            <movementSpeed dataType="Int">3</movementSpeed>
+            <movementSpeed dataType="Float">20</movementSpeed>
             <vectorMove dataType="Struct" type="OpenTK.Vector2">
               <X dataType="Float">0</X>
               <Y dataType="Float">0</Y>
             </vectorMove>
-            <weaponDelay dataType="Float">50</weaponDelay>
+            <weaponDelay dataType="Float">200</weaponDelay>
             <weaponTimer dataType="Float">0</weaponTimer>
           </item>
         </_items>
         <_size dataType="Int">4</_size>
-        <_version dataType="Int">10</_version>
+        <_version dataType="Int">12</_version>
       </compList>
       <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="605725376" surrogate="true">
         <header />

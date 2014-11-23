@@ -86,12 +86,18 @@ namespace GameRes
 				}
 			}
 			public static class Bullets {
+				public static Duality.ContentRef<Duality.Resources.Material> Arrows_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Scenes\Bullets\Arrows.Material.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Pixmap> Arrows_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Scenes\Bullets\Arrows.Pixmap.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Texture> Arrows_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Scenes\Bullets\Arrows.Texture.res"); }}
 				public static Duality.ContentRef<Dove_Game.BulletBlueprint> BulletBlueprint_BulletBlueprint { get { return Duality.ContentProvider.RequestContent<Dove_Game.BulletBlueprint>(@"Data\Scenes\Bullets\BulletBlueprint.BulletBlueprint.res"); }}
 				public static Duality.ContentRef<Dove_Game.BulletBlueprint> DefaultBullet_BulletBlueprint { get { return Duality.ContentProvider.RequestContent<Dove_Game.BulletBlueprint>(@"Data\Scenes\Bullets\DefaultBullet.BulletBlueprint.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Material> Rocket_Bullet_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Scenes\Bullets\Rocket_Bullet.Material.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Pixmap> Rocket_Bullet_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Scenes\Bullets\Rocket_Bullet.Pixmap.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Texture> Rocket_Bullet_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Scenes\Bullets\Rocket_Bullet.Texture.res"); }}
 				public static void LoadAll() {
+					Arrows_Material.MakeAvailable();
+					Arrows_Pixmap.MakeAvailable();
+					Arrows_Texture.MakeAvailable();
 					BulletBlueprint_BulletBlueprint.MakeAvailable();
 					DefaultBullet_BulletBlueprint.MakeAvailable();
 					Rocket_Bullet_Material.MakeAvailable();

@@ -15,22 +15,42 @@ namespace Dove_Game.Enemies
     // Base class characterizing components as enemies.
     public abstract class Enemy : Character 
     {
-        private int movementSpeed = 3;
+        private float impulse = 10;
+        protected float movementSpeed = 15;
         private float weaponTimer = 0.0f;
-        private float weaponDelay = 50.0f;
+        private float weaponDelay = 200.0f;
 
         public float WeaponTimer { get { return this.weaponTimer; } set { this.weaponTimer = value; } }
         public float WeaponDelay { get { return this.weaponDelay; } set { this.weaponDelay = value; } }
-        public int MovementSpeed { get { return this.movementSpeed; } set { this.movementSpeed = value; } }
- 
+    
         public virtual void Move(Vector2 unitDirection)
         {
-            CharDirection = Direction.Right;
             RigidBody body = this.GameObj.RigidBody;
-            if (unitDirection.X != 0)
-                body.LinearVelocity = new Vector2(unitDirection.X * MovementSpeed, body.LinearVelocity.Y);
-            else
-                body.LinearVelocity = new Vector2(body.LinearVelocity.X,unitDirection.Y * MovementSpeed);
+
+            //if direction desired is 
+            //X and speed < movement speed
+            if (unitDirection.X != 0 && Math.Abs(body.LinearVelocity.X) < Math.Abs(movementSpeed)) 
+                body.ApplyLocalForce(Vector2.UnitX * impulse);
+            else if (unitDirection.Y != 0 && Math.Abs(body.LinearVelocity.Y) < Math.Abs(movementSpeed))
+                body.ApplyLocalForce(Vector2.UnitY * impulse);
+        }
+
+        //on collision with character->deal damage
+        //anything else->change directions
+        public override void OnCollisionBegin(Component sender, CollisionEventArgs args)
+        {
+            PlayerOne mainCharacter = args.CollideWith.GetComponent<PlayerOne>();
+            if (mainCharacter != null && !mainCharacter.isAttacking)
+                mainCharacter.doDamage(10);
+
+            //if wall hit change Directions
+            if (args.CollideWith != null)
+                this.ChangeDirection();
+        }
+
+        public void ChangeDirection()
+        {
+            impulse *= -1;
         }
 
         //Initialize Collision Types
@@ -44,7 +64,7 @@ namespace Dove_Game.Enemies
 
         public override void OnShutdown(Component.ShutdownContext context)
         {
-            Console.WriteLine("Placeholder code.");
+           //"Placeholder code"
         }
     }
 

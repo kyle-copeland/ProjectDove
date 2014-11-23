@@ -19,7 +19,7 @@ namespace Dove_Game
         public override void OnInit(Component.InitContext context)
         {
             base.OnInit(context); 
-            this.GameObj.RigidBody.AngularVelocity = MovementSpeed;
+            this.GameObj.RigidBody.AngularVelocity = this.movementSpeed;
         }
         public override void OnCollisionBegin(Component sender, CollisionEventArgs args)
         {

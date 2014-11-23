@@ -24,28 +24,14 @@ namespace Dove_Game
             this.Move(Vector2.UnitX);
         }
 
-        // On collision with anything, reverse direction. Deal damage if colliding with main character.
-        public override void OnCollisionBegin(Component sender, CollisionEventArgs args)
-        {
-            PlayerOne mainCharacter = args.CollideWith.GetComponent<PlayerOne>();
-            if (mainCharacter != null && !mainCharacter.isAttacking)
-                mainCharacter.doDamage(10);
-
-            if (args.CollideWith.RigidBody.CollisionCategory != CollisionCategory.Cat5)
-            {
-                MovementSpeed *= -1;
-                this.GameObj.Transform.MoveBy((Vector2.UnitX * MovementSpeed) * 10.0f);
-            }
-        }
-
         public override void OnCollisionEnd(Component sender, CollisionEventArgs args)
         {
-            Console.WriteLine("Placeholder code.");
+           // Console.WriteLine("Placeholder code.");
         }
 
         public override void OnCollisionSolve(Component sender, CollisionEventArgs args)
         {
-            Console.WriteLine("Placeholder code.");
+           // Console.WriteLine("Placeholder code.");
         }
     }
 }

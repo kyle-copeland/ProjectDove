@@ -22,6 +22,8 @@ namespace Dove_Game
         {
             get { return lifetime; }
         }
+
+        //TODO: Allow for sprite sheets to be uses to allow bullets to face different directions
         public Bullet CreateBullet(Direction direction, ContentRef<Material> bulletMaterial)
         {
             GameObject obj = new GameObject("Bullet");

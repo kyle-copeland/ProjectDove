@@ -13,12 +13,20 @@ using Duality.Editor;
 using OpenTK;
 namespace Dove_Game.Enemies
 {
+    [Serializable]
+    [RequiredComponent(typeof(RigidBody))]
+    /*Each boss will have a set of BossAttacks.
+     These will be put into a List and randomly chosen on a timer
+     * Check out LinkBoss for an example
+     * I will continue to work on these tomorrow
+     */
     public abstract class Boss : Enemy
     {
         protected int touchDamage = 10;
         // each boss must specify its bullet information
         protected ContentRef<BulletBlueprint> bulletBlueprint = Test_Logic.ContentRefs.BBP_Default.Res; 
         protected ContentRef<Material> bulletMaterial = null;
+        protected int BulletSpeed = 30;
        
         public override void OnUpdate()
         {
@@ -44,22 +52,24 @@ namespace Dove_Game.Enemies
             {
                 float mainPosition = playerOne.GameObj.Transform.Pos.X;
                 float bossPosition = this.GameObj.Transform.Pos.X;
-
+                int relativeOffset = 150;
                 //if boss is moving right and player on left
-                if (bossPosition - mainPosition > 0 && MovementSpeed > 0)
+                float distance = bossPosition - mainPosition;
+                if (distance > relativeOffset &&  this.CharDirection == Direction.Right)
                 {
-                    MovementSpeed *= -1;
+                    this.ChangeDirection();
                     CharDirection = Direction.Left;
                 }
                 //if player is moving left and player is on right
-                else if (bossPosition - mainPosition < 0 && MovementSpeed < 0)
+                else if (distance < -relativeOffset && CharDirection == Direction.Left)
                 {
-                    MovementSpeed *= -1;
+                    this.ChangeDirection();
                     CharDirection = Direction.Right;
                 }
             }
         }
 
+        //Each Boss will have a special attach or series of special attacks
         public virtual void FireBullet(Vector2 localPos, float localAngle)
         {
             RigidBody body = this.GameObj.RigidBody;
@@ -67,9 +77,13 @@ namespace Dove_Game.Enemies
 
             WeaponTimer = WeaponDelay;
 
-           
             Bullet bullet = bulletBlueprint.Res.CreateBullet(CharDirection,bulletMaterial);
-            bullet.Fire(body.LinearVelocity, transform.GetWorldPoint(localPos), transform.Angle + localAngle, new Vector2(50,0));
+            Vector2 direction;
+            if (CharDirection == Direction.Right)
+                direction = new Vector2(BulletSpeed, 0);
+            else
+                direction = new Vector2(-BulletSpeed, 0);
+            bullet.Fire(body.LinearVelocity, transform.GetWorldPoint(localPos), transform.Angle + localAngle, direction);
             Scene.Current.AddObject(bullet.GameObj);
         }
 

@@ -45,8 +45,8 @@ namespace Dove_Game
             if (temp != null)
                 temp.doDamage(50);
 
-            MovementSpeed *= -1;
-            this.GameObj.Transform.MoveBy((Vector2.UnitY * MovementSpeed) * 10.0f);
+            this.ChangeDirection();
+           // this.GameObj.Transform.MoveBy((Vector2.UnitY * MovementSpeed) * 10.0f);
         }
 
         public override void OnCollisionEnd(Component sender, CollisionEventArgs args) {}
