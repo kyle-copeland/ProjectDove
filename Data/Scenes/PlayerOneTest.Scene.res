@@ -246,17 +246,12 @@
             </shapes>
           </item>
           <item dataType="Struct" type="Dove_Game.Celes" id="1500407990">
+            <_x003C_distance_x003E_k__BackingField dataType="Float">0</_x003C_distance_x003E_k__BackingField>
+            <_x003C_force_x003E_k__BackingField dataType="Float">0</_x003C_force_x003E_k__BackingField>
             <active dataType="Bool">true</active>
-            <currentSA />
             <gameobj dataType="ObjectRef">2424607957</gameobj>
             <healthPts dataType="Int">50</healthPts>
             <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
-            <lastFrame dataType="Int">0</lastFrame>
-            <movementSpeed dataType="Int">3</movementSpeed>
-            <vectorMove dataType="Struct" type="OpenTK.Vector2">
-              <X dataType="Float">0</X>
-              <Y dataType="Float">0</Y>
-            </vectorMove>
           </item>
         </_items>
         <_size dataType="Int">4</_size>

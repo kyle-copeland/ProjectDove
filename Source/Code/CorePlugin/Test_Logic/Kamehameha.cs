@@ -14,9 +14,9 @@ namespace Dove_Game.Test_Logic
     public class Kamehameha : SpecialAttack
     {
         // Set lifetime and direction of special attack.
-        public void InitFrom(SpecialAttack_Goku sg, Direction direction)
+        public void InitFrom(Direction direction)
         {
-            Lifetime = sg.Lifetime;
+            Lifetime = 2000.0f;
             AttackDirection = direction;
         }
 
@@ -25,6 +25,17 @@ namespace Dove_Game.Test_Logic
         {
             Lifetime -= Time.MsPFMult * Time.TimeMult;
             if (Lifetime <= 0.0f) this.GameObj.DisposeLater();
+        }
+
+        public override void OnInit(Component.InitContext context)
+        {
+            this.GameObj.RigidBody.CollisionCategory = CollisionCategory.Cat2;
+            this.GameObj.RigidBody.CollidesWith = CollisionCategory.Cat3;
+        }
+
+        public override void OnShutdown(Component.ShutdownContext context)
+        {
+
         }
 
         // If the attack hits an enemy, apply damage.

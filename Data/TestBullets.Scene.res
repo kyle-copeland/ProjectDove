@@ -398,13 +398,16 @@
           </item>
           <item dataType="Struct" type="Dove_Game.PlayerOne" id="269231931">
             <active dataType="Bool">true</active>
-            <attacking dataType="Bool">false</attacking>
             <currentSA />
-            <direction dataType="Enum" type="Dove_Game.Direction" name="Left" value="0" />
             <gameobj dataType="ObjectRef">3166928663</gameobj>
-            <healthPts dataType="Int">2147483647</healthPts>
             <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
+            <kameBlast dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
+              <contentPath dataType="String">Data\Scenes\Components\KameBlast.Material.res</contentPath>
+            </kameBlast>
             <lastFrame dataType="Int">0</lastFrame>
+            <Sag_Goku dataType="Struct" type="Duality.ContentRef`1[[Dove_Game.Test_Logic.SpecialAttack_Goku]]">
+              <contentPath dataType="String">Data\Scenes\SpecialAttacks\SSGoku_SpecialAttack_Goku.SpecialAttack_Goku.res</contentPath>
+            </Sag_Goku>
             <vectorMove dataType="Struct" type="OpenTK.Vector2">
               <X dataType="Float">0</X>
               <Y dataType="Float">0</Y>
@@ -447,7 +450,7 @@
       <active dataType="Bool">true</active>
       <children />
       <compList dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Component]]" id="1106847463">
-        <_items dataType="Array" type="Duality.Component[]" id="425353550">
+        <_items dataType="Array" type="Duality.Component[]" id="425353550" length="4">
           <item dataType="Struct" type="Duality.Components.Transform" id="3056683721">
             <active dataType="Bool">true</active>
             <angle dataType="Float">0</angle>
@@ -566,42 +569,6 @@
               <_version dataType="Int">3</_version>
             </shapes>
           </item>
-          <item dataType="Struct" type="Dove_Game.Enemies.Zelda_World.LinkBoss" id="1548163860">
-            <active dataType="Bool">true</active>
-            <attackCooldown dataType="Float">1000</attackCooldown>
-            <attacks />
-            <attackTimer dataType="Float">100</attackTimer>
-            <bulletBlueprint dataType="Struct" type="Duality.ContentRef`1[[Dove_Game.BulletBlueprint]]">
-              <contentPath dataType="String">Data\Scenes\Bullets\DefaultBullet.BulletBlueprint.res</contentPath>
-            </bulletBlueprint>
-            <bulletMaterial dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
-              <contentPath />
-            </bulletMaterial>
-            <BulletSpeed dataType="Int">30</BulletSpeed>
-            <currentSA />
-            <direction dataType="Enum" type="Dove_Game.Direction" name="Right" value="1" />
-            <gameobj dataType="ObjectRef">696368789</gameobj>
-            <healthPts dataType="Int">0</healthPts>
-            <impulse dataType="Float">10</impulse>
-            <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
-            <lastFrame dataType="Int">0</lastFrame>
-            <movementSpeed dataType="Float">15</movementSpeed>
-            <seqWalk dataType="Struct" type="System.Collections.Generic.List`1[[System.Int32]]" id="2495095232">
-              <_items dataType="Array" type="System.Int32[]" id="3818707740" length="4">
-                <item dataType="Int">0</item>
-                <item dataType="Int">1</item>
-              </_items>
-              <_size dataType="Int">2</_size>
-              <_version dataType="Int">2</_version>
-            </seqWalk>
-            <touchDamage dataType="Int">10</touchDamage>
-            <vectorMove dataType="Struct" type="OpenTK.Vector2">
-              <X dataType="Float">0</X>
-              <Y dataType="Float">0</Y>
-            </vectorMove>
-            <weaponDelay dataType="Float">200</weaponDelay>
-            <weaponTimer dataType="Float">0</weaponTimer>
-          </item>
         </_items>
         <_size dataType="Int">4</_size>
         <_version dataType="Int">8</_version>
@@ -613,13 +580,11 @@
             <item dataType="ObjectRef">1981071276</item>
             <item dataType="ObjectRef">1331415470</item>
             <item dataType="ObjectRef">3382837240</item>
-            <item dataType="Type" id="4233976358" value="Dove_Game.Enemies.Zelda_World.LinkBoss" />
           </keys>
           <values dataType="Array" type="Duality.Component[]" id="1646575800">
             <item dataType="ObjectRef">3056683721</item>
             <item dataType="ObjectRef">403804170</item>
             <item dataType="ObjectRef">3759145313</item>
-            <item dataType="ObjectRef">1548163860</item>
           </values>
         </body>
       </compMap>

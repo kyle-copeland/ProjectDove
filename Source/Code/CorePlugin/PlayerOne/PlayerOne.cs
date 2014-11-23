@@ -1,17 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-
+using Dove_Game.Enemies;
+using Dove_Game.Test_Logic;
 using Duality;
 using Duality.Components;
 using Duality.Components.Physics;
-using OpenTK;
-using OpenTK.Input;
 using Duality.Components.Renderers;
 using Duality.Resources;
-using Dove_Game.Test_Logic;
-using Dove_Game.Enemies;
+using OpenTK;
+using OpenTK.Input;
 
 // Collision Categories:
 // Player One       Category 1
@@ -26,83 +24,120 @@ namespace Dove_Game
     [RequiredComponent(typeof(RigidBody))]
     public class PlayerOne : Character
     {
-        // Specifies whether the main character is attacking or not.
-        private bool attacking;
+        private Character summonedCharacter;
 
-        public bool isAttacking { get { return this.attacking; } set { this.attacking = value; } }
+        // Specifies whether the main character is attacking or not.
+        private bool _attacking;
+
+        public bool isAttacking { get { return _attacking; } set { this._attacking = value; } }
 
         public override void OnUpdate()
         {
             if (HealthPoints <= 0)
                 this.GameObj.DisposeLater();
-        
+
             RigidBody playerOne = this.GameObj.RigidBody;
             Transform playerMovement = this.GameObj.Transform;
             AnimSpriteRenderer playerSprite = this.GameObj.GetComponent<AnimSpriteRenderer>();
+            RevoluteJointInfo motor = playerOne.Joints.OfType<RevoluteJointInfo>().FirstOrDefault();
 
-            if (CurrentSpecialAttack == null)
+            if (summonedCharacter == null && CurrentSpecialAttack == null)
             {
                 // Move left
                 if (DualityApp.Keyboard[Key.Left])
                 {
+                    playerSprite.AnimDuration = 1;
+                    playerSprite.AnimFirstFrame = 4;
+                    playerSprite.AnimFrameCount = 4;
+                    playerSprite.AnimLoopMode = AnimSpriteRenderer.LoopMode.Loop;
+
                     CharDirection = Direction.Left;
                     MovementVector = Vector2.UnitX * -1.0f;
-                    playerMovement.MoveBy(MovementVector * Time.TimeMult);
+                    motor.MotorSpeed = -0.5f;
+                    playerOne.ApplyWorldImpulse(-Vector2.UnitX * 0.45f);
+                    //playerMovement.MoveBy(MovementVector * Time.TimeMult);
                 }
 
                 // Move right
                 else if (DualityApp.Keyboard[Key.Right])
                 {
+                    playerSprite.AnimDuration = 1;
+                    playerSprite.AnimFirstFrame = 8;
+                    playerSprite.AnimFrameCount = 4;
+                    playerSprite.AnimLoopMode = AnimSpriteRenderer.LoopMode.Loop;
+
                     CharDirection = Direction.Right;
                     MovementVector = Vector2.UnitX * 1.0f;
-                    playerMovement.MoveBy(MovementVector * Time.TimeMult);
+                    motor.MotorSpeed = 0.5f;
+                    playerOne.ApplyWorldImpulse(Vector2.UnitX * 0.45f);
+                    //playerMovement.MoveBy(MovementVector * Time.TimeMult);
                 }
 
                 // Move up
                 else if (DualityApp.Keyboard[Key.Up])
                 {
-                    CharDirection = Direction.Up;
+                    if (CharDirection == Direction.Right)
+                        playerSprite.AnimFirstFrame = 0;
+                    else if (CharDirection == Direction.Left)
+                        playerSprite.AnimFirstFrame = 2;
+
+                    playerSprite.AnimDuration = 1;
+                    playerSprite.AnimFrameCount = 2;
+                    playerSprite.AnimLoopMode = AnimSpriteRenderer.LoopMode.Loop;
+                    
                     MovementVector = Vector2.UnitY * -1.0f;
-                    playerMovement.MoveBy(MovementVector * Time.TimeMult);
+                    playerOne.ApplyWorldImpulse(-Vector2.UnitY * 5.0f * 0.45f);
+                    //playerMovement.MoveBy(MovementVector * Time.TimeMult);
                 }
 
-                // Move down
-                //else if (DualityApp.Keyboard[Key.Down])
-                //{
-                //    direction = Direction.Down;
-                //    vectorMove = Vector2.UnitY * 1.0f;
-                //    playerMovement.MoveBy(vectorMove * Time.TimeMult);
-                //}
-
-                // Punch Sequence
+                // Gun Sequence
                 else if (DualityApp.Keyboard[Key.S])
                 {
-                    // Modify frame sequence to render punch sequence animation
-                    playerSprite.CustomFrameSequence = new List<int>() { 24, 25, 26, 33 };
-                    playerSprite.AnimLoopMode = AnimSpriteRenderer.LoopMode.Loop;
-                    playerSprite.AnimDuration = 1;
-                    playerSprite.UpdateVisibleFrames();
                     isAttacking = true;
 
-                    // Move toward current direction and display attack.
-                    playerMovement.MoveBy(MovementVector * Time.TimeMult);
+                    // Modify frame sequence to render punch sequence animation
+                    if (CharDirection == Direction.Right)
+                        playerSprite.AnimFirstFrame = 17;
+                    else if (CharDirection == Direction.Left)
+                        playerSprite.AnimFirstFrame = 12;
+
+                    playerSprite.AnimLoopMode = AnimSpriteRenderer.LoopMode.Loop;
+                    playerSprite.AnimDuration = 3;
+                    playerSprite.UpdateVisibleFrames();
+
+                    GameObject rocketBullet = Summon.SummonGameObject(SideCharacter.NoCharacter, Attack.Bullet, this);
+                    CurrentSpecialAttack = rocketBullet.GetComponent<PlayerOneBullet>();
+                    float bulletSpeed = 20;
+                    if (CharDirection == Direction.Left)
+                        bulletSpeed *= -1;
+
+                    ((PlayerOneBullet)CurrentSpecialAttack).Fire(playerOne.LinearVelocity, playerMovement.Pos.Xy, 0, new Vector2(bulletSpeed, 0.0f));
+                    Scene.Current.AddObject(rocketBullet);
                 }
 
                 // Kamehameha special skill
                 else if (DualityApp.Keyboard[Key.D])
                 {
-                    playerSprite.CustomFrameSequence = new List<int>() { 0, 1, 33 };
-                    playerSprite.AnimLoopMode = AnimSpriteRenderer.LoopMode.Loop;
+                    playerSprite.AnimFirstFrame = 20;
+                    playerSprite.AnimLoopMode = AnimSpriteRenderer.LoopMode.Once;
+                    playerSprite.AnimFrameCount = 2;
                     playerSprite.AnimDuration = 1;
-                    playerSprite.UpdateVisibleFrames();
 
-                    // Pause animation on blast frame for dramatic effect and create kamehameha.
-                    if (playerSprite.CurrentFrame == 1)
-                    {
-                        isAttacking = true;
-                        playerSprite.AnimPaused = true;
-                        CurrentSpecialAttack = SummonKamehameha();
-                    }
+                    GameObject goku = Summon.SummonGameObject(SideCharacter.Goku, Attack.NoAttack, this);
+                    summonedCharacter = goku.GetComponent<Goku>();
+                    Scene.Current.AddObject(goku);
+                }
+
+                else
+                {
+                    if (CharDirection == Direction.Right)
+                        playerSprite.AnimFirstFrame = 16;
+                    else if (CharDirection == Direction.Left)
+                        playerSprite.AnimFirstFrame = 12;
+
+                    playerSprite.AnimFrameCount = 1;
+                    playerSprite.AnimLoopMode = AnimSpriteRenderer.LoopMode.Loop;
+                    motor.MotorSpeed = 0.0f;
                 }
 
                 // All custom frame sequences end in 27, the current default animation for the Goku SpriteSheet. Reset after an attack animation.
@@ -117,25 +152,27 @@ namespace Dove_Game
             }
 
             // Continue animation sequence after special attack ends.
-            else if (CurrentSpecialAttack.Lifetime <= 0.0f)
+            else if ((summonedCharacter != null && summonedCharacter.CurrentSpecialAttack != null && summonedCharacter.CurrentSpecialAttack.Lifetime <= 0.0f) ||
+                (CurrentSpecialAttack != null && (CurrentSpecialAttack.FireDelay <= 0.0f || CurrentSpecialAttack.Lifetime <= 0.0f)))
             {
                 playerSprite.AnimPaused = false;
                 CurrentSpecialAttack = null;
+                summonedCharacter = null;
             }
         }
 
-        // Creates the Kamehameha and adds it to the scene
-        public SpecialAttack SummonKamehameha()
-        {
-            SpecialAttack_Goku sgoku = ContentRefs.SS_Goku.Res;
-            Transform playerMovement = this.GameObj.Transform;
-            if (sgoku == null)
-                return null;
+        //// Creates the Kamehameha and adds it to the scene
+        //public SpecialAttack SummonKamehameha()
+        //{
+        //    SpecialAttack_Goku sgoku = ContentRefs.SS_Goku.Res;
+        //    Transform playerMovement = this.GameObj.Transform;
+        //    if (sgoku == null)
+        //        return null;
 
-            Kamehameha kame = sgoku.CreateKamehameha(playerMovement.Pos.X, playerMovement.Pos.Y, ContentRefs.kameBlast, CharDirection);
-            Scene.Current.AddObject(kame.GameObj);
-            return kame;
-        }
+        //    Kamehameha kame = sgoku.CreateKamehameha(playerMovement.Pos.X, playerMovement.Pos.Y, ContentRefs.kameBlast, CharDirection);
+        //    Scene.Current.AddObject(kame.GameObj);
+        //    return kame;
+        //}
 
         // Collision detection
         public override void OnCollisionBegin(Component sender, CollisionEventArgs args)
@@ -156,12 +193,12 @@ namespace Dove_Game
 
         public override void OnCollisionEnd(Component sender, CollisionEventArgs args)
         {
-           // Console.WriteLine("Placeholder code.");
+
         }
 
         public override void OnCollisionSolve(Component sender, CollisionEventArgs args)
         {
-           // Console.WriteLine("Placeholder code.");
+
         }
 
         public override void OnInit(Component.InitContext context)
@@ -173,7 +210,7 @@ namespace Dove_Game
 
         public override void OnShutdown(Component.ShutdownContext context)
         {
-           // Console.WriteLine("Placeholder code.");
+
         }
     }
 }

@@ -19,9 +19,19 @@ namespace Dove_Game
     [RequiredComponent(typeof(RigidBody))]
     public class Goku : Character
     {
-        private int defaultFrameIndex = 33;
         private List<int> defaultFrameSequence = new List<int>() { 33 };
-        private List<int> kamehamehaFrameSequence = new List<int>() { 0, 1, 33 };
+        private List<int> dissolveFrameSequence = new List<int>() { 33, 33, 33, 33, 30, 31, 32, 10, 11, 33 };
+        private List<int> rightKamehamehaFrameSequence = new List<int>() { 33, 0, 1 };
+        private List<int> leftKamehamehaFrameSequence = new List<int>() { 33, 0, 1 };
+        private bool finishedKamehameha;
+
+        public List<int> kamehamehaFrameSequence
+        {
+            get
+            {
+                return CharDirection == Direction.Right ? rightKamehamehaFrameSequence : leftKamehamehaFrameSequence;
+            }
+        } 
 
         public override void OnUpdate()
         {
@@ -29,37 +39,48 @@ namespace Dove_Game
             Transform playerMovement = this.GameObj.Transform;
             AnimSpriteRenderer playerSprite = this.GameObj.GetComponent<AnimSpriteRenderer>();
 
-            if (CurrentSpecialAttack == null)
+            if (CurrentSpecialAttack == null && !finishedKamehameha)
             {
                 // Kamehameha special skill
                 playerSprite.CustomFrameSequence = kamehamehaFrameSequence;
-                playerSprite.AnimLoopMode = AnimSpriteRenderer.LoopMode.Loop;
-                playerSprite.AnimDuration = 1;
+                playerSprite.AnimLoopMode = AnimSpriteRenderer.LoopMode.Once;
+                playerSprite.AnimDuration = 2;
                 playerSprite.UpdateVisibleFrames();
 
                 // Pause animation on blast frame for dramatic effect and create kamehameha.
                 if (playerSprite.CurrentFrame == 1)
                 {
                     playerSprite.AnimPaused = true;
-                    CurrentSpecialAttack = SummonKamehameha();
+                    GameObject kame = Summon.SummonGameObject(SideCharacter.NoCharacter, Attack.Kamehameha, this);
+                    CurrentSpecialAttack = kame.GetComponent<Kamehameha>();
+                    Scene.Current.AddObject(kame);
                 }
-                
-                // All custom frame sequences end in 27, the current default animation for the Goku SpriteSheet. Reset after an attack animation.
-                if (playerSprite.CurrentFrame != LastFrame && playerSprite.CurrentFrame == defaultFrameIndex)
-                {
-                    playerSprite.CustomFrameSequence = defaultFrameSequence;
-                    playerSprite.AnimLoopMode = AnimSpriteRenderer.LoopMode.Once;
-                }
-
-                LastFrame = playerSprite.CurrentFrame;
             }
 
             // Continue animation sequence after special attack ends.
-            else if (CurrentSpecialAttack.Lifetime <= 0.0f)
+            else if (CurrentSpecialAttack != null && CurrentSpecialAttack.Lifetime <= 0.0f)
             {
+                playerSprite.CustomFrameSequence = defaultFrameSequence;
                 playerSprite.AnimPaused = false;
+                finishedKamehameha = true;
                 CurrentSpecialAttack = null;
             }
+
+            if (finishedKamehameha && playerSprite.CurrentFrame == 33)
+            {
+                playerSprite.CustomFrameSequence = dissolveFrameSequence;
+                playerSprite.AnimLoopMode = AnimSpriteRenderer.LoopMode.Once;
+                playerSprite.AnimDuration = 4;
+                playerSprite.UpdateVisibleFrames();
+
+                // All custom frame sequences end in 27, the current default animation for the Goku SpriteSheet. Reset after an attack animation.
+                if (playerSprite.CurrentFrame != LastFrame && playerSprite.CurrentFrame == 33)
+                {
+                    this.GameObj.DisposeLater();
+                }
+            }
+
+            LastFrame = playerSprite.CurrentFrame;
         }
 
         // Creates the Kamehameha and adds it to the scene

@@ -258,20 +258,10 @@
           </item>
           <item dataType="Struct" type="Dove_Game.RoverAI" id="4275461210">
             <active dataType="Bool">true</active>
-            <currentSA />
-            <direction dataType="Enum" type="Dove_Game.Direction" name="Left" value="0" />
             <gameobj dataType="ObjectRef">4136050917</gameobj>
-            <healthPts dataType="Int">50</healthPts>
-            <impulse dataType="Float">10</impulse>
+            <Health dataType="Int">3</Health>
             <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
-            <lastFrame dataType="Int">0</lastFrame>
-            <movementSpeed dataType="Float">20</movementSpeed>
-            <vectorMove dataType="Struct" type="OpenTK.Vector2">
-              <X dataType="Float">0</X>
-              <Y dataType="Float">0</Y>
-            </vectorMove>
-            <weaponDelay dataType="Float">200</weaponDelay>
-            <weaponTimer dataType="Float">0</weaponTimer>
+            <MovementSpeed dataType="Int">3</MovementSpeed>
           </item>
         </_items>
         <_size dataType="Int">4</_size>

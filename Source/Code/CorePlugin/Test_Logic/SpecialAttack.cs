@@ -1,9 +1,6 @@
 ﻿using Duality;
 using Duality.Components.Physics;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace Dove_Game.Test_Logic
 {
@@ -12,10 +9,16 @@ namespace Dove_Game.Test_Logic
 
     [Serializable]
     [RequiredComponent(typeof(RigidBody))]
-    public abstract class SpecialAttack : Component, ICmpUpdatable, ICmpCollisionListener
+    public abstract class SpecialAttack : Component, ICmpUpdatable, ICmpCollisionListener, ICmpInitializable
     {
         private float lifetime;
+        private float fireDelay;
         private Direction direction;
+        public float FireDelay
+        {
+            get { return this.fireDelay; }
+            set { this.fireDelay = value; }
+        }
         public float Lifetime
         {
             get { return this.lifetime; }
@@ -33,5 +36,9 @@ namespace Dove_Game.Test_Logic
         abstract public void OnCollisionEnd(Component sender, CollisionEventArgs args);
 
         abstract public void OnCollisionSolve(Component sender, CollisionEventArgs args);
+
+        abstract public void OnInit(Component.InitContext context);
+
+        abstract public void OnShutdown(Component.ShutdownContext context);
     }
 }

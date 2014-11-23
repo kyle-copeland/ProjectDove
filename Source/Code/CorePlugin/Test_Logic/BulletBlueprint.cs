@@ -30,7 +30,7 @@ namespace Dove_Game
             Transform transform = obj.AddComponent<Transform>();
             RigidBody body = obj.AddComponent<RigidBody>();
             SpriteRenderer sprite = obj.AddComponent<SpriteRenderer>();
-            Bullet bullet = obj.AddComponent<Bullet>();
+            EnemyBullet bullet = obj.AddComponent<EnemyBullet>();
 
             Material spriteMaterial = bulletMaterial.Res ?? Material.SolidBlack.Res;
             Vector2 spriteSize = bulletMaterial.Res.MainTexture.IsAvailable ? spriteMaterial.MainTexture.Res.Size : new Vector2(20, 20);
@@ -47,7 +47,7 @@ namespace Dove_Game
             sprite.SharedMaterial = spriteMaterial;
             sprite.Rect = Rect.AlignCenter(0.0f, 0.0f, spriteSize.X, spriteSize.Y);
 
-            bullet.InitFrom(this, direction);
+            bullet.InitFrom(direction);
             return bullet;
         }
     }

@@ -73,7 +73,7 @@ namespace Dove_Game.Test_Logic
             sprite.Rect = Rect.AlignLeft(gokuPos.X, gokuPos.Y, spriteSize.X, spriteSize.Y);
             
             // Set lifetime and blueprint for this object
-            kame.InitFrom(this, direction);
+            kame.InitFrom(direction);
 
             return kame;
         }

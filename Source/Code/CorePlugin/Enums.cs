@@ -12,4 +12,19 @@ namespace Dove_Game
         Up,
         Down
     }
+
+    public enum Attack
+    {
+        Kamehameha,
+        Bullet,
+        NoAttack
+    }
+
+    public enum SideCharacter
+    {
+        Goku,
+        Link,
+        Bowser,
+        NoCharacter
+    }
 }

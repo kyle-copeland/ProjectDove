@@ -48,10 +48,15 @@
   <ItemGroup>
     <Compile Include="AI_Logic\ChargeAI.cs" />
     <Compile Include="AI_Logic\JumpRover.cs" />
+    <Compile Include="Enemies\Boss.cs" />
+    <Compile Include="Enemies\BossAttack.cs" />
+    <Compile Include="Enemies\DBZ_World\GokuBoss.cs" />
     <Compile Include="Enemies\Enemy.cs" />
     <Compile Include="Enemies\EnvironmentEnemy.cs" />
     <Compile Include="Enemies\Mario_World\Firespin.cs" />
     <Compile Include="Enemies\Mario_World\MarioBoss.cs" />
+    <Compile Include="Enemies\SlenderBoss.cs" />
+    <Compile Include="Enemies\Zelda_World\LinkBoss.cs" />
     <Compile Include="Enums.cs" />
     <Compile Include="AI_Logic\FloatAI.cs" />
     <Compile Include="PlayerOne\PlayerOne.cs" />
@@ -68,13 +73,14 @@
     <Compile Include="Test_Logic\BulletBlueprint.cs" />
     <Compile Include="Test_Logic\Character.cs" />
     <Compile Include="Test_Logic\ContentRefs.cs" />
+    <Compile Include="Test_Logic\EnemyBullet.cs" />
     <Compile Include="Test_Logic\Kamehameha.cs" />
+    <Compile Include="Test_Logic\PlayerOneBullet.cs" />
     <Compile Include="Test_Logic\SpecialAttack.cs" />
     <Compile Include="Test_Logic\SpecialAttack_Goku.cs" />
+    <Compile Include="Test_Logic\Summon.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Enemies\DBZ_World\" />
-    <Folder Include="Enemies\Zelda_World\" />
     <Folder Include="Scene_Components\DBZ_World\" />
     <Folder Include="Scene_Components\Mario_World\" />
     <Folder Include="Scene_Components\Zelda_World\" />
