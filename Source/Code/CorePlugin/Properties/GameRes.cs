@@ -175,6 +175,7 @@ namespace GameRes
 				TestThwomp_Scene.MakeAvailable();
 			}
 		}
+		public static Duality.ContentRef<Duality.Resources.Scene> CanvasTest_Scene { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Scene>(@"Data\CanvasTest.Scene.res"); }}
 		public static Duality.ContentRef<Duality.Resources.Scene> Scene_Scene { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Scene>(@"Data\Scene.Scene.res"); }}
 		public static Duality.ContentRef<Duality.Resources.Scene> SpecialSkillTest_Scene { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Scene>(@"Data\SpecialSkillTest.Scene.res"); }}
 		public static Duality.ContentRef<Duality.Resources.Scene> TestBullets_Scene { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Scene>(@"Data\TestBullets.Scene.res"); }}
@@ -182,6 +183,7 @@ namespace GameRes
 			Characters.LoadAll();
 			Prefabs.LoadAll();
 			Scenes.LoadAll();
+			CanvasTest_Scene.MakeAvailable();
 			Scene_Scene.MakeAvailable();
 			SpecialSkillTest_Scene.MakeAvailable();
 			TestBullets_Scene.MakeAvailable();

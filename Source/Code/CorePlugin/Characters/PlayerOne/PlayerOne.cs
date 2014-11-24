@@ -34,7 +34,7 @@ namespace Dove_Game
         public override void OnUpdate()
         {
             if (HealthPoints <= 0)
-                this.GameObj.DisposeLater();
+                GameObj.DisposeLater();
 
             RigidBody playerOne = this.GameObj.RigidBody;
             Transform playerMovement = this.GameObj.Transform;
