@@ -9,6 +9,11 @@ namespace Dove_Game.Test_Logic
 {
     public static class ContentRefs
     {
+        // Scene References
+        public static ContentRef<Scene> StartScene = GameRes.Data.Start_Scene;
+        public static ContentRef<Scene> LevelOne = GameRes.Data.SpecialSkillTest_Scene;
+
+
 		public static ContentRef<Material> GokuContentRef = GameRes.Data.Characters.Side_Characters.Goku_2d_2_Material;
 
 		// Material and resource references for special attacks.

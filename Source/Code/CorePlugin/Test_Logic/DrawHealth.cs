@@ -13,12 +13,7 @@ namespace Dove_Game.Test_Logic
     public class DrawHealth : Component, ICmpRenderer
     {
         private ContentRef<Font> font = null;
-        private PlayerOne mainChar;
-        public PlayerOne MainCharacter
-        {
-            get { return this.mainChar; }
-            set { this.mainChar = value; }
-        }
+        private PlayerOne playerOne;
 
         [NonSerialized]
         private CanvasBuffer buffer = null;
@@ -33,6 +28,22 @@ namespace Dove_Game.Test_Logic
             get { return float.MaxValue; }
         }
 
+        //if (hasInputMethod && Player.IsAnyPlayerAlive && !this.hasReachedGoal)
+        //{
+        //    // Respawn when possible
+        //    this.respawnTime += Time.MsPFMult * Time.TimeMult;
+        //    if (this.respawnTime > RespawnDelay)
+        //    {
+        //        // Move near alive player
+        //        Player alivePlayer = Player.AlivePlayers.FirstOrDefault(); 
+        //        Vector3 alivePlayerPos = alivePlayer.controlObj.GameObj.Transform.Pos;
+        //        this.controlObj.GameObj.Transform.Pos = alivePlayerPos;
+
+        //        // Respawn
+        //        this.respawnTime = 0.0f;
+        //        this.controlObj.Revive();
+        //    }
+        //}
 
         public void Draw(IDrawDevice device)
         {
@@ -45,27 +56,27 @@ namespace Dove_Game.Test_Logic
             canvas.State.TextFont = this.font;
 
             // Retrieve players
-            if (MainCharacter == null)
-                MainCharacter = Scene.Current.FindComponents<PlayerOne>().FirstOrDefault();
-
-            // Is any player alive? Keep that value in mind, won't change here anyway.
-            // bool isAnyPlayerAlive = Player.IsAnyPlayerAlive;
+            if (playerOne == null)
+                playerOne = Scene.Current.FindComponents<PlayerOne>().FirstOrDefault();
 
             // Draw health and info of player one
-            bool active = false;;
-            canvas.State.ColorTint = ColorRgba.Green.WithAlpha(0.5f);
-            if (active)
+            canvas.State.ColorTint = ColorRgba.VeryLightGrey.WithAlpha(0.5f);
+            if (playerOne.HealthPoints > 0.0f)
             {
                 // Draw a health bar when alive
-                float health = 100;
-                canvas.DrawRect(10, device.TargetSize.Y - 10 - 200, 20, 200);
-                canvas.FillRect(12, device.TargetSize.Y - 10 - health * 198.0f, 16, health * 196.0f);
+                float health = playerOne.HealthPoints;
+
+                // Draw health bar label
+                string respawnText = string.Format("Health Points: {0} / 100", health);
+                canvas.DrawText(respawnText, 10, device.TargetSize.Y - 85, 0.0f, Alignment.BottomLeft);
+                canvas.DrawRect(10, device.TargetSize.Y - 80, 200.0f, 20);
+                canvas.FillRect(10, device.TargetSize.Y - 80, health * 2.0f, 16);
             }
             else
             {
                 // Draw a respawn timer when dead
-                float respawnPercentage = 1000.0f / 10000.0f;
-                string respawnText = string.Format("Respawn in {0:F1}", (10000.0f - 1000.0f) / 1000.0f);
+                float respawnPercentage = playerOne.ElaspedRespawnTime / playerOne.RespawnDelay;
+                string respawnText = string.Format("Respawn in {0:F1}", (playerOne.RespawnDelay - playerOne.ElaspedRespawnTime) / 1000.0f);
                 Vector2 textSize = canvas.MeasureText(string.Format("Respawn in {0:F1}", 0.0f));
                 canvas.DrawText(respawnText, 10, device.TargetSize.Y - 10, 0.0f, Alignment.BottomLeft);
                 canvas.FillRect(10, device.TargetSize.Y - 10 - textSize.Y, textSize.X * respawnPercentage, 3);

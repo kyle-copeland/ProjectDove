@@ -25,6 +25,20 @@ namespace Dove_Game
     public class PlayerOne : Character
     {
         private Character summonedCharacter;
+        private float elaspedRespawnTime;
+
+        public float ElaspedRespawnTime
+        {
+            get { return elaspedRespawnTime; }
+            set { elaspedRespawnTime = value; }
+        }
+
+        private const float _respawnDelay = 7000.0f;
+
+        public float RespawnDelay
+        {
+            get { return _respawnDelay; }
+        }
 
         // Specifies whether the main character is attacking or not.
         private bool _attacking;
@@ -33,15 +47,27 @@ namespace Dove_Game
 
         public override void OnUpdate()
         {
-            if (HealthPoints <= 0)
-                GameObj.DisposeLater();
-
             RigidBody playerOne = this.GameObj.RigidBody;
             Transform playerMovement = this.GameObj.Transform;
             AnimSpriteRenderer playerSprite = this.GameObj.GetComponent<AnimSpriteRenderer>();
             RevoluteJointInfo motor = playerOne.Joints.OfType<RevoluteJointInfo>().FirstOrDefault();
 
-            if (summonedCharacter == null && CurrentSpecialAttack == null)
+            if (HealthPoints <= 0)
+            {
+                ElaspedRespawnTime += Time.MsPFMult * Time.TimeMult;
+
+                playerSprite.AnimDuration = 4;
+                playerSprite.AnimFirstFrame = 21;
+                playerSprite.AnimFrameCount = 3;
+                playerSprite.AnimLoopMode = AnimSpriteRenderer.LoopMode.Once;
+
+                if (ElaspedRespawnTime >= RespawnDelay)
+                {
+                    GameObj.DisposeLater();
+                }
+            }
+
+            else if (summonedCharacter == null && CurrentSpecialAttack == null)
             {
                 // Move left
                 if (DualityApp.Keyboard[Key.Left])
@@ -118,6 +144,7 @@ namespace Dove_Game
                 // Kamehameha special skill
                 else if (DualityApp.Keyboard[Key.D])
                 {
+                    isAttacking = true;
                     playerSprite.AnimFirstFrame = 20;
                     playerSprite.AnimLoopMode = AnimSpriteRenderer.LoopMode.Once;
                     playerSprite.AnimFrameCount = 2;
@@ -158,21 +185,9 @@ namespace Dove_Game
                 playerSprite.AnimPaused = false;
                 CurrentSpecialAttack = null;
                 summonedCharacter = null;
+                isAttacking = false;
             }
         }
-
-        //// Creates the Kamehameha and adds it to the scene
-        //public SpecialAttack SummonKamehameha()
-        //{
-        //    SpecialAttack_Goku sgoku = ContentRefs.SS_Goku.Res;
-        //    Transform playerMovement = this.GameObj.Transform;
-        //    if (sgoku == null)
-        //        return null;
-
-        //    Kamehameha kame = sgoku.CreateKamehameha(playerMovement.Pos.X, playerMovement.Pos.Y, ContentRefs.kameBlast, CharDirection);
-        //    Scene.Current.AddObject(kame.GameObj);
-        //    return kame;
-        //}
 
         // Collision detection
         public override void OnCollisionBegin(Component sender, CollisionEventArgs args)
@@ -203,7 +218,8 @@ namespace Dove_Game
 
         public override void OnInit(Component.InitContext context)
         {
-            HealthPoints = int.MaxValue;
+            HealthPoints = 100;
+            ElaspedRespawnTime = 0.0f;
             this.GameObj.RigidBody.CollisionCategory = CollisionCategory.Cat1;
             this.GameObj.RigidBody.CollidesWith = CollisionCategory.Cat3 | CollisionCategory.Cat2 | CollisionCategory.Cat4 | CollisionCategory.Cat5;
         }

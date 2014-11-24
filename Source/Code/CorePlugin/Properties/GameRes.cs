@@ -89,6 +89,9 @@ namespace GameRes
 				public static Duality.ContentRef<Duality.Resources.Material> Mario_Sky_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Scenes\Backgrounds\Mario_Sky.Material.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Pixmap> Mario_Sky_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Scenes\Backgrounds\Mario_Sky.Pixmap.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Texture> Mario_Sky_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Scenes\Backgrounds\Mario_Sky.Texture.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Material> StartScene_UnknownPlayer_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Scenes\Backgrounds\StartScene_UnknownPlayer.Material.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Pixmap> StartScene_UnknownPlayer_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Scenes\Backgrounds\StartScene_UnknownPlayer.Pixmap.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Texture> StartScene_UnknownPlayer_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Scenes\Backgrounds\StartScene_UnknownPlayer.Texture.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Material> Test_ScrollMap_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Scenes\Backgrounds\Test_ScrollMap.Material.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Pixmap> Test_ScrollMap_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Scenes\Backgrounds\Test_ScrollMap.Pixmap.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Texture> Test_ScrollMap_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Scenes\Backgrounds\Test_ScrollMap.Texture.res"); }}
@@ -99,6 +102,9 @@ namespace GameRes
 					Mario_Sky_Material.MakeAvailable();
 					Mario_Sky_Pixmap.MakeAvailable();
 					Mario_Sky_Texture.MakeAvailable();
+					StartScene_UnknownPlayer_Material.MakeAvailable();
+					StartScene_UnknownPlayer_Pixmap.MakeAvailable();
+					StartScene_UnknownPlayer_Texture.MakeAvailable();
 					Test_ScrollMap_Material.MakeAvailable();
 					Test_ScrollMap_Pixmap.MakeAvailable();
 					Test_ScrollMap_Texture.MakeAvailable();
@@ -176,16 +182,16 @@ namespace GameRes
 			}
 		}
 		public static Duality.ContentRef<Duality.Resources.Scene> CanvasTest_Scene { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Scene>(@"Data\CanvasTest.Scene.res"); }}
-		public static Duality.ContentRef<Duality.Resources.Scene> Scene_Scene { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Scene>(@"Data\Scene.Scene.res"); }}
 		public static Duality.ContentRef<Duality.Resources.Scene> SpecialSkillTest_Scene { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Scene>(@"Data\SpecialSkillTest.Scene.res"); }}
+		public static Duality.ContentRef<Duality.Resources.Scene> Start_Scene { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Scene>(@"Data\Start.Scene.res"); }}
 		public static Duality.ContentRef<Duality.Resources.Scene> TestBullets_Scene { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Scene>(@"Data\TestBullets.Scene.res"); }}
 		public static void LoadAll() {
 			Characters.LoadAll();
 			Prefabs.LoadAll();
 			Scenes.LoadAll();
 			CanvasTest_Scene.MakeAvailable();
-			Scene_Scene.MakeAvailable();
 			SpecialSkillTest_Scene.MakeAvailable();
+			Start_Scene.MakeAvailable();
 			TestBullets_Scene.MakeAvailable();
 		}
 	}
