@@ -58,13 +58,11 @@ namespace Dove_Game.Enemies
                 if (distance > relativeOffset &&  this.CharDirection == Direction.Right)
                 {
                     this.ChangeDirection();
-                    CharDirection = Direction.Left;
                 }
                 //if player is moving left and player is on right
                 else if (distance < -relativeOffset && CharDirection == Direction.Left)
                 {
                     this.ChangeDirection();
-                    CharDirection = Direction.Right;
                 }
             }
         }
@@ -74,16 +72,12 @@ namespace Dove_Game.Enemies
         {
             RigidBody body = this.GameObj.RigidBody;
             Transform transform = this.GameObj.Transform;
-
+            //reset bullet timer
             WeaponTimer = WeaponDelay;
 
             Bullet bullet = bulletBlueprint.Res.CreateBullet(CharDirection,bulletMaterial);
-            Vector2 direction;
-            if (CharDirection == Direction.Right)
-                direction = new Vector2(BulletSpeed, 0);
-            else
-                direction = new Vector2(-BulletSpeed, 0);
-            bullet.Fire(body.LinearVelocity, transform.GetWorldPoint(localPos), transform.Angle + localAngle, direction);
+         
+            bullet.Fire(body.LinearVelocity, transform.GetWorldPoint(localPos), transform.Angle + localAngle, new Vector2(BulletSpeed,0));
             Scene.Current.AddObject(bullet.GameObj);
         }
 

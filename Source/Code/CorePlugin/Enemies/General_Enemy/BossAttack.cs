@@ -10,8 +10,8 @@ namespace Dove_Game.Enemies
     //Each boss will have special attacks
     //It may be droping a bomb, doing some flying animation, or charging the player
     //These attacks are privately defined per boss
-    public abstract class BossAttack
+    public interface BossAttack
     {
-        public abstract void attack(Boss boss);
+        void attack(Boss boss);
     }
 }

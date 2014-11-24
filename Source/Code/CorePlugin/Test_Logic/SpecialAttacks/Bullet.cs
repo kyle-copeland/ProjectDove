@@ -27,18 +27,17 @@ namespace Dove_Game
         // Dispose special attack after duration ends.
         public override void OnUpdate()
         {
-            FireDelay -= Time.MsPFMult * Time.TimeMult;
             Lifetime -= Time.MsPFMult * Time.TimeMult;
             if (Lifetime <= 0) this.GameObj.DisposeLater();
         }
 
-        public void Fire(Vector2 sourceDragVel, Vector2 position, float angle, Vector2 direction)
+        public void Fire(Vector2 sourceDragVel, Vector2 position, float angle, Vector2 speed)
         {
-            FireDelay = 700.0f;
             Transform transform = this.GameObj.Transform;
             RigidBody body = this.GameObj.RigidBody;
 
-            body.LinearVelocity = direction;
+            //if person is walking left shoot left else right
+            body.LinearVelocity = AttackDirection == Direction.Left ? speed*-1.0f : speed;
             transform.Pos = new Vector3(position, -2.0f);      
         }
     }

@@ -9,7 +9,7 @@ namespace Dove_Game.Enemies
     {
         private class Stun : BossAttack
         {
-            public override void attack(Boss boss)
+            public void attack(Boss boss)
             {
                 Console.WriteLine("Stun");
             }
@@ -17,7 +17,7 @@ namespace Dove_Game.Enemies
 
         private class BlackoutScreen : BossAttack
         {
-            public override void attack(Boss boss)
+            public void attack(Boss boss)
             {
                 Console.WriteLine("Blackout Screen");
             }
@@ -25,7 +25,7 @@ namespace Dove_Game.Enemies
 
         private class Charge : BossAttack
         {
-            public override void attack(Boss boss)
+            public void attack(Boss boss)
             {
                 Console.WriteLine("Charge");
             }

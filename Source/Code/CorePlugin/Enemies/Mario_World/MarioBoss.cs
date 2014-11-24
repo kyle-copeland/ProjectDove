@@ -30,7 +30,7 @@ namespace Dove_Game
 
         private class Jump : BossAttack
         {
-            public override void attack(Boss boss)
+            public void attack(Boss boss)
             {
  	            Console.WriteLine("Jump");
             }
@@ -38,7 +38,7 @@ namespace Dove_Game
 
         private class FireballRainbow : BossAttack
         {
-            public override void attack(Boss boss)
+            public void attack(Boss boss)
             {
                 Console.WriteLine("Fireball Rainbow");
             }

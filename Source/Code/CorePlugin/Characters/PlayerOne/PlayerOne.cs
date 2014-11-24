@@ -134,8 +134,8 @@ namespace Dove_Game
                     GameObject rocketBullet = Summon.SummonGameObject(SideCharacter.NoCharacter, Attack.Bullet, this);
                     CurrentSpecialAttack = rocketBullet.GetComponent<PlayerOneBullet>();
                     float bulletSpeed = 20;
-                    if (CharDirection == Direction.Left)
-                        bulletSpeed *= -1;
+                    /*if (CharDirection == Direction.Left)
+                        bulletSpeed *= -1;*/
 
                     ((PlayerOneBullet)CurrentSpecialAttack).Fire(playerOne.LinearVelocity, playerMovement.Pos.Xy, 0, new Vector2(bulletSpeed, 0.0f));
                     Scene.Current.AddObject(rocketBullet);

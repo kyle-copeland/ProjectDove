@@ -9,7 +9,7 @@ namespace Dove_Game.Enemies.DBZ_World
     {
         private class Kamahameha : BossAttack
         {
-            public override void attack(Boss boss)
+            public void attack(Boss boss)
             {
                 Console.WriteLine("Kamahameha");
             }
@@ -17,7 +17,7 @@ namespace Dove_Game.Enemies.DBZ_World
 
         private class Flyaround : BossAttack
         {
-            public override void attack(Boss boss)
+            public void attack(Boss boss)
             {
                 Console.WriteLine("Flyaround");
             }
@@ -25,7 +25,7 @@ namespace Dove_Game.Enemies.DBZ_World
 
         private class Charge : BossAttack
         {
-            public override void attack(Boss boss)
+            public void attack(Boss boss)
             {
                 Console.WriteLine("Charge");
             }

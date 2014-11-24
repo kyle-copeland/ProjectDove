@@ -64,7 +64,7 @@ namespace Dove_Game.Enemies.Zelda_World
         private class BombDrop : BossAttack
         {
             private List<int> seqBomb = new List<int>() { 0, 10, 20 };
-            public override void attack(Boss boss)
+            public void attack(Boss boss)
             {
                 Console.WriteLine("BombDrop");
             }
@@ -75,17 +75,13 @@ namespace Dove_Game.Enemies.Zelda_World
         private class ShootArrow : BossAttack
         {
             private List<int> seqBomb = new List<int>() { 0, 10, 20 };
-            public override void attack(Boss boss)
+            public void attack(Boss boss)
             {
                 //get materials
                 Bullet arrow = Test_Logic.ContentRefs.BBP_Default.Res.CreateBullet(boss.CharDirection, GameRes.Data.Scenes.Bullets.Arrows_Material);
-                Vector2 direction;
-                float bulletSpeed = 20;
-                if (boss.CharDirection == Direction.Right)
-                    direction = new Vector2(bulletSpeed, 0);
-                else
-                    direction = new Vector2(-bulletSpeed, 0);
-                arrow.Fire(boss.GameObj.RigidBody.LinearVelocity, boss.GameObj.Transform.GetWorldPoint(Vector2.Zero), 0, direction);
+                int bulletSpeed = 20;
+            
+                arrow.Fire(boss.GameObj.RigidBody.LinearVelocity, boss.GameObj.Transform.GetWorldPoint(Vector2.Zero), 0, new Vector2(bulletSpeed,0));
                 Scene.Current.AddObject(arrow.GameObj);
             }
         }
@@ -93,7 +89,7 @@ namespace Dove_Game.Enemies.Zelda_World
         private class Whirlwind : BossAttack 
         {
             private List<int> seqWhirlwind = new List<int>() { 0, 10, 20, 3 };
-            public override void attack(Boss boss)
+            public void attack(Boss boss)
             {
                 //spin and shoot up
                 RigidBody body = boss.GameObj.RigidBody;

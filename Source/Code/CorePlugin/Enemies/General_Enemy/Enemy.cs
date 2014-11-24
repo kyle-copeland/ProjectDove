@@ -50,6 +50,24 @@ namespace Dove_Game.Enemies
 
         public void ChangeDirection()
         {
+            switch (CharDirection)
+            {
+                case Direction.Right:
+                    CharDirection = Direction.Left;
+                    break;
+                case Direction.Left:
+                    CharDirection = Direction.Right;
+                    break;
+                case Direction.Up:
+                    CharDirection = Direction.Down;
+                    break;
+                case Direction.Down:
+                    CharDirection = Direction.Up;
+                    break;
+                default:
+                    CharDirection = Direction.Left;
+                    break;
+            }
             impulse *= -1;
         }
 
