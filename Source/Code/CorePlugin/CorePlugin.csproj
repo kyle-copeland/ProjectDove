@@ -58,6 +58,7 @@
     <Compile Include="Enemies\Boss_World\SlenderBoss.cs" />
     <Compile Include="Enemies\Zelda_World\LinkBoss.cs" />
     <Compile Include="Scene_Components\Test_World\StartScene.cs" />
+    <Compile Include="Test_Logic\CameraController.cs" />
     <Compile Include="Test_Logic\DrawHealth.cs" />
     <Compile Include="Test_Logic\GenericBaseLogic\Enumerations.cs" />
     <Compile Include="AI_Logic\FloatAI.cs" />

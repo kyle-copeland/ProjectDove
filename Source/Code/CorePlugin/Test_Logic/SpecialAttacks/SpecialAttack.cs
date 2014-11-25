@@ -12,7 +12,7 @@ namespace Dove_Game.Test_Logic
     public abstract class SpecialAttack : Component, ICmpUpdatable, ICmpCollisionListener, ICmpInitializable
     {
         private float lifetime;
-        private float fireDelay;
+        private float fireDelay = 400.0f;
         private Direction direction;
         public float FireDelay
         {

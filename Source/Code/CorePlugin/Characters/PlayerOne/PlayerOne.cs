@@ -24,6 +24,7 @@ namespace Dove_Game
     [RequiredComponent(typeof(RigidBody))]
     public class PlayerOne : Character
     {
+        private int sensorCount;
         private Character summonedCharacter;
         private float elaspedRespawnTime;
 
@@ -100,7 +101,7 @@ namespace Dove_Game
                 }
 
                 // Move up
-                else if (DualityApp.Keyboard[Key.Up])
+                else if (DualityApp.Keyboard[Key.Up])// && sensorCount > 0)
                 {
                     if (CharDirection == Direction.Right)
                         playerSprite.AnimFirstFrame = 0;
@@ -112,7 +113,7 @@ namespace Dove_Game
                     playerSprite.AnimLoopMode = AnimSpriteRenderer.LoopMode.Loop;
                     
                     MovementVector = Vector2.UnitY * -1.0f;
-                    playerOne.ApplyWorldImpulse(-Vector2.UnitY * 5.0f * 0.45f);
+                    playerOne.ApplyWorldImpulse(-Vector2.UnitY * 2.0f);
                     //playerMovement.MoveBy(MovementVector * Time.TimeMult);
                 }
 
@@ -204,10 +205,21 @@ namespace Dove_Game
                 Transform playerMovement = this.GameObj.Transform;
                 playerMovement.MoveBy(MovementVector * -1.0f * 10.0f);
             }
+
+            RigidBodyCollisionEventArgs bodyCollision = args as RigidBodyCollisionEventArgs;
+            if (bodyCollision == null) return;
+
+            if (bodyCollision.MyShape.IsSensor)
+                this.sensorCount++;
         }
 
         public override void OnCollisionEnd(Component sender, CollisionEventArgs args)
         {
+            RigidBodyCollisionEventArgs bodyCollision = args as RigidBodyCollisionEventArgs;
+            if (bodyCollision == null) return;
+
+            if (bodyCollision.MyShape.IsSensor)
+                this.sensorCount--;
 
         }
 

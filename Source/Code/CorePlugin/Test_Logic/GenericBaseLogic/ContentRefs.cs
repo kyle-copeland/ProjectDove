@@ -11,13 +11,12 @@ namespace Dove_Game.Test_Logic
     {
         // Scene References
         public static ContentRef<Scene> StartScene = GameRes.Data.Start_Scene;
-        public static ContentRef<Scene> LevelOne = GameRes.Data.SpecialSkillTest_Scene;
-
+        public static ContentRef<Scene> LevelOne = GameRes.Data.Dbz_LevelOne_Scene;
 
 		public static ContentRef<Material> GokuContentRef = GameRes.Data.Characters.Side_Characters.Goku_2d_2_Material;
 
 		// Material and resource references for special attacks.
-        public static ContentRef<Material> kameBlast = GameRes.Data.Scenes.Components.KameBlast_Material;
+        public static ContentRef<Material> kameBlast = GameRes.Data.Scenes.SpecialAttacks.Kamehameha_Material;
         public static ContentRef<SpecialAttack_Goku> SS_Goku = GameRes.Data.Scenes.SpecialAttacks.SSGoku_SpecialAttack_Goku;
 
         // Material and resource references for Bullet attacks.

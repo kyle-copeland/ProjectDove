@@ -51,9 +51,16 @@ namespace Dove_Game.Test_Logic
                     case Attack.Kamehameha:
                         Kamehameha kame = summonPiece.AddComponent<Kamehameha>();
                         kame.AttackDirection = main.CharDirection;
+
+                        sprite.AnimDuration = 1;
+                        sprite.AnimFrameCount = 3;
+                        sprite.AnimLoopMode = AnimSpriteRenderer.LoopMode.Loop;
+                        sprite.AnimFirstFrame = kame.AttackDirection == Direction.Right ? 0 : 3;
+
                         spriteMaterial = ContentRefs.kameBlast.Res;
                         spriteSize = spriteMaterial.MainTexture.IsAvailable ? spriteMaterial.MainTexture.Res.Size : new Vector2(5, 5);
-                        spriteSize.X *= 2.0f;
+                        spriteSize.X /= 2.25f;
+                        spriteSize.Y /= 2.0f;
                         createKamehameha(ref summonPiece, new Vector2(playerOneRectX, playerOneRectY), main.CharDirection, spriteSize);
                         break;
 

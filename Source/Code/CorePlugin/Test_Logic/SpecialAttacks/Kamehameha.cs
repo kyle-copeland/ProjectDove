@@ -50,12 +50,12 @@ namespace Dove_Game.Test_Logic
 
         public override void OnCollisionEnd(Component sender, CollisionEventArgs args)
         {
-            Console.WriteLine("Placeholder code.");
+            
         }
 
         public override void OnCollisionSolve(Component sender, CollisionEventArgs args)
         {
-            Console.WriteLine("Placeholder code.");
+            
         }
     }
 }

@@ -26,12 +26,12 @@ namespace Dove_Game
 
         public override void OnCollisionEnd(Component sender, CollisionEventArgs args)
         {
-           // Console.WriteLine("Placeholder code.");
+
         }
 
         public override void OnCollisionSolve(Component sender, CollisionEventArgs args)
         {
-           // Console.WriteLine("Placeholder code.");
+
         }
     }
 }
