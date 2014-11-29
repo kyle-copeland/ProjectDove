@@ -128,9 +128,9 @@ namespace Dove_Game.Test_Logic
         {
             RigidBody body = summonPiece.GetComponent<RigidBody>();
             float spriteRadius = MathF.Max(spriteSize.X, spriteSize.Y) * 0.25f;
-
+            float bulletBodyPos = direction == Direction.Right ? spriteRadius : -spriteRadius;
             body.ClearShapes();
-            CircleShapeInfo circleShape = new CircleShapeInfo(spriteRadius, Vector2.Zero, 1.0f);
+            CircleShapeInfo circleShape = new CircleShapeInfo(spriteRadius, new Vector2(playerPos.X + bulletBodyPos, -spriteRadius), 1.0f);
             circleShape.IsSensor = false;
             body.AddShape(circleShape);
             body.CollisionCategory = CollisionCategory.Cat2;

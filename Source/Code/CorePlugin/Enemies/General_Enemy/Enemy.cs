@@ -5,7 +5,7 @@ using System.Text;
 
 using Duality;
 using Duality.Components.Physics;
-
+using Duality.Resources;
 using OpenTK;
 using Dove_Game.Test_Logic;
 namespace Dove_Game.Enemies
@@ -83,6 +83,24 @@ namespace Dove_Game.Enemies
         public override void OnShutdown(Component.ShutdownContext context)
         {
            //"Placeholder code"
+        }
+
+
+        public bool DetectPlayerOneNearby()
+        {
+            var playerOne = Scene.Current.FindComponent<PlayerOne>();
+
+            if (playerOne != null)
+            {
+                float mainPos = playerOne.GameObj.Transform.Pos.X;
+                float enemyPos = GameObj.Transform.Pos.X;
+                const float relativeOffset = 150.0f;
+
+                if (mainPos >= enemyPos - relativeOffset && mainPos <= enemyPos + relativeOffset)
+                    return true;
+            }
+
+            return false;
         }
     }
 

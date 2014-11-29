@@ -13,8 +13,14 @@ namespace Dove_Game.Scene_Components.Test_World
         {
             if (DualityApp.Keyboard[Key.Enter])
             {
-                Scene.SwitchTo(ContentRefs.LevelOne);
+                Scene.Entered += (sender, e) => DrawDialog.AssignDialogScript(sender, e, DialogScripts.introScript); ;
+                Scene.SwitchTo(ContentRefs.DbzDialogOne);
             }
+        }
+
+        public void TestMessage(object sender, EventArgs e)
+        {
+            Console.WriteLine(Scene.Current.Name);
         }
     }
 }
