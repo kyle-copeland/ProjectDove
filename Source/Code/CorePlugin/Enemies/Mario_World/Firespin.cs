@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 
 using Duality;
+using Duality.Components.Physics;
 using OpenTK;
 using Dove_Game.Enemies;
 
@@ -14,12 +15,13 @@ namespace Dove_Game
     {
         public override void OnUpdate()
         {
+            this.GameObj.RigidBody.AngularVelocity = 0.05f;
         }
 
         public override void OnInit(Component.InitContext context)
         {
-            base.OnInit(context); 
-            this.GameObj.RigidBody.AngularVelocity = this.movementSpeed;
+            this.GameObj.RigidBody.CollidesWith = CollisionCategory.Cat1 | CollisionCategory.Cat2;
+
         }
         public override void OnCollisionBegin(Component sender, CollisionEventArgs args)
         {
