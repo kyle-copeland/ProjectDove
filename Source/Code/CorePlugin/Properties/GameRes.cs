@@ -140,25 +140,19 @@ namespace GameRes
 			}
 		}
 		public static class Prefabs {
-			public static Duality.ContentRef<Duality.Resources.Prefab> Brick_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\Brick.Prefab.res"); }}
 			public static Duality.ContentRef<Duality.Resources.Prefab> CloudsT_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\CloudsT.Prefab.res"); }}
 			public static Duality.ContentRef<Duality.Resources.Prefab> Firespin_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\Firespin.Prefab.res"); }}
 			public static Duality.ContentRef<Duality.Resources.Prefab> Goku_2d_2_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\Goku_2d_2.Prefab.res"); }}
 			public static Duality.ContentRef<Duality.Resources.Prefab> Pipe_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\Pipe.Prefab.res"); }}
 			public static Duality.ContentRef<Duality.Resources.Prefab> PlayerOne_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\PlayerOne.Prefab.res"); }}
-			public static Duality.ContentRef<Duality.Resources.Prefab> QuestionBox_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\QuestionBox.Prefab.res"); }}
-			public static Duality.ContentRef<Duality.Resources.Prefab> Solid_Brick_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\Solid Brick.Prefab.res"); }}
 			public static Duality.ContentRef<Duality.Resources.Prefab> Thwomp_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\Thwomp.Prefab.res"); }}
 			public static Duality.ContentRef<Duality.Resources.Prefab> White_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\White.Prefab.res"); }}
 			public static void LoadAll() {
-				Brick_Prefab.MakeAvailable();
 				CloudsT_Prefab.MakeAvailable();
 				Firespin_Prefab.MakeAvailable();
 				Goku_2d_2_Prefab.MakeAvailable();
 				Pipe_Prefab.MakeAvailable();
 				PlayerOne_Prefab.MakeAvailable();
-				QuestionBox_Prefab.MakeAvailable();
-				Solid_Brick_Prefab.MakeAvailable();
 				Thwomp_Prefab.MakeAvailable();
 				White_Prefab.MakeAvailable();
 			}
