@@ -15,7 +15,7 @@
       <header />
       <body>
         <mainTex dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Texture]]">
-          <contentPath dataType="String">Data\Characters\Enemies\Dbz_World\KingKai.Texture.res</contentPath>
+          <contentPath dataType="String">Data\Scenes\Backgrounds\Lost Map1.Texture.res</contentPath>
         </mainTex>
       </body>
     </textures>

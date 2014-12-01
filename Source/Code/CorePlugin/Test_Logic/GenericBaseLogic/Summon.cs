@@ -58,9 +58,12 @@ namespace Dove_Game.Test_Logic
                         sprite.AnimFirstFrame = kame.AttackDirection == Direction.Right ? 0 : 3;
 
                         spriteMaterial = ContentRefs.kameBlast.Res;
-                        spriteSize = spriteMaterial.MainTexture.IsAvailable ? spriteMaterial.MainTexture.Res.Size : new Vector2(5, 5);
-                        spriteSize.X /= 2.25f;
-                        spriteSize.Y /= 2.0f;
+                        spriteSize = spriteMaterial.MainTexture.IsAvailable ? new Vector2(300.0f, 40.0f) : new Vector2(5, 5);
+
+                        //  For old kamehameha sprite
+                        //  spriteSize = spriteMaterial.MainTexture.IsAvailable ? spriteMaterial.MainTexture.Res.Size : new Vector2(5, 5);
+                        //  spriteSize.X /= 2.25f;
+                        //  spriteSize.Y /= 2.0f;
                         createKamehameha(ref summonPiece, new Vector2(playerOneRectX, playerOneRectY), main.CharDirection, spriteSize);
                         break;
 

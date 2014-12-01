@@ -15,7 +15,7 @@
       <header />
       <body>
         <mainTex dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Texture]]">
-          <contentPath dataType="String">Data\Characters\Enemies\Dbz_World\Jeice.Texture.res</contentPath>
+          <contentPath dataType="String">Data\Characters\Enemies\Dbz_World\SnakeWay\Dbz_Frieza.Texture.res</contentPath>
         </mainTex>
       </body>
     </textures>

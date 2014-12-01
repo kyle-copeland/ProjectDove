@@ -86,6 +86,8 @@
     <Compile Include="Test_Logic\SpecialAttacks\SpecialAttack.cs" />
     <Compile Include="Test_Logic\Blueprints\SpecialAttack_Goku.cs" />
     <Compile Include="Test_Logic\GenericBaseLogic\Summon.cs" />
+    <Compile Include="Test_Logic\WorldComponent.cs" />
+    <Compile Include="Test_Logic\WorldSelectionMap.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Scene_Components\DBZ_World\" />
