@@ -15,7 +15,7 @@
       <header />
       <body>
         <mainTex dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Texture]]">
-          <contentPath dataType="String">Data\Scenes\Components\Clouds.Texture.res</contentPath>
+          <contentPath dataType="String">Data\Characters\DialogImage\goku_hero.Texture.res</contentPath>
         </mainTex>
       </body>
     </textures>

@@ -11,7 +11,11 @@ namespace Dove_Game.Test_Logic
     {
         // Scene References
         public static ContentRef<Scene> StartScene = GameRes.Data.Start_Scene;
-        public static ContentRef<Scene> LevelOne = GameRes.Data.Dbz_LevelOne_Scene;
+        public static ContentRef<Scene> DbzDialogOne = GameRes.Data.CanvasTest_Scene;
+        public static ContentRef<Scene> DbzLevelOne = GameRes.Data.Dbz_LevelOne_Scene;
+
+        public static ContentRef<Material> BigHeadGoku = GameRes.Data.Characters.DialogImage.bigheadgoku_Material;
+        public static ContentRef<Material> GokuHero = GameRes.Data.Characters.DialogImage.goku_hero_Material;
 
 		public static ContentRef<Material> GokuContentRef = GameRes.Data.Characters.Side_Characters.Goku_2d_2_Material;
 
