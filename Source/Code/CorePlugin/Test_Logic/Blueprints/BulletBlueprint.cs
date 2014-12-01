@@ -24,12 +24,13 @@ namespace Dove_Game
         }
 
         //TODO: Allow for sprite sheets to be uses to allow bullets to face different directions
-        public Bullet CreateBullet(Direction direction, ContentRef<Material> bulletMaterial)
+        public Bullet CreateBullet(Direction direction, ContentRef<Material> bulletMaterial, bool isAnimated = false, List<int> seq = null)
         {
             GameObject obj = new GameObject("Bullet");
             Transform transform = obj.AddComponent<Transform>();
             RigidBody body = obj.AddComponent<RigidBody>();
-            SpriteRenderer sprite = obj.AddComponent<SpriteRenderer>();
+           
+            
             EnemyBullet bullet = obj.AddComponent<EnemyBullet>();
 
             Material spriteMaterial = bulletMaterial.Res ?? Material.SolidBlack.Res;
@@ -44,8 +45,22 @@ namespace Dove_Game
             body.CollidesWith = CollisionCategory.Cat1;
             body.IgnoreGravity = true;
             body.FixedAngle = true;
-            sprite.SharedMaterial = spriteMaterial;
-            sprite.Rect = Rect.AlignCenter(0.0f, 0.0f, spriteSize.X, spriteSize.Y);
+
+            if(isAnimated)
+            {
+                AnimSpriteRenderer sprite = obj.AddComponent<AnimSpriteRenderer>();
+                sprite.SharedMaterial = spriteMaterial;
+                sprite.Rect = Rect.AlignCenter(0.0f, 0.0f, spriteSize.X, spriteSize.Y);
+                sprite.CustomFrameSequence = seq;
+                sprite.AnimDuration = 1;
+            }
+            else
+            {
+                SpriteRenderer sprite = obj.AddComponent<SpriteRenderer>();
+                sprite.SharedMaterial = spriteMaterial;
+                sprite.Rect = Rect.AlignCenter(0.0f, 0.0f, spriteSize.X, spriteSize.Y);
+            }
+           
 
             bullet.InitFrom(direction);
             return bullet;

@@ -23,7 +23,7 @@ namespace Dove_Game
             Console.WriteLine(value);
             if(value == 0 && r.LinearVelocity.Y == 0)
             {
-                r.ApplyLocalImpulse(Vector2.UnitY * -1.0f * force * Time.TimeMult);
+                r.ApplyLocalImpulse(Vector2.UnitY * -1.0f * force);
             }
 
 

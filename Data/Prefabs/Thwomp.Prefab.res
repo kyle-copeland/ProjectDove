@@ -59,7 +59,7 @@
           </rect>
           <rectMode dataType="Enum" type="Duality.Components.Renderers.SpriteRenderer+UVMode" name="Stretch" value="0" />
           <sharedMat dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
-            <contentPath dataType="String">Data\Characters\Enemies\Thwomp.Material.res</contentPath>
+            <contentPath dataType="String">Data\Characters\Enemies\MarioWorld\Thwomp.Material.res</contentPath>
           </sharedMat>
           <visibilityGroup dataType="Enum" type="Duality.Drawing.VisibilityFlag" name="Group0" value="1" />
         </item>
@@ -116,6 +116,7 @@
           </shapes>
         </item>
         <item dataType="Struct" type="Dove_Game.Thwomp" id="314283199">
+          <_x003C_ThwompSpeed_x003E_k__BackingField dataType="Float">0</_x003C_ThwompSpeed_x003E_k__BackingField>
           <active dataType="Bool">true</active>
           <gameobj dataType="ObjectRef">1950543485</gameobj>
           <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />

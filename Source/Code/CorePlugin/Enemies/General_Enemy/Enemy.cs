@@ -18,7 +18,7 @@ namespace Dove_Game.Enemies
         private float impulse = 10;
         protected float movementSpeed = 15;
         private float weaponTimer = 0.0f;
-        private float weaponDelay = 200.0f;
+        private float weaponDelay = 1000.0f;
 
         public float WeaponTimer { get { return this.weaponTimer; } set { this.weaponTimer = value; } }
         public float WeaponDelay { get { return this.weaponDelay; } set { this.weaponDelay = value; } }

@@ -27,7 +27,11 @@ namespace Dove_Game.Enemies
         protected ContentRef<BulletBlueprint> bulletBlueprint = Test_Logic.ContentRefs.BBP_Default.Res; 
         protected ContentRef<Material> bulletMaterial = null;
         protected int BulletSpeed = 30;
-       
+
+        public int nextAttack = 0;
+
+        private Direction playerPosition = Direction.Left;
+        public Direction PlayerPosition { get { return playerPosition; } }
         public override void OnUpdate()
         {
             WeaponTimer -= Time.MsPFMult * Time.TimeMult;
@@ -39,8 +43,8 @@ namespace Dove_Game.Enemies
 
         public override void Move(Vector2 unitDirection)
         {
-            MoveTowardsPlayerOne();
-            base.Move(unitDirection);
+           MoveTowardsPlayerOne();
+           // base.Move(unitDirection);
         }
 
         //Follows Player 
@@ -58,11 +62,13 @@ namespace Dove_Game.Enemies
                 if (distance > relativeOffset &&  this.CharDirection == Direction.Right)
                 {
                     this.ChangeDirection();
+                    playerPosition = Direction.Left;
                 }
                 //if player is moving left and player is on right
                 else if (distance < -relativeOffset && CharDirection == Direction.Left)
                 {
                     this.ChangeDirection();
+                    playerPosition = Direction.Right;
                 }
             }
         }
@@ -92,5 +98,11 @@ namespace Dove_Game.Enemies
         public override void OnCollisionEnd(Component sender, CollisionEventArgs args) { }
 
         public override void OnCollisionSolve(Component sender, CollisionEventArgs args) { }
+
+        //Aux. functions
+        public static bool onGround(RigidBody body)
+        {
+            return body.LinearVelocity.Y == 0;
+        }
     }
 }

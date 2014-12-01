@@ -55,10 +55,7 @@ namespace Dove_Game.Enemies.Zelda_World
             base.Move(Vector2.UnitX);
         }
         
-        private bool onGround(RigidBody body)
-        {
-            return body.LinearVelocity.Y == 0;
-        }
+      
         //Special Moves
         //Drops a bomb that will explode 5 seconds later
         private class BombDrop : BossAttack
