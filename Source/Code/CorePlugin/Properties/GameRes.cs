@@ -62,9 +62,15 @@ namespace GameRes
 						Thwomp_Texture.MakeAvailable();
 					}
 				}
+				public static Duality.ContentRef<Duality.Resources.Material> Thwomp_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\Enemies\Thwomp.Material.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Pixmap> Thwomp_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\Enemies\Thwomp.Pixmap.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Texture> Thwomp_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Characters\Enemies\Thwomp.Texture.res"); }}
 				public static void LoadAll() {
 					Dbz_World.LoadAll();
 					MarioWorld.LoadAll();
+					Thwomp_Material.MakeAvailable();
+					Thwomp_Pixmap.MakeAvailable();
+					Thwomp_Texture.MakeAvailable();
 				}
 			}
 			public static class PlayerOne {
@@ -121,18 +127,6 @@ namespace GameRes
 			}
 		}
 		public static class Music {
-			public static class DragonballZ {
-				public static void LoadAll() {
-				}
-			}
-			public static class Link {
-				public static void LoadAll() {
-				}
-			}
-			public static class Mario {
-				public static void LoadAll() {
-				}
-			}
 			public static class Menu {
 				public static Duality.ContentRef<Duality.Resources.AudioData> Main_Menu_AudioData { get { return Duality.ContentProvider.RequestContent<Duality.Resources.AudioData>(@"Data\Music\Menu\Main Menu.AudioData.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Sound> Main_Menu_Sound { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Sound>(@"Data\Music\Menu\Main Menu.Sound.res"); }}
@@ -141,16 +135,8 @@ namespace GameRes
 					Main_Menu_Sound.MakeAvailable();
 				}
 			}
-			public static class Slender {
-				public static void LoadAll() {
-				}
-			}
 			public static void LoadAll() {
-				DragonballZ.LoadAll();
-				Link.LoadAll();
-				Mario.LoadAll();
 				Menu.LoadAll();
-				Slender.LoadAll();
 			}
 		}
 		public static class Prefabs {
@@ -247,6 +233,9 @@ namespace GameRes
 				public static Duality.ContentRef<Duality.Resources.Material> Fireball_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Scenes\Components\Fireball.Material.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Pixmap> Fireball_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Scenes\Components\Fireball.Pixmap.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Texture> Fireball_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Scenes\Components\Fireball.Texture.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Material> Firespin_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Scenes\Components\Firespin.Material.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Pixmap> Firespin_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Scenes\Components\Firespin.Pixmap.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Texture> Firespin_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Scenes\Components\Firespin.Texture.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Material> Flag2_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Scenes\Components\Flag2.Material.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Pixmap> Flag2_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Scenes\Components\Flag2.Pixmap.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Texture> Flag2_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Scenes\Components\Flag2.Texture.res"); }}
@@ -271,6 +260,9 @@ namespace GameRes
 				public static Duality.ContentRef<Duality.Resources.Material> Solid_Brick_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Scenes\Components\Solid Brick.Material.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Pixmap> Solid_Brick_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Scenes\Components\Solid Brick.Pixmap.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Texture> Solid_Brick_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Scenes\Components\Solid Brick.Texture.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Material> Thwomp_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Scenes\Components\Thwomp.Material.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Pixmap> Thwomp_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Scenes\Components\Thwomp.Pixmap.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Texture> Thwomp_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Scenes\Components\Thwomp.Texture.res"); }}
 				public static void LoadAll() {
 					Brick_Material.MakeAvailable();
 					Brick_Pixmap.MakeAvailable();
@@ -284,6 +276,9 @@ namespace GameRes
 					Fireball_Material.MakeAvailable();
 					Fireball_Pixmap.MakeAvailable();
 					Fireball_Texture.MakeAvailable();
+					Firespin_Material.MakeAvailable();
+					Firespin_Pixmap.MakeAvailable();
+					Firespin_Texture.MakeAvailable();
 					Flag2_Material.MakeAvailable();
 					Flag2_Pixmap.MakeAvailable();
 					Flag2_Texture.MakeAvailable();
@@ -308,6 +303,9 @@ namespace GameRes
 					Solid_Brick_Material.MakeAvailable();
 					Solid_Brick_Pixmap.MakeAvailable();
 					Solid_Brick_Texture.MakeAvailable();
+					Thwomp_Material.MakeAvailable();
+					Thwomp_Pixmap.MakeAvailable();
+					Thwomp_Texture.MakeAvailable();
 				}
 			}
 			public static class SpecialAttacks {
