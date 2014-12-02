@@ -195,6 +195,18 @@ namespace GameRes
 			}
 		}
 		public static class Music {
+			public static class DragonballZ {
+				public static void LoadAll() {
+				}
+			}
+			public static class Link {
+				public static void LoadAll() {
+				}
+			}
+			public static class Mario {
+				public static void LoadAll() {
+				}
+			}
 			public static class Menu {
 				public static Duality.ContentRef<Duality.Resources.AudioData> Main_Menu_AudioData { get { return Duality.ContentProvider.RequestContent<Duality.Resources.AudioData>(@"Data\Music\Menu\Main Menu.AudioData.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Sound> Main_Menu_Sound { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Sound>(@"Data\Music\Menu\Main Menu.Sound.res"); }}
@@ -203,8 +215,16 @@ namespace GameRes
 					Main_Menu_Sound.MakeAvailable();
 				}
 			}
+			public static class Slender {
+				public static void LoadAll() {
+				}
+			}
 			public static void LoadAll() {
+				DragonballZ.LoadAll();
+				Link.LoadAll();
+				Mario.LoadAll();
 				Menu.LoadAll();
+				Slender.LoadAll();
 			}
 		}
 		public static class Prefabs {
