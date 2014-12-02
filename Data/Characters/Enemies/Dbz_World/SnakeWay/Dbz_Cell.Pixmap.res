@@ -1,60 +1,204 @@
 ﻿<root dataType="Struct" type="Duality.Resources.Pixmap" id="129723834">
-  <animCols dataType="Int">1</animCols>
+  <animCols dataType="Int">4</animCols>
   <animFrameBorder dataType="Int">0</animFrameBorder>
   <animRows dataType="Int">8</animRows>
   <atlas dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Rect]]" id="427169525">
     <_items dataType="Array" type="Duality.Rect[]" id="1100841590">
       <item dataType="Struct" type="Duality.Rect">
         <H dataType="Float">47</H>
-        <W dataType="Float">144</W>
+        <W dataType="Float">40</W>
         <X dataType="Float">0</X>
-        <Y dataType="Float">0</Y>
+        <Y dataType="Float">9</Y>
       </item>
       <item dataType="Struct" type="Duality.Rect">
         <H dataType="Float">47</H>
-        <W dataType="Float">144</W>
-        <X dataType="Float">0</X>
-        <Y dataType="Float">47</Y>
+        <W dataType="Float">40</W>
+        <X dataType="Float">32</X>
+        <Y dataType="Float">9</Y>
       </item>
       <item dataType="Struct" type="Duality.Rect">
         <H dataType="Float">47</H>
-        <W dataType="Float">144</W>
+        <W dataType="Float">40</W>
+        <X dataType="Float">64</X>
+        <Y dataType="Float">9</Y>
+      </item>
+      <item dataType="Struct" type="Duality.Rect">
+        <H dataType="Float">47</H>
+        <W dataType="Float">40</W>
+        <X dataType="Float">96</X>
+        <Y dataType="Float">9</Y>
+      </item>
+      <item dataType="Struct" type="Duality.Rect">
+        <H dataType="Float">47</H>
+        <W dataType="Float">36</W>
+        <X dataType="Float">0</X>
+        <Y dataType="Float">52</Y>
+      </item>
+      <item dataType="Struct" type="Duality.Rect">
+        <H dataType="Float">47</H>
+        <W dataType="Float">36</W>
+        <X dataType="Float">36</X>
+        <Y dataType="Float">52</Y>
+      </item>
+      <item dataType="Struct" type="Duality.Rect">
+        <H dataType="Float">47</H>
+        <W dataType="Float">36</W>
+        <X dataType="Float">72</X>
+        <Y dataType="Float">52</Y>
+      </item>
+      <item dataType="Struct" type="Duality.Rect">
+        <H dataType="Float">47</H>
+        <W dataType="Float">36</W>
+        <X dataType="Float">72</X>
+        <Y dataType="Float">52</Y>
+      </item>
+      <item dataType="Struct" type="Duality.Rect">
+        <H dataType="Float">47</H>
+        <W dataType="Float">36</W>
         <X dataType="Float">0</X>
         <Y dataType="Float">94</Y>
       </item>
       <item dataType="Struct" type="Duality.Rect">
         <H dataType="Float">47</H>
-        <W dataType="Float">144</W>
+        <W dataType="Float">36</W>
+        <X dataType="Float">36</X>
+        <Y dataType="Float">94</Y>
+      </item>
+      <item dataType="Struct" type="Duality.Rect">
+        <H dataType="Float">47</H>
+        <W dataType="Float">36</W>
+        <X dataType="Float">72</X>
+        <Y dataType="Float">94</Y>
+      </item>
+      <item dataType="Struct" type="Duality.Rect">
+        <H dataType="Float">47</H>
+        <W dataType="Float">36</W>
+        <X dataType="Float">72</X>
+        <Y dataType="Float">94</Y>
+      </item>
+      <item dataType="Struct" type="Duality.Rect">
+        <H dataType="Float">47</H>
+        <W dataType="Float">36</W>
         <X dataType="Float">0</X>
         <Y dataType="Float">141</Y>
       </item>
       <item dataType="Struct" type="Duality.Rect">
         <H dataType="Float">47</H>
-        <W dataType="Float">144</W>
+        <W dataType="Float">36</W>
+        <X dataType="Float">36</X>
+        <Y dataType="Float">141</Y>
+      </item>
+      <item dataType="Struct" type="Duality.Rect">
+        <H dataType="Float">47</H>
+        <W dataType="Float">36</W>
+        <X dataType="Float">36</X>
+        <Y dataType="Float">141</Y>
+      </item>
+      <item dataType="Struct" type="Duality.Rect">
+        <H dataType="Float">47</H>
+        <W dataType="Float">36</W>
+        <X dataType="Float">36</X>
+        <Y dataType="Float">141</Y>
+      </item>
+      <item dataType="Struct" type="Duality.Rect">
+        <H dataType="Float">47</H>
+        <W dataType="Float">36</W>
         <X dataType="Float">0</X>
         <Y dataType="Float">188</Y>
       </item>
       <item dataType="Struct" type="Duality.Rect">
         <H dataType="Float">47</H>
-        <W dataType="Float">144</W>
-        <X dataType="Float">0</X>
-        <Y dataType="Float">235</Y>
+        <W dataType="Float">36</W>
+        <X dataType="Float">36</X>
+        <Y dataType="Float">188</Y>
       </item>
       <item dataType="Struct" type="Duality.Rect">
         <H dataType="Float">47</H>
-        <W dataType="Float">144</W>
-        <X dataType="Float">0</X>
-        <Y dataType="Float">282</Y>
+        <W dataType="Float">36</W>
+        <X dataType="Float">72</X>
+        <Y dataType="Float">188</Y>
       </item>
       <item dataType="Struct" type="Duality.Rect">
         <H dataType="Float">47</H>
-        <W dataType="Float">144</W>
-        <X dataType="Float">0</X>
-        <Y dataType="Float">329</Y>
+        <W dataType="Float">36</W>
+        <X dataType="Float">108</X>
+        <Y dataType="Float">188</Y>
+      </item>
+      <item dataType="Struct" type="Duality.Rect">
+        <H dataType="Float">47</H>
+        <W dataType="Float">36</W>
+        <X dataType="Float">36</X>
+        <Y dataType="Float">225</Y>
+      </item>
+      <item dataType="Struct" type="Duality.Rect">
+        <H dataType="Float">47</H>
+        <W dataType="Float">36</W>
+        <X dataType="Float">36</X>
+        <Y dataType="Float">225</Y>
+      </item>
+      <item dataType="Struct" type="Duality.Rect">
+        <H dataType="Float">47</H>
+        <W dataType="Float">36</W>
+        <X dataType="Float">72</X>
+        <Y dataType="Float">225</Y>
+      </item>
+      <item dataType="Struct" type="Duality.Rect">
+        <H dataType="Float">47</H>
+        <W dataType="Float">36</W>
+        <X dataType="Float">108</X>
+        <Y dataType="Float">225</Y>
+      </item>
+      <item dataType="Struct" type="Duality.Rect">
+        <H dataType="Float">47</H>
+        <W dataType="Float">36</W>
+        <X dataType="Float">36</X>
+        <Y dataType="Float">275</Y>
+      </item>
+      <item dataType="Struct" type="Duality.Rect">
+        <H dataType="Float">47</H>
+        <W dataType="Float">36</W>
+        <X dataType="Float">36</X>
+        <Y dataType="Float">275</Y>
+      </item>
+      <item dataType="Struct" type="Duality.Rect">
+        <H dataType="Float">47</H>
+        <W dataType="Float">36</W>
+        <X dataType="Float">72</X>
+        <Y dataType="Float">275</Y>
+      </item>
+      <item dataType="Struct" type="Duality.Rect">
+        <H dataType="Float">47</H>
+        <W dataType="Float">36</W>
+        <X dataType="Float">108</X>
+        <Y dataType="Float">275</Y>
+      </item>
+      <item dataType="Struct" type="Duality.Rect">
+        <H dataType="Float">47</H>
+        <W dataType="Float">36</W>
+        <X dataType="Float">72</X>
+        <Y dataType="Float">315</Y>
+      </item>
+      <item dataType="Struct" type="Duality.Rect">
+        <H dataType="Float">47</H>
+        <W dataType="Float">36</W>
+        <X dataType="Float">72</X>
+        <Y dataType="Float">315</Y>
+      </item>
+      <item dataType="Struct" type="Duality.Rect">
+        <H dataType="Float">47</H>
+        <W dataType="Float">36</W>
+        <X dataType="Float">72</X>
+        <Y dataType="Float">315</Y>
+      </item>
+      <item dataType="Struct" type="Duality.Rect">
+        <H dataType="Float">47</H>
+        <W dataType="Float">36</W>
+        <X dataType="Float">108</X>
+        <Y dataType="Float">315</Y>
       </item>
     </_items>
-    <_size dataType="Int">8</_size>
-    <_version dataType="Int">8</_version>
+    <_size dataType="Int">32</_size>
+    <_version dataType="Int">123</_version>
   </atlas>
   <layers dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Resources.Pixmap+Layer]]" id="2035693768">
     <_items dataType="Array" type="Duality.Resources.Pixmap+Layer[]" id="2696347487" length="4">
