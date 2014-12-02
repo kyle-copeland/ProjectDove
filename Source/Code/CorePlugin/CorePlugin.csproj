@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="AI_Logic\ChargeAI.cs" />
     <Compile Include="AI_Logic\JumpRover.cs" />
+    <Compile Include="Characters\SideCharacters\Bowser.cs" />
     <Compile Include="Enemies\DbzEnemy.cs" />
     <Compile Include="Enemies\DBZ_World\DbzJeice.cs" />
     <Compile Include="Enemies\General_Enemy\Boss.cs" />

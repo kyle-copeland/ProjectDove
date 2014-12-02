@@ -63,6 +63,9 @@ namespace GameRes
 						public static Duality.ContentRef<Duality.Resources.Material> Jeice_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\Enemies\Dbz_World\SnakeWay\Jeice.Material.res"); }}
 						public static Duality.ContentRef<Duality.Resources.Pixmap> Jeice_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\Enemies\Dbz_World\SnakeWay\Jeice.Pixmap.res"); }}
 						public static Duality.ContentRef<Duality.Resources.Texture> Jeice_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Characters\Enemies\Dbz_World\SnakeWay\Jeice.Texture.res"); }}
+						public static Duality.ContentRef<Duality.Resources.Material> MajinBuu_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\Enemies\Dbz_World\SnakeWay\MajinBuu.Material.res"); }}
+						public static Duality.ContentRef<Duality.Resources.Pixmap> MajinBuu_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\Enemies\Dbz_World\SnakeWay\MajinBuu.Pixmap.res"); }}
+						public static Duality.ContentRef<Duality.Resources.Texture> MajinBuu_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Characters\Enemies\Dbz_World\SnakeWay\MajinBuu.Texture.res"); }}
 						public static void LoadAll() {
 							Dbz_Cell_Material.MakeAvailable();
 							Dbz_Cell_Pixmap.MakeAvailable();
@@ -85,6 +88,9 @@ namespace GameRes
 							Jeice_Material.MakeAvailable();
 							Jeice_Pixmap.MakeAvailable();
 							Jeice_Texture.MakeAvailable();
+							MajinBuu_Material.MakeAvailable();
+							MajinBuu_Pixmap.MakeAvailable();
+							MajinBuu_Texture.MakeAvailable();
 						}
 					}
 					public static void LoadAll() {
@@ -96,6 +102,9 @@ namespace GameRes
 					public static Duality.ContentRef<Duality.Resources.Material> BossMario__1__Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\Enemies\MarioWorld\BossMario (1).Material.res"); }}
 					public static Duality.ContentRef<Duality.Resources.Pixmap> BossMario__1__Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\Enemies\MarioWorld\BossMario (1).Pixmap.res"); }}
 					public static Duality.ContentRef<Duality.Resources.Texture> BossMario__1__Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Characters\Enemies\MarioWorld\BossMario (1).Texture.res"); }}
+					public static Duality.ContentRef<Duality.Resources.Material> Bowser_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\Enemies\MarioWorld\Bowser.Material.res"); }}
+					public static Duality.ContentRef<Duality.Resources.Pixmap> Bowser_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\Enemies\MarioWorld\Bowser.Pixmap.res"); }}
+					public static Duality.ContentRef<Duality.Resources.Texture> Bowser_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Characters\Enemies\MarioWorld\Bowser.Texture.res"); }}
 					public static Duality.ContentRef<Duality.Resources.Material> Thwomp_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\Enemies\MarioWorld\Thwomp.Material.res"); }}
 					public static Duality.ContentRef<Duality.Resources.Pixmap> Thwomp_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\Enemies\MarioWorld\Thwomp.Pixmap.res"); }}
 					public static Duality.ContentRef<Duality.Resources.Texture> Thwomp_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Characters\Enemies\MarioWorld\Thwomp.Texture.res"); }}
@@ -103,9 +112,20 @@ namespace GameRes
 						BossMario__1__Material.MakeAvailable();
 						BossMario__1__Pixmap.MakeAvailable();
 						BossMario__1__Texture.MakeAvailable();
+						Bowser_Material.MakeAvailable();
+						Bowser_Pixmap.MakeAvailable();
+						Bowser_Texture.MakeAvailable();
 						Thwomp_Material.MakeAvailable();
 						Thwomp_Pixmap.MakeAvailable();
 						Thwomp_Texture.MakeAvailable();
+					}
+				}
+				public static class Mario_World {
+					public static void LoadAll() {
+					}
+				}
+				public static class Zelda_World {
+					public static void LoadAll() {
 					}
 				}
 				public static Duality.ContentRef<Duality.Resources.Material> Thwomp_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\Enemies\Thwomp.Material.res"); }}
@@ -114,6 +134,8 @@ namespace GameRes
 				public static void LoadAll() {
 					Dbz_World.LoadAll();
 					MarioWorld.LoadAll();
+					Mario_World.LoadAll();
+					Zelda_World.LoadAll();
 					Thwomp_Material.MakeAvailable();
 					Thwomp_Pixmap.MakeAvailable();
 					Thwomp_Texture.MakeAvailable();
