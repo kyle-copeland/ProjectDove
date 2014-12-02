@@ -66,9 +66,23 @@
               <prop dataType="PropertyInfo" id="1361200350" value="P:Duality.Components.Physics.RigidBody:CollisionCategory" />
               <val dataType="Enum" type="Duality.Components.Physics.CollisionCategory" name="Cat5" value="16" />
             </item>
+            <item dataType="Struct" type="Duality.Resources.PrefabLink+VarMod">
+              <childIndex dataType="Struct" type="System.Collections.Generic.List`1[[System.Int32]]" id="3475297716">
+                <_items dataType="Array" type="System.Int32[]" id="677919816" />
+                <_size dataType="Int">0</_size>
+                <_version dataType="Int">1</_version>
+              </childIndex>
+              <componentType dataType="ObjectRef">1717510894</componentType>
+              <prop dataType="PropertyInfo" id="3443847714" value="P:Duality.Components.Transform:RelativePos" />
+              <val dataType="Struct" type="OpenTK.Vector3">
+                <X dataType="Float">26</X>
+                <Y dataType="Float">-7</Y>
+                <Z dataType="Float">0</Z>
+              </val>
+            </item>
           </_items>
-          <_size dataType="Int">1</_size>
-          <_version dataType="Int">7</_version>
+          <_size dataType="Int">2</_size>
+          <_version dataType="Int">8</_version>
         </changes>
         <obj dataType="ObjectRef">3905830553</obj>
         <prefab dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Prefab]]">
@@ -95,12 +109,12 @@
             <pos dataType="Struct" type="OpenTK.Vector3">
               <X dataType="Float">-772</X>
               <Y dataType="Float">-7</Y>
-              <Z dataType="Float">-1</Z>
+              <Z dataType="Float">0</Z>
             </pos>
             <posAbs dataType="Struct" type="OpenTK.Vector3">
               <X dataType="Float">-772</X>
               <Y dataType="Float">-7</Y>
-              <Z dataType="Float">-1</Z>
+              <Z dataType="Float">0</Z>
             </posAbs>
             <scale dataType="Float">1</scale>
             <scaleAbs dataType="Float">1</scaleAbs>
@@ -467,27 +481,31 @@
           <item dataType="Struct" type="Dove_Game.Enemies.DBZ_World.GokuBoss" id="692839585">
             <active dataType="Bool">true</active>
             <attackCooldown dataType="Float">1000</attackCooldown>
-            <attacks />
+            <attacks dataType="Array" type="Dove_Game.Enemies.BossAttack[]" id="2023009277">
+              <item />
+              <item />
+              <item />
+            </attacks>
             <attackTimer dataType="Float">1000</attackTimer>
             <bulletBlueprint dataType="Struct" type="Duality.ContentRef`1[[Dove_Game.BulletBlueprint]]">
-              <contentPath dataType="String">Data\Scenes\Bullets\DefaultBullet.BulletBlueprint.res</contentPath>
+              <contentPath dataType="String">Data\Scenes\SpecialAttacks\RocketBullet.BulletBlueprint.res</contentPath>
             </bulletBlueprint>
             <bulletMaterial dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
-              <contentPath />
+              <contentPath dataType="String">Data\Scenes\Bullets\Rocket_Bullet.Material.res</contentPath>
             </bulletMaterial>
             <BulletSpeed dataType="Int">30</BulletSpeed>
             <currentSA />
             <direction dataType="Enum" type="Dove_Game.Direction" name="Right" value="1" />
             <gameobj dataType="ObjectRef">2675831366</gameobj>
-            <healthPts dataType="Int">0</healthPts>
+            <healthPts dataType="Int">50</healthPts>
             <impulse dataType="Float">10</impulse>
             <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
             <lastFrame dataType="Int">0</lastFrame>
             <movementSpeed dataType="Float">15</movementSpeed>
             <nextAttack dataType="Int">0</nextAttack>
             <playerPosition dataType="Enum" type="Dove_Game.Direction" name="Left" value="0" />
-            <seqWalk dataType="Struct" type="System.Collections.Generic.List`1[[System.Int32]]" id="2023009277">
-              <_items dataType="Array" type="System.Int32[]" id="3573128486">
+            <seqWalk dataType="Struct" type="System.Collections.Generic.List`1[[System.Int32]]" id="3853734840">
+              <_items dataType="Array" type="System.Int32[]" id="2273383575">
                 <item dataType="Int">31</item>
                 <item dataType="Int">32</item>
                 <item dataType="Int">33</item>

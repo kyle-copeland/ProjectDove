@@ -44,9 +44,9 @@ namespace Dove_Game.Enemies.DBZ_World
             attackTimer -= Time.MsPFMult * Time.TimeMult;
             if (attackTimer <= 0.0f )
             {
-                if(nextAttack != FLYAROUND)
+                if(nextAttack == NONE)
                     nextAttack = specialAttackPicker.Next(attacks.Length);
-                attacks[2].attack(this);
+                attacks[nextAttack].attack(this);
                 attackTimer = attackCooldown;
             }
             else if (nextAttack == NONE)
@@ -62,7 +62,7 @@ namespace Dove_Game.Enemies.DBZ_World
         {
             public void attack(Boss boss)
             {
-                Console.WriteLine("Kamahameha");
+                Scene.Current.AddObject(Test_Logic.Summon.SummonGameObject(SideCharacter.NoCharacter, Attack.Kamehameha,boss));
                 boss.nextAttack = NONE;
             }
         }
@@ -127,6 +127,7 @@ namespace Dove_Game.Enemies.DBZ_World
                if (boss.PlayerPosition == Direction.Right)
                    sideForce *= -1.0f;
                boss.GameObj.RigidBody.ApplyLocalImpulse(Vector2.UnitX * sideForce);
+               boss.nextAttack = NONE;
             }
         }
     }
