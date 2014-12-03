@@ -25,13 +25,20 @@ namespace Dove_Game
     public class PlayerOne : Character
     {
         private int sensorCount;
-        private Character summonedCharacter;
-        private float elaspedRespawnTime;
+        private Character _summonedCharacter;
+        private float _elaspedRespawnTime;
+        private bool _playerJumped;
+
+        public bool PlayerJumped
+        {
+            get { return _playerJumped; }
+            set { _playerJumped = value; }
+        }
 
         public float ElaspedRespawnTime
         {
-            get { return elaspedRespawnTime; }
-            set { elaspedRespawnTime = value; }
+            get { return _elaspedRespawnTime; }
+            set { _elaspedRespawnTime = value; }
         }
 
         private const float _respawnDelay = 7000.0f;
@@ -51,7 +58,6 @@ namespace Dove_Game
             RigidBody playerOne = this.GameObj.RigidBody;
             Transform playerMovement = this.GameObj.Transform;
             AnimSpriteRenderer playerSprite = this.GameObj.GetComponent<AnimSpriteRenderer>();
-            RevoluteJointInfo motor = playerOne.Joints.OfType<RevoluteJointInfo>().FirstOrDefault();
 
             if (HealthPoints <= 0)
             {
@@ -68,7 +74,7 @@ namespace Dove_Game
                 }
             }
 
-            else if (summonedCharacter == null && CurrentSpecialAttack == null)
+            else if (_summonedCharacter == null && CurrentSpecialAttack == null)
             {
                 // Move left
                 if (DualityApp.Keyboard[Key.Left])
@@ -80,8 +86,7 @@ namespace Dove_Game
 
                     CharDirection = Direction.Left;
                     MovementVector = Vector2.UnitX * -1.0f;
-                    motor.MotorSpeed = -0.5f;
-                    playerOne.ApplyWorldImpulse(-Vector2.UnitX * 0.45f);
+                    playerOne.ApplyWorldImpulse(-Vector2.UnitX * 0.37f);
                     //playerMovement.MoveBy(MovementVector * Time.TimeMult);
                 }
 
@@ -95,14 +100,15 @@ namespace Dove_Game
 
                     CharDirection = Direction.Right;
                     MovementVector = Vector2.UnitX * 1.0f;
-                    motor.MotorSpeed = 0.5f;
-                    playerOne.ApplyWorldImpulse(Vector2.UnitX * 0.45f);
+                    playerOne.ApplyWorldImpulse(Vector2.UnitX * 0.37f);
                     //playerMovement.MoveBy(MovementVector * Time.TimeMult);
                 }
 
                 // Move up
-                else if (DualityApp.Keyboard[Key.Up])// && sensorCount > 0)
+                else if (DualityApp.Keyboard[Key.Up] && sensorCount > 0)
                 {
+                    PlayerJumped = true;
+
                     if (CharDirection == Direction.Right)
                         playerSprite.AnimFirstFrame = 0;
                     else if (CharDirection == Direction.Left)
@@ -113,7 +119,7 @@ namespace Dove_Game
                     playerSprite.AnimLoopMode = AnimSpriteRenderer.LoopMode.Loop;
                     
                     MovementVector = Vector2.UnitY * -1.0f;
-                    playerOne.ApplyWorldImpulse(-Vector2.UnitY * 2.0f);
+                    playerOne.ApplyWorldForce(-Vector2.UnitY * 14.0f);
                     //playerMovement.MoveBy(MovementVector * Time.TimeMult);
                 }
 
@@ -150,7 +156,7 @@ namespace Dove_Game
                     playerSprite.AnimDuration = 1;
 
                     GameObject goku = Summon.SummonGameObject(SideCharacter.Goku, Attack.NoAttack, this);
-                    summonedCharacter = goku.GetComponent<Goku>();
+                    _summonedCharacter = goku.GetComponent<Goku>();
                     Scene.Current.AddObject(goku);
                 }
                 // Kamehameha special skill
@@ -163,7 +169,7 @@ namespace Dove_Game
                     playerSprite.AnimDuration = 1;
 
                     GameObject bowser = Summon.SummonGameObject(SideCharacter.Bowser, Attack.NoAttack, this);
-                    summonedCharacter = bowser.GetComponent<Bowser>();
+                    _summonedCharacter = bowser.GetComponent<Bowser>();
                     Scene.Current.AddObject(bowser);
                 }
 
@@ -176,7 +182,6 @@ namespace Dove_Game
 
                     playerSprite.AnimFrameCount = 1;
                     playerSprite.AnimLoopMode = AnimSpriteRenderer.LoopMode.Loop;
-                    motor.MotorSpeed = 0.0f;
                 }
 
                 // All custom frame sequences end in 27, the current default animation for the Goku SpriteSheet. Reset after an attack animation.
@@ -191,12 +196,12 @@ namespace Dove_Game
             }
 
             // Continue animation sequence after special attack ends.
-            else if ((summonedCharacter != null && summonedCharacter.CurrentSpecialAttack != null && summonedCharacter.CurrentSpecialAttack.Lifetime <= 0.0f) ||
+            else if ((_summonedCharacter != null && _summonedCharacter.CurrentSpecialAttack != null && _summonedCharacter.CurrentSpecialAttack.Lifetime <= 0.0f) ||
                 (CurrentSpecialAttack != null && (CurrentSpecialAttack.FireDelay <= 0.0f || CurrentSpecialAttack.Lifetime <= 0.0f)))
             {
                 playerSprite.AnimPaused = false;
                 CurrentSpecialAttack = null;
-                summonedCharacter = null;
+                _summonedCharacter = null;
                 isAttacking = false;
             }
         }
@@ -217,19 +222,19 @@ namespace Dove_Game
                 playerMovement.MoveBy(MovementVector * -1.0f * 10.0f);
             }
 
-            RigidBodyCollisionEventArgs bodyCollision = args as RigidBodyCollisionEventArgs;
+            var bodyCollision = args as RigidBodyCollisionEventArgs;
             if (bodyCollision == null) return;
 
-            if (bodyCollision.MyShape.IsSensor)
+            if (bodyCollision.OtherShape.IsSensor)
                 this.sensorCount++;
         }
 
         public override void OnCollisionEnd(Component sender, CollisionEventArgs args)
         {
-            RigidBodyCollisionEventArgs bodyCollision = args as RigidBodyCollisionEventArgs;
+            var bodyCollision = args as RigidBodyCollisionEventArgs;
             if (bodyCollision == null) return;
 
-            if (bodyCollision.MyShape.IsSensor)
+            if (bodyCollision.OtherShape.IsSensor)
                 this.sensorCount--;
 
         }
