@@ -19,17 +19,17 @@ namespace Dove_Game
     [RequiredComponent(typeof(RigidBody))]
     public class Bowser : Character
     {
-        private List<int> defaultFrameSequence = new List<int>() { 33 };
-        private List<int> dissolveFrameSequence = new List<int>() { 33, 33, 33, 33, 30, 31, 32, 10, 11, 33 };
-        private List<int> rightKamehamehaFrameSequence = new List<int>() { 33, 0, 1 };
-        private List<int> leftKamehamehaFrameSequence = new List<int>() { 33, 0, 1 };
-        private bool finishedKamehameha;
+        private List<int> defaultFrameSequence = new List<int>() { 12 };
+        private List<int> dissolveFrameSequence = new List<int>() { 12, 13, 14, 15, 16 };
+        private List<int> leftFireblastFrameSequence = new List<int>() { 11, 10, 9, 8, 7, 6 };
+        private List<int> rightFireblastFrameSequence = new List<int>() { 30, 31, 32, 33, 34, 35 };
+        private bool finishedFireblast;
 
-        public List<int> kamehamehaFrameSequence
+        public List<int> FireblastFrameSequence
         {
             get
             {
-                return CharDirection == Direction.Right ? rightKamehamehaFrameSequence : leftKamehamehaFrameSequence;
+                return CharDirection == Direction.Right ? rightFireblastFrameSequence : leftFireblastFrameSequence;
             }
         }
 
@@ -39,21 +39,67 @@ namespace Dove_Game
             Transform playerMovement = this.GameObj.Transform;
             AnimSpriteRenderer playerSprite = this.GameObj.GetComponent<AnimSpriteRenderer>();
 
-            if (CurrentSpecialAttack == null && !finishedKamehameha)
+            if (CurrentSpecialAttack == null && !finishedFireblast)
             {
                 // Kamehameha special skill
-                playerSprite.CustomFrameSequence = kamehamehaFrameSequence;
+                playerSprite.CustomFrameSequence = FireblastFrameSequence;
                 playerSprite.AnimLoopMode = AnimSpriteRenderer.LoopMode.Once;
                 playerSprite.AnimDuration = 2;
                 playerSprite.UpdateVisibleFrames();
 
                 // Pause animation on blast frame for dramatic effect and create kamehameha.
-                if (playerSprite.CurrentFrame == 1)
+                if (playerSprite.CurrentFrame == 6 || playerSprite.CurrentFrame == 35)
                 {
                     playerSprite.AnimPaused = true;
-                    GameObject kame = Summon.SummonGameObject(SideCharacter.NoCharacter, Attack.Kamehameha, this);
-                    CurrentSpecialAttack = kame.GetComponent<Kamehameha>();
-                    Scene.Current.AddObject(kame);
+                    GameObject fireBlastUpper = Summon.SummonGameObject(SideCharacter.NoCharacter, Attack.Fireblast, this);
+                    GameObject fireBlastMiddle = Summon.SummonGameObject(SideCharacter.NoCharacter, Attack.Fireblast, this);
+                    GameObject fireBlastLower = Summon.SummonGameObject(SideCharacter.NoCharacter, Attack.Fireblast, this);
+
+                    Fireblast fbUpper = fireBlastUpper.GetComponent<Fireblast>();
+                    Fireblast fbMiddle = fireBlastMiddle.GetComponent<Fireblast>();
+                    Fireblast fbLower = fireBlastLower.GetComponent<Fireblast>();
+
+                    CurrentSpecialAttack = fbMiddle;
+
+                    AnimSpriteRenderer spriteUpper = fireBlastUpper.GetComponent<AnimSpriteRenderer>();
+
+                    AnimSpriteRenderer spriteMiddle = fireBlastMiddle.GetComponent<AnimSpriteRenderer>();
+
+                    AnimSpriteRenderer spriteLower = fireBlastLower.GetComponent<AnimSpriteRenderer>();
+
+                    float bulletSpeed = 8.0f;
+                    if (CharDirection == Direction.Right)
+                    {
+                        spriteUpper.AnimFirstFrame = 9;
+                        fbUpper.Fire(playerOne.LinearVelocity, playerMovement.Pos.Xy, -2.0f, new Vector2(bulletSpeed, 0.0f));
+                        Scene.Current.AddObject(fireBlastUpper);
+
+                        spriteMiddle.AnimFirstFrame = 12;
+                        fbMiddle.Fire(playerOne.LinearVelocity, playerMovement.Pos.Xy, 0.0f, new Vector2(bulletSpeed, 0.0f));
+                        Scene.Current.AddObject(fireBlastMiddle);
+
+                        spriteLower.AnimFirstFrame = 15;
+                        fbLower.Fire(playerOne.LinearVelocity, playerMovement.Pos.Xy, 2.0f, new Vector2(bulletSpeed, 0.0f));
+                        Scene.Current.AddObject(fireBlastLower);
+                    }
+
+                    else if (CharDirection == Direction.Left)
+                    {
+                        spriteUpper.AnimFirstFrame = 0;
+                        fbUpper.Fire(playerOne.LinearVelocity, playerMovement.Pos.Xy, -2.0f, new Vector2(bulletSpeed, 0.0f));
+                        Scene.Current.AddObject(fireBlastUpper);
+
+                        spriteMiddle.AnimFirstFrame = 3;
+                        fbMiddle.Fire(playerOne.LinearVelocity, playerMovement.Pos.Xy, 0.0f, new Vector2(bulletSpeed, 0.0f));
+                        Scene.Current.AddObject(fireBlastMiddle);
+
+                        spriteLower.AnimFirstFrame = 6;
+                        fbLower.Fire(playerOne.LinearVelocity, playerMovement.Pos.Xy, 2.0f, new Vector2(bulletSpeed, 0.0f));
+                        Scene.Current.AddObject(fireBlastLower);
+                        
+                    }
+
+                    // Scene.Current.AddObject(fireBlast);
                 }
             }
 
@@ -62,11 +108,11 @@ namespace Dove_Game
             {
                 playerSprite.CustomFrameSequence = defaultFrameSequence;
                 playerSprite.AnimPaused = false;
-                finishedKamehameha = true;
+                finishedFireblast = true;
                 CurrentSpecialAttack = null;
             }
 
-            if (finishedKamehameha && playerSprite.CurrentFrame == 33)
+            if (finishedFireblast && playerSprite.CurrentFrame == 12)
             {
                 playerSprite.CustomFrameSequence = dissolveFrameSequence;
                 playerSprite.AnimLoopMode = AnimSpriteRenderer.LoopMode.Once;
@@ -74,7 +120,7 @@ namespace Dove_Game
                 playerSprite.UpdateVisibleFrames();
 
                 // All custom frame sequences end in 27, the current default animation for the Goku SpriteSheet. Reset after an attack animation.
-                if (playerSprite.CurrentFrame != LastFrame && playerSprite.CurrentFrame == 33)
+                if (playerSprite.CurrentFrame != LastFrame && playerSprite.CurrentFrame == 16)
                 {
                     this.GameObj.DisposeLater();
                 }

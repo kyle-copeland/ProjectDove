@@ -38,6 +38,12 @@ namespace Dove_Game.Test_Logic
                         spriteMaterial = ContentRefs.GokuContentRef.Res;
                         spriteSize = new Vector2(41, 52);
                         break;
+                    case SideCharacter.Bowser:
+                        Bowser bowser = summonPiece.AddComponent<Bowser>();
+                        bowser.CharDirection = main.CharDirection;
+                        spriteMaterial = ContentRefs.BowserContentRef.Res;
+                        spriteSize = new Vector2(41, 52);
+                        break;
                 }
 
                 // Clear any default rigid bodies.
@@ -67,12 +73,34 @@ namespace Dove_Game.Test_Logic
                         createKamehameha(ref summonPiece, new Vector2(playerOneRectX, playerOneRectY), main.CharDirection, spriteSize);
                         break;
 
-                    case Attack.Bullet:
-                        PlayerOneBullet bullet = summonPiece.AddComponent<PlayerOneBullet>();
-                        bullet.AttackDirection = main.CharDirection;
+                    case Attack.PlayerBullet:
+                        PlayerOneBullet playerBullet = summonPiece.AddComponent<PlayerOneBullet>();
+                        playerBullet.AttackDirection = main.CharDirection;
                         spriteMaterial = ContentRefs.rocketBullet.Res;
                         spriteSize = spriteMaterial.MainTexture.IsAvailable ? spriteMaterial.MainTexture.Res.Size : new Vector2(5, 5);
                         createBullet(ref summonPiece, new Vector2(playerOneRectX, playerOneRectY), main.CharDirection, spriteSize);
+                        break;
+
+                    case Attack.CellBullet:
+                        EnemyBullet cellBullet = summonPiece.AddComponent<EnemyBullet>();
+                        cellBullet.AttackDirection = main.CharDirection;
+                        sprite.AnimFrameCount = 2;
+                        sprite.AnimDuration = 0.75f;
+                        sprite.AnimFirstFrame = cellBullet.AttackDirection == Direction.Right ? 0 : 3;
+                        spriteMaterial = ContentRefs.cellBlast.Res;
+                        spriteSize = spriteMaterial.MainTexture.IsAvailable ? spriteMaterial.MainTexture.Res.Size : new Vector2(5, 5);
+                        spriteSize.X *= 2.0f;
+                        createBullet(ref summonPiece, new Vector2(playerOneRectX, playerOneRectY), main.CharDirection, spriteSize);
+                        break;
+
+                    case Attack.Fireblast:
+                        Fireblast fireblast = summonPiece.AddComponent<Fireblast>();
+                        fireblast.AttackDirection = main.CharDirection;
+                        sprite.AnimFrameCount = 3;
+                        sprite.AnimDuration = 2;
+                        spriteMaterial = ContentRefs.fireBlast.Res;
+                        spriteSize = spriteMaterial.MainTexture.IsAvailable ? spriteMaterial.MainTexture.Res.Size : new Vector2(5, 5);
+                        createFireblast(ref summonPiece, new Vector2(playerOneRectX, playerOneRectY), main.CharDirection, spriteSize);
                         break;
                 }
             }
@@ -133,7 +161,7 @@ namespace Dove_Game.Test_Logic
             float spriteRadius = MathF.Max(spriteSize.X, spriteSize.Y) * 0.25f;
             float bulletBodyPos = direction == Direction.Right ? spriteRadius : -spriteRadius;
             body.ClearShapes();
-            CircleShapeInfo circleShape = new CircleShapeInfo(spriteRadius, new Vector2(playerPos.X + bulletBodyPos, -spriteRadius), 1.0f);
+            CircleShapeInfo circleShape = new CircleShapeInfo(spriteRadius, new Vector2(playerPos.X + bulletBodyPos, 0f), 1.0f);
             circleShape.IsSensor = false;
             body.AddShape(circleShape);
             body.CollisionCategory = CollisionCategory.Cat2;
@@ -142,6 +170,23 @@ namespace Dove_Game.Test_Logic
             body.FixedAngle = true;
 
             summonPiece.GetComponent<Bullet>().InitFrom(direction);
+        }
+
+        public static void createFireblast(ref GameObject summonPiece, Vector2 playerPos, Direction direction, Vector2 spriteSize)
+        {
+            RigidBody body = summonPiece.GetComponent<RigidBody>();
+            float spriteRadius = MathF.Max(spriteSize.X, spriteSize.Y) * 0.25f;
+            float bulletBodyPos = direction == Direction.Right ? spriteRadius : -spriteRadius;
+            body.ClearShapes();
+            CircleShapeInfo circleShape = new CircleShapeInfo(spriteRadius, new Vector2(playerPos.X + bulletBodyPos, -spriteRadius), 1.0f);
+            circleShape.IsSensor = false;
+            body.AddShape(circleShape);
+            body.CollisionCategory = CollisionCategory.Cat2;
+            body.CollidesWith = CollisionCategory.Cat3;
+            body.IgnoreGravity = true;
+            body.FixedAngle = true;
+
+            summonPiece.GetComponent<Fireblast>().InitFrom(direction);
         }
     }
 }

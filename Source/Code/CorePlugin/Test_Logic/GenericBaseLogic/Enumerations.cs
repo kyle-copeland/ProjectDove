@@ -16,7 +16,9 @@ namespace Dove_Game
     public enum Attack
     {
         Kamehameha,
-        Bullet,
+        PlayerBullet,
+        CellBullet,
+        Fireblast,
         NoAttack
     }
 

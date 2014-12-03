@@ -15,7 +15,7 @@
       <header />
       <body>
         <mainTex dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Texture]]">
-          <contentPath dataType="String">Data\Characters\Enemies\MarioWorld\Bowser.Texture.res</contentPath>
+          <contentPath dataType="String">Data\Scenes\Bullets\CellAttack.Texture.res</contentPath>
         </mainTex>
       </body>
     </textures>

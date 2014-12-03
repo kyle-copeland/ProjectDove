@@ -35,7 +35,10 @@ namespace Dove_Game.Enemies.DBZ_World
                 playerSprite.AnimFrameCount = 2;
             }
             else
+            {
+                playerSprite.AnimFrameCount = 3;
                 playerSprite.AnimFirstFrame = CharDirection == Direction.Left ? 0 : 9;
+            }
 
             //Move(Vector2.UnitX);
         }
@@ -46,7 +49,7 @@ namespace Dove_Game.Enemies.DBZ_World
 
             var playerSprite = GameObj.GetComponent<AnimSpriteRenderer>();
             playerSprite.AnimFrameCount = 3;
-            playerSprite.AnimDuration = 1;
+            playerSprite.AnimDuration = 2;
             playerSprite.AnimLoopMode = AnimSpriteRenderer.LoopMode.Loop;
 
         }

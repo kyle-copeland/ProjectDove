@@ -132,13 +132,11 @@ namespace Dove_Game
                     playerSprite.AnimDuration = 3;
                     playerSprite.UpdateVisibleFrames();
 
-                    GameObject rocketBullet = Summon.SummonGameObject(SideCharacter.NoCharacter, Attack.Bullet, this);
+                    GameObject rocketBullet = Summon.SummonGameObject(SideCharacter.NoCharacter, Attack.PlayerBullet, this);
                     CurrentSpecialAttack = rocketBullet.GetComponent<PlayerOneBullet>();
-                    float bulletSpeed = 20;
-                    /*if (CharDirection == Direction.Left)
-                        bulletSpeed *= -1;*/
+                    const float bulletSpeed = 20;
 
-                    ((PlayerOneBullet)CurrentSpecialAttack).Fire(playerOne.LinearVelocity, playerMovement.Pos.Xy, 0, new Vector2(bulletSpeed, 0.0f));
+                    ((PlayerOneBullet)CurrentSpecialAttack).Fire(playerOne.LinearVelocity, playerMovement.Pos.Xy, 0f, new Vector2(bulletSpeed, 0.0f));
                     Scene.Current.AddObject(rocketBullet);
                 }
 
@@ -154,6 +152,19 @@ namespace Dove_Game
                     GameObject goku = Summon.SummonGameObject(SideCharacter.Goku, Attack.NoAttack, this);
                     summonedCharacter = goku.GetComponent<Goku>();
                     Scene.Current.AddObject(goku);
+                }
+                // Kamehameha special skill
+                else if (DualityApp.Keyboard[Key.C])
+                {
+                    isAttacking = true;
+                    playerSprite.AnimFirstFrame = 20;
+                    playerSprite.AnimLoopMode = AnimSpriteRenderer.LoopMode.Once;
+                    playerSprite.AnimFrameCount = 2;
+                    playerSprite.AnimDuration = 1;
+
+                    GameObject bowser = Summon.SummonGameObject(SideCharacter.Bowser, Attack.NoAttack, this);
+                    summonedCharacter = bowser.GetComponent<Bowser>();
+                    Scene.Current.AddObject(bowser);
                 }
 
                 else
