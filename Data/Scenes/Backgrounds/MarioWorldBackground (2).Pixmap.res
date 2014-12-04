@@ -15,6 +15,6 @@
     <_size dataType="Int">1</_size>
     <_version dataType="Int">1</_version>
   </layers>
-  <sourcePath dataType="String">Source\Media\MarioWorldBackground.png</sourcePath>
+  <sourcePath dataType="String">Source\Media\MarioWorldBackground (2).png</sourcePath>
 </root>
 <!-- XmlFormatterBase Document Separator -->
