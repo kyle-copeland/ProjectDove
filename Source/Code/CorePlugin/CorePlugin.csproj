@@ -48,7 +48,9 @@
   <ItemGroup>
     <Compile Include="AI_Logic\ChargeAI.cs" />
     <Compile Include="AI_Logic\JumpRover.cs" />
-    <Compile Include="Enemies\DbzEnemy.cs" />
+    <Compile Include="Characters\SideCharacters\Bowser.cs" />
+    <Compile Include="Enemies\DBZ_World\DbzEnemy.cs" />
+    <Compile Include="Enemies\DBZ_World\DbzCell.cs" />
     <Compile Include="Enemies\DBZ_World\DbzJeice.cs" />
     <Compile Include="Enemies\General_Enemy\Boss.cs" />
     <Compile Include="Enemies\General_Enemy\BossAttack.cs" />
@@ -82,6 +84,7 @@
     <Compile Include="Characters\Character.cs" />
     <Compile Include="Test_Logic\GenericBaseLogic\ContentRefs.cs" />
     <Compile Include="Test_Logic\SpecialAttacks\EnemyBullet.cs" />
+    <Compile Include="Test_Logic\SpecialAttacks\Fireblast.cs" />
     <Compile Include="Test_Logic\SpecialAttacks\Kamehameha.cs" />
     <Compile Include="Test_Logic\SpecialAttacks\PlayerOneBullet.cs" />
     <Compile Include="Test_Logic\SpecialAttacks\SpecialAttack.cs" />

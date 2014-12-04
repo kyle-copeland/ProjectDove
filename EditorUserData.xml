@@ -4,7 +4,7 @@
   <Plugin_CamView>
     <CamView_0>
       <Perspective>Parallax</Perspective>
-      <FocusDist>50</FocusDist>
+      <FocusDist>35</FocusDist>
       <BgColorArgb>4210752</BgColorArgb>
       <SnapToGridSize>
         <X>1</X>

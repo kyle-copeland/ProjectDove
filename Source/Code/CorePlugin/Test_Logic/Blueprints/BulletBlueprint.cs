@@ -45,21 +45,15 @@ namespace Dove_Game
             body.CollidesWith = CollisionCategory.Cat1;
             body.IgnoreGravity = true;
             body.FixedAngle = true;
-
+            AnimSpriteRenderer sprite = obj.AddComponent<AnimSpriteRenderer>();
+            sprite.SharedMaterial = spriteMaterial;
+            sprite.Rect = Rect.AlignCenter(0.0f, 0.0f, spriteSize.X, spriteSize.Y);
             if(isAnimated)
             {
-                AnimSpriteRenderer sprite = obj.AddComponent<AnimSpriteRenderer>();
-                sprite.SharedMaterial = spriteMaterial;
-                sprite.Rect = Rect.AlignCenter(0.0f, 0.0f, spriteSize.X, spriteSize.Y);
                 sprite.CustomFrameSequence = seq;
                 sprite.AnimDuration = 1;
             }
-            else
-            {
-                SpriteRenderer sprite = obj.AddComponent<SpriteRenderer>();
-                sprite.SharedMaterial = spriteMaterial;
-                sprite.Rect = Rect.AlignCenter(0.0f, 0.0f, spriteSize.X, spriteSize.Y);
-            }
+       
            
 
             bullet.InitFrom(direction);

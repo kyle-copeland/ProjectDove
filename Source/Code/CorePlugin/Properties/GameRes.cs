@@ -63,6 +63,9 @@ namespace GameRes
 						public static Duality.ContentRef<Duality.Resources.Material> Jeice_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\Enemies\Dbz_World\SnakeWay\Jeice.Material.res"); }}
 						public static Duality.ContentRef<Duality.Resources.Pixmap> Jeice_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\Enemies\Dbz_World\SnakeWay\Jeice.Pixmap.res"); }}
 						public static Duality.ContentRef<Duality.Resources.Texture> Jeice_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Characters\Enemies\Dbz_World\SnakeWay\Jeice.Texture.res"); }}
+						public static Duality.ContentRef<Duality.Resources.Material> MajinBuu_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\Enemies\Dbz_World\SnakeWay\MajinBuu.Material.res"); }}
+						public static Duality.ContentRef<Duality.Resources.Pixmap> MajinBuu_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\Enemies\Dbz_World\SnakeWay\MajinBuu.Pixmap.res"); }}
+						public static Duality.ContentRef<Duality.Resources.Texture> MajinBuu_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Characters\Enemies\Dbz_World\SnakeWay\MajinBuu.Texture.res"); }}
 						public static void LoadAll() {
 							Dbz_Cell_Material.MakeAvailable();
 							Dbz_Cell_Pixmap.MakeAvailable();
@@ -85,6 +88,9 @@ namespace GameRes
 							Jeice_Material.MakeAvailable();
 							Jeice_Pixmap.MakeAvailable();
 							Jeice_Texture.MakeAvailable();
+							MajinBuu_Material.MakeAvailable();
+							MajinBuu_Pixmap.MakeAvailable();
+							MajinBuu_Texture.MakeAvailable();
 						}
 					}
 					public static void LoadAll() {
@@ -108,12 +114,22 @@ namespace GameRes
 						Thwomp_Texture.MakeAvailable();
 					}
 				}
+				public static class Mario_World {
+					public static void LoadAll() {
+					}
+				}
+				public static class Zelda_World {
+					public static void LoadAll() {
+					}
+				}
 				public static Duality.ContentRef<Duality.Resources.Material> Thwomp_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\Enemies\Thwomp.Material.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Pixmap> Thwomp_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\Enemies\Thwomp.Pixmap.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Texture> Thwomp_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Characters\Enemies\Thwomp.Texture.res"); }}
 				public static void LoadAll() {
 					Dbz_World.LoadAll();
 					MarioWorld.LoadAll();
+					Mario_World.LoadAll();
+					Zelda_World.LoadAll();
 					Thwomp_Material.MakeAvailable();
 					Thwomp_Pixmap.MakeAvailable();
 					Thwomp_Texture.MakeAvailable();
@@ -130,6 +146,9 @@ namespace GameRes
 				}
 			}
 			public static class Side_Characters {
+				public static Duality.ContentRef<Duality.Resources.Material> Bowser_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\Side Characters\Bowser.Material.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Pixmap> Bowser_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\Side Characters\Bowser.Pixmap.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Texture> Bowser_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Characters\Side Characters\Bowser.Texture.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Material> Celes_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\Side Characters\Celes.Material.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Pixmap> Celes_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\Side Characters\Celes.Pixmap.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Texture> Celes_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Characters\Side Characters\Celes.Texture.res"); }}
@@ -147,6 +166,9 @@ namespace GameRes
 				public static Duality.ContentRef<Duality.Resources.Pixmap> goku_static_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\Side Characters\goku_static.Pixmap.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Texture> goku_static_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Characters\Side Characters\goku_static.Texture.res"); }}
 				public static void LoadAll() {
+					Bowser_Material.MakeAvailable();
+					Bowser_Pixmap.MakeAvailable();
+					Bowser_Texture.MakeAvailable();
 					Celes_Material.MakeAvailable();
 					Celes_Pixmap.MakeAvailable();
 					Celes_Texture.MakeAvailable();
@@ -189,6 +211,7 @@ namespace GameRes
 			public static Duality.ContentRef<Duality.Resources.Prefab> CloudsT_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\CloudsT.Prefab.res"); }}
 			public static Duality.ContentRef<Duality.Resources.Prefab> Firespin_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\Firespin.Prefab.res"); }}
 			public static Duality.ContentRef<Duality.Resources.Prefab> Goku_2d_2_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\Goku_2d_2.Prefab.res"); }}
+			public static Duality.ContentRef<Duality.Resources.Prefab> GroundSensor_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\GroundSensor.Prefab.res"); }}
 			public static Duality.ContentRef<Duality.Resources.Prefab> KaiMonkey_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\KaiMonkey.Prefab.res"); }}
 			public static Duality.ContentRef<Duality.Resources.Prefab> KingKai_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\KingKai.Prefab.res"); }}
 			public static Duality.ContentRef<Duality.Resources.Prefab> Pipe_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\Pipe.Prefab.res"); }}
@@ -200,6 +223,7 @@ namespace GameRes
 				CloudsT_Prefab.MakeAvailable();
 				Firespin_Prefab.MakeAvailable();
 				Goku_2d_2_Prefab.MakeAvailable();
+				GroundSensor_Prefab.MakeAvailable();
 				KaiMonkey_Prefab.MakeAvailable();
 				KingKai_Prefab.MakeAvailable();
 				Pipe_Prefab.MakeAvailable();
@@ -274,6 +298,17 @@ namespace GameRes
 				public static Duality.ContentRef<Duality.Resources.Material> Arrows_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Scenes\Bullets\Arrows.Material.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Pixmap> Arrows_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Scenes\Bullets\Arrows.Pixmap.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Texture> Arrows_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Scenes\Bullets\Arrows.Texture.res"); }}
+<<<<<<< HEAD
+=======
+				public static Duality.ContentRef<Duality.Resources.Material> BowserFireball_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Scenes\Bullets\BowserFireball.Material.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Pixmap> BowserFireball_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Scenes\Bullets\BowserFireball.Pixmap.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Texture> BowserFireball_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Scenes\Bullets\BowserFireball.Texture.res"); }}
+				public static Duality.ContentRef<Dove_Game.BulletBlueprint> BulletBlueprint_BulletBlueprint { get { return Duality.ContentProvider.RequestContent<Dove_Game.BulletBlueprint>(@"Data\Scenes\Bullets\BulletBlueprint.BulletBlueprint.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Material> CellAttack_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Scenes\Bullets\CellAttack.Material.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Pixmap> CellAttack_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Scenes\Bullets\CellAttack.Pixmap.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Texture> CellAttack_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Scenes\Bullets\CellAttack.Texture.res"); }}
+				public static Duality.ContentRef<Dove_Game.BulletBlueprint> DefaultBullet_BulletBlueprint { get { return Duality.ContentProvider.RequestContent<Dove_Game.BulletBlueprint>(@"Data\Scenes\Bullets\DefaultBullet.BulletBlueprint.res"); }}
+>>>>>>> 79a5decfec57f7cc2c5ae221eb943721eeed6644
 				public static Duality.ContentRef<Duality.Resources.Material> Fireball_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Scenes\Bullets\Fireball.Material.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Pixmap> Fireball_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Scenes\Bullets\Fireball.Pixmap.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Texture> Fireball_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Scenes\Bullets\Fireball.Texture.res"); }}
@@ -284,6 +319,17 @@ namespace GameRes
 					Arrows_Material.MakeAvailable();
 					Arrows_Pixmap.MakeAvailable();
 					Arrows_Texture.MakeAvailable();
+<<<<<<< HEAD
+=======
+					BowserFireball_Material.MakeAvailable();
+					BowserFireball_Pixmap.MakeAvailable();
+					BowserFireball_Texture.MakeAvailable();
+					BulletBlueprint_BulletBlueprint.MakeAvailable();
+					CellAttack_Material.MakeAvailable();
+					CellAttack_Pixmap.MakeAvailable();
+					CellAttack_Texture.MakeAvailable();
+					DefaultBullet_BulletBlueprint.MakeAvailable();
+>>>>>>> 79a5decfec57f7cc2c5ae221eb943721eeed6644
 					Fireball_Material.MakeAvailable();
 					Fireball_Pixmap.MakeAvailable();
 					Fireball_Texture.MakeAvailable();

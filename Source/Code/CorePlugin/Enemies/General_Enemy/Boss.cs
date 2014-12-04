@@ -34,9 +34,9 @@ namespace Dove_Game.Enemies
         public Direction PlayerPosition { get { return playerPosition; } }
         public override void OnUpdate()
         {
-            WeaponTimer -= Time.MsPFMult * Time.TimeMult;
-            if(WeaponTimer <= 0.0f)
-                FireBullet(Vector2.Zero, 0.0f);
+           // WeaponTimer -= Time.MsPFMult * Time.TimeMult;
+           // if(WeaponTimer <= 0.0f)
+              //  FireBullet(Vector2.Zero, 0.0f);
 
             Move(Vector2.UnitX);
         }

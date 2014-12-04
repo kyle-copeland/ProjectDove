@@ -37,7 +37,7 @@ namespace Dove_Game
             RigidBody body = this.GameObj.RigidBody;
 
             //if person is walking left shoot left else right
-            body.LinearVelocity = AttackDirection == Direction.Left ? new Vector2(speed.X*-1.0f,speed.Y) : speed;
+            body.LinearVelocity = AttackDirection == Direction.Left ? new Vector2(speed.X*-1.0f, angle) : new Vector2(speed.X, angle);
             transform.Pos = new Vector3(position, -2.0f);      
         }
     }

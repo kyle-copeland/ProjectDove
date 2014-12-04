@@ -18,7 +18,11 @@ namespace Dove_Game.Test_Logic
         public static ContentRef<Material> BigHeadGoku = GameRes.Data.Characters.DialogImage.bigheadgoku_Material;
         public static ContentRef<Material> GokuHero = GameRes.Data.Characters.DialogImage.goku_hero_Material;
 
-		public static ContentRef<Material> GokuContentRef = GameRes.Data.Characters.Side_Characters.Goku_2d_2_Material;
+        public static ContentRef<Material> GokuContentRef = GameRes.Data.Characters.Side_Characters.Goku_2d_2_Material;
+        public static ContentRef<Material> BowserContentRef = GameRes.Data.Characters.Side_Characters.Bowser_Material;
+
+        public static ContentRef<Material> fireBlast = GameRes.Data.Scenes.Bullets.BowserFireball_Material;
+        public static ContentRef<Material> cellBlast = GameRes.Data.Scenes.Bullets.CellAttack_Material;
 
 		// Material and resource references for special attacks.
         public static ContentRef<Material> kameBlast = GameRes.Data.Scenes.SpecialAttacks.Kamehameha_2_Material;
