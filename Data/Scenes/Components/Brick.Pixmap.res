@@ -8,12 +8,12 @@
       <item dataType="Struct" type="Duality.Resources.Pixmap+Layer" id="2824927200" custom="true">
         <body>
           <version dataType="Int">3</version>
-          <pixelData dataType="Array" type="System.Byte[]" id="3329633244">iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADNSURBVEhL7ZTBCQIxEEUDgoggiD143as92IJWYRVrQ1ZkH3F+SGD+MLnEyUUMvMP/M/snuyGb0prn4pqRuGYkWrzvxy6v6yE9L/tCr/5YdhJoNq1Fbc49pNv1G6gjX2eSkKa5A/Ca3oMNBHh+A3Xk60wS+L6y4A6znDaUSaIeIO1Ia4tXL5tUmSSk4esBAmWSsGcwMgAZOpNExBnczlvKJGHPwIIAz2/UIZRJQprmDvjfA/Dj96D+z+EOUzJUphFBizK1mIFrRuKaYeT0AehjiNKuQnvIAAAAAElFTkSuQmCC</pixelData>
+          <pixelData dataType="Array" type="System.Byte[]" id="3329633244">iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAC+SURBVEhLY2Do+M9AU0xTw0GOp6sFT2IEGHDhbV68DJ3mXGCMTQ1IvkiPA+hiNEcj+wCq8T+QxoqBWnHKgfSA5AfWApA3cbke5kJC8nh9AApfqDdh3iWZ1hNiRk04yHEAjUB4OBMT5ug+AjsSOW/hi2RyLAAlFJwWoMcBORaAzMBpATXiIFqVjfg4QA9fYnw0mg8I5ovRfIBSmmJLVXjzAbQ8JxjO+MorsBm4igpIbUEFgNMCWjQA6Fon08IyAOhjiNIC99fdAAAAAElFTkSuQmCC</pixelData>
         </body>
       </item>
     </_items>
     <_size dataType="Int">1</_size>
-    <_version dataType="Int">1</_version>
+    <_version dataType="Int">2</_version>
   </layers>
   <sourcePath dataType="String">Source\Media\Brick (3).png</sourcePath>
 </root>

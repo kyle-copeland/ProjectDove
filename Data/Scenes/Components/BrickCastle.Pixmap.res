@@ -8,12 +8,12 @@
       <item dataType="Struct" type="Duality.Resources.Pixmap+Layer" id="2824927200" custom="true">
         <body>
           <version dataType="Int">3</version>
-          <pixelData dataType="Array" type="System.Byte[]" id="3329633244">iVBORw0KGgoAAAANSUhEUgAAADoAAABHCAYAAABWB1Q3AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAF8SURBVHhe7dcxboMwGEDhXC5j75OoK0p7Cg7DHRg5B6PLX+EIOa9l+LvwyvAp8rNk2cIkyqWU8i9gNMJohNEIoxFGI4xGGI0wGmE0wmiE0QijEUYjjEYYjTAaYTTCaITRCKMRRiOMRhiNMBphNMJohDHjen37E7R2BsaMdaNjRtd94toZGDOWjYYyDEOZ5/lF9J35qes+cO0MjBn1oOumXzwej++D/jI/9X2Pa2dgzKgHXTeNduan+/0d187AmFEPmjDebgc6aDyxej2341Y7v3we8x2N67gdt9r5uLqHfUfbcauZP9/RDIwZy0afTzSuYyv6zvz5O5qBMaMedN002pk/39EMjBnLRp9PtF7P7bjVzi+f5+9oBsaM9aDjsukpNh3acQvmce0MjBlx0Pg/Gdcvnkx8scQ7V8dxiK2f5mntDIxGGI0wGmE0wmiE0QijEUYjjEYYjTAaYTTCaITRCKMRRiOMRhiNMBphNMJohNEIoxFGI4xGGH3K5QsVUUq0ZTVgxgAAAABJRU5ErkJggg==</pixelData>
+          <pixelData dataType="Array" type="System.Byte[]" id="3329633244">iVBORw0KGgoAAAANSUhEUgAAADoAAABHCAYAAABWB1Q3AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGNSURBVHhe7ZfBDYMwDEVZjmP3AfWKaKdgGHbgyBwc07giCCilCD6WU/7BBxrq+PvlkyRxziVXiEuIFJAU+m/LmURJNNKvNJculy6Xru0TFj1Kj9Kj9KiJ74CJIjS+BxSq0WXNOUhUs9sac5GoRpc15yBRzW5rzEWiGl3WnANONE1vCSLQTThLaOPF7o6ieMLrgifsabq6rl3XdR8hv/t31sbbonjA64InDEJFpIiaR1mWb6Er421VVfC64AnHREXUUgSiX8bbPL/D64InDEJFzM5osiwiocGjGzw58ax/P06PbvDkxLP+/Xg9+sOTA9Hes/TokUPEaR8j7qPcR4c9lx417VHuo/05eL7PxraPNnLCkaIl5Mo2fg6/r4zDdwN4Qjnryn1SrlpyC5EDupxdw7MXl4zj2/gRPy79Fy4UXSAqH4WiOmklD4laIYGqg0RRnbSSh0StkEDVQaKoTlrJQ6JWSKDqIFFUJ63kIVErJFB1kCiqk1bykKgVEqg6SBTVSSt5SNQKCVQdlyH6AhVRSrRDMdxkAAAAAElFTkSuQmCC</pixelData>
         </body>
       </item>
     </_items>
     <_size dataType="Int">1</_size>
-    <_version dataType="Int">2</_version>
+    <_version dataType="Int">3</_version>
   </layers>
   <sourcePath dataType="String">Source\Media\BrickCastle.png</sourcePath>
 </root>

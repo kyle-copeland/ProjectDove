@@ -8,12 +8,12 @@
       <item dataType="Struct" type="Duality.Resources.Pixmap+Layer" id="2824927200" custom="true">
         <body>
           <version dataType="Int">3</version>
-          <pixelData dataType="Array" type="System.Byte[]" id="3329633244">iVBORw0KGgoAAAANSUhEUgAAADoAAABHCAYAAABWB1Q3AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHVSURBVHhe7dmxajJBFMXx+xq+g2CR1i5Y5hlsgkUQUktKwfQ+wBYprSQBa7G3kmBvlUKwtNzMHbyykZPdUVDh7C1+JPknzM5JDHx8kTzPawFGRjAygpERjIxgZAQjIxgZwcgIRkYwMoKREYyMYGQEIyMYGcHICEZGMDKCkRGMjGBM0ek8SZZ9yHT6Jfv9/upWq28ZDt+l1XqQRqMB71QGxhQ6NPgMl8hvJTwvDyPndxk6Go3yxWLxR/Fy9vHp15SxM/Wt0ZE+NAGMKXxo4EMT+VAfWg3GFO32Yz2GHv6Fog9VeoFbsOfBO5WBMYU+rNlsxZ+qfbevzUbedKgKDz++fO3lZi59+do5dqY6HYruUgXGVHUb+mMXKl74SkN3PrQCjKkOQ/131IeWsHPsTOVDzwBjKh8a+NAKdo6dqXzoGWBM5UMDH1rBzrEzlQ89A4yp6jh0rsIFj8KwI/u48PndQbFFdo6dqfQZ6q5De70X6fdfZTwey2QykXBJWS6Xstls4l/BttttfH+9Xkf6+f/MZrN4RpZlURgpg8GbdLvP8T/jLv1LmoKREYyMYGQEIyMYGcHICEZGMDKCkRGMjGBkBCMjGBnByAhGRjAygpERjIxg5JPLLwJrBUN8zWauAAAAAElFTkSuQmCC</pixelData>
+          <pixelData dataType="Array" type="System.Byte[]" id="3329633244">iVBORw0KGgoAAAANSUhEUgAAADoAAABHCAYAAABWB1Q3AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIKSURBVHhe7Vk9b8IwEL2/wX9AYujKVjH2N7BUDBVSZ9QRie75ARk6MiEqMUfZM6EqO1MHJMaMqc/iqoBU4BxwY/KGp3w58T2/u/PFprIsqQ1oBUkWEkTvzZ2hKBQNNEvDdeG6cN1mV1iIUcQoYhQx2og80AgjfOQDEPUxyj77gKI+R9tHX86KDgZPFMcftFh8UlEUN8d6/UXT6Tv1eg/U6XTUdqtfkNFnogZLQ7L0BdNfaUgm/0J0NpuVaZoeoEqcn/H1cZtT1/JNPgqYJIheUJbWdl0ouo9duO5RXFdjFjGKrHv+F9E5GfX7j3YevftktK9QePJm8ETuA9KfWiD1C1IZcXXS7fasqjKZ3/ooVZHXyogJSxko1Us1c7pWR7fIuLX3R9tG9NujojsXt72Woq0haqeY42kGMXqi9ONkhmRUo/y7VozCdSVONb9qcF247vk/F8TopQvKbSsBkXWRdT0vjCEZOSSjxEz0iSkMfmHcNhHwfT6vPN+Zc8bBO3wt3+GjYL+KsXTdd7mKoqPRC43HrxRFEc3nczLGUpZltNls7A7bdru153meW/Dzv7Barew34ji2MERpMnmj4fCZeDHOdSetNtFLlW9CO+fFsSYYr7EBRDWjFUJbKBqCShoboahmtEJoC0VDUEljIxTVjFYIbaFoCCppbISimtEKoS0UDUEljY2tUfQHAmsFQymxVUcAAAAASUVORK5CYII=</pixelData>
         </body>
       </item>
     </_items>
     <_size dataType="Int">1</_size>
-    <_version dataType="Int">1</_version>
+    <_version dataType="Int">2</_version>
   </layers>
   <sourcePath dataType="String">Source\Media\PipeCastle.png</sourcePath>
 </root>

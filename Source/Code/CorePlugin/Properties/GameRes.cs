@@ -114,12 +114,22 @@ namespace GameRes
 						Thwomp_Texture.MakeAvailable();
 					}
 				}
+				public static class Mario_World {
+					public static void LoadAll() {
+					}
+				}
+				public static class Zelda_World {
+					public static void LoadAll() {
+					}
+				}
 				public static Duality.ContentRef<Duality.Resources.Material> Thwomp_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\Enemies\Thwomp.Material.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Pixmap> Thwomp_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\Enemies\Thwomp.Pixmap.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Texture> Thwomp_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Characters\Enemies\Thwomp.Texture.res"); }}
 				public static void LoadAll() {
 					Dbz_World.LoadAll();
 					MarioWorld.LoadAll();
+					Mario_World.LoadAll();
+					Zelda_World.LoadAll();
 					Thwomp_Material.MakeAvailable();
 					Thwomp_Pixmap.MakeAvailable();
 					Thwomp_Texture.MakeAvailable();
