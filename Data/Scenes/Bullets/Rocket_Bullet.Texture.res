@@ -7,8 +7,8 @@
   <filterMin dataType="Enum" type="OpenTK.Graphics.OpenGL.TextureMinFilter" name="LinearMipmapLinear" value="9987" />
   <pixelformat dataType="Enum" type="OpenTK.Graphics.OpenGL.PixelInternalFormat" name="Rgba" value="6408" />
   <size dataType="Struct" type="OpenTK.Vector2">
-    <X dataType="Float">64</X>
-    <Y dataType="Float">64</Y>
+    <X dataType="Float">130</X>
+    <Y dataType="Float">82</Y>
   </size>
   <sourcePath />
   <texSizeMode dataType="Enum" type="Duality.Resources.Texture+SizeMode" name="Enlarge" value="0" />

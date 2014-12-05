@@ -13,7 +13,7 @@ namespace Dove_Game.Test_Logic
         public override void OnInit(Component.InitContext context)
         {
             this.GameObj.RigidBody.CollisionCategory = CollisionCategory.Cat2;
-            this.GameObj.RigidBody.CollidesWith = CollisionCategory.Cat3 | CollisionCategory.Cat4;
+            this.GameObj.RigidBody.CollidesWith = CollisionCategory.Cat3;
         }
 
         public override void OnShutdown(Component.ShutdownContext context)
