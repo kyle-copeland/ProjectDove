@@ -57,7 +57,7 @@ namespace Dove_Game
                 temp.doDamage(50);
 
 
-            if (args.CollideWith.Name == "Brick")
+            if (args.CollideWith.Name == "Brick" || (args.CollideWith.Name == "SceneBoundary" && this.GameObj.RigidBody.LinearVelocity.Y > 0))
             {
                 this.GameObj.RigidBody.LinearVelocity = (Vector2.UnitY * 0);
             }
