@@ -18,7 +18,7 @@ namespace Dove_Game
     public abstract class Bullet : SpecialAttack
     {
         // Set lifetime and direction of special attack.
-        public void InitFrom(Direction direction)
+        public virtual void InitFrom(Direction direction)
         {
             Lifetime = 800.0f;
             AttackDirection = direction;

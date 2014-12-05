@@ -481,11 +481,7 @@
           <item dataType="Struct" type="Dove_Game.Enemies.DBZ_World.GokuBoss" id="692839585">
             <active dataType="Bool">true</active>
             <attackCooldown dataType="Float">1000</attackCooldown>
-            <attacks dataType="Array" type="Dove_Game.Enemies.BossAttack[]" id="2023009277">
-              <item />
-              <item />
-              <item />
-            </attacks>
+            <attacks dataType="Array" type="Dove_Game.Enemies.BossAttack[]" id="2023009277" length="3" />
             <attackTimer dataType="Float">1000</attackTimer>
             <bulletBlueprint dataType="Struct" type="Duality.ContentRef`1[[Dove_Game.BulletBlueprint]]">
               <contentPath dataType="String">Data\Scenes\SpecialAttacks\RocketBullet.BulletBlueprint.res</contentPath>
@@ -719,16 +715,17 @@
           </item>
           <item dataType="Struct" type="Dove_Game.PlayerOne" id="288668236">
             <_attacking dataType="Bool">false</_attacking>
+            <_elaspedRespawnTime dataType="Float">0</_elaspedRespawnTime>
+            <_playerJumped dataType="Bool">false</_playerJumped>
+            <_summonedCharacter />
             <active dataType="Bool">true</active>
             <currentSA />
             <direction dataType="Enum" type="Dove_Game.Direction" name="Right" value="1" />
-            <elaspedRespawnTime dataType="Float">0</elaspedRespawnTime>
             <gameobj dataType="ObjectRef">3186364968</gameobj>
             <healthPts dataType="Int">100</healthPts>
             <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
             <lastFrame dataType="Int">0</lastFrame>
             <sensorCount dataType="Int">0</sensorCount>
-            <summonedCharacter />
             <vectorMove dataType="Struct" type="OpenTK.Vector2">
               <X dataType="Float">0</X>
               <Y dataType="Float">0</Y>
