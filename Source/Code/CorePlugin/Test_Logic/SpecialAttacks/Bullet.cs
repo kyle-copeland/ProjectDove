@@ -18,7 +18,7 @@ namespace Dove_Game
     public abstract class Bullet : SpecialAttack
     {
         // Set lifetime and direction of special attack.
-        public void InitFrom(Direction direction)
+        public virtual void InitFrom(Direction direction)
         {
             Lifetime = 800.0f;
             AttackDirection = direction;
@@ -37,7 +37,7 @@ namespace Dove_Game
             RigidBody body = this.GameObj.RigidBody;
 
             //if person is walking left shoot left else right
-            body.LinearVelocity = AttackDirection == Direction.Left ? new Vector2(speed.X*-1.0f, angle) : new Vector2(speed.X, angle);
+            body.LinearVelocity = AttackDirection == Direction.Left ? new Vector2(speed.X*-1.0f, speed.Y) : speed;
             transform.Pos = new Vector3(position, -2.0f);      
         }
     }

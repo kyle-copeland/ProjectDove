@@ -358,13 +358,13 @@
             <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
             <parentTransform />
             <pos dataType="Struct" type="OpenTK.Vector3">
-              <X dataType="Float">-5</X>
-              <Y dataType="Float">17</Y>
+              <X dataType="Float">-193</X>
+              <Y dataType="Float">36</Y>
               <Z dataType="Float">-2</Z>
             </pos>
             <posAbs dataType="Struct" type="OpenTK.Vector3">
-              <X dataType="Float">-5</X>
-              <Y dataType="Float">17</Y>
+              <X dataType="Float">-193</X>
+              <Y dataType="Float">36</Y>
               <Z dataType="Float">-2</Z>
             </posAbs>
             <scale dataType="Float">5</scale>
@@ -471,7 +471,7 @@
               <item />
               <item />
             </attacks>
-            <attackTimer dataType="Float">100</attackTimer>
+            <attackTimer dataType="Float">1000</attackTimer>
             <bulletBlueprint dataType="Struct" type="Duality.ContentRef`1[[Dove_Game.BulletBlueprint]]">
               <contentPath dataType="String">Data\Scenes\SpecialAttacks\RocketBullet.BulletBlueprint.res</contentPath>
             </bulletBlueprint>
@@ -483,10 +483,12 @@
             <direction dataType="Enum" type="Dove_Game.Direction" name="Right" value="1" />
             <gameobj dataType="ObjectRef">2675831366</gameobj>
             <healthPts dataType="Int">50</healthPts>
-            <impulse dataType="Float">10</impulse>
+            <impulse dataType="Float">3</impulse>
             <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
             <lastFrame dataType="Int">0</lastFrame>
-            <movementSpeed dataType="Float">15</movementSpeed>
+            <movementSpeed dataType="Float">5</movementSpeed>
+            <nextAttack dataType="Int">0</nextAttack>
+            <playerPosition dataType="Enum" type="Dove_Game.Direction" name="Left" value="0" />
             <seqWalk dataType="Struct" type="System.Collections.Generic.List`1[[System.Int32]]" id="2178536374">
               <_items dataType="Array" type="System.Int32[]" id="3613221478">
                 <item dataType="Int">31</item>
@@ -502,7 +504,7 @@
               <X dataType="Float">0</X>
               <Y dataType="Float">0</Y>
             </vectorMove>
-            <weaponDelay dataType="Float">200</weaponDelay>
+            <weaponDelay dataType="Float">1000</weaponDelay>
             <weaponTimer dataType="Float">0</weaponTimer>
           </item>
         </_items>
@@ -702,16 +704,17 @@
           </item>
           <item dataType="Struct" type="Dove_Game.PlayerOne" id="288668236">
             <_attacking dataType="Bool">false</_attacking>
+            <_elaspedRespawnTime dataType="Float">0</_elaspedRespawnTime>
+            <_playerJumped dataType="Bool">false</_playerJumped>
+            <_summonedCharacter />
             <active dataType="Bool">true</active>
             <currentSA />
             <direction dataType="Enum" type="Dove_Game.Direction" name="Right" value="1" />
-            <elaspedRespawnTime dataType="Float">0</elaspedRespawnTime>
             <gameobj dataType="ObjectRef">3186364968</gameobj>
             <healthPts dataType="Int">100</healthPts>
             <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
             <lastFrame dataType="Int">0</lastFrame>
             <sensorCount dataType="Int">0</sensorCount>
-            <summonedCharacter />
             <vectorMove dataType="Struct" type="OpenTK.Vector2">
               <X dataType="Float">0</X>
               <Y dataType="Float">0</Y>

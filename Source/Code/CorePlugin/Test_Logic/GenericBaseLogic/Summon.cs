@@ -109,6 +109,11 @@ namespace Dove_Game.Test_Logic
                         spriteSize = spriteMaterial.MainTexture.IsAvailable ? spriteMaterial.MainTexture.Res.Size : new Vector2(5, 5);
                         createFireblast(ref summonPiece, new Vector2(playerOneRectX, playerOneRectY), main.CharDirection, spriteSize);
                         break;
+                    case Attack.Bomb:
+                        Bomb bomb = summonPiece.AddComponent<Bomb>();
+                        //Create bomb
+                        break;
+
                 }
             }
 
@@ -194,6 +199,11 @@ namespace Dove_Game.Test_Logic
             body.FixedAngle = true;
 
             summonPiece.GetComponent<Fireblast>().InitFrom(direction);
+        }
+
+        public static void createBomb(ref GameObject summonPiece, Vector2 playerPos, Direction direction, Vector2 spriteSize)
+        {
+
         }
     }
 }

@@ -19,6 +19,7 @@ namespace Dove_Game
         PlayerBullet,
         CellBullet,
         Fireblast,
+        Bomb,
         NoAttack
     }
 

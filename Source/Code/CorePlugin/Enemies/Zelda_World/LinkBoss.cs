@@ -14,10 +14,7 @@ namespace Dove_Game.Enemies.Zelda_World
     [Serializable]
     [RequiredComponent(typeof(RigidBody))]
     public class LinkBoss : Boss
-    {
-        private BossAttack[] attacks = null;
-        private float attackTimer = 100.0f;
-        private float attackCooldown = 1000.0f;
+    {  
 
         //animation sequences
         private List<int> seqWalk = new List<int> { 0, 1 };
@@ -63,7 +60,8 @@ namespace Dove_Game.Enemies.Zelda_World
             private List<int> seqBomb = new List<int>() { 0, 10, 20 };
             public void attack(Boss boss)
             {
-                Console.WriteLine("BombDrop");
+                Scene.Current.AddObject(Test_Logic.Summon.SummonGameObject(SideCharacter.NoCharacter, Attack.Bomb, boss));
+                boss.nextAttack = NONE;
             }
         }
         //Shoots an arrow with a random generated color
@@ -80,6 +78,7 @@ namespace Dove_Game.Enemies.Zelda_World
             
                 arrow.Fire(boss.GameObj.RigidBody.LinearVelocity, boss.GameObj.Transform.GetWorldPoint(Vector2.Zero), 0, new Vector2(bulletSpeed,0));
                 Scene.Current.AddObject(arrow.GameObj);
+                boss.nextAttack = NONE;
             }
         }
         //Jumps in the air swinging sword around
@@ -95,7 +94,7 @@ namespace Dove_Game.Enemies.Zelda_World
                 sprite.CustomFrameSequence = seqWhirlwind;
                 sprite.AnimDuration = 0.5f;
                 body.ApplyLocalImpulse(Vector2.UnitY * -600.0f);
-                Console.WriteLine(body.LinearVelocity);
+                boss.nextAttack = NONE;
             }
         }
 

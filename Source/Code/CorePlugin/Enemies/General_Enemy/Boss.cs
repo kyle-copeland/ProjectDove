@@ -6,7 +6,7 @@ using System.Text;
 using Duality;
 using Duality.Components;
 using Duality.Components.Physics;
-
+using Duality.Components.Renderers;
 using Duality.Resources;
 using Duality.Editor;
 
@@ -27,24 +27,41 @@ namespace Dove_Game.Enemies
         protected ContentRef<BulletBlueprint> bulletBlueprint = Test_Logic.ContentRefs.BBP_Default.Res; 
         protected ContentRef<Material> bulletMaterial = null;
         protected int BulletSpeed = 30;
-
+        //Special boss attack information
+        protected BossAttack[] attacks = null;
+        protected float attackTimer = 1000.0f;
+        protected float attackCooldown = 1000.0f;
         public int nextAttack = 0;
-
+        public const int NONE = -1;
         private Direction playerPosition = Direction.Left;
         public Direction PlayerPosition { get { return playerPosition; } }
         public override void OnUpdate()
         {
-           // WeaponTimer -= Time.MsPFMult * Time.TimeMult;
-           // if(WeaponTimer <= 0.0f)
-              //  FireBullet(Vector2.Zero, 0.0f);
-
-            Move(Vector2.UnitX);
+           
+            //this will randomly select an attack every some odd seconds
+            Random specialAttackPicker = new Random();
+            attackTimer -= Time.MsPFMult * Time.TimeMult;
+            if (attackTimer <= 0.0f )
+            {
+                if (nextAttack == NONE)
+                    nextAttack = specialAttackPicker.Next(attacks.Length);
+                attacks[nextAttack].attack(this);
+                attackTimer = attackCooldown;
+            }
+            else if (nextAttack == NONE)
+            {
+                WeaponTimer -= Time.MsPFMult * Time.TimeMult;
+                if(WeaponTimer <= 0.0f)
+                    FireBullet(Vector2.Zero, 0.0f);
+                Move(Vector2.UnitX);
+            }
+           
         }
 
         public override void Move(Vector2 unitDirection)
         {
            MoveTowardsPlayerOne();
-           // base.Move(unitDirection);
+           base.Move(unitDirection);
         }
 
         //Follows Player 

@@ -14,7 +14,7 @@ namespace Dove_Game.Test_Logic
     public class Fireblast : PlayerOneBullet
     {
         // Set lifetime and direction of special attack.
-        public void InitFrom(Direction direction)
+        public override void InitFrom(Direction direction)
         {
             Lifetime = 1200.0f;
             AttackDirection = direction;

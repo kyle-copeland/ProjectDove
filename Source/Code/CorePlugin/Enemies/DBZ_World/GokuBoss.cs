@@ -17,13 +17,8 @@ namespace Dove_Game.Enemies.DBZ_World
     [RequiredComponent(typeof(RigidBody))]
     public class GokuBoss : Boss
     {
-
-        private BossAttack[] attacks = null;
-        private float attackTimer = 1000.0f;
-        private float attackCooldown = 1000.0f;
-
         private const int FLYAROUND = 1;
-        private const int NONE = -1;
+        
         //animation sequences
         private List<int> seqWalk = new List<int> { 31, 32, 33, 34 };
 
@@ -37,27 +32,7 @@ namespace Dove_Game.Enemies.DBZ_World
             attacks = new BossAttack[] { new Kamahameha(), new Flyaround(), new Charge() };
         }
 
-        public override void OnUpdate()
-        {
-            //this will randomly select an attack every some odd seconds
-            Random specialAttackPicker = new Random();
-            attackTimer -= Time.MsPFMult * Time.TimeMult;
-            if (attackTimer <= 0.0f )
-            {
-                if(nextAttack == NONE)
-                    nextAttack = specialAttackPicker.Next(attacks.Length);
-                attacks[nextAttack].attack(this);
-                attackTimer = attackCooldown;
-            }
-            else if (nextAttack == NONE)
-            {
-                if (onGround(this.GameObj.RigidBody))
-                    this.GameObj.GetComponent<AnimSpriteRenderer>().CustomFrameSequence = seqWalk;
-                base.OnUpdate();
-            }
-
-           
-        }
+        
         private class Kamahameha : BossAttack
         {
             public void attack(Boss boss)
