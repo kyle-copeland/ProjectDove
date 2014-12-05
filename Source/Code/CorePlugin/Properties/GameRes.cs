@@ -198,6 +198,7 @@ namespace GameRes
 			}
 		}
 		public static class Prefabs {
+			public static Duality.ContentRef<Duality.Resources.Prefab> Brick_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\Brick.Prefab.res"); }}
 			public static Duality.ContentRef<Duality.Resources.Prefab> CloudsT_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\CloudsT.Prefab.res"); }}
 			public static Duality.ContentRef<Duality.Resources.Prefab> Firespin_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\Firespin.Prefab.res"); }}
 			public static Duality.ContentRef<Duality.Resources.Prefab> Goku_2d_2_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\Goku_2d_2.Prefab.res"); }}
@@ -210,6 +211,7 @@ namespace GameRes
 			public static Duality.ContentRef<Duality.Resources.Prefab> Thwomp_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\Thwomp.Prefab.res"); }}
 			public static Duality.ContentRef<Duality.Resources.Prefab> White_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\White.Prefab.res"); }}
 			public static void LoadAll() {
+				Brick_Prefab.MakeAvailable();
 				CloudsT_Prefab.MakeAvailable();
 				Firespin_Prefab.MakeAvailable();
 				Goku_2d_2_Prefab.MakeAvailable();
@@ -338,9 +340,9 @@ namespace GameRes
 				public static Duality.ContentRef<Duality.Resources.Material> Firespin_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Scenes\Components\Firespin.Material.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Pixmap> Firespin_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Scenes\Components\Firespin.Pixmap.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Texture> Firespin_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Scenes\Components\Firespin.Texture.res"); }}
-				public static Duality.ContentRef<Duality.Resources.Material> Flag2_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Scenes\Components\Flag2.Material.res"); }}
-				public static Duality.ContentRef<Duality.Resources.Pixmap> Flag2_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Scenes\Components\Flag2.Pixmap.res"); }}
-				public static Duality.ContentRef<Duality.Resources.Texture> Flag2_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Scenes\Components\Flag2.Texture.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Material> Flag_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Scenes\Components\Flag.Material.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Pixmap> Flag_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Scenes\Components\Flag.Pixmap.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Texture> Flag_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Scenes\Components\Flag.Texture.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Material> Flagpole_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Scenes\Components\Flagpole.Material.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Pixmap> Flagpole_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Scenes\Components\Flagpole.Pixmap.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Texture> Flagpole_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Scenes\Components\Flagpole.Texture.res"); }}
@@ -378,9 +380,9 @@ namespace GameRes
 					Firespin_Material.MakeAvailable();
 					Firespin_Pixmap.MakeAvailable();
 					Firespin_Texture.MakeAvailable();
-					Flag2_Material.MakeAvailable();
-					Flag2_Pixmap.MakeAvailable();
-					Flag2_Texture.MakeAvailable();
+					Flag_Material.MakeAvailable();
+					Flag_Pixmap.MakeAvailable();
+					Flag_Texture.MakeAvailable();
 					Flagpole_Material.MakeAvailable();
 					Flagpole_Pixmap.MakeAvailable();
 					Flagpole_Texture.MakeAvailable();
