@@ -75,7 +75,7 @@ namespace Dove_Game.Enemies.DBZ_World
 
                     Bullet fireball = Test_Logic.ContentRefs.BBP_Default.Res.CreateBullet(boss.CharDirection, spiritballMaterial,true, new List<int> {12});
 
-                    fireball.Fire(body.LinearVelocity, transform.GetWorldPoint(Vector2.Zero), 0, Vector2.UnitY*10);
+                    fireball.Fire(body.LinearVelocity, transform.GetWorldPoint(Vector2.Zero), 0, (Vector2.UnitY*10.0f).X);
                     Scene.Current.AddObject(fireball.GameObj);
                 }
                 else

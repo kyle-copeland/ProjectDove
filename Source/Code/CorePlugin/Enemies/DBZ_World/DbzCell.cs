@@ -56,7 +56,7 @@ namespace Dove_Game.Enemies.DBZ_World
 
                     CurrentSpecialAttack = cellBlast.GetComponent<EnemyBullet>();
                     ((EnemyBullet) CurrentSpecialAttack).Fire(this.GameObj.RigidBody.LinearVelocity,
-                        this.GameObj.Transform.Pos.Xy, 0f, new Vector2(bulletSpeed, 0.0f));
+                        this.GameObj.Transform.Pos.Xy, 0f, bulletSpeed);
                     Scene.Current.AddObject(cellBlast);
                 }
                 else

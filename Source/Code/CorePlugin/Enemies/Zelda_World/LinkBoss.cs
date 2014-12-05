@@ -75,8 +75,8 @@ namespace Dove_Game.Enemies.Zelda_World
                 //get materials
                 Bullet arrow = Test_Logic.ContentRefs.BBP_Default.Res.CreateBullet(boss.CharDirection, GameRes.Data.Scenes.Bullets.Arrows_Material);
                 int bulletSpeed = 20;
-            
-                arrow.Fire(boss.GameObj.RigidBody.LinearVelocity, boss.GameObj.Transform.GetWorldPoint(Vector2.Zero), 0, new Vector2(bulletSpeed,0));
+
+                arrow.Fire(boss.GameObj.RigidBody.LinearVelocity, boss.GameObj.Transform.GetWorldPoint(Vector2.Zero), 0, bulletSpeed);
                 Scene.Current.AddObject(arrow.GameObj);
                 boss.nextAttack = NONE;
             }

@@ -69,7 +69,7 @@ namespace Dove_Game
 
                         Bullet fireball = Test_Logic.ContentRefs.BBP_Default.Res.CreateBullet(boss.CharDirection, fireballMaterial, true, new List<int> { 4, 5, 6, 7 });
 
-                        fireball.Fire(body.LinearVelocity, transform.GetWorldPoint(Vector2.Zero), 0, seq[5-fireballsLeft] * speed);
+                        fireball.Fire(body.LinearVelocity, transform.GetWorldPoint(Vector2.Zero), 0, (seq[5-fireballsLeft] * speed).X);
                         Scene.Current.AddObject(fireball.GameObj);
                        
                         fireballsLeft--;

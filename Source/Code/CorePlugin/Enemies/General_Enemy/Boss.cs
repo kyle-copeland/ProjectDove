@@ -99,8 +99,8 @@ namespace Dove_Game.Enemies
             WeaponTimer = WeaponDelay;
 
             Bullet bullet = bulletBlueprint.Res.CreateBullet(CharDirection,bulletMaterial);
-         
-            bullet.Fire(body.LinearVelocity, transform.GetWorldPoint(localPos), transform.Angle + localAngle, new Vector2(BulletSpeed,0));
+
+            bullet.Fire(body.LinearVelocity, transform.GetWorldPoint(localPos), transform.Angle + localAngle, BulletSpeed);
             Scene.Current.AddObject(bullet.GameObj);
         }
 

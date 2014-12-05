@@ -31,13 +31,15 @@ namespace Dove_Game
             if (Lifetime <= 0) this.GameObj.DisposeLater();
         }
 
-        public void Fire(Vector2 sourceDragVel, Vector2 position, float angle, Vector2 speed)
+        public void Fire(Vector2 sourceDragVel, Vector2 position, float angle, float speed)
         {
-            Transform transform = this.GameObj.Transform;
-            RigidBody body = this.GameObj.RigidBody;
+            var transform = this.GameObj.Transform;
+            var body = this.GameObj.RigidBody;
+
+            speed *= AttackDirection == Direction.Left ? -1.0f : 1.0f;
 
             //if person is walking left shoot left else right
-            body.LinearVelocity = AttackDirection == Direction.Left ? new Vector2(speed.X*-1.0f, speed.Y) : speed;
+            body.LinearVelocity = new Vector2(speed, angle);
             transform.Pos = new Vector3(position, -2.0f);      
         }
     }

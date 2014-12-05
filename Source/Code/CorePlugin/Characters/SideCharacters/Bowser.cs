@@ -71,30 +71,30 @@ namespace Dove_Game
                     if (CharDirection == Direction.Right)
                     {
                         spriteUpper.AnimFirstFrame = 9;
-                        fbUpper.Fire(playerOne.LinearVelocity, playerMovement.Pos.Xy, -2.0f, new Vector2(bulletSpeed, 0.0f));
+                        fbUpper.Fire(playerOne.LinearVelocity, playerMovement.Pos.Xy, -2.0f, bulletSpeed);
                         Scene.Current.AddObject(fireBlastUpper);
 
                         spriteMiddle.AnimFirstFrame = 12;
-                        fbMiddle.Fire(playerOne.LinearVelocity, playerMovement.Pos.Xy, 0.0f, new Vector2(bulletSpeed, 0.0f));
+                        fbMiddle.Fire(playerOne.LinearVelocity, playerMovement.Pos.Xy, 0.0f, bulletSpeed);
                         Scene.Current.AddObject(fireBlastMiddle);
 
                         spriteLower.AnimFirstFrame = 15;
-                        fbLower.Fire(playerOne.LinearVelocity, playerMovement.Pos.Xy, 2.0f, new Vector2(bulletSpeed, 0.0f));
+                        fbLower.Fire(playerOne.LinearVelocity, playerMovement.Pos.Xy, 2.0f, bulletSpeed);
                         Scene.Current.AddObject(fireBlastLower);
                     }
 
                     else if (CharDirection == Direction.Left)
                     {
                         spriteUpper.AnimFirstFrame = 0;
-                        fbUpper.Fire(playerOne.LinearVelocity, playerMovement.Pos.Xy, -2.0f, new Vector2(bulletSpeed, 0.0f));
+                        fbUpper.Fire(playerOne.LinearVelocity, playerMovement.Pos.Xy, -2.0f, bulletSpeed);
                         Scene.Current.AddObject(fireBlastUpper);
 
                         spriteMiddle.AnimFirstFrame = 3;
-                        fbMiddle.Fire(playerOne.LinearVelocity, playerMovement.Pos.Xy, 0.0f, new Vector2(bulletSpeed, 0.0f));
+                        fbMiddle.Fire(playerOne.LinearVelocity, playerMovement.Pos.Xy, 0.0f, bulletSpeed);
                         Scene.Current.AddObject(fireBlastMiddle);
 
                         spriteLower.AnimFirstFrame = 6;
-                        fbLower.Fire(playerOne.LinearVelocity, playerMovement.Pos.Xy, 2.0f, new Vector2(bulletSpeed, 0.0f));
+                        fbLower.Fire(playerOne.LinearVelocity, playerMovement.Pos.Xy, 2.0f, bulletSpeed);
                         Scene.Current.AddObject(fireBlastLower);
                         
                     }

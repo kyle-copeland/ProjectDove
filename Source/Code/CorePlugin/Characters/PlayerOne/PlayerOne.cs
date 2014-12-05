@@ -140,7 +140,7 @@ namespace Dove_Game
                     CurrentSpecialAttack = rocketBullet.GetComponent<PlayerOneBullet>();
                     const float bulletSpeed = 20;
 
-                    ((PlayerOneBullet)CurrentSpecialAttack).Fire(playerOne.LinearVelocity, playerMovement.Pos.Xy, 0f, new Vector2(bulletSpeed, 0.0f));
+                    ((PlayerOneBullet)CurrentSpecialAttack).Fire(playerOne.LinearVelocity, playerMovement.Pos.Xy, 0f, bulletSpeed);
                     Scene.Current.AddObject(rocketBullet);
                 }
 
