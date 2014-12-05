@@ -67,6 +67,9 @@
     <Compile Include="Test_Logic\DialogScripts.cs" />
     <Compile Include="Test_Logic\DrawDialog.cs" />
     <Compile Include="Test_Logic\DrawHealth.cs" />
+    <Compile Include="Test_Logic\DrawOverlay.cs" />
+    <Compile Include="Test_Logic\GameController.cs" />
+    <Compile Include="Test_Logic\GameOverController.cs" />
     <Compile Include="Test_Logic\GenericBaseLogic\Enumerations.cs" />
     <Compile Include="AI_Logic\FloatAI.cs" />
     <Compile Include="Characters\PlayerOne\PlayerOne.cs" />

@@ -450,6 +450,7 @@ namespace GameRes
 		public static Duality.ContentRef<Duality.Resources.Scene> CanvasTest_Scene { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Scene>(@"Data\CanvasTest.Scene.res"); }}
 		public static Duality.ContentRef<Duality.Resources.Scene> Dbz_KaiPlanet_Scene { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Scene>(@"Data\Dbz_KaiPlanet.Scene.res"); }}
 		public static Duality.ContentRef<Duality.Resources.Scene> Dbz_SnakeWay_Scene { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Scene>(@"Data\Dbz_SnakeWay.Scene.res"); }}
+		public static Duality.ContentRef<Duality.Resources.Scene> GameOverTest_Scene { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Scene>(@"Data\GameOverTest.Scene.res"); }}
 		public static Duality.ContentRef<Duality.Resources.Scene> SpecialSkillTest_Scene { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Scene>(@"Data\SpecialSkillTest.Scene.res"); }}
 		public static Duality.ContentRef<Duality.Resources.Scene> Start_Scene { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Scene>(@"Data\Start.Scene.res"); }}
 		public static Duality.ContentRef<Duality.Resources.Scene> TestBullets_Scene { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Scene>(@"Data\TestBullets.Scene.res"); }}
@@ -462,6 +463,7 @@ namespace GameRes
 			CanvasTest_Scene.MakeAvailable();
 			Dbz_KaiPlanet_Scene.MakeAvailable();
 			Dbz_SnakeWay_Scene.MakeAvailable();
+			GameOverTest_Scene.MakeAvailable();
 			SpecialSkillTest_Scene.MakeAvailable();
 			Start_Scene.MakeAvailable();
 			TestBullets_Scene.MakeAvailable();
