@@ -14,6 +14,7 @@ namespace Dove_Game.Test_Logic
         public static ContentRef<Scene> WorldMapScene = GameRes.Data.WorldMap_Scene;
         public static ContentRef<Scene> DbzDialogOne = GameRes.Data.CanvasTest_Scene;
         public static ContentRef<Scene> DbzSnakeWay = GameRes.Data.Dbz_SnakeWay_Scene;
+        public static ContentRef<Scene> DbzKaiPlanet = GameRes.Data.Dbz_KaiPlanet_Scene;
 
         public static ContentRef<Material> BigHeadGoku = GameRes.Data.Characters.DialogImage.bigheadgoku_Material;
         public static ContentRef<Material> GokuHero = GameRes.Data.Characters.DialogImage.goku_hero_Material;
@@ -34,5 +35,7 @@ namespace Dove_Game.Test_Logic
 
         //Default Bullet
         public static ContentRef<BulletBlueprint> BBP_Default = GameRes.Data.Scenes.Bullets.DefaultBullet_BulletBlueprint;
+
+        public static ContentRef<Prefab> playerOnePrefab = GameRes.Data.Prefabs.PlayerOne_Prefab;
     }
 }

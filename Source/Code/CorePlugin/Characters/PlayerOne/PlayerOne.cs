@@ -24,15 +24,15 @@ namespace Dove_Game
     [RequiredComponent(typeof(RigidBody))]
     public class PlayerOne : Character
     {
-        private int sensorCount;
+        private int _sensorCount;
+
         private Character _summonedCharacter;
         private float _elaspedRespawnTime;
-        private bool _playerJumped;
 
-        public bool PlayerJumped
+        public int SensorCount
         {
-            get { return _playerJumped; }
-            set { _playerJumped = value; }
+            get { return _sensorCount; }
+            set { _sensorCount = value; }
         }
 
         public float ElaspedRespawnTime
@@ -105,10 +105,8 @@ namespace Dove_Game
                 }
 
                 // Move up
-                else if (DualityApp.Keyboard[Key.Up] && sensorCount > 0)
+                else if (DualityApp.Keyboard[Key.Up] && SensorCount > 0)
                 {
-                    PlayerJumped = true;
-
                     if (CharDirection == Direction.Right)
                         playerSprite.AnimFirstFrame = 0;
                     else if (CharDirection == Direction.Left)
@@ -226,7 +224,7 @@ namespace Dove_Game
             if (bodyCollision == null) return;
 
             if (bodyCollision.OtherShape.IsSensor)
-                this.sensorCount++;
+                this.SensorCount++;
         }
 
         public override void OnCollisionEnd(Component sender, CollisionEventArgs args)
@@ -235,7 +233,7 @@ namespace Dove_Game
             if (bodyCollision == null) return;
 
             if (bodyCollision.OtherShape.IsSensor)
-                this.sensorCount--;
+                this.SensorCount--;
 
         }
 

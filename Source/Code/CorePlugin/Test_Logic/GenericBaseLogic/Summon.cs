@@ -76,8 +76,15 @@ namespace Dove_Game.Test_Logic
                     case Attack.PlayerBullet:
                         PlayerOneBullet playerBullet = summonPiece.AddComponent<PlayerOneBullet>();
                         playerBullet.AttackDirection = main.CharDirection;
+                        
+                        sprite.AnimDuration = 1;
+                        sprite.AnimFrameCount = 1;
+                        sprite.AnimLoopMode = AnimSpriteRenderer.LoopMode.Loop;
+                        sprite.AnimFirstFrame = playerBullet.AttackDirection == Direction.Right ? 1 : 0;
+
                         spriteMaterial = ContentRefs.rocketBullet.Res;
                         spriteSize = spriteMaterial.MainTexture.IsAvailable ? spriteMaterial.MainTexture.Res.Size : new Vector2(5, 5);
+                        spriteSize.X /= 2.0f;
                         createBullet(ref summonPiece, new Vector2(playerOneRectX, playerOneRectY), main.CharDirection, spriteSize);
                         break;
 
