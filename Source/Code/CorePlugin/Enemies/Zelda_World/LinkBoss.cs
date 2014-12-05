@@ -14,10 +14,7 @@ namespace Dove_Game.Enemies.Zelda_World
     [Serializable]
     [RequiredComponent(typeof(RigidBody))]
     public class LinkBoss : Boss
-    {
-        private BossAttack[] attacks = null;
-        private float attackTimer = 100.0f;
-        private float attackCooldown = 1000.0f;
+    {  
 
         //animation sequences
         private List<int> seqWalk = new List<int> { 0, 1 };

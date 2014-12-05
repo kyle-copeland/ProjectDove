@@ -12,6 +12,7 @@ namespace Dove_Game.Enemies
     //These attacks are privately defined per boss
     public interface BossAttack
     {
+        
         void attack(Boss boss);
     }
 }

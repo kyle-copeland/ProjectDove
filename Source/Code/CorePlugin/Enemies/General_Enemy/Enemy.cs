@@ -15,8 +15,8 @@ namespace Dove_Game.Enemies
     // Base class characterizing components as enemies.
     public abstract class Enemy : Character 
     {
-        private float impulse = 10;
-        protected float movementSpeed = 15;
+        private float impulse = 3;
+        protected float movementSpeed = 5;
         private float weaponTimer = 0.0f;
         private float weaponDelay = 1000.0f;
 
@@ -76,6 +76,7 @@ namespace Dove_Game.Enemies
         public override void OnInit(Component.InitContext context)
         {
             HealthPoints = 50;
+            this.GameObj.RigidBody.Mass = 50;
             this.GameObj.RigidBody.CollisionCategory = CollisionCategory.Cat3;
             this.GameObj.RigidBody.CollidesWith = CollisionCategory.Cat1 | CollisionCategory.Cat2 | CollisionCategory.Cat4 | CollisionCategory.Cat5;
         }
