@@ -47,7 +47,7 @@ namespace Dove_Game.Enemies
             {
                 if (nextAttack == NONE)
                     nextAttack = specialAttackPicker.Next(attacks.Length);
-                attacks[nextAttack].attack(this);
+                attacks[0].attack(this);
                 attackTimer = attackCooldown;
             }
             else if (nextAttack == NONE)

@@ -358,13 +358,13 @@
             <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
             <parentTransform />
             <pos dataType="Struct" type="OpenTK.Vector3">
-              <X dataType="Float">-193</X>
-              <Y dataType="Float">36</Y>
+              <X dataType="Float">86</X>
+              <Y dataType="Float">-22</Y>
               <Z dataType="Float">-2</Z>
             </pos>
             <posAbs dataType="Struct" type="OpenTK.Vector3">
-              <X dataType="Float">-193</X>
-              <Y dataType="Float">36</Y>
+              <X dataType="Float">86</X>
+              <Y dataType="Float">-22</Y>
               <Z dataType="Float">-2</Z>
             </posAbs>
             <scale dataType="Float">5</scale>
@@ -464,10 +464,44 @@
               <_version dataType="Int">5</_version>
             </shapes>
           </item>
-          <item />
+          <item dataType="Struct" type="Dove_Game.Enemies.SlenderBoss" id="4149157691">
+            <active dataType="Bool">true</active>
+            <attackCooldown dataType="Float">1000</attackCooldown>
+            <attacks dataType="Array" type="Dove_Game.Enemies.BossAttack[]" id="2150899735">
+              <item />
+              <item />
+              <item />
+            </attacks>
+            <attackTimer dataType="Float">1000</attackTimer>
+            <autoShoot dataType="Bool">true</autoShoot>
+            <bulletBlueprint dataType="Struct" type="Duality.ContentRef`1[[Dove_Game.BulletBlueprint]]">
+              <contentPath dataType="String">Data\Scenes\SpecialAttacks\RocketBullet.BulletBlueprint.res</contentPath>
+            </bulletBlueprint>
+            <bulletMaterial dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
+              <contentPath dataType="String">Data\Scenes\Bullets\Rocket_Bullet.Material.res</contentPath>
+            </bulletMaterial>
+            <BulletSpeed dataType="Int">30</BulletSpeed>
+            <currentSA />
+            <direction dataType="Enum" type="Dove_Game.Direction" name="Right" value="1" />
+            <gameobj dataType="ObjectRef">2675831366</gameobj>
+            <healthPts dataType="Int">50</healthPts>
+            <impulse dataType="Float">3</impulse>
+            <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
+            <lastFrame dataType="Int">0</lastFrame>
+            <movementSpeed dataType="Float">5</movementSpeed>
+            <nextAttack dataType="Int">0</nextAttack>
+            <playerPosition dataType="Enum" type="Dove_Game.Direction" name="Left" value="0" />
+            <touchDamage dataType="Int">20</touchDamage>
+            <vectorMove dataType="Struct" type="OpenTK.Vector2">
+              <X dataType="Float">0</X>
+              <Y dataType="Float">0</Y>
+            </vectorMove>
+            <weaponDelay dataType="Float">1000</weaponDelay>
+            <weaponTimer dataType="Float">0</weaponTimer>
+          </item>
         </_items>
         <_size dataType="Int">4</_size>
-        <_version dataType="Int">8</_version>
+        <_version dataType="Int">12</_version>
       </compList>
       <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="2750225134" surrogate="true">
         <header />
@@ -807,6 +841,48 @@
       </identifier>
       <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
       <name dataType="String">Fireball</name>
+      <parent />
+      <prefabLink />
+    </item>
+    <item dataType="Struct" type="Duality.GameObject" id="2254236648">
+      <active dataType="Bool">true</active>
+      <children />
+      <compList dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Component]]" id="3422116142">
+        <_items dataType="Array" type="Duality.Component[]" id="1540908880" length="4">
+          <item dataType="Struct" type="Dove_Game.Test_Logic.DrawHealth" id="1111929262">
+            <_respawnNeeded dataType="Bool">false</_respawnNeeded>
+            <active dataType="Bool">true</active>
+            <font dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Font]]">
+              <contentPath />
+            </font>
+            <gameobj dataType="ObjectRef">2254236648</gameobj>
+            <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
+            <playerOne dataType="ObjectRef">288668236</playerOne>
+          </item>
+        </_items>
+        <_size dataType="Int">1</_size>
+        <_version dataType="Int">1</_version>
+      </compList>
+      <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="2609684682" surrogate="true">
+        <header />
+        <body>
+          <keys dataType="Array" type="System.Type[]" id="142969772">
+            <item dataType="Type" id="838667492" value="Dove_Game.Test_Logic.DrawHealth" />
+          </keys>
+          <values dataType="Array" type="Duality.Component[]" id="2368222134">
+            <item dataType="ObjectRef">1111929262</item>
+          </values>
+        </body>
+      </compMap>
+      <compTransform />
+      <identifier dataType="Struct" type="System.Guid" surrogate="true">
+        <header>
+          <data dataType="Array" type="System.Byte[]" id="529730552">A6J6ziY//kmP1XeoJRb4FQ==</data>
+        </header>
+        <body />
+      </identifier>
+      <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
+      <name dataType="String">DrawHealth</name>
       <parent />
       <prefabLink />
     </item>
