@@ -114,22 +114,12 @@ namespace GameRes
 						Thwomp_Texture.MakeAvailable();
 					}
 				}
-				public static class Mario_World {
-					public static void LoadAll() {
-					}
-				}
-				public static class Zelda_World {
-					public static void LoadAll() {
-					}
-				}
 				public static Duality.ContentRef<Duality.Resources.Material> Thwomp_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\Enemies\Thwomp.Material.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Pixmap> Thwomp_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\Enemies\Thwomp.Pixmap.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Texture> Thwomp_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Characters\Enemies\Thwomp.Texture.res"); }}
 				public static void LoadAll() {
 					Dbz_World.LoadAll();
 					MarioWorld.LoadAll();
-					Mario_World.LoadAll();
-					Zelda_World.LoadAll();
 					Thwomp_Material.MakeAvailable();
 					Thwomp_Pixmap.MakeAvailable();
 					Thwomp_Texture.MakeAvailable();
@@ -438,7 +428,9 @@ namespace GameRes
 			}
 			public static Duality.ContentRef<Duality.Resources.Scene> AI_Testing_Center_Scene { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Scene>(@"Data\Scenes\AI Testing Center.Scene.res"); }}
 			public static Duality.ContentRef<Duality.Resources.Scene> BossTestingGoku_Scene { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Scene>(@"Data\Scenes\BossTestingGoku.Scene.res"); }}
+			public static Duality.ContentRef<Duality.Resources.Scene> BossTestingLink_Scene { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Scene>(@"Data\Scenes\BossTestingLink.Scene.res"); }}
 			public static Duality.ContentRef<Duality.Resources.Scene> BossTestingMario_Scene { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Scene>(@"Data\Scenes\BossTestingMario.Scene.res"); }}
+			public static Duality.ContentRef<Duality.Resources.Scene> BossTestingSlenderMan_Scene { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Scene>(@"Data\Scenes\BossTestingSlenderMan.Scene.res"); }}
 			public static Duality.ContentRef<Duality.Resources.Scene> MarioCastle_Scene { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Scene>(@"Data\Scenes\MarioCastle.Scene.res"); }}
 			public static Duality.ContentRef<Duality.Resources.Scene> MarioWorld_Scene { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Scene>(@"Data\Scenes\MarioWorld.Scene.res"); }}
 			public static Duality.ContentRef<Duality.Resources.Scene> PlayerOneTest_Scene { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Scene>(@"Data\Scenes\PlayerOneTest.Scene.res"); }}
@@ -451,7 +443,9 @@ namespace GameRes
 				SpecialAttacks.LoadAll();
 				AI_Testing_Center_Scene.MakeAvailable();
 				BossTestingGoku_Scene.MakeAvailable();
+				BossTestingLink_Scene.MakeAvailable();
 				BossTestingMario_Scene.MakeAvailable();
+				BossTestingSlenderMan_Scene.MakeAvailable();
 				MarioCastle_Scene.MakeAvailable();
 				MarioWorld_Scene.MakeAvailable();
 				PlayerOneTest_Scene.MakeAvailable();

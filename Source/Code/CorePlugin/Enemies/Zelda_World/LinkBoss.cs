@@ -27,31 +27,12 @@ namespace Dove_Game.Enemies.Zelda_World
             // each boss must specify its bullet information
             this.bulletBlueprint = Test_Logic.ContentRefs.BBP_rocketBullet;
             this.bulletMaterial = Test_Logic.ContentRefs.rocketBullet;
-
+            autoShoot = false;
             //a list of available attacks to use
             attacks = new BossAttack[] {new Whirlwind(), new BombDrop(), new ShootArrow() };
         }
 
-        //Logic
-        public override void OnUpdate()
-        {
-            //this will randomly select an attack every some odd seconds
-            Random specialAttackPicker = new Random();
-            attackTimer -= Time.MsPFMult * Time.TimeMult;
-            if (attackTimer <= 0.0f)
-            {
-                //attacks[specialAttackPicker.Next(attacks.Length)].attack(this.GameObj);
-                attacks[2].attack(this);
-                attackTimer = attackCooldown;
-            }
-            else
-            {
-                if(onGround(this.GameObj.RigidBody))
-                    this.GameObj.GetComponent<AnimSpriteRenderer>().CustomFrameSequence = seqWalk;
-            }
-            base.Move(Vector2.UnitX);
-        }
-        
+       
       
         //Special Moves
         //Drops a bomb that will explode 5 seconds later
@@ -60,7 +41,28 @@ namespace Dove_Game.Enemies.Zelda_World
             private List<int> seqBomb = new List<int>() { 0, 10, 20 };
             public void attack(Boss boss)
             {
-                Scene.Current.AddObject(Test_Logic.Summon.SummonGameObject(SideCharacter.NoCharacter, Attack.Bomb, boss));
+                GameObject bomb = new GameObject("Bomb");
+                RigidBody body = bomb.AddComponent<RigidBody>();
+                Transform transform = bomb.AddComponent<Transform>();
+                AnimSpriteRenderer sprite = bomb.AddComponent<AnimSpriteRenderer>();
+                Material spriteMaterial = Material.SolidBlack.Res;
+                sprite.SharedMaterial = spriteMaterial;
+               
+                Bomb compBomb = bomb.AddComponent<Bomb>();
+                
+                Vector2 spriteSize = spriteMaterial.MainTexture.IsAvailable ? spriteMaterial.MainTexture.Res.Size : new Vector2(50, 50);
+                sprite.Rect = Rect.AlignCenter(0, 0, spriteSize.X, spriteSize.Y);
+                //Create bomb
+                float spriteRadius = MathF.Max(spriteSize.X, spriteSize.Y)*0.5f;
+                body.ClearShapes();
+                CircleShapeInfo circleShape = new CircleShapeInfo(spriteRadius, Vector2.Zero, 1.0f);
+                circleShape.IsSensor = false;
+                body.AddShape(circleShape);
+                body.IgnoreGravity = false;
+                transform.Pos = new Vector3(boss.GameObj.Transform.GetWorldPoint(Vector2.Zero), -2.0f);
+                compBomb.InitFrom();
+                Scene.Current.AddObject(bomb);
+                
                 boss.nextAttack = NONE;
             }
         }
@@ -73,7 +75,8 @@ namespace Dove_Game.Enemies.Zelda_World
             public void attack(Boss boss)
             {
                 //get materials
-                Bullet arrow = Test_Logic.ContentRefs.BBP_Default.Res.CreateBullet(boss.CharDirection, GameRes.Data.Scenes.Bullets.Arrows_Material);
+                List<int> seq = boss.PlayerPosition == Direction.Right ? new List<int> {0,1,2,3} : new List<int>{4,5,6,7};
+                Bullet arrow = Test_Logic.ContentRefs.BBP_Default.Res.CreateBullet(boss.CharDirection, GameRes.Data.Scenes.Bullets.Arrows_Material,true, seq );
                 int bulletSpeed = 20;
 
                 arrow.Fire(boss.GameObj.RigidBody.LinearVelocity, boss.GameObj.Transform.GetWorldPoint(Vector2.Zero), 0, bulletSpeed);
@@ -93,7 +96,7 @@ namespace Dove_Game.Enemies.Zelda_World
                 AnimSpriteRenderer sprite = boss.GameObj.GetComponent<AnimSpriteRenderer>();
                 sprite.CustomFrameSequence = seqWhirlwind;
                 sprite.AnimDuration = 0.5f;
-                body.ApplyLocalImpulse(Vector2.UnitY * -600.0f);
+                body.ApplyLocalImpulse(Vector2.UnitY * -180.0f);
                 boss.nextAttack = NONE;
             }
         }
