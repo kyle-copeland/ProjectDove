@@ -57,6 +57,7 @@
     <Compile Include="Enemies\DBZ_World\GokuBoss.cs" />
     <Compile Include="Enemies\General_Enemy\Enemy.cs" />
     <Compile Include="Enemies\General_Enemy\EnvironmentEnemy.cs" />
+    <Compile Include="Enemies\Mario_World\Fireball.cs" />
     <Compile Include="Enemies\Mario_World\Firespin.cs" />
     <Compile Include="Enemies\Mario_World\MarioBoss.cs" />
     <Compile Include="Enemies\Boss_World\SlenderBoss.cs" />
@@ -101,7 +102,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Scene_Components\DBZ_World\" />
-    <Folder Include="Scene_Components\General_Environment\" />
     <Folder Include="Scene_Components\Zelda_World\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

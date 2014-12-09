@@ -337,6 +337,9 @@ namespace GameRes
 				public static Duality.ContentRef<Duality.Resources.Material> CloudsT_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Scenes\Components\CloudsT.Material.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Pixmap> CloudsT_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Scenes\Components\CloudsT.Pixmap.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Texture> CloudsT_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Scenes\Components\CloudsT.Texture.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Material> Fireball_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Scenes\Components\Fireball.Material.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Pixmap> Fireball_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Scenes\Components\Fireball.Pixmap.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Texture> Fireball_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Scenes\Components\Fireball.Texture.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Material> Firespin_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Scenes\Components\Firespin.Material.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Pixmap> Firespin_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Scenes\Components\Firespin.Pixmap.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Texture> Firespin_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Scenes\Components\Firespin.Texture.res"); }}
@@ -380,6 +383,9 @@ namespace GameRes
 					CloudsT_Material.MakeAvailable();
 					CloudsT_Pixmap.MakeAvailable();
 					CloudsT_Texture.MakeAvailable();
+					Fireball_Material.MakeAvailable();
+					Fireball_Pixmap.MakeAvailable();
+					Fireball_Texture.MakeAvailable();
 					Firespin_Material.MakeAvailable();
 					Firespin_Pixmap.MakeAvailable();
 					Firespin_Texture.MakeAvailable();
