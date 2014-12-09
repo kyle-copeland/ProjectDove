@@ -86,7 +86,7 @@ namespace Dove_Game
 
                     CharDirection = Direction.Left;
                     MovementVector = Vector2.UnitX * -1.0f;
-                    playerOne.ApplyWorldImpulse(-Vector2.UnitX * 0.37f);
+                    playerOne.ApplyWorldImpulse(-Vector2.UnitX * 1.0f);
                     //playerMovement.MoveBy(MovementVector * Time.TimeMult);
                 }
 
@@ -100,7 +100,7 @@ namespace Dove_Game
 
                     CharDirection = Direction.Right;
                     MovementVector = Vector2.UnitX * 1.0f;
-                    playerOne.ApplyWorldImpulse(Vector2.UnitX * 0.37f);
+                    playerOne.ApplyWorldImpulse(Vector2.UnitX * 1.0f);
                     //playerMovement.MoveBy(MovementVector * Time.TimeMult);
                 }
 

@@ -114,22 +114,12 @@ namespace GameRes
 						Thwomp_Texture.MakeAvailable();
 					}
 				}
-				public static class Mario_World {
-					public static void LoadAll() {
-					}
-				}
-				public static class Zelda_World {
-					public static void LoadAll() {
-					}
-				}
 				public static Duality.ContentRef<Duality.Resources.Material> Thwomp_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\Enemies\Thwomp.Material.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Pixmap> Thwomp_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\Enemies\Thwomp.Pixmap.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Texture> Thwomp_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Characters\Enemies\Thwomp.Texture.res"); }}
 				public static void LoadAll() {
 					Dbz_World.LoadAll();
 					MarioWorld.LoadAll();
-					Mario_World.LoadAll();
-					Zelda_World.LoadAll();
 					Thwomp_Material.MakeAvailable();
 					Thwomp_Pixmap.MakeAvailable();
 					Thwomp_Texture.MakeAvailable();
@@ -371,6 +361,9 @@ namespace GameRes
 				public static Duality.ContentRef<Duality.Resources.Material> Solid_Brick_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Scenes\Components\Solid Brick.Material.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Pixmap> Solid_Brick_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Scenes\Components\Solid Brick.Pixmap.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Texture> Solid_Brick_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Scenes\Components\Solid Brick.Texture.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Material> SolidBrickCastle_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Scenes\Components\SolidBrickCastle.Material.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Pixmap> SolidBrickCastle_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Scenes\Components\SolidBrickCastle.Pixmap.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Texture> SolidBrickCastle_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Scenes\Components\SolidBrickCastle.Texture.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Material> Thwomp_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Scenes\Components\Thwomp.Material.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Pixmap> Thwomp_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Scenes\Components\Thwomp.Pixmap.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Texture> Thwomp_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Scenes\Components\Thwomp.Texture.res"); }}
@@ -411,6 +404,9 @@ namespace GameRes
 					Solid_Brick_Material.MakeAvailable();
 					Solid_Brick_Pixmap.MakeAvailable();
 					Solid_Brick_Texture.MakeAvailable();
+					SolidBrickCastle_Material.MakeAvailable();
+					SolidBrickCastle_Pixmap.MakeAvailable();
+					SolidBrickCastle_Texture.MakeAvailable();
 					Thwomp_Material.MakeAvailable();
 					Thwomp_Pixmap.MakeAvailable();
 					Thwomp_Texture.MakeAvailable();

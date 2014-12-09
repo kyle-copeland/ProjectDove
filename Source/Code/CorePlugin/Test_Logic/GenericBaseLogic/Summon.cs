@@ -110,7 +110,7 @@ namespace Dove_Game.Test_Logic
                         createFireblast(ref summonPiece, new Vector2(playerOneRectX, playerOneRectY), main.CharDirection, spriteSize);
                         break;
                     case Attack.Bomb:
-                        Bomb bomb = summonPiece.AddComponent<Bomb>();
+                        //Bomb bomb = summonPiece.AddComponent<Bomb>();
                         //Create bomb
                         break;
 

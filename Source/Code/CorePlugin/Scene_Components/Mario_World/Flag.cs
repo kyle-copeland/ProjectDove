@@ -8,18 +8,17 @@ using Duality.Components.Physics;
 using Duality.Resources;
 using OpenTK;
 
-
 namespace Dove_Game.Scene_Components.Mario_World
 {
     [Serializable]
-
-    public class Flag : Component, ICmpUpdatable, ICmpCollisionListener, ICmpInitializable
+    public class Flag : Component, ICmpUpdatable, ICmpInitializable, ICmpCollisionListener
     {
-        private PlayerOne playerOne;
-        private float initYPosition;
+        PlayerOne playerOne;
+        float initYPosition;
 
         void ICmpInitializable.OnInit(Component.InitContext context)
         {
+            playerOne = Scene.Current.FindComponent<PlayerOne>();
             initYPosition = this.GameObj.Transform.Pos.Y;
         }
 
@@ -29,9 +28,10 @@ namespace Dove_Game.Scene_Components.Mario_World
 
         void ICmpUpdatable.OnUpdate()
         {
-            playerOne = Scene.Current.FindComponent<PlayerOne>();
-            if (playerOne.GameObj.Transform.Pos.X >= this.GameObj.Transform.Pos.X && !isDown() && this.GameObj.Transform.Vel.Length == 0)
-                this.GameObj.RigidBody.ApplyLocalImpulse(Vector2.UnitY * 5.0f);
+            if (playerOne.GameObj.Transform.Pos.X >= this.GameObj.Transform.Pos.X && isRaised())
+            {
+                this.GameObj.RigidBody.ApplyLocalImpulse(Vector2.UnitY * 0.1f);
+            }
         }
 
         void ICmpCollisionListener.OnCollisionBegin(Component sender, CollisionEventArgs args)
@@ -50,12 +50,12 @@ namespace Dove_Game.Scene_Components.Mario_World
         {
         }
 
-        private Boolean isDown()
+        private Boolean isRaised()
         {
-            if (this.GameObj.Transform.Pos.Y != initYPosition)
-                return true;
-            else
+            if (this.GameObj.Transform.Pos.Y < initYPosition)
                 return false;
+            else
+                return true;
         }
 
     }
