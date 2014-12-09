@@ -89,6 +89,7 @@
     <Compile Include="Characters\Character.cs" />
     <Compile Include="Test_Logic\GenericBaseLogic\ContentRefs.cs" />
     <Compile Include="Test_Logic\SpecialAttacks\EnemyBullet.cs" />
+    <Compile Include="Test_Logic\SpecialAttacks\Explosion.cs" />
     <Compile Include="Test_Logic\SpecialAttacks\Fireblast.cs" />
     <Compile Include="Test_Logic\SpecialAttacks\Kamehameha.cs" />
     <Compile Include="Test_Logic\SpecialAttacks\PlayerOneBullet.cs" />

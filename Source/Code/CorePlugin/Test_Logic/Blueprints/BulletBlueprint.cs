@@ -35,7 +35,7 @@ namespace Dove_Game
 
             Material spriteMaterial = bulletMaterial.Res ?? Material.SolidBlack.Res;
             Vector2 spriteSize = bulletMaterial.Res.MainTexture.IsAvailable ? spriteMaterial.MainTexture.Res.Size : new Vector2(20, 20);
-            float spriteRadius = MathF.Max(spriteSize.X, spriteSize.Y) * 0.25f;
+            float spriteRadius = MathF.Max(spriteSize.X, spriteSize.Y) * .5f;
 
             body.ClearShapes();
             CircleShapeInfo circleShape = new CircleShapeInfo(spriteRadius, Vector2.Zero, 1.0f);
@@ -48,6 +48,7 @@ namespace Dove_Game
             AnimSpriteRenderer sprite = obj.AddComponent<AnimSpriteRenderer>();
             sprite.SharedMaterial = spriteMaterial;
             sprite.Rect = Rect.AlignCenter(0.0f, 0.0f, spriteSize.X, spriteSize.Y);
+            
             if(isAnimated)
             {
                 sprite.CustomFrameSequence = seq;

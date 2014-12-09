@@ -29,6 +29,8 @@ namespace Dove_Game
         private Character _summonedCharacter;
         private float _elaspedRespawnTime;
 
+        public bool isStunned = false;
+
         public int SensorCount
         {
             get { return _sensorCount; }
@@ -74,7 +76,7 @@ namespace Dove_Game
                 }
             }
 
-            else if (_summonedCharacter == null && CurrentSpecialAttack == null)
+            else if (_summonedCharacter == null && CurrentSpecialAttack == null && !isStunned)
             {
                 // Move left
                 if (DualityApp.Keyboard[Key.Left])
@@ -105,7 +107,7 @@ namespace Dove_Game
                 }
 
                 // Move up
-                else if (DualityApp.Keyboard[Key.Up] && SensorCount > 0)
+                else if (DualityApp.Keyboard[Key.Up] && playerOne.LinearVelocity.Y == 0)
                 {
                     if (CharDirection == Direction.Right)
                         playerSprite.AnimFirstFrame = 0;
@@ -117,8 +119,7 @@ namespace Dove_Game
                     playerSprite.AnimLoopMode = AnimSpriteRenderer.LoopMode.Loop;
                     
                     MovementVector = Vector2.UnitY * -1.0f;
-                    playerOne.ApplyWorldForce(-Vector2.UnitY * 14.0f);
-                    //playerMovement.MoveBy(MovementVector * Time.TimeMult);
+                    playerOne.ApplyLocalImpulse(-Vector2.UnitY * 100.0f);
                 }
 
                 // Gun Sequence

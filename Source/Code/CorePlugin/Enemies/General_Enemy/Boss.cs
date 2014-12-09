@@ -33,6 +33,8 @@ namespace Dove_Game.Enemies
         protected float attackCooldown = 1000.0f;
         public int nextAttack = 0;
         public const int NONE = -1;
+
+        protected bool autoShoot = true;
         private Direction playerPosition = Direction.Left;
         public Direction PlayerPosition { get { return playerPosition; } }
         public override void OnUpdate()
@@ -45,14 +47,17 @@ namespace Dove_Game.Enemies
             {
                 if (nextAttack == NONE)
                     nextAttack = specialAttackPicker.Next(attacks.Length);
-                attacks[nextAttack].attack(this);
+                attacks[0].attack(this);
                 attackTimer = attackCooldown;
             }
             else if (nextAttack == NONE)
             {
-                WeaponTimer -= Time.MsPFMult * Time.TimeMult;
-                if(WeaponTimer <= 0.0f)
-                    FireBullet(Vector2.Zero, 0.0f);
+                if (autoShoot)
+                {
+                    WeaponTimer -= Time.MsPFMult * Time.TimeMult;
+                    if (WeaponTimer <= 0.0f)
+                        FireBullet(Vector2.Zero, 0.0f);
+                }
                 Move(Vector2.UnitX);
             }
            

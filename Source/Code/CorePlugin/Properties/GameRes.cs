@@ -434,7 +434,9 @@ namespace GameRes
 			}
 			public static Duality.ContentRef<Duality.Resources.Scene> AI_Testing_Center_Scene { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Scene>(@"Data\Scenes\AI Testing Center.Scene.res"); }}
 			public static Duality.ContentRef<Duality.Resources.Scene> BossTestingGoku_Scene { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Scene>(@"Data\Scenes\BossTestingGoku.Scene.res"); }}
+			public static Duality.ContentRef<Duality.Resources.Scene> BossTestingLink_Scene { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Scene>(@"Data\Scenes\BossTestingLink.Scene.res"); }}
 			public static Duality.ContentRef<Duality.Resources.Scene> BossTestingMario_Scene { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Scene>(@"Data\Scenes\BossTestingMario.Scene.res"); }}
+			public static Duality.ContentRef<Duality.Resources.Scene> BossTestingSlenderMan_Scene { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Scene>(@"Data\Scenes\BossTestingSlenderMan.Scene.res"); }}
 			public static Duality.ContentRef<Duality.Resources.Scene> MarioCastle_Scene { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Scene>(@"Data\Scenes\MarioCastle.Scene.res"); }}
 			public static Duality.ContentRef<Duality.Resources.Scene> MarioWorld_Scene { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Scene>(@"Data\Scenes\MarioWorld.Scene.res"); }}
 			public static Duality.ContentRef<Duality.Resources.Scene> PlayerOneTest_Scene { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Scene>(@"Data\Scenes\PlayerOneTest.Scene.res"); }}
@@ -447,7 +449,9 @@ namespace GameRes
 				SpecialAttacks.LoadAll();
 				AI_Testing_Center_Scene.MakeAvailable();
 				BossTestingGoku_Scene.MakeAvailable();
+				BossTestingLink_Scene.MakeAvailable();
 				BossTestingMario_Scene.MakeAvailable();
+				BossTestingSlenderMan_Scene.MakeAvailable();
 				MarioCastle_Scene.MakeAvailable();
 				MarioWorld_Scene.MakeAvailable();
 				PlayerOneTest_Scene.MakeAvailable();
