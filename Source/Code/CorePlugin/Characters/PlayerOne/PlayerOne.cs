@@ -88,7 +88,7 @@ namespace Dove_Game
 
                     CharDirection = Direction.Left;
                     MovementVector = Vector2.UnitX * -1.0f;
-                    playerOne.ApplyWorldImpulse(-Vector2.UnitX * 1.0f);
+                    playerOne.ApplyWorldImpulse(-Vector2.UnitX * 0.3f);
                     //playerMovement.MoveBy(MovementVector * Time.TimeMult);
                 }
 
@@ -102,7 +102,7 @@ namespace Dove_Game
 
                     CharDirection = Direction.Right;
                     MovementVector = Vector2.UnitX * 1.0f;
-                    playerOne.ApplyWorldImpulse(Vector2.UnitX * 1.0f);
+                    playerOne.ApplyWorldImpulse(Vector2.UnitX * 0.3f);
                     //playerMovement.MoveBy(MovementVector * Time.TimeMult);
                 }
 
@@ -119,7 +119,7 @@ namespace Dove_Game
                     playerSprite.AnimLoopMode = AnimSpriteRenderer.LoopMode.Loop;
                     
                     MovementVector = Vector2.UnitY * -1.0f;
-                    playerOne.ApplyLocalImpulse(-Vector2.UnitY * 100.0f);
+                    playerOne.ApplyLocalImpulse(-Vector2.UnitY * 35.0f);
                 }
 
                 // Gun Sequence
