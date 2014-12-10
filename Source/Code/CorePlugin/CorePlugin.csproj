@@ -64,11 +64,8 @@
     <Compile Include="Enemies\Zelda_World\LinkBoss.cs" />
     <Compile Include="Scene_Components\Mario_World\Brick.cs" />
     <Compile Include="Scene_Components\Mario_World\Flag.cs" />
-<<<<<<< HEAD
     <Compile Include="Scene_Components\Mario_World\QuestionBox.cs" />
-=======
     <Compile Include="Scene_Components\Test_World\EndGameOverlay.cs" />
->>>>>>> 1e49874dbf2faa2c66282a1b10c1931c2b277cd2
     <Compile Include="Scene_Components\Test_World\StartScene.cs" />
     <Compile Include="Test_Logic\CameraController.cs" />
     <Compile Include="Test_Logic\DialogComponent.cs" />
