@@ -4,41 +4,30 @@ using System.Linq;
 using System.Text;
 
 using Duality;
-using Duality.Components.Physics;
 using Duality.Resources;
 using OpenTK;
 
 namespace Dove_Game.Scene_Components.Mario_World
 {
     [Serializable]
-    public class Flag : Component, ICmpUpdatable, ICmpInitializable, ICmpCollisionListener
+    public class Brick : Component, ICmpCollisionListener, ICmpInitializable
     {
-        PlayerOne playerOne;
-        float initYPosition;
+        private PlayerOne playerOne;
 
         void ICmpInitializable.OnInit(Component.InitContext context)
         {
             playerOne = Scene.Current.FindComponent<PlayerOne>();
-            initYPosition = this.GameObj.Transform.Pos.Y;
         }
 
         void ICmpInitializable.OnShutdown(Component.ShutdownContext context)
         {
-        }
-
-        void ICmpUpdatable.OnUpdate()
-        {
-            if (playerOne.GameObj.Transform.Pos.X >= this.GameObj.Transform.Pos.X && isRaised())
-            {
-                this.GameObj.RigidBody.ApplyLocalImpulse(Vector2.UnitY * 0.1f);
-            }
-        }
+        } 
 
         void ICmpCollisionListener.OnCollisionBegin(Component sender, CollisionEventArgs args)
         {
-            if (args.CollideWith.Name == "Solid Brick")
+            if (args.CollideWith.Name == "MainCharacter" && playerOne.GameObj.Transform.Pos.Y > this.GameObj.Transform.Pos.Y)
             {
-                this.GameObj.RigidBody.LinearVelocity = (Vector2.UnitY * 0);
+                this.GameObj.DisposeLater();
             }
         }
 
@@ -49,14 +38,5 @@ namespace Dove_Game.Scene_Components.Mario_World
         void ICmpCollisionListener.OnCollisionSolve(Component sender, CollisionEventArgs args)
         {
         }
-
-        private Boolean isRaised()
-        {
-            if (this.GameObj.Transform.Pos.Y < initYPosition)
-                return false;
-            else
-                return true;
-        }
-
     }
 }

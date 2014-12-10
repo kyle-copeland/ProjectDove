@@ -49,7 +49,8 @@ namespace Dove_Game.Test_Logic
 
         public static void AssignDialogScript(object sender, EventArgs e, List<DialogComponent> dscript)
         {
-            DialogScript = dscript;
+           DialogScript = dscript.ToList();
+            Scene.Entered -= WorldSelectionMap.SceneLoadHandler;
         }
 
         public void Draw(IDrawDevice device)
@@ -61,6 +62,7 @@ namespace Dove_Game.Test_Logic
             {
                 CurrentDialog = DialogScript.First();
                 DialogScript.Remove(CurrentDialog);
+                //DialogScripts.introScript.Add(CurrentDialog);
                 AwaitingInput = true;
             }
 

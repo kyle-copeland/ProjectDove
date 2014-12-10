@@ -17,13 +17,16 @@ namespace Dove_Game
     public class Thwomp : EnvironmentEnemy
     {
         private PlayerOne playerOne;
-        private AnimSpriteRenderer thwompSprite; 
+        private AnimSpriteRenderer thwompSprite;
 
-        public override void OnUpdate()
+        public override void OnInit(Component.InitContext context)
         {
             playerOne = Scene.Current.FindComponent<PlayerOne>();
             thwompSprite = this.GameObj.GetComponent<AnimSpriteRenderer>();
+        }
 
+        public override void OnUpdate()
+        {
             float mainPosition = playerOne.GameObj.Transform.Pos.X;
             float thwompPosition = this.GameObj.Transform.Pos.X;
             float difference = Math.Abs(mainPosition - thwompPosition);

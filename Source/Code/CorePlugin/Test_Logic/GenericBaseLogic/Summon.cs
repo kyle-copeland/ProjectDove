@@ -109,8 +109,8 @@ namespace Dove_Game.Test_Logic
                         spriteSize = spriteMaterial.MainTexture.IsAvailable ? spriteMaterial.MainTexture.Res.Size : new Vector2(5, 5);
                         createFireblast(ref summonPiece, new Vector2(playerOneRectX, playerOneRectY), main.CharDirection, spriteSize);
                         break;
-                       
-                 
+
+
 
                 }
             }
@@ -123,7 +123,7 @@ namespace Dove_Game.Test_Logic
             //else if (main.CharDirection == Direction.Left)
             //    playerOnePosX -= 50.0f;
 
-         
+
             body.IgnoreGravity = true;
             body.BodyType = BodyType.Dynamic;
             transform.Pos = new Vector3(playerOnePosX, playerOnePosY, -1.0f);

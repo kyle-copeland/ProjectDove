@@ -59,16 +59,17 @@ namespace Dove_Game.Test_Logic
             if (MainCharacter == null)
                 MainCharacter = Scene.Current.FindComponents<PlayerOne>().FirstOrDefault();
 
-            if (MainCharacter != null && MainCharacter.HealthPoints <= 0 && LifeCount > 1 && DrawHealthSvc.RespawnNeeded)
+            if (MainCharacter != null && MainCharacter.HealthPoints <= 0 && LifeCount > 1 && DrawHealth.RespawnNeeded)
             {
                 LifeCount--;
+                DrawHealth.RespawnNeeded = false;
                 Scene.Current.Dispose();
                 Scene.SwitchTo(PrevScene);
             }
-            else if (LifeCount <= 1 && DrawHealthSvc.RespawnNeeded)
+            else if (LifeCount == 1 && DrawHealth.RespawnNeeded)
             {
+                LifeCount--;
                 //Draw GameOverScene and have that scene navigate to start scene when player presses enter.
-
             }
             else if(DualityApp.Keyboard[Key.ShiftLeft] && DualityApp.Keyboard[Key.Q])
                 Scene.SwitchTo(ContentRefs.StartScene);
@@ -89,6 +90,13 @@ namespace Dove_Game.Test_Logic
         public void OnShutdown(Component.ShutdownContext context)
         {
 
+        }
+
+        public static void ReloadScene()
+        {
+            LifeCount = 3;
+            Scene.Current.Dispose();
+            Scene.SwitchTo(PrevScene);
         }
     }
 }

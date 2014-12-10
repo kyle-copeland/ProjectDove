@@ -16,6 +16,9 @@ namespace Dove_Game.Test_Logic
         public static ContentRef<Scene> DbzSnakeWay = GameRes.Data.Dbz_SnakeWay_Scene;
         public static ContentRef<Scene> DbzKaiPlanet = GameRes.Data.Dbz_KaiPlanet_Scene;
 
+        public static ContentRef<Material> GameOver = GameRes.Data.Scenes.Backgrounds.GameOver_Material;
+        public static ContentRef<Material> GameWin = GameRes.Data.Scenes.Backgrounds.GameWin_Material;
+
         public static ContentRef<Material> BigHeadGoku = GameRes.Data.Characters.DialogImage.bigheadgoku_Material;
         public static ContentRef<Material> GokuHero = GameRes.Data.Characters.DialogImage.goku_hero_Material;
 

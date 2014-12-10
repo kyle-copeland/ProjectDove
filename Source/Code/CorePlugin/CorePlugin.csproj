@@ -57,10 +57,18 @@
     <Compile Include="Enemies\DBZ_World\GokuBoss.cs" />
     <Compile Include="Enemies\General_Enemy\Enemy.cs" />
     <Compile Include="Enemies\General_Enemy\EnvironmentEnemy.cs" />
+    <Compile Include="Enemies\Mario_World\Fireball.cs" />
     <Compile Include="Enemies\Mario_World\Firespin.cs" />
     <Compile Include="Enemies\Mario_World\MarioBoss.cs" />
     <Compile Include="Enemies\Boss_World\SlenderBoss.cs" />
     <Compile Include="Enemies\Zelda_World\LinkBoss.cs" />
+    <Compile Include="Scene_Components\Mario_World\Brick.cs" />
+    <Compile Include="Scene_Components\Mario_World\Flag.cs" />
+<<<<<<< HEAD
+    <Compile Include="Scene_Components\Mario_World\QuestionBox.cs" />
+=======
+    <Compile Include="Scene_Components\Test_World\EndGameOverlay.cs" />
+>>>>>>> 1e49874dbf2faa2c66282a1b10c1931c2b277cd2
     <Compile Include="Scene_Components\Test_World\StartScene.cs" />
     <Compile Include="Test_Logic\CameraController.cs" />
     <Compile Include="Test_Logic\DialogComponent.cs" />
@@ -100,7 +108,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Scene_Components\DBZ_World\" />
-    <Folder Include="Scene_Components\Mario_World\" />
     <Folder Include="Scene_Components\Zelda_World\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

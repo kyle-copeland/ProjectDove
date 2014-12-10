@@ -63,6 +63,8 @@ namespace Dove_Game.Test_Logic
             get { return float.MaxValue; }
         }
 
+        public static EventHandler SceneLoadHandler;
+
         public void OnUpdate()
         {
             if (DualityApp.Keyboard.KeyHit(Key.Left))
@@ -81,7 +83,13 @@ namespace Dove_Game.Test_Logic
             {
                 if (CurrentWorld != null)
                 {
-                    Scene.Entered += (sender, e) => DrawDialog.AssignDialogScript(sender, e, DialogScripts.introScript);
+                    List<DialogComponent> x = DialogScripts.introScript;
+                    SceneLoadHandler = delegate(object sender, EventArgs e)
+                    {
+                        DrawDialog.AssignDialogScript(sender, e, x);
+                    };
+
+                    Scene.Entered += SceneLoadHandler;
                     Scene.SwitchTo(CurrentWorld.WorldScene);
                 }
             }
@@ -133,7 +141,7 @@ namespace Dove_Game.Test_Logic
                 new WorldComponent(ContentRefs.DbzSnakeWay, new Vector2(62.0f, -87.0f)),
 
                 // Dbz World
-                new WorldComponent(ContentRefs.DbzSnakeWay, new Vector2(-200.0f, 92.0f))
+                new WorldComponent(ContentRefs.DbzDialogOne, new Vector2(-200.0f, 92.0f))
             };
 
             CurrentWorld = WorldList.First();
