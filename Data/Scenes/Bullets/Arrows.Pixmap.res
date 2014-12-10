@@ -14,19 +14,19 @@
         <H dataType="Float">15.375</H>
         <W dataType="Float">51</W>
         <X dataType="Float">0</X>
-        <Y dataType="Float">15.375</Y>
+        <Y dataType="Float">19</Y>
       </item>
       <item dataType="Struct" type="Duality.Rect">
         <H dataType="Float">15.375</H>
         <W dataType="Float">51</W>
         <X dataType="Float">0</X>
-        <Y dataType="Float">30.75</Y>
+        <Y dataType="Float">32</Y>
       </item>
       <item dataType="Struct" type="Duality.Rect">
         <H dataType="Float">15.375</H>
         <W dataType="Float">51</W>
         <X dataType="Float">0</X>
-        <Y dataType="Float">46.125</Y>
+        <Y dataType="Float">44</Y>
       </item>
       <item dataType="Struct" type="Duality.Rect">
         <H dataType="Float">15.375</H>
@@ -44,17 +44,17 @@
         <H dataType="Float">15.375</H>
         <W dataType="Float">51</W>
         <X dataType="Float">0</X>
-        <Y dataType="Float">92.25</Y>
+        <Y dataType="Float">90</Y>
       </item>
       <item dataType="Struct" type="Duality.Rect">
         <H dataType="Float">15.375</H>
         <W dataType="Float">51</W>
         <X dataType="Float">0</X>
-        <Y dataType="Float">107.625</Y>
+        <Y dataType="Float">105</Y>
       </item>
     </_items>
     <_size dataType="Int">8</_size>
-    <_version dataType="Int">10</_version>
+    <_version dataType="Int">48</_version>
   </atlas>
   <layers dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Resources.Pixmap+Layer]]" id="2035693768">
     <_items dataType="Array" type="Duality.Resources.Pixmap+Layer[]" id="2696347487" length="4">

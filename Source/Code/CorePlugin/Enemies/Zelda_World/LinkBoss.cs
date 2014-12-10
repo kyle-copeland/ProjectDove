@@ -17,7 +17,6 @@ namespace Dove_Game.Enemies.Zelda_World
     {  
 
         //animation sequences
-        private List<int> seqWalk = new List<int> { 0, 1 };
 
         //Initalize
         public override void OnInit(Component.InitContext context)
@@ -30,6 +29,10 @@ namespace Dove_Game.Enemies.Zelda_World
             autoShoot = false;
             //a list of available attacks to use
             attacks = new BossAttack[] {new Whirlwind(), new BombDrop(), new ShootArrow() };
+
+            //Animation
+            seqWalkRight = new List<int> { 6, 7, 8 };
+            seqWalkLeft = new List<int> { 9, 10, 11 };
         }
 
        
@@ -45,15 +48,19 @@ namespace Dove_Game.Enemies.Zelda_World
                 RigidBody body = bomb.AddComponent<RigidBody>();
                 Transform transform = bomb.AddComponent<Transform>();
                 AnimSpriteRenderer sprite = bomb.AddComponent<AnimSpriteRenderer>();
-                Material spriteMaterial = Material.SolidBlack.Res;
+                Material spriteMaterial = Test_Logic.ContentRefs.bomb.Res;
                 sprite.SharedMaterial = spriteMaterial;
-               
+                sprite.AnimDuration = 0.4f;
+                sprite.AnimFrameCount = 3;
+                sprite.AnimLoopMode = AnimSpriteRenderer.LoopMode.PingPong;
                 Bomb compBomb = bomb.AddComponent<Bomb>();
                 
-                Vector2 spriteSize = spriteMaterial.MainTexture.IsAvailable ? spriteMaterial.MainTexture.Res.Size : new Vector2(50, 50);
+      
+                Vector2 spriteSize = spriteMaterial.MainTexture.IsAvailable ? new Vector2(spriteMaterial.MainTexture.Res.Size.X/3,spriteMaterial.MainTexture.Res.Size.Y) : new Vector2(50, 50);
+
                 sprite.Rect = Rect.AlignCenter(0, 0, spriteSize.X, spriteSize.Y);
                 //Create bomb
-                float spriteRadius = MathF.Max(spriteSize.X, spriteSize.Y)*0.5f;
+                float spriteRadius = MathF.Max(spriteSize.X, spriteSize.Y)*0.25f;
                 body.ClearShapes();
                 CircleShapeInfo circleShape = new CircleShapeInfo(spriteRadius, Vector2.Zero, 1.0f);
                 circleShape.IsSensor = false;
@@ -71,12 +78,16 @@ namespace Dove_Game.Enemies.Zelda_World
         //TODO: RANDOMIZE Arrows
         private class ShootArrow : BossAttack
         {
-            private List<int> seqBomb = new List<int>() { 0, 10, 20 };
+            private List<int> seqArrowLeft = new List<int>() { 23, 22, 21 };
+            private List<int> seqArrowRight = new List<int>() { 18, 19, 20 };
             public void attack(Boss boss)
             {
                 //get materials
-                List<int> seq = boss.PlayerPosition == Direction.Right ? new List<int> {0,1,2,3} : new List<int>{4,5,6,7};
-                Bullet arrow = Test_Logic.ContentRefs.BBP_Default.Res.CreateBullet(boss.CharDirection, GameRes.Data.Scenes.Bullets.Arrows_Material,true, seq );
+                List<int> seqArrow = boss.PlayerPosition == Direction.Right ? new List<int> {0,1,2,3} : new List<int>{4,5,6,7};
+                boss.GameObj.GetComponent<AnimSpriteRenderer>().CustomFrameSequence = boss.PlayerPosition == Direction.Right ? seqArrowRight :  seqArrowLeft;
+                boss.GameObj.GetComponent<AnimSpriteRenderer>().AnimDuration = 1.0f;
+                int spriteRowsArrow = 8;
+                Bullet arrow = Test_Logic.ContentRefs.BBP_Default.Res.CreateBullet(boss.CharDirection, GameRes.Data.Scenes.Bullets.Arrows_Material,true, seqArrow,8 );
                 int bulletSpeed = 20;
 
                 arrow.Fire(boss.GameObj.RigidBody.LinearVelocity, boss.GameObj.Transform.GetWorldPoint(Vector2.Zero), 0, bulletSpeed);
@@ -87,7 +98,7 @@ namespace Dove_Game.Enemies.Zelda_World
         //Jumps in the air swinging sword around
         private class Whirlwind : BossAttack 
         {
-            private List<int> seqWhirlwind = new List<int>() { 0, 10, 20, 3 };
+            private List<int> seqWhirlwind = new List<int>() { 12, 13, 14, 15,16,17 };
             public void attack(Boss boss)
             {
                 //spin and shoot up
@@ -95,7 +106,8 @@ namespace Dove_Game.Enemies.Zelda_World
                 Transform transform = boss.GameObj.Transform;
                 AnimSpriteRenderer sprite = boss.GameObj.GetComponent<AnimSpriteRenderer>();
                 sprite.CustomFrameSequence = seqWhirlwind;
-                sprite.AnimDuration = 0.5f;
+                sprite.AnimDuration = .5f;
+                sprite.AnimLoopMode = AnimSpriteRenderer.LoopMode.PingPong;
                 body.ApplyLocalImpulse(Vector2.UnitY * -180.0f);
                 boss.nextAttack = NONE;
             }

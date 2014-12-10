@@ -29,14 +29,18 @@ namespace Dove_Game.Enemies
         protected int BulletSpeed = 30;
         //Special boss attack information
         protected BossAttack[] attacks = null;
-        protected float attackTimer = 1000.0f;
-        protected float attackCooldown = 1000.0f;
-        public int nextAttack = 0;
+        protected float attackTimer = 4000.0f;
+        protected float attackCooldown = 4000.0f;
+        public int nextAttack = NONE;
         public const int NONE = -1;
 
         protected bool autoShoot = true;
         private Direction playerPosition = Direction.Left;
         public Direction PlayerPosition { get { return playerPosition; } }
+
+        //Animations
+        protected List<int> seqWalkLeft;
+        protected List<int> seqWalkRight;
         public override void OnUpdate()
         {
            
@@ -47,7 +51,7 @@ namespace Dove_Game.Enemies
             {
                 if (nextAttack == NONE)
                     nextAttack = specialAttackPicker.Next(attacks.Length);
-                attacks[0].attack(this);
+                attacks[2].attack(this);
                 attackTimer = attackCooldown;
             }
             else if (nextAttack == NONE)
@@ -58,6 +62,8 @@ namespace Dove_Game.Enemies
                     if (WeaponTimer <= 0.0f)
                         FireBullet(Vector2.Zero, 0.0f);
                 }
+                
+              
                 Move(Vector2.UnitX);
             }
            
@@ -66,6 +72,7 @@ namespace Dove_Game.Enemies
         public override void Move(Vector2 unitDirection)
         {
            MoveTowardsPlayerOne();
+           updateWalkAnimation();
            base.Move(unitDirection);
         }
 
@@ -124,7 +131,23 @@ namespace Dove_Game.Enemies
         //Aux. functions
         public static bool onGround(RigidBody body)
         {
-            return body.LinearVelocity.Y == 0;
+            return Math.Abs(body.LinearVelocity.Y) <= 0.02f;
+        }
+
+        private  void updateWalkAnimation()
+        {
+            AnimSpriteRenderer sprite = this.GameObj.GetComponent<AnimSpriteRenderer>();
+            if (onGround(this.GameObj.RigidBody))
+            {
+                if (sprite.AnimTime +0.06f > sprite.AnimDuration)
+                {
+                    if (playerPosition == Direction.Left)
+                        sprite.CustomFrameSequence = seqWalkLeft;
+                    else
+                        sprite.CustomFrameSequence = seqWalkRight;
+                    sprite.AnimLoopMode = AnimSpriteRenderer.LoopMode.PingPong;
+                }
+            }
         }
     }
 }
