@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Linq;
-
+using Dove_Game.Scene_Components.Test_World;
 using Duality;
+using Duality.Components;
+using Duality.Components.Renderers;
 using Duality.Resources;
 using Duality.Drawing;
+using OpenTK;
 using OpenTK.Input;
 
 namespace Dove_Game.Test_Logic
@@ -13,13 +16,13 @@ namespace Dove_Game.Test_Logic
     {
         private ContentRef<Font> _font;
         [NonSerialized]
-        private bool _gameStarted;
+        private static bool _gameStarted;
 
         [NonSerialized]
-        private bool _gameOver;
+        private static bool _gameOver;
 
         [NonSerialized]
-        private bool _gameWin;
+        private static bool _gameWin;
 
         [NonSerialized]
         private float _lastTimeAnyAlive;
@@ -27,9 +30,27 @@ namespace Dove_Game.Test_Logic
         [NonSerialized]
         private CanvasBuffer _buffer;
 
+        public static bool GameOver
+        {
+            get { return _gameOver; }
+            set { _gameOver = value; }
+        }
+
+        public static bool GameWin
+        {
+            get { return _gameWin; }
+            set { _gameWin = value; }
+        }
+
+        public static  bool GameStarted
+        {
+            get { return _gameStarted; }
+            set { _gameStarted = value; }
+        }
+
         public ContentRef<Font> Font
         {
-            get { return _font; }
+            get { return _font.Res ?? Duality.Resources.Font.GenericSansSerif12.As<Font>(); }
             set { _font = value; }
         }
         float ICmpRenderer.BoundRadius
@@ -39,7 +60,7 @@ namespace Dove_Game.Test_Logic
 
         public bool HasGameEnded
         {
-            get { return _gameOver || _gameWin; }
+            get { return GameOver || GameWin; }
         }
 
         private PlayerOne _mainCharacter;
@@ -53,14 +74,29 @@ namespace Dove_Game.Test_Logic
         private BatchInfo _blendMaterial;
         public BatchInfo BlendMaterial
         {
-            get { return _blendMaterial; }
+            get { return _blendMaterial ?? new BatchInfo(DrawTechnique.Alpha, ColorRgba.White, Texture.White); }
             set { _blendMaterial = value; }
         }
 
         void ICmpUpdatable.OnUpdate()
         {
+            if (GameOver && DualityApp.Keyboard[Key.Enter])
+            {
+                var endOverlay = Scene.Current.FindGameObject<EndGameOverlay>();
+                var endRenderer = endOverlay.GetComponent<SpriteRenderer>();
+                var endTransform = endOverlay.GetComponent<Transform>();
+                endTransform.Pos = new Vector3(0, 0, 10);
+                endRenderer.SharedMaterial = Material.SolidBlack;
+
+                GameOver = false;
+                GameWin = false;
+                GameController.ReloadScene();
+
+                Scene.SwitchTo(ContentRefs.StartScene);
+            }
+
             // If the game has ended, nothing to do here
-            if (_gameOver || _gameWin)
+            else if (GameOver || GameWin)
                 return;
             
             if (MainCharacter == null)
@@ -69,22 +105,19 @@ namespace Dove_Game.Test_Logic
             // Determine whether the game has started / ended
             if (MainCharacter != null && MainCharacter.HealthPoints > 0)
             {
-                _gameStarted = true;
+                GameStarted = true;
                 _lastTimeAnyAlive = (float)Time.MainTimer.TotalMilliseconds;
 
                 // Temp code to run game over overlay.
-                GameController.LifeCount = 0;
-                MainCharacter.HealthPoints = 0;
+                //GameController.LifeCount = 0;
+                //MainCharacter.HealthPoints = 0;
             }
 
             else if (MainCharacter != null && MainCharacter.HealthPoints == int.MaxValue)
-                _gameWin = true;
+                GameWin = true;
 
-            if (_gameStarted && GameController.LifeCount <= 0)
-                _gameOver = true;
-
-            if(_gameOver && DualityApp.Keyboard[Key.Enter])
-                Scene.SwitchTo(ContentRefs.StartScene);
+            if (GameStarted && GameController.LifeCount <= 0)
+                GameOver = true;
         }
 
         bool ICmpRenderer.IsVisible(IDrawDevice device)
@@ -111,19 +144,19 @@ namespace Dove_Game.Test_Logic
             };
 
             // If the game is over or won, display "game over" screen
-            if (!_gameOver && !_gameWin) return;
+            if (!GameOver && !GameWin) return;
 
             // Various animation timing variables.
-            var animTime = _gameWin ? 10000.0f : 4500.0f;     // How long we want to show the game over screen
-            var animOffset = _gameWin ? 0.0f : 2500.0f;       // Offset used to add more time to animation progress, anim time currently set to 7 seconds
-            var blendDurationRatio = _gameWin ? 0.6f : 0.5f;  // What portion of the animation time we want to spend blending/fading in
-            var textOffsetRatio = _gameWin ? 0.2f : 0.0f;
+            var animTime = GameWin ? 10000.0f : 4500.0f;     // How long we want to show the game over screen
+            var animOffset = GameWin ? 0.0f : 2500.0f;       // Offset used to add more time to animation progress, anim time currently set to 7 seconds
+            var blendDurationRatio = GameWin ? 0.6f : 0.5f;  // What portion of the animation time we want to spend blending/fading in
+            var textOffsetRatio = GameWin ? 0.2f : 0.0f;
 
-            var overlayText = _gameWin ? "YOU WON!" : "Lol You lost...";
-            var colorTint = _gameWin ? ColorRgba.Black : ColorRgba.White;
-
+            var overlayText = string.Empty; // GameWin ? "YOU WON!" : "Lol You lost...";
+            var colorTint = GameWin ? ColorRgba.Black : ColorRgba.White;
+            var endOverlay = GameWin ? ContentRefs.GameWin : ContentRefs.GameOver;
             DrawOverlay.SetOverlayVariables(canvas, BlendMaterial, colorTint, _font, animTime);
-            DrawOverlay.DrawBlend(animOffset, blendDurationRatio, textOffsetRatio, _lastTimeAnyAlive, overlayText);
+            DrawOverlay.DrawBlend(animOffset, blendDurationRatio, textOffsetRatio, _lastTimeAnyAlive, overlayText, endOverlay);
         }
     }
 }
