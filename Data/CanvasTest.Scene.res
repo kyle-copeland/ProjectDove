@@ -18,6 +18,7 @@
             <deriveAngle dataType="Bool">true</deriveAngle>
             <gameobj dataType="ObjectRef">2692034869</gameobj>
             <ignoreParent dataType="Bool">false</ignoreParent>
+            <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
             <parentTransform />
             <pos dataType="Struct" type="OpenTK.Vector3">
               <X dataType="Float">0</X>
@@ -47,6 +48,7 @@
             <farZ dataType="Float">10000</farZ>
             <focusDist dataType="Float">500</focusDist>
             <gameobj dataType="ObjectRef">2692034869</gameobj>
+            <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
             <nearZ dataType="Float">0</nearZ>
             <passes dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Components.Camera+Pass]]" id="1485951488">
               <_items dataType="Array" type="Duality.Components.Camera+Pass[]" id="1290570908" length="8">
@@ -126,15 +128,23 @@
       <compList dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Component]]" id="2993903444">
         <_items dataType="Array" type="Duality.Component[]" id="1305060068" length="4">
           <item dataType="Struct" type="Dove_Game.Test_Logic.DrawDialog" id="1986532222">
-            <_awaitingInput dataType="Bool">false</_awaitingInput>
-            <_x003C_AwaitingInput_x003E_k__BackingField dataType="Bool">false</_x003C_AwaitingInput_x003E_k__BackingField>
-            <active dataType="Bool">true</active>
-            <currentDialog />
-            <font dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Font]]">
+            <_awaitingInput dataType="Bool">true</_awaitingInput>
+            <_currentDialog dataType="Struct" type="Dove_Game.Test_Logic.DialogComponent" id="2280818726">
+              <_x003C_DialogMessage_x003E_k__BackingField dataType="String">Oh, you've come to recruit me?</_x003C_DialogMessage_x003E_k__BackingField>
+              <_x003C_DialogSprite_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
+                <contentPath dataType="String">Data\Characters\DialogImage\bigheadgoku.Material.res</contentPath>
+              </_x003C_DialogSprite_x003E_k__BackingField>
+              <_x003C_PlayerOneDialog_x003E_k__BackingField dataType="Bool">false</_x003C_PlayerOneDialog_x003E_k__BackingField>
+              <_x003C_PostSceneRef_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Scene]]">
+                <contentPath />
+              </_x003C_PostSceneRef_x003E_k__BackingField>
+            </_currentDialog>
+            <_font dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Font]]">
               <contentPath />
-            </font>
+            </_font>
+            <active dataType="Bool">true</active>
             <gameobj dataType="ObjectRef">420639498</gameobj>
-            <playerOne />
+            <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
           </item>
         </_items>
         <_size dataType="Int">1</_size>
@@ -177,6 +187,7 @@
             <deriveAngle dataType="Bool">true</deriveAngle>
             <gameobj dataType="ObjectRef">2775196305</gameobj>
             <ignoreParent dataType="Bool">false</ignoreParent>
+            <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
             <parentTransform />
             <pos dataType="Struct" type="OpenTK.Vector3">
               <X dataType="Float">0</X>
@@ -211,6 +222,7 @@
             </colorTint>
             <customMat />
             <gameobj dataType="ObjectRef">2775196305</gameobj>
+            <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
             <offset dataType="Int">0</offset>
             <pixelGrid dataType="Bool">false</pixelGrid>
             <rect dataType="Struct" type="Duality.Rect">
@@ -221,7 +233,7 @@
             </rect>
             <rectMode dataType="Enum" type="Duality.Components.Renderers.SpriteRenderer+UVMode" name="Stretch" value="0" />
             <sharedMat dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
-              <contentPath dataType="String">Default:Material:DualityIcon</contentPath>
+              <contentPath dataType="String">Data\Characters\DialogImage\bigheadgoku.Material.res</contentPath>
             </sharedMat>
             <visibilityGroup dataType="Enum" type="Duality.Drawing.VisibilityFlag" name="Group0" value="1" />
           </item>

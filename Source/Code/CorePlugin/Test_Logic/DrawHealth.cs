@@ -14,9 +14,9 @@ namespace Dove_Game.Test_Logic
     {
         private ContentRef<Font> font = null;
         private PlayerOne playerOne;
-        private bool _respawnNeeded;
+        private static bool _respawnNeeded;
 
-        public bool RespawnNeeded
+        public static bool RespawnNeeded
         {
             get { return _respawnNeeded; }
             set { _respawnNeeded = value; }
@@ -77,7 +77,7 @@ namespace Dove_Game.Test_Logic
                     }
 
                 }
-                else
+                else if(GameController.LifeCount > 1)
                 {
                     // Draw a respawn timer when dead
                     float respawnPercentage = playerOne.ElaspedRespawnTime/playerOne.RespawnDelay;
@@ -87,6 +87,18 @@ namespace Dove_Game.Test_Logic
                     canvas.DrawText(respawnText, 10, device.TargetSize.Y - 10, 0.0f, Alignment.BottomLeft);
                     canvas.FillRect(10, device.TargetSize.Y - 10 - textSize.Y, textSize.X*respawnPercentage, 3);
                     canvas.FillRect(10, device.TargetSize.Y - 10, textSize.X*respawnPercentage, 3);
+
+                    if (playerOne.ElaspedRespawnTime >= playerOne.RespawnDelay)
+                        RespawnNeeded = true;
+                }
+                else if (GameController.LifeCount <= 1)
+                {
+                    float respawnPercentage = playerOne.ElaspedRespawnTime / playerOne.RespawnDelay;
+                    string respawnText = string.Format("Waiting to respawn...");
+                    Vector2 textSize = canvas.MeasureText(respawnText);
+                    canvas.DrawText(respawnText, 10, device.TargetSize.Y - 10, 0.0f, Alignment.BottomLeft);
+                    canvas.FillRect(10, device.TargetSize.Y - 10 - textSize.Y, textSize.X * respawnPercentage, 3);
+                    canvas.FillRect(10, device.TargetSize.Y - 10, textSize.X * respawnPercentage, 3);
 
                     if (playerOne.ElaspedRespawnTime >= playerOne.RespawnDelay)
                         RespawnNeeded = true;

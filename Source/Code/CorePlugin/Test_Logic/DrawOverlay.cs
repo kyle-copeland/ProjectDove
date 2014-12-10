@@ -1,7 +1,11 @@
 ﻿using System;
+using Dove_Game.Scene_Components.Test_World;
 using Duality;
+using Duality.Components;
+using Duality.Components.Renderers;
 using Duality.Drawing;
 using Duality.Resources;
+using OpenTK;
 
 namespace Dove_Game.Test_Logic
 {
@@ -55,7 +59,7 @@ namespace Dove_Game.Test_Logic
             AnimationLength = animationTime;
         }
 
-        public static void DrawBlend(float animationDelay, float blendDurationRatio, float textOffsetRatio, float baseAnchor, string overlayText)
+        public static void DrawBlend(float animationDelay, float blendDurationRatio, float textOffsetRatio, float baseAnchor, string overlayText, ContentRef<Material> endOverlayMaterial)
         {
             // Time elasped since end of game.
             var timeSinceGameOver = (float)Time.MainTimer.TotalMilliseconds - baseAnchor;
@@ -70,25 +74,33 @@ namespace Dove_Game.Test_Logic
             {
                 CurrentCanvas.PushState();
                 // Set up our special blending Material and specify the threshold to blend to
-                BlendMaterial.SetUniform("threshold", 1.0f - blendAnimProgress);
-                CurrentCanvas.State.SetMaterial(BlendMaterial);
-                CurrentCanvas.State.ColorTint = ColorRgba.Black;
+                //BlendMaterial.SetUniform("threshold", 1.0f - blendAnimProgress);
+                //CurrentCanvas.State.SetMaterial(BlendMaterial);
+                //CurrentCanvas.State.ColorTint = ColorRgba.Black;
+                if (endOverlayMaterial != null)
+                {
+                    var endOverlay = Scene.Current.FindGameObject<EndGameOverlay>();
+                    var endRenderer = endOverlay.GetComponent<SpriteRenderer>();
+                    var endTransform = endOverlay.GetComponent<Transform>();
+                    endTransform.Pos = new Vector3(0, 0, -10);
+                    endRenderer.SharedMaterial = endOverlayMaterial;
+                }
 
                 // Specify a texture coordinate rect so it spans the entire screen repeating itself, instead of being stretched
-                if (BlendMaterial.MainTexture != null)
-                {
-                    var rnd = new Random((int)baseAnchor);
-                    var randomTranslate = rnd.NextVector2(0.0f, 0.0f, CurrentCanvas.State.TextureBaseSize.X, CurrentCanvas.State.TextureBaseSize.Y);
-                    CurrentCanvas.State.TextureCoordinateRect = new Rect(
-                        randomTranslate.X,
-                        randomTranslate.Y,
-                        CurrentCanvas.DrawDevice.TargetSize.X / CurrentCanvas.State.TextureBaseSize.X,
-                        CurrentCanvas.DrawDevice.TargetSize.Y / CurrentCanvas.State.TextureBaseSize.Y);
-                }
+                //if (BlendMaterial.MainTexture != null)
+                //{
+                //    var rnd = new Random((int)baseAnchor);
+                //    var randomTranslate = rnd.NextVector2(0.0f, 0.0f, CurrentCanvas.State.TextureBaseSize.X, CurrentCanvas.State.TextureBaseSize.Y);
+                //    CurrentCanvas.State.TextureCoordinateRect = new Rect(
+                //        randomTranslate.X,
+                //        randomTranslate.Y,
+                //        CurrentCanvas.DrawDevice.TargetSize.X / CurrentCanvas.State.TextureBaseSize.X,
+                //        CurrentCanvas.DrawDevice.TargetSize.Y / CurrentCanvas.State.TextureBaseSize.Y);
+                //}
                 
 
                 // Fill the screen with a rect of our Material
-                CurrentCanvas.FillRect(0, 0, CurrentCanvas.DrawDevice.TargetSize.X, CurrentCanvas.DrawDevice.TargetSize.Y);
+                //CurrentCanvas.FillRect(0, 0, CurrentCanvas.DrawDevice.TargetSize.X, CurrentCanvas.DrawDevice.TargetSize.Y);
 
                 CurrentCanvas.PopState();
             }

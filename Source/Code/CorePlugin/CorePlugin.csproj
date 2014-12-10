@@ -63,6 +63,7 @@
     <Compile Include="Enemies\Boss_World\SlenderBoss.cs" />
     <Compile Include="Enemies\Zelda_World\LinkBoss.cs" />
     <Compile Include="Scene_Components\Mario_World\Flag.cs" />
+    <Compile Include="Scene_Components\Test_World\EndGameOverlay.cs" />
     <Compile Include="Scene_Components\Test_World\StartScene.cs" />
     <Compile Include="Test_Logic\CameraController.cs" />
     <Compile Include="Test_Logic\DialogComponent.cs" />

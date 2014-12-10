@@ -72,7 +72,7 @@ namespace Dove_Game
 
                 if (ElaspedRespawnTime >= RespawnDelay)
                 {
-                    GameObj.DisposeLater();
+                    // GameObj.DisposeLater();
                 }
             }
 
