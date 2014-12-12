@@ -3,7 +3,7 @@
     <active dataType="Bool">true</active>
     <children />
     <compList dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Component]]" id="3390781541">
-      <_items dataType="Array" type="Duality.Component[]" id="677818262" length="4">
+      <_items dataType="Array" type="Duality.Component[]" id="677818262">
         <item dataType="Struct" type="Duality.Components.Transform" id="603047190">
           <active dataType="Bool">true</active>
           <angle dataType="Float">0</angle>
@@ -16,12 +16,12 @@
           <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
           <parentTransform />
           <pos dataType="Struct" type="OpenTK.Vector3">
-            <X dataType="Float">172</X>
+            <X dataType="Float">204</X>
             <Y dataType="Float">202</Y>
             <Z dataType="Float">0</Z>
           </pos>
           <posAbs dataType="Struct" type="OpenTK.Vector3">
-            <X dataType="Float">172</X>
+            <X dataType="Float">204</X>
             <Y dataType="Float">202</Y>
             <Z dataType="Float">0</Z>
           </posAbs>
@@ -112,12 +112,17 @@
               </item>
             </_items>
             <_size dataType="Int">1</_size>
-            <_version dataType="Int">3</_version>
+            <_version dataType="Int">4</_version>
           </shapes>
         </item>
+        <item dataType="Struct" type="Dove_Game.Scene_Components.Mario_World.Brick" id="1909318580">
+          <active dataType="Bool">true</active>
+          <gameobj dataType="ObjectRef">2537699554</gameobj>
+          <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
+        </item>
       </_items>
-      <_size dataType="Int">3</_size>
-      <_version dataType="Int">3</_version>
+      <_size dataType="Int">4</_size>
+      <_version dataType="Int">4</_version>
     </compList>
     <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="3447933544" surrogate="true">
       <header />
@@ -126,11 +131,13 @@
           <item dataType="Type" id="2260522926" value="Duality.Components.Transform" />
           <item dataType="Type" id="1916016330" value="Duality.Components.Renderers.SpriteRenderer" />
           <item dataType="Type" id="1954689310" value="Duality.Components.Physics.RigidBody" />
+          <item dataType="Type" id="3374999002" value="Dove_Game.Scene_Components.Mario_World.Brick" />
         </keys>
         <values dataType="Array" type="Duality.Component[]" id="907256800">
           <item dataType="ObjectRef">603047190</item>
           <item dataType="ObjectRef">4179866122</item>
           <item dataType="ObjectRef">1305508782</item>
+          <item dataType="ObjectRef">1909318580</item>
         </values>
       </body>
     </compMap>

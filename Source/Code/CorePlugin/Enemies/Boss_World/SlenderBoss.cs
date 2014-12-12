@@ -70,7 +70,7 @@ namespace Dove_Game.Enemies
                     screenBlackout = new GameObject("Blackout");
                     SpriteRenderer sprite = screenBlackout.AddComponent<SpriteRenderer>();
                     Transform transform = screenBlackout.AddComponent<Transform>();
-                    sprite.SharedMaterial = Material.SolidBlack.Res;
+                    sprite.SharedMaterial = Test_Logic.ContentRefs.staticScreen;
                     sprite.Rect = Rect.AlignCenter(0, 0, 4000, 4000);
                     transform.Pos = new Vector3(boss.GameObj.Transform.GetWorldPoint(Vector2.Zero), -2.0f);
                     Scene.Current.AddObject(screenBlackout);

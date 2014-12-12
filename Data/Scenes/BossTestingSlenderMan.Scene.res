@@ -466,13 +466,13 @@
           </item>
           <item dataType="Struct" type="Dove_Game.Enemies.SlenderBoss" id="4149157691">
             <active dataType="Bool">true</active>
-            <attackCooldown dataType="Float">1000</attackCooldown>
+            <attackCooldown dataType="Float">5000</attackCooldown>
             <attacks dataType="Array" type="Dove_Game.Enemies.BossAttack[]" id="2150899735">
               <item />
               <item />
               <item />
             </attacks>
-            <attackTimer dataType="Float">1000</attackTimer>
+            <attackTimer dataType="Float">5000</attackTimer>
             <autoShoot dataType="Bool">true</autoShoot>
             <bulletBlueprint dataType="Struct" type="Duality.ContentRef`1[[Dove_Game.BulletBlueprint]]">
               <contentPath dataType="String">Data\Scenes\SpecialAttacks\RocketBullet.BulletBlueprint.res</contentPath>
@@ -705,6 +705,7 @@
             <gameobj dataType="ObjectRef">3186364968</gameobj>
             <healthPts dataType="Int">100</healthPts>
             <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
+            <isStunned dataType="Bool">false</isStunned>
             <lastFrame dataType="Int">0</lastFrame>
             <vectorMove dataType="Struct" type="OpenTK.Vector2">
               <X dataType="Float">0</X>
