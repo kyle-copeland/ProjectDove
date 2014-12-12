@@ -42,16 +42,36 @@ namespace Dove_Game.Enemies.DBZ_World
             {
                 PlayerNearby = DetectPlayerOneNearby();
 
-                var playerSprite = GameObj.GetComponent<AnimSpriteRenderer>();
+                var enemySprite = GameObj.GetComponent<AnimSpriteRenderer>();
+                var enemyTransform = GameObj.Transform;
+
+                var playerBullet = Scene.Current.FindGameObject<PlayerOneBullet>();
+                if (playerBullet != null)
+                {
+                    var pbTransform = playerBullet.Transform;
+                    if (pbTransform.Pos.X > enemyTransform.Pos.X - 250.0f &&
+                        pbTransform.Pos.X < enemyTransform.Pos.X + 250.0f)
+                    {
+                        var main = Scene.Current.FindComponent<PlayerOne>();
+                        var mainTransform = main.GameObj.Transform;
+                        enemyTransform.Pos = new Vector3(main.CharDirection == Direction.Left ?
+                            mainTransform.Pos.X + 95.0f : mainTransform.Pos.X - 95.0f, mainTransform.Pos.Y - 15.0f, mainTransform.Pos.Z);
+
+                        CharDirection = main.GameObj.Transform.Pos.X > GameObj.Transform.Pos.X ? Direction.Left : Direction.Right;
+                    }
+                }
 
                 if (PlayerNearby)
                 {
-                    AttackDelay = 1500.0f;
+                    AttackDelay = 700.0f;
+                    var main = Scene.Current.FindComponent<PlayerOne>();
 
-                    playerSprite.AnimFirstFrame = CharDirection == Direction.Left ? 4 : 21;
-                    playerSprite.AnimFrameCount = 3;
+                    CharDirection = main.GameObj.Transform.Pos.X > GameObj.Transform.Pos.X ? Direction.Right : Direction.Left;
 
-                    GameObject cellBlast = Summon.SummonGameObject(SideCharacter.NoCharacter, Attack.CellBullet, this);
+                    enemySprite.AnimFirstFrame = CharDirection == Direction.Left ? 4 : 21;
+                    enemySprite.AnimFrameCount = 3;
+
+                    var cellBlast = Summon.SummonGameObject(SideCharacter.NoCharacter, Attack.CellBullet, this);
                     const float bulletSpeed = 11;
 
                     CurrentSpecialAttack = cellBlast.GetComponent<EnemyBullet>();
@@ -59,10 +79,21 @@ namespace Dove_Game.Enemies.DBZ_World
                         this.GameObj.Transform.Pos.Xy, 0f, bulletSpeed);
                     Scene.Current.AddObject(cellBlast);
                 }
+                    
                 else
                 {
-                    playerSprite.AnimFrameCount = 4;
-                    playerSprite.AnimFirstFrame = CharDirection == Direction.Left ? 0 : 16;
+                    enemySprite.AnimFrameCount = 4;
+
+                    if (CharDirection == Direction.Left)
+                    {
+                        enemySprite.AnimFirstFrame = 0;
+                        GameObj.RigidBody.ApplyWorldImpulse(Vector2.UnitX * -1.4f);
+                    }
+                    else
+                    {
+                        enemySprite.AnimFirstFrame = 16;
+                        GameObj.RigidBody.ApplyWorldImpulse(Vector2.UnitX * 1.4f);
+                    }
                 }
             }
             //Move(Vector2.UnitX);

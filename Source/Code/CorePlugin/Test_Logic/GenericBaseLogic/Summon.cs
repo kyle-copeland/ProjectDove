@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Dove_Game.Test_Logic.SpecialAttacks;
 using Duality;
 using Duality.Components;
 using Duality.Components.Physics;
@@ -42,6 +43,12 @@ namespace Dove_Game.Test_Logic
                         Bowser bowser = summonPiece.AddComponent<Bowser>();
                         bowser.CharDirection = main.CharDirection;
                         spriteMaterial = ContentRefs.BowserContentRef.Res;
+                        spriteSize = new Vector2(41, 52);
+                        break;
+                    case SideCharacter.Navi:
+                        Navi navi = summonPiece.AddComponent<Navi>();
+                        navi.CharDirection = main.CharDirection;
+                        spriteMaterial = ContentRefs.NaviContentRef.Res;
                         spriteSize = new Vector2(41, 52);
                         break;
                 }
@@ -110,8 +117,17 @@ namespace Dove_Game.Test_Logic
                         createFireblast(ref summonPiece, new Vector2(playerOneRectX, playerOneRectY), main.CharDirection, spriteSize);
                         break;
 
-
-
+                    case Attack.Frostblast:
+                        Frostblast frostblast = summonPiece.AddComponent<Frostblast>();
+                        frostblast.AttackDirection = main.CharDirection;
+                        sprite.AnimFrameCount = 5;
+                        sprite.AnimDuration = 1;
+                        sprite.AnimLoopMode = AnimSpriteRenderer.LoopMode.Loop;
+                        spriteMaterial = ContentRefs.frostBlast.Res;
+                        spriteSize = spriteMaterial.MainTexture.IsAvailable ? spriteMaterial.MainTexture.Res.Size : new Vector2(5, 5);
+                        spriteSize.X *= 2.0f;
+                        createFrostBlast(ref summonPiece, new Vector2(playerOneRectX, playerOneRectY), main.CharDirection, spriteSize);
+                        break;
                 }
             }
 
@@ -198,6 +214,23 @@ namespace Dove_Game.Test_Logic
             body.FixedAngle = true;
 
             summonPiece.GetComponent<Fireblast>().InitFrom(direction);
+        }
+
+        public static void createFrostBlast(ref GameObject summonPiece, Vector2 playerPos, Direction direction, Vector2 spriteSize)
+        {
+            RigidBody body = summonPiece.GetComponent<RigidBody>();
+            float spriteRadius = MathF.Max(spriteSize.X, spriteSize.Y) * 0.15f;
+            float bulletBodyPos = direction == Direction.Right ? spriteRadius : -spriteRadius;
+            body.ClearShapes();
+            CircleShapeInfo circleShape = new CircleShapeInfo(spriteRadius, new Vector2(playerPos.X + bulletBodyPos - 10.0f, spriteRadius/2.0f), 1.0f);
+            circleShape.IsSensor = false;
+            body.AddShape(circleShape);
+            body.CollisionCategory = CollisionCategory.Cat2;
+            body.CollidesWith = CollisionCategory.Cat3;
+            body.IgnoreGravity = true;
+            body.FixedAngle = true;
+
+            summonPiece.GetComponent<Frostblast>().InitFrom(direction);
         }
 
     }

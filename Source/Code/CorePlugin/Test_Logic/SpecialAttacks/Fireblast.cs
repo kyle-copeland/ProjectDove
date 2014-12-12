@@ -1,13 +1,8 @@
-﻿using Dove_Game.Enemies;
+﻿using System;
 using Duality;
 using Duality.Components.Physics;
-using OpenTK.Input;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
-namespace Dove_Game.Test_Logic
+namespace Dove_Game.Test_Logic.SpecialAttacks
 {
     [Serializable]
     [RequiredComponent(typeof(RigidBody))]

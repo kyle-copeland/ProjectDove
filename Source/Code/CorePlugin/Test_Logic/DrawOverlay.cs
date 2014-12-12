@@ -135,5 +135,25 @@ namespace Dove_Game.Test_Logic
                 CurrentCanvas.PopState();
             }
         }
+
+        public static void DrawOversizedHeader(Canvas canvas, string overlayMessage)
+        {
+            canvas.PushState();
+
+            // Determine which text to draw to screen and where to draw it
+            var fullTextSize = canvas.MeasureText(overlayMessage);
+            var textPos = canvas.DrawDevice.TargetSize * 0.5f - fullTextSize * 0.5f;
+
+            // Make sure not to draw inbetween pixels, so the text is perfectly sharp.
+            textPos.X = MathF.Round(textPos.X);
+            textPos.Y = MathF.Round(textPos.Y);
+
+            // Draw the text to screen
+            canvas.State.ColorTint = ColorRgba.White;
+            canvas.DrawText(overlayMessage, textPos.X, textPos.Y);
+
+            canvas.PopState();
+            
+        }
     }
 }

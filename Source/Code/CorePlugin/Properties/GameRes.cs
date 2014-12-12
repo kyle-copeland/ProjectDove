@@ -161,7 +161,9 @@ namespace GameRes
 				public static Duality.ContentRef<Duality.Resources.Material> Goku_Aura_2d_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\Side Characters\Goku_Aura_2d.Material.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Pixmap> Goku_Aura_2d_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\Side Characters\Goku_Aura_2d.Pixmap.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Texture> Goku_Aura_2d_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Characters\Side Characters\Goku_Aura_2d.Texture.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Material> Goku_Final_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\Side Characters\Goku_Final.Material.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Pixmap> Goku_Final_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\Side Characters\Goku_Final.Pixmap.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Texture> Goku_Final_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Characters\Side Characters\Goku_Final.Texture.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Material> goku_static_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\Side Characters\goku_static.Material.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Pixmap> goku_static_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\Side Characters\goku_static.Pixmap.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Texture> goku_static_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Characters\Side Characters\goku_static.Texture.res"); }}
@@ -184,7 +186,9 @@ namespace GameRes
 					Goku_Aura_2d_Material.MakeAvailable();
 					Goku_Aura_2d_Pixmap.MakeAvailable();
 					Goku_Aura_2d_Texture.MakeAvailable();
+					Goku_Final_Material.MakeAvailable();
 					Goku_Final_Pixmap.MakeAvailable();
+					Goku_Final_Texture.MakeAvailable();
 					goku_static_Material.MakeAvailable();
 					goku_static_Pixmap.MakeAvailable();
 					goku_static_Texture.MakeAvailable();
@@ -216,6 +220,11 @@ namespace GameRes
 		public static class Prefabs {
 			public static Duality.ContentRef<Duality.Resources.Prefab> Brick_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\Brick.Prefab.res"); }}
 			public static Duality.ContentRef<Duality.Resources.Prefab> CloudsT_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\CloudsT.Prefab.res"); }}
+			public static Duality.ContentRef<Duality.Resources.Prefab> Dbz_Cell_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\Dbz_Cell.Prefab.res"); }}
+			public static Duality.ContentRef<Duality.Resources.Prefab> Dbz_Enemy1_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\Dbz_Enemy1.Prefab.res"); }}
+			public static Duality.ContentRef<Duality.Resources.Prefab> Dbz_Enemy2_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\Dbz_Enemy2.Prefab.res"); }}
+			public static Duality.ContentRef<Duality.Resources.Prefab> Dbz_Enemy3_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\Dbz_Enemy3.Prefab.res"); }}
+			public static Duality.ContentRef<Duality.Resources.Prefab> Dbz_Enemy4_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\Dbz_Enemy4.Prefab.res"); }}
 			public static Duality.ContentRef<Duality.Resources.Prefab> Firespin_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\Firespin.Prefab.res"); }}
 			public static Duality.ContentRef<Duality.Resources.Prefab> GameEnd_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\GameEnd.Prefab.res"); }}
 			public static Duality.ContentRef<Duality.Resources.Prefab> Goku_2d_2_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\Goku_2d_2.Prefab.res"); }}
@@ -226,10 +235,16 @@ namespace GameRes
 			public static Duality.ContentRef<Duality.Resources.Prefab> PlayerOne_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\PlayerOne.Prefab.res"); }}
 			public static Duality.ContentRef<Duality.Resources.Prefab> QuestionBox_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\QuestionBox.Prefab.res"); }}
 			public static Duality.ContentRef<Duality.Resources.Prefab> Thwomp_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\Thwomp.Prefab.res"); }}
+			public static Duality.ContentRef<Duality.Resources.Prefab> Wall_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\Wall.Prefab.res"); }}
 			public static Duality.ContentRef<Duality.Resources.Prefab> White_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\White.Prefab.res"); }}
 			public static void LoadAll() {
 				Brick_Prefab.MakeAvailable();
 				CloudsT_Prefab.MakeAvailable();
+				Dbz_Cell_Prefab.MakeAvailable();
+				Dbz_Enemy1_Prefab.MakeAvailable();
+				Dbz_Enemy2_Prefab.MakeAvailable();
+				Dbz_Enemy3_Prefab.MakeAvailable();
+				Dbz_Enemy4_Prefab.MakeAvailable();
 				Firespin_Prefab.MakeAvailable();
 				GameEnd_Prefab.MakeAvailable();
 				Goku_2d_2_Prefab.MakeAvailable();
@@ -240,6 +255,7 @@ namespace GameRes
 				PlayerOne_Prefab.MakeAvailable();
 				QuestionBox_Prefab.MakeAvailable();
 				Thwomp_Prefab.MakeAvailable();
+				Wall_Prefab.MakeAvailable();
 				White_Prefab.MakeAvailable();
 			}
 		}
@@ -505,6 +521,7 @@ namespace GameRes
 		public static Duality.ContentRef<Duality.Resources.Scene> Dbz_KaiPlanet_Scene { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Scene>(@"Data\Dbz_KaiPlanet.Scene.res"); }}
 		public static Duality.ContentRef<Duality.Resources.Scene> Dbz_SnakeWay_Scene { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Scene>(@"Data\Dbz_SnakeWay.Scene.res"); }}
 		public static Duality.ContentRef<Duality.Resources.Scene> GameOverTest_Scene { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Scene>(@"Data\GameOverTest.Scene.res"); }}
+		public static Duality.ContentRef<Duality.Resources.Scene> GokuBossScene_Scene { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Scene>(@"Data\GokuBossScene.Scene.res"); }}
 		public static Duality.ContentRef<Duality.Resources.Scene> SpecialSkillTest_Scene { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Scene>(@"Data\SpecialSkillTest.Scene.res"); }}
 		public static Duality.ContentRef<Duality.Resources.Scene> Start_Scene { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Scene>(@"Data\Start.Scene.res"); }}
 		public static Duality.ContentRef<Duality.Resources.Scene> TestBullets_Scene { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Scene>(@"Data\TestBullets.Scene.res"); }}
@@ -518,6 +535,7 @@ namespace GameRes
 			Dbz_KaiPlanet_Scene.MakeAvailable();
 			Dbz_SnakeWay_Scene.MakeAvailable();
 			GameOverTest_Scene.MakeAvailable();
+			GokuBossScene_Scene.MakeAvailable();
 			SpecialSkillTest_Scene.MakeAvailable();
 			Start_Scene.MakeAvailable();
 			TestBullets_Scene.MakeAvailable();

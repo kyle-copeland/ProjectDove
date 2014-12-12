@@ -19,6 +19,7 @@ namespace Dove_Game
         PlayerBullet,
         CellBullet,
         Fireblast,
+        Frostblast,
         Bomb,
         NoAttack
     }
@@ -28,6 +29,7 @@ namespace Dove_Game
         Goku,
         Link,
         Bowser,
+        Navi,
         NoCharacter
     }
 }

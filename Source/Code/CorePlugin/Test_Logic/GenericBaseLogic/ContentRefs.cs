@@ -19,13 +19,21 @@ namespace Dove_Game.Test_Logic
         public static ContentRef<Material> GameOver = GameRes.Data.Scenes.Backgrounds.GameOver_Material;
         public static ContentRef<Material> GameWin = GameRes.Data.Scenes.Backgrounds.GameWin_Material;
 
+        public static ContentRef<Prefab> DbzEnemyOne = GameRes.Data.Prefabs.Dbz_Enemy1_Prefab;
+        public static ContentRef<Prefab> DbzEnemyTwo = GameRes.Data.Prefabs.Dbz_Enemy2_Prefab;
+        public static ContentRef<Prefab> DbzEnemyThree = GameRes.Data.Prefabs.Dbz_Enemy3_Prefab;
+        public static ContentRef<Prefab> DbzEnemyFour = GameRes.Data.Prefabs.Dbz_Enemy4_Prefab;
+        public static ContentRef<Prefab> DbzCell = GameRes.Data.Prefabs.Dbz_Cell_Prefab;
+
         public static ContentRef<Material> BigHeadGoku = GameRes.Data.Characters.DialogImage.bigheadgoku_Material;
         public static ContentRef<Material> GokuHero = GameRes.Data.Characters.DialogImage.goku_hero_Material;
 
         public static ContentRef<Material> GokuContentRef = GameRes.Data.Characters.Side_Characters.Goku_2d_2_Material;
         public static ContentRef<Material> BowserContentRef = GameRes.Data.Characters.Side_Characters.Bowser_Material;
+        public static ContentRef<Material> NaviContentRef = GameRes.Data.Characters.Side_Characters.Navis_Material;
 
         public static ContentRef<Material> fireBlast = GameRes.Data.Scenes.Bullets.BowserFireball_Material;
+        public static ContentRef<Material> frostBlast = GameRes.Data.Scenes.Bullets.NavisAttack_Material;
         public static ContentRef<Material> cellBlast = GameRes.Data.Scenes.Bullets.CellAttack_Material;
 
 		// Material and resource references for special attacks.

@@ -49,9 +49,11 @@
     <Compile Include="AI_Logic\ChargeAI.cs" />
     <Compile Include="AI_Logic\JumpRover.cs" />
     <Compile Include="Characters\SideCharacters\Bowser.cs" />
+    <Compile Include="Characters\SideCharacters\Navi.cs" />
     <Compile Include="Enemies\DBZ_World\DbzEnemy.cs" />
     <Compile Include="Enemies\DBZ_World\DbzCell.cs" />
     <Compile Include="Enemies\DBZ_World\DbzJeice.cs" />
+    <Compile Include="Enemies\DBZ_World\KaiMonkey.cs" />
     <Compile Include="Enemies\General_Enemy\Boss.cs" />
     <Compile Include="Enemies\General_Enemy\BossAttack.cs" />
     <Compile Include="Enemies\DBZ_World\GokuBoss.cs" />
@@ -85,6 +87,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\GameRes.cs" />
     <Compile Include="Characters\SideCharacters\Goku.cs" />
+    <Compile Include="Test_Logic\KaiLevelController.cs" />
+    <Compile Include="Test_Logic\SnakeWayLevelController.cs" />
     <Compile Include="Test_Logic\SpecialAttacks\Bomb.cs" />
     <Compile Include="Test_Logic\SpecialAttacks\Bullet.cs" />
     <Compile Include="Test_Logic\Blueprints\BulletBlueprint.cs" />
@@ -93,6 +97,7 @@
     <Compile Include="Test_Logic\SpecialAttacks\EnemyBullet.cs" />
     <Compile Include="Test_Logic\SpecialAttacks\Explosion.cs" />
     <Compile Include="Test_Logic\SpecialAttacks\Fireblast.cs" />
+    <Compile Include="Test_Logic\SpecialAttacks\Frostblast.cs" />
     <Compile Include="Test_Logic\SpecialAttacks\Kamehameha.cs" />
     <Compile Include="Test_Logic\SpecialAttacks\PlayerOneBullet.cs" />
     <Compile Include="Test_Logic\SpecialAttacks\SpecialAttack.cs" />

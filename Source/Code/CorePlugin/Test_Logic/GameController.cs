@@ -47,8 +47,12 @@ namespace Dove_Game.Test_Logic
             set { _drawHealth = value; }
         }
 
+        public static bool GamePaused;
+
         public void OnUpdate()
         {
+            if (GamePaused) return;
+
             if (PrevSceneName != Scene.Current.Name)
             {
                 LifeCount = 3;
@@ -77,6 +81,8 @@ namespace Dove_Game.Test_Logic
 
         public void OnInit(Component.InitContext context)
         {
+            GamePaused = false;
+
             var dh = Scene.Current.FindComponent<DrawHealth>();
             if (dh == null)
             {
