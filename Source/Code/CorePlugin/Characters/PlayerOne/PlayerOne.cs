@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Dove_Game.Enemies;
+using Dove_Game.Enemies.DBZ_World;
 using Dove_Game.Test_Logic;
 using Duality;
 using Duality.Components;
@@ -24,18 +25,10 @@ namespace Dove_Game
     [RequiredComponent(typeof(RigidBody))]
     public class PlayerOne : Character
     {
-        private int _sensorCount;
-
         private Character _summonedCharacter;
         private float _elaspedRespawnTime;
 
         public bool isStunned = false;
-
-        public int SensorCount
-        {
-            get { return _sensorCount; }
-            set { _sensorCount = value; }
-        }
 
         public float ElaspedRespawnTime
         {
@@ -55,8 +48,18 @@ namespace Dove_Game
 
         public bool isAttacking { get { return _attacking; } set { this._attacking = value; } }
 
+        private float _movementOffset;
+
+        public float MovementOffset
+        {
+            get { return _movementOffset; }
+            set { _movementOffset = value; }
+        }
+
         public override void OnUpdate()
         {
+            if (GameController.GamePaused) return;
+
             RigidBody playerOne = this.GameObj.RigidBody;
             Transform playerMovement = this.GameObj.Transform;
             AnimSpriteRenderer playerSprite = this.GameObj.GetComponent<AnimSpriteRenderer>();
@@ -88,7 +91,7 @@ namespace Dove_Game
 
                     CharDirection = Direction.Left;
                     MovementVector = Vector2.UnitX * -1.0f;
-                    playerOne.ApplyWorldImpulse(-Vector2.UnitX * 0.3f);
+                    playerOne.ApplyWorldImpulse(-Vector2.UnitX * MovementOffset);
                     //playerMovement.MoveBy(MovementVector * Time.TimeMult);
                 }
 
@@ -102,12 +105,12 @@ namespace Dove_Game
 
                     CharDirection = Direction.Right;
                     MovementVector = Vector2.UnitX * 1.0f;
-                    playerOne.ApplyWorldImpulse(Vector2.UnitX * 0.3f);
+                    playerOne.ApplyWorldImpulse(Vector2.UnitX * MovementOffset);
                     //playerMovement.MoveBy(MovementVector * Time.TimeMult);
                 }
 
                 // Move up
-                else if (DualityApp.Keyboard[Key.Up] && Enemies.Boss.onGround(this.GameObj.RigidBody))
+                else if (DualityApp.Keyboard[Key.Up] && playerOne.LinearVelocity.Y == 0f)
                 {
                     if (CharDirection == Direction.Right)
                         playerSprite.AnimFirstFrame = 0;
@@ -119,7 +122,7 @@ namespace Dove_Game
                     playerSprite.AnimLoopMode = AnimSpriteRenderer.LoopMode.Loop;
                     
                     MovementVector = Vector2.UnitY * -1.0f;
-                    playerOne.ApplyLocalImpulse(-Vector2.UnitY * 10.0f);
+                    playerOne.ApplyLocalImpulse(-Vector2.UnitY * 35.0f);
                 }
 
                 // Gun Sequence
@@ -158,8 +161,8 @@ namespace Dove_Game
                     _summonedCharacter = goku.GetComponent<Goku>();
                     Scene.Current.AddObject(goku);
                 }
-                // Kamehameha special skill
-                else if (DualityApp.Keyboard[Key.C])
+
+                else if (DualityApp.Keyboard[Key.R])
                 {
                     isAttacking = true;
                     playerSprite.AnimFirstFrame = 20;
@@ -170,6 +173,19 @@ namespace Dove_Game
                     GameObject bowser = Summon.SummonGameObject(SideCharacter.Bowser, Attack.NoAttack, this);
                     _summonedCharacter = bowser.GetComponent<Bowser>();
                     Scene.Current.AddObject(bowser);
+                }
+
+                else if (DualityApp.Keyboard[Key.F])
+                {
+                    isAttacking = true;
+                    playerSprite.AnimFirstFrame = 20;
+                    playerSprite.AnimLoopMode = AnimSpriteRenderer.LoopMode.Once;
+                    playerSprite.AnimFrameCount = 2;
+                    playerSprite.AnimDuration = 1;
+
+                    GameObject navi = Summon.SummonGameObject(SideCharacter.Navi, Attack.NoAttack, this);
+                    _summonedCharacter = navi.GetComponent<Navi>();
+                    Scene.Current.AddObject(navi);
                 }
 
                 else
@@ -221,20 +237,19 @@ namespace Dove_Game
                 playerMovement.MoveBy(MovementVector * -1.0f * 10.0f);
             }
 
-            var bodyCollision = args as RigidBodyCollisionEventArgs;
-            if (bodyCollision == null) return;
-
-            if (bodyCollision.OtherShape.IsSensor)
-                this.SensorCount++;
+            var kaiMonkey = args.CollideWith.GetComponent<KaiMonkey>();
+            if (kaiMonkey != null)
+            {
+                HealthPoints += 10;
+                if (DualityApp.Keyboard[Key.C])
+                {
+                    kaiMonkey.MonkeyCaught = true;
+                }
+            }
         }
 
         public override void OnCollisionEnd(Component sender, CollisionEventArgs args)
         {
-            var bodyCollision = args as RigidBodyCollisionEventArgs;
-            if (bodyCollision == null) return;
-
-            if (bodyCollision.OtherShape.IsSensor)
-                this.SensorCount--;
 
         }
 
@@ -245,11 +260,11 @@ namespace Dove_Game
 
         public override void OnInit(Component.InitContext context)
         {
+            MovementOffset = 0.75f;
             HealthPoints = 100;
             ElaspedRespawnTime = 0.0f;
-            this.GameObj.RigidBody.Mass = 3.09f;
             this.GameObj.RigidBody.CollisionCategory = CollisionCategory.Cat1;
-            this.GameObj.RigidBody.CollidesWith = CollisionCategory.Cat3 | CollisionCategory.Cat2 | CollisionCategory.Cat4 | CollisionCategory.Cat5;
+            this.GameObj.RigidBody.CollidesWith = CollisionCategory.Cat3 | CollisionCategory.Cat2 | CollisionCategory.Cat4 | CollisionCategory.Cat5 | CollisionCategory.Cat7;
         }
 
         public override void OnShutdown(Component.ShutdownContext context)

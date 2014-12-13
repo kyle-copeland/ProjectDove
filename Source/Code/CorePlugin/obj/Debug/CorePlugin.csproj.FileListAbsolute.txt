@@ -38,3 +38,4 @@ C:\Users\Kyle Copeland\Projects\ProjectDove\Source\Code\CorePlugin\bin\Debug\Ope
 C:\Users\Kyle Copeland\Projects\ProjectDove\Source\Code\CorePlugin\bin\Debug\OpenTK.xml
 C:\Users\Kyle Copeland\Projects\ProjectDove\Source\Code\CorePlugin\bin\Debug\NVorbis.xml
 C:\Users\Kyle Copeland\Projects\ProjectDove\Source\Code\CorePlugin\obj\Debug\GamePlugin.core.pdb
+C:\Users\Kyle Copeland\Projects\projectdove\Source\Code\CorePlugin\obj\Debug\CorePlugin.csprojResolveAssemblyReference.cache

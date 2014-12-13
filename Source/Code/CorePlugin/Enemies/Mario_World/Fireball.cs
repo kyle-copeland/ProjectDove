@@ -30,7 +30,7 @@ namespace Dove_Game.Enemies.Mario_World
             attackTimer -= Time.MsPFMult * Time.TimeMult * 0.75f;
             if (attackTimer <= 0.0f && this.GameObj.Transform.Vel.Length == 0)
             {
-                this.GameObj.RigidBody.ApplyLocalImpulse(-Vector2.UnitY * 100);
+                this.GameObj.RigidBody.ApplyLocalImpulse(-Vector2.UnitY * 30000);
                 attackTimer = attackCooldown;
             }
 
@@ -46,7 +46,7 @@ namespace Dove_Game.Enemies.Mario_World
         {
             PlayerOne temp = args.CollideWith.GetComponent<PlayerOne>();
             if (temp != null)
-                temp.doDamage(50);
+                temp.doDamage(25);
 
             if(args.CollideWith.Name == "SceneBoundary")
             {
