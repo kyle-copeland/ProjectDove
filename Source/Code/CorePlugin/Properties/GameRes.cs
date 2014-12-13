@@ -251,14 +251,18 @@ namespace GameRes
 			}
 			public static class MarioWorld {
 				public static Duality.ContentRef<Duality.Resources.Prefab> Brick_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\MarioWorld\Brick.Prefab.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Prefab> Fireball_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\MarioWorld\Fireball.Prefab.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Prefab> Firespin_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\MarioWorld\Firespin.Prefab.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Prefab> Pipe_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\MarioWorld\Pipe.Prefab.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Prefab> PiranhaPlant_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\MarioWorld\PiranhaPlant.Prefab.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Prefab> QuestionBox_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\MarioWorld\QuestionBox.Prefab.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Prefab> Thwomp_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\MarioWorld\Thwomp.Prefab.res"); }}
 				public static void LoadAll() {
 					Brick_Prefab.MakeAvailable();
+					Fireball_Prefab.MakeAvailable();
 					Firespin_Prefab.MakeAvailable();
 					Pipe_Prefab.MakeAvailable();
+					PiranhaPlant_Prefab.MakeAvailable();
 					QuestionBox_Prefab.MakeAvailable();
 					Thwomp_Prefab.MakeAvailable();
 				}
@@ -441,6 +445,9 @@ namespace GameRes
 				public static Duality.ContentRef<Duality.Resources.Material> PipeCastle_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Scenes\Components\PipeCastle.Material.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Pixmap> PipeCastle_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Scenes\Components\PipeCastle.Pixmap.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Texture> PipeCastle_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Scenes\Components\PipeCastle.Texture.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Material> PiranhaPlant_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Scenes\Components\PiranhaPlant.Material.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Pixmap> PiranhaPlant_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Scenes\Components\PiranhaPlant.Pixmap.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Texture> PiranhaPlant_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Scenes\Components\PiranhaPlant.Texture.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Material> QuestionBox_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Scenes\Components\QuestionBox.Material.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Pixmap> QuestionBox_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Scenes\Components\QuestionBox.Pixmap.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Texture> QuestionBox_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Scenes\Components\QuestionBox.Texture.res"); }}
@@ -487,6 +494,9 @@ namespace GameRes
 					PipeCastle_Material.MakeAvailable();
 					PipeCastle_Pixmap.MakeAvailable();
 					PipeCastle_Texture.MakeAvailable();
+					PiranhaPlant_Material.MakeAvailable();
+					PiranhaPlant_Pixmap.MakeAvailable();
+					PiranhaPlant_Texture.MakeAvailable();
 					QuestionBox_Material.MakeAvailable();
 					QuestionBox_Pixmap.MakeAvailable();
 					QuestionBox_Texture.MakeAvailable();

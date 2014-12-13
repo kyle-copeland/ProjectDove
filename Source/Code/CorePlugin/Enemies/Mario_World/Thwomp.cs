@@ -45,7 +45,7 @@ namespace Dove_Game
             // ATTACK 
             else if (difference < 15 && this.GameObj.Transform.Vel.Length == 0)
             {
-                this.GameObj.RigidBody.ApplyLocalImpulse(Vector2.UnitY * 300.0f);
+                this.GameObj.RigidBody.ApplyLocalImpulse(Vector2.UnitY * 10000.0f);
                 thwompSprite.AnimFirstFrame = 2;
             }
 
@@ -57,7 +57,7 @@ namespace Dove_Game
         {
             PlayerOne temp = args.CollideWith.GetComponent<PlayerOne>();
             if (temp != null)
-                temp.doDamage(50);
+                temp.doDamage(25);
 
 
             if (args.CollideWith.Name == "Brick" || (args.CollideWith.Name == "SceneBoundary" && this.GameObj.RigidBody.LinearVelocity.Y > 0))

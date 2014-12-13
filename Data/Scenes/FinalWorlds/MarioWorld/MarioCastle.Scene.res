@@ -545,12 +545,12 @@
             <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
             <parentTransform />
             <pos dataType="Struct" type="OpenTK.Vector3">
-              <X dataType="Float">-998</X>
+              <X dataType="Float">-1000</X>
               <Y dataType="Float">129</Y>
               <Z dataType="Float">0</Z>
             </pos>
             <posAbs dataType="Struct" type="OpenTK.Vector3">
-              <X dataType="Float">-998</X>
+              <X dataType="Float">-1000</X>
               <Y dataType="Float">129</Y>
               <Z dataType="Float">0</Z>
             </posAbs>
@@ -849,7 +849,7 @@
           </item>
         </_items>
         <_size dataType="Int">4</_size>
-        <_version dataType="Int">4</_version>
+        <_version dataType="Int">6</_version>
       </compList>
       <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="479560056" surrogate="true">
         <header />
@@ -879,7 +879,26 @@
       <name dataType="String">QuestionBox</name>
       <parent />
       <prefabLink dataType="Struct" type="Duality.Resources.PrefabLink" id="1427014409">
-        <changes />
+        <changes dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Resources.PrefabLink+VarMod]]" id="4225673108">
+          <_items dataType="Array" type="Duality.Resources.PrefabLink+VarMod[]" id="4120780644" length="4">
+            <item dataType="Struct" type="Duality.Resources.PrefabLink+VarMod">
+              <childIndex dataType="Struct" type="System.Collections.Generic.List`1[[System.Int32]]" id="3461688520">
+                <_items dataType="Array" type="System.Int32[]" id="2847912556" />
+                <_size dataType="Int">0</_size>
+                <_version dataType="Int">1</_version>
+              </childIndex>
+              <componentType dataType="ObjectRef">2331962012</componentType>
+              <prop dataType="PropertyInfo" id="3489585886" value="P:Duality.Components.Transform:RelativePos" />
+              <val dataType="Struct" type="OpenTK.Vector3">
+                <X dataType="Float">-995</X>
+                <Y dataType="Float">117</Y>
+                <Z dataType="Float">0</Z>
+              </val>
+            </item>
+          </_items>
+          <_size dataType="Int">1</_size>
+          <_version dataType="Int">569</_version>
+        </changes>
         <obj dataType="ObjectRef">1627296609</obj>
         <prefab dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Prefab]]">
           <contentPath dataType="String">Data\Prefabs\MarioWorld\QuestionBox.Prefab.res</contentPath>
@@ -1838,7 +1857,7 @@
                 <_version dataType="Int">1</_version>
               </childIndex>
               <componentType dataType="ObjectRef">2331962012</componentType>
-              <prop dataType="PropertyInfo" id="3829051798" value="P:Duality.Components.Transform:RelativePos" />
+              <prop dataType="ObjectRef">3489585886</prop>
               <val dataType="Struct" type="OpenTK.Vector3">
                 <X dataType="Float">-1115</X>
                 <Y dataType="Float">44</Y>
@@ -1926,21 +1945,21 @@
             </item>
             <item dataType="Struct" type="Duality.Resources.PrefabLink+VarMod">
               <childIndex dataType="Struct" type="System.Collections.Generic.List`1[[System.Int32]]" id="2670850964">
-                <_items dataType="Array" type="System.Int32[]" id="280107080" />
+                <_items dataType="ObjectRef">2847912556</_items>
                 <_size dataType="Int">0</_size>
                 <_version dataType="Int">1</_version>
               </childIndex>
               <componentType dataType="ObjectRef">2331962012</componentType>
-              <prop dataType="ObjectRef">3829051798</prop>
+              <prop dataType="ObjectRef">3489585886</prop>
               <val dataType="Struct" type="OpenTK.Vector3">
-                <X dataType="Float">-1144</X>
-                <Y dataType="Float">159</Y>
+                <X dataType="Float">-1019</X>
+                <Y dataType="Float">160</Y>
                 <Z dataType="Float">0</Z>
               </val>
             </item>
           </_items>
           <_size dataType="Int">2</_size>
-          <_version dataType="Int">714</_version>
+          <_version dataType="Int">848</_version>
         </changes>
         <obj dataType="ObjectRef">536610198</obj>
         <prefab dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Prefab]]">
@@ -1965,14 +1984,14 @@
             <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
             <parentTransform />
             <pos dataType="Struct" type="OpenTK.Vector3">
-              <X dataType="Float">893.0042</X>
-              <Y dataType="Float">44.4015236</Y>
-              <Z dataType="Float">-591.7488</Z>
+              <X dataType="Float">-1019</X>
+              <Y dataType="Float">43.659256</Y>
+              <Z dataType="Float">-329.058655</Z>
             </pos>
             <posAbs dataType="Struct" type="OpenTK.Vector3">
-              <X dataType="Float">893.0042</X>
-              <Y dataType="Float">44.4015236</Y>
-              <Z dataType="Float">-591.7488</Z>
+              <X dataType="Float">-1019</X>
+              <Y dataType="Float">43.659256</Y>
+              <Z dataType="Float">-329.058655</Z>
             </posAbs>
             <scale dataType="Float">1</scale>
             <scaleAbs dataType="Float">1</scaleAbs>
@@ -2032,14 +2051,20 @@
                 </item>
               </_items>
               <_size dataType="Int">2</_size>
-              <_version dataType="Int">117602</_version>
+              <_version dataType="Int">120374</_version>
             </passes>
             <perspective dataType="Enum" type="Duality.Drawing.PerspectiveMode" name="Parallax" value="1" />
             <visibilityMask dataType="Enum" type="Duality.Drawing.VisibilityFlag" name="All" value="4294967295" />
           </item>
+          <item dataType="Struct" type="Dove_Game.Test_Logic.CameraController" id="3552001652">
+            <active dataType="Bool">true</active>
+            <followObject dataType="ObjectRef">2896925130</followObject>
+            <gameobj dataType="ObjectRef">3818708567</gameobj>
+            <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
+          </item>
         </_items>
-        <_size dataType="Int">2</_size>
-        <_version dataType="Int">2</_version>
+        <_size dataType="Int">3</_size>
+        <_version dataType="Int">3</_version>
       </compList>
       <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="4051226696" surrogate="true">
         <header />
@@ -2047,10 +2072,12 @@
           <keys dataType="Array" type="System.Type[]" id="3886522623">
             <item dataType="ObjectRef">2331962012</item>
             <item dataType="Type" id="1781068078" value="Duality.Components.Camera" />
+            <item dataType="Type" id="1810006218" value="Dove_Game.Test_Logic.CameraController" />
           </keys>
           <values dataType="Array" type="Duality.Component[]" id="2740540256">
             <item dataType="ObjectRef">1884056203</item>
             <item dataType="ObjectRef">61017078</item>
+            <item dataType="ObjectRef">3552001652</item>
           </values>
         </body>
       </compMap>
@@ -4004,7 +4031,7 @@
           </item>
         </_items>
         <_size dataType="Int">4</_size>
-        <_version dataType="Int">4</_version>
+        <_version dataType="Int">6</_version>
       </compList>
       <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="1945888184" surrogate="true">
         <header />
@@ -4043,7 +4070,7 @@
                 <_version dataType="Int">1</_version>
               </childIndex>
               <componentType dataType="ObjectRef">2331962012</componentType>
-              <prop dataType="ObjectRef">3829051798</prop>
+              <prop dataType="ObjectRef">3489585886</prop>
               <val dataType="Struct" type="OpenTK.Vector3">
                 <X dataType="Float">410</X>
                 <Y dataType="Float">116</Y>
