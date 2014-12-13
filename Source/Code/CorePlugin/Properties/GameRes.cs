@@ -114,7 +114,6 @@ namespace GameRes
 						Thwomp_Texture.MakeAvailable();
 					}
 				}
-<<<<<<< HEAD
 				public static class ZeldaWorld {
 					public static Duality.ContentRef<Duality.Resources.Material> LinkSP_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\Enemies\ZeldaWorld\LinkSP.Material.res"); }}
 					public static Duality.ContentRef<Duality.Resources.Pixmap> LinkSP_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\Enemies\ZeldaWorld\LinkSP.Pixmap.res"); }}
@@ -125,30 +124,19 @@ namespace GameRes
 						LinkSP_Texture.MakeAvailable();
 					}
 				}
+				public static Duality.ContentRef<Duality.Resources.Material> SlenderMan1_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\Enemies\SlenderMan1.Material.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Pixmap> SlenderMan1_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\Enemies\SlenderMan1.Pixmap.res"); }}
-=======
-				public static class Mario_World {
-					public static void LoadAll() {
-					}
-				}
-				public static class Zelda_World {
-					public static void LoadAll() {
-					}
-				}
->>>>>>> a0b52093b1efd792306d02a9b349cd4693fc415b
+				public static Duality.ContentRef<Duality.Resources.Texture> SlenderMan1_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Characters\Enemies\SlenderMan1.Texture.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Material> Thwomp_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\Enemies\Thwomp.Material.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Pixmap> Thwomp_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\Enemies\Thwomp.Pixmap.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Texture> Thwomp_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Characters\Enemies\Thwomp.Texture.res"); }}
 				public static void LoadAll() {
 					Dbz_World.LoadAll();
 					MarioWorld.LoadAll();
-<<<<<<< HEAD
 					ZeldaWorld.LoadAll();
+					SlenderMan1_Material.MakeAvailable();
 					SlenderMan1_Pixmap.MakeAvailable();
-=======
-					Mario_World.LoadAll();
-					Zelda_World.LoadAll();
->>>>>>> a0b52093b1efd792306d02a9b349cd4693fc415b
+					SlenderMan1_Texture.MakeAvailable();
 					Thwomp_Material.MakeAvailable();
 					Thwomp_Pixmap.MakeAvailable();
 					Thwomp_Texture.MakeAvailable();
@@ -245,6 +233,7 @@ namespace GameRes
 			public static Duality.ContentRef<Duality.Resources.Prefab> Pipe_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\Pipe.Prefab.res"); }}
 			public static Duality.ContentRef<Duality.Resources.Prefab> PlayerOne_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\PlayerOne.Prefab.res"); }}
 			public static Duality.ContentRef<Duality.Resources.Prefab> QuestionBox_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\QuestionBox.Prefab.res"); }}
+			public static Duality.ContentRef<Duality.Resources.Prefab> SlenderBoss_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\SlenderBoss.Prefab.res"); }}
 			public static Duality.ContentRef<Duality.Resources.Prefab> Thwomp_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\Thwomp.Prefab.res"); }}
 			public static Duality.ContentRef<Duality.Resources.Prefab> White_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\White.Prefab.res"); }}
 			public static void LoadAll() {
@@ -260,6 +249,7 @@ namespace GameRes
 				Pipe_Prefab.MakeAvailable();
 				PlayerOne_Prefab.MakeAvailable();
 				QuestionBox_Prefab.MakeAvailable();
+				SlenderBoss_Prefab.MakeAvailable();
 				Thwomp_Prefab.MakeAvailable();
 				White_Prefab.MakeAvailable();
 			}

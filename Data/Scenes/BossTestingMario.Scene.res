@@ -358,13 +358,13 @@
             <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
             <parentTransform />
             <pos dataType="Struct" type="OpenTK.Vector3">
-              <X dataType="Float">-193</X>
-              <Y dataType="Float">36</Y>
+              <X dataType="Float">338</X>
+              <Y dataType="Float">59</Y>
               <Z dataType="Float">-2</Z>
             </pos>
             <posAbs dataType="Struct" type="OpenTK.Vector3">
-              <X dataType="Float">-193</X>
-              <Y dataType="Float">36</Y>
+              <X dataType="Float">338</X>
+              <Y dataType="Float">59</Y>
               <Z dataType="Float">-2</Z>
             </posAbs>
             <scale dataType="Float">5</scale>
@@ -472,6 +472,7 @@
               <item />
             </attacks>
             <attackTimer dataType="Float">1000</attackTimer>
+            <autoShoot dataType="Bool">true</autoShoot>
             <bulletBlueprint dataType="Struct" type="Duality.ContentRef`1[[Dove_Game.BulletBlueprint]]">
               <contentPath dataType="String">Data\Scenes\SpecialAttacks\RocketBullet.BulletBlueprint.res</contentPath>
             </bulletBlueprint>
@@ -499,6 +500,8 @@
               <_size dataType="Int">4</_size>
               <_version dataType="Int">4</_version>
             </seqWalk>
+            <seqWalkLeft />
+            <seqWalkRight />
             <touchDamage dataType="Int">10</touchDamage>
             <vectorMove dataType="Struct" type="OpenTK.Vector2">
               <X dataType="Float">0</X>
@@ -705,7 +708,7 @@
           <item dataType="Struct" type="Dove_Game.PlayerOne" id="288668236">
             <_attacking dataType="Bool">false</_attacking>
             <_elaspedRespawnTime dataType="Float">0</_elaspedRespawnTime>
-            <_playerJumped dataType="Bool">false</_playerJumped>
+            <_sensorCount dataType="Int">0</_sensorCount>
             <_summonedCharacter />
             <active dataType="Bool">true</active>
             <currentSA />
@@ -713,8 +716,8 @@
             <gameobj dataType="ObjectRef">3186364968</gameobj>
             <healthPts dataType="Int">100</healthPts>
             <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
+            <isStunned dataType="Bool">false</isStunned>
             <lastFrame dataType="Int">0</lastFrame>
-            <sensorCount dataType="Int">0</sensorCount>
             <vectorMove dataType="Struct" type="OpenTK.Vector2">
               <X dataType="Float">0</X>
               <Y dataType="Float">0</Y>
