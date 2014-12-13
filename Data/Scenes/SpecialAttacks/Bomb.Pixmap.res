@@ -36,7 +36,7 @@
       </item>
     </_items>
     <_size dataType="Int">1</_size>
-    <_version dataType="Int">1</_version>
+    <_version dataType="Int">2</_version>
   </layers>
   <sourcePath dataType="String">Source\Media\Bomb (2).png</sourcePath>
 </root>
