@@ -87,7 +87,7 @@ namespace Dove_Game.Enemies.Zelda_World
                 boss.GameObj.GetComponent<AnimSpriteRenderer>().CustomFrameSequence = boss.PlayerPosition == Direction.Right ? seqArrowRight :  seqArrowLeft;
                 boss.GameObj.GetComponent<AnimSpriteRenderer>().AnimDuration = 1.0f;
                 int spriteRowsArrow = 8;
-                Bullet arrow = Test_Logic.ContentRefs.BBP_Default.Res.CreateBullet(boss.CharDirection, GameRes.Data.Scenes.Bullets.Arrows_Material,true, seqArrow,8 );
+                Bullet arrow = Test_Logic.ContentRefs.BBP_Default.Res.CreateBullet(boss.CharDirection, GameRes.Data.Scenes.Bullets.Arrows_Material,true, seqArrow,spriteRowsArrow);
                 int bulletSpeed = 20;
 
                 arrow.Fire(boss.GameObj.RigidBody.LinearVelocity, boss.GameObj.Transform.GetWorldPoint(Vector2.Zero), 0, bulletSpeed);

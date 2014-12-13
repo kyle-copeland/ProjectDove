@@ -115,10 +115,16 @@ namespace GameRes
 					}
 				}
 				public static class ZeldaWorld {
+					public static Duality.ContentRef<Duality.Resources.Material> Blue_Knight_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\Enemies\ZeldaWorld\Blue Knight.Material.res"); }}
+					public static Duality.ContentRef<Duality.Resources.Pixmap> Blue_Knight_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\Enemies\ZeldaWorld\Blue Knight.Pixmap.res"); }}
+					public static Duality.ContentRef<Duality.Resources.Texture> Blue_Knight_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Characters\Enemies\ZeldaWorld\Blue Knight.Texture.res"); }}
 					public static Duality.ContentRef<Duality.Resources.Material> LinkSP_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\Enemies\ZeldaWorld\LinkSP.Material.res"); }}
 					public static Duality.ContentRef<Duality.Resources.Pixmap> LinkSP_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\Enemies\ZeldaWorld\LinkSP.Pixmap.res"); }}
 					public static Duality.ContentRef<Duality.Resources.Texture> LinkSP_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Characters\Enemies\ZeldaWorld\LinkSP.Texture.res"); }}
 					public static void LoadAll() {
+						Blue_Knight_Material.MakeAvailable();
+						Blue_Knight_Pixmap.MakeAvailable();
+						Blue_Knight_Texture.MakeAvailable();
 						LinkSP_Material.MakeAvailable();
 						LinkSP_Pixmap.MakeAvailable();
 						LinkSP_Texture.MakeAvailable();
@@ -221,6 +227,9 @@ namespace GameRes
 			}
 		}
 		public static class Prefabs {
+			public static Duality.ContentRef<Duality.Resources.Prefab> Blue_Knight_1_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\Blue Knight 1.Prefab.res"); }}
+			public static Duality.ContentRef<Duality.Resources.Prefab> Blue_Knight_2_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\Blue Knight 2.Prefab.res"); }}
+			public static Duality.ContentRef<Duality.Resources.Prefab> Blue_Knight_3_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\Blue Knight 3.Prefab.res"); }}
 			public static Duality.ContentRef<Duality.Resources.Prefab> Brick_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\Brick.Prefab.res"); }}
 			public static Duality.ContentRef<Duality.Resources.Prefab> CloudsT_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\CloudsT.Prefab.res"); }}
 			public static Duality.ContentRef<Duality.Resources.Prefab> Firespin_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\Firespin.Prefab.res"); }}
@@ -237,6 +246,9 @@ namespace GameRes
 			public static Duality.ContentRef<Duality.Resources.Prefab> Thwomp_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\Thwomp.Prefab.res"); }}
 			public static Duality.ContentRef<Duality.Resources.Prefab> White_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\White.Prefab.res"); }}
 			public static void LoadAll() {
+				Blue_Knight_1_Prefab.MakeAvailable();
+				Blue_Knight_2_Prefab.MakeAvailable();
+				Blue_Knight_3_Prefab.MakeAvailable();
 				Brick_Prefab.MakeAvailable();
 				CloudsT_Prefab.MakeAvailable();
 				Firespin_Prefab.MakeAvailable();
