@@ -110,7 +110,7 @@ namespace Dove_Game
                 }
 
                 // Move up
-                else if (DualityApp.Keyboard[Key.Up] && playerOne.LinearVelocity.Y == 0f)
+                else if (DualityApp.Keyboard[Key.Up] && Enemies.Boss.onGround(this.GameObj.RigidBody))
                 {
                     if (CharDirection == Direction.Right)
                         playerSprite.AnimFirstFrame = 0;
@@ -122,7 +122,7 @@ namespace Dove_Game
                     playerSprite.AnimLoopMode = AnimSpriteRenderer.LoopMode.Loop;
                     
                     MovementVector = Vector2.UnitY * -1.0f;
-                    playerOne.ApplyLocalImpulse(-Vector2.UnitY * 35.0f);
+                    playerOne.ApplyLocalImpulse(-Vector2.UnitY * 10.0f);
                 }
 
                 // Gun Sequence
@@ -263,6 +263,7 @@ namespace Dove_Game
             MovementOffset = 0.75f;
             HealthPoints = 100;
             ElaspedRespawnTime = 0.0f;
+            this.GameObj.RigidBody.Mass = 3.09f;
             this.GameObj.RigidBody.CollisionCategory = CollisionCategory.Cat1;
             this.GameObj.RigidBody.CollidesWith = CollisionCategory.Cat3 | CollisionCategory.Cat2 | CollisionCategory.Cat4 | CollisionCategory.Cat5 | CollisionCategory.Cat7;
         }
