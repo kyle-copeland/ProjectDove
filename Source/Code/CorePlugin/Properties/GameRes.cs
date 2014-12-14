@@ -272,6 +272,7 @@ namespace GameRes
 				public static Duality.ContentRef<Duality.Resources.Prefab> Pipe_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\MarioWorld\Pipe.Prefab.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Prefab> PiranhaPlant_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\MarioWorld\PiranhaPlant.Prefab.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Prefab> QuestionBox_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\MarioWorld\QuestionBox.Prefab.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Prefab> SolidBrickCastle_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\MarioWorld\SolidBrickCastle.Prefab.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Prefab> Thwomp_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\MarioWorld\Thwomp.Prefab.res"); }}
 				public static void LoadAll() {
 					Brick_Prefab.MakeAvailable();
@@ -280,6 +281,7 @@ namespace GameRes
 					Pipe_Prefab.MakeAvailable();
 					PiranhaPlant_Prefab.MakeAvailable();
 					QuestionBox_Prefab.MakeAvailable();
+					SolidBrickCastle_Prefab.MakeAvailable();
 					Thwomp_Prefab.MakeAvailable();
 				}
 			}
@@ -348,6 +350,9 @@ namespace GameRes
 				public static Duality.ContentRef<Duality.Resources.Pixmap> Test_ScrollMap_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Scenes\Backgrounds\Test_ScrollMap.Pixmap.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Prefab> Test_ScrollMap_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Scenes\Backgrounds\Test_ScrollMap.Prefab.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Texture> Test_ScrollMap_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Scenes\Backgrounds\Test_ScrollMap.Texture.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Material> ZeldaWorldBackground_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Scenes\Backgrounds\ZeldaWorldBackground.Material.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Pixmap> ZeldaWorldBackground_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Scenes\Backgrounds\ZeldaWorldBackground.Pixmap.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Texture> ZeldaWorldBackground_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Scenes\Backgrounds\ZeldaWorldBackground.Texture.res"); }}
 				public static void LoadAll() {
 					DBZ_SnakeWay_Material.MakeAvailable();
 					DBZ_SnakeWay_Pixmap.MakeAvailable();
@@ -383,6 +388,9 @@ namespace GameRes
 					Test_ScrollMap_Pixmap.MakeAvailable();
 					Test_ScrollMap_Prefab.MakeAvailable();
 					Test_ScrollMap_Texture.MakeAvailable();
+					ZeldaWorldBackground_Material.MakeAvailable();
+					ZeldaWorldBackground_Pixmap.MakeAvailable();
+					ZeldaWorldBackground_Texture.MakeAvailable();
 				}
 			}
 			public static class Bullets {
