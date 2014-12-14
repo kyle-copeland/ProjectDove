@@ -261,7 +261,11 @@ namespace GameRes
 				}
 			}
 			public static class Zelda_World {
+				public static Duality.ContentRef<Duality.Resources.AudioData> Zelda_Forest_AudioData { get { return Duality.ContentProvider.RequestContent<Duality.Resources.AudioData>(@"Data\Music\Zelda World\Zelda Forest.AudioData.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Sound> Zelda_Forest_Sound { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Sound>(@"Data\Music\Zelda World\Zelda Forest.Sound.res"); }}
 				public static void LoadAll() {
+					Zelda_Forest_AudioData.MakeAvailable();
+					Zelda_Forest_Sound.MakeAvailable();
 				}
 			}
 			public static void LoadAll() {
