@@ -237,7 +237,11 @@ namespace GameRes
 		}
 		public static class Music {
 			public static class Goku_World {
+				public static Duality.ContentRef<Duality.Resources.AudioData> Goku_Snake_Way_AudioData { get { return Duality.ContentProvider.RequestContent<Duality.Resources.AudioData>(@"Data\Music\Goku World\Goku Snake Way.AudioData.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Sound> Goku_Snake_Way_Sound { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Sound>(@"Data\Music\Goku World\Goku Snake Way.Sound.res"); }}
 				public static void LoadAll() {
+					Goku_Snake_Way_AudioData.MakeAvailable();
+					Goku_Snake_Way_Sound.MakeAvailable();
 				}
 			}
 			public static class Mario_World {
