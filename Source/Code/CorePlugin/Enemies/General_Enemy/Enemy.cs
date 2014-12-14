@@ -51,7 +51,7 @@ namespace Dove_Game.Enemies
                 mainCharacter.doDamage(10);
 
             //if wall hit change Directions
-            if (args.CollideWith != null)
+            else if (args.CollideWith != null)
                 this.ChangeDirection();
         }
 

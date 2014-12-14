@@ -118,16 +118,34 @@ namespace GameRes
 					public static Duality.ContentRef<Duality.Resources.Material> Blue_Knight_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\Enemies\ZeldaWorld\Blue Knight.Material.res"); }}
 					public static Duality.ContentRef<Duality.Resources.Pixmap> Blue_Knight_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\Enemies\ZeldaWorld\Blue Knight.Pixmap.res"); }}
 					public static Duality.ContentRef<Duality.Resources.Texture> Blue_Knight_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Characters\Enemies\ZeldaWorld\Blue Knight.Texture.res"); }}
+					public static Duality.ContentRef<Duality.Resources.Material> ChickenSPR_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\Enemies\ZeldaWorld\ChickenSPR.Material.res"); }}
+					public static Duality.ContentRef<Duality.Resources.Pixmap> ChickenSPR_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\Enemies\ZeldaWorld\ChickenSPR.Pixmap.res"); }}
+					public static Duality.ContentRef<Duality.Resources.Texture> ChickenSPR_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Characters\Enemies\ZeldaWorld\ChickenSPR.Texture.res"); }}
 					public static Duality.ContentRef<Duality.Resources.Material> LinkSP_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\Enemies\ZeldaWorld\LinkSP.Material.res"); }}
 					public static Duality.ContentRef<Duality.Resources.Pixmap> LinkSP_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\Enemies\ZeldaWorld\LinkSP.Pixmap.res"); }}
 					public static Duality.ContentRef<Duality.Resources.Texture> LinkSP_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Characters\Enemies\ZeldaWorld\LinkSP.Texture.res"); }}
+					public static Duality.ContentRef<Duality.Resources.Material> Octoroc_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\Enemies\ZeldaWorld\Octoroc.Material.res"); }}
+					public static Duality.ContentRef<Duality.Resources.Pixmap> Octoroc_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\Enemies\ZeldaWorld\Octoroc.Pixmap.res"); }}
+					public static Duality.ContentRef<Duality.Resources.Texture> Octoroc_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Characters\Enemies\ZeldaWorld\Octoroc.Texture.res"); }}
+					public static Duality.ContentRef<Duality.Resources.Material> Tektike_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\Enemies\ZeldaWorld\Tektike.Material.res"); }}
+					public static Duality.ContentRef<Duality.Resources.Pixmap> Tektike_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\Enemies\ZeldaWorld\Tektike.Pixmap.res"); }}
+					public static Duality.ContentRef<Duality.Resources.Texture> Tektike_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Characters\Enemies\ZeldaWorld\Tektike.Texture.res"); }}
 					public static void LoadAll() {
 						Blue_Knight_Material.MakeAvailable();
 						Blue_Knight_Pixmap.MakeAvailable();
 						Blue_Knight_Texture.MakeAvailable();
+						ChickenSPR_Material.MakeAvailable();
+						ChickenSPR_Pixmap.MakeAvailable();
+						ChickenSPR_Texture.MakeAvailable();
 						LinkSP_Material.MakeAvailable();
 						LinkSP_Pixmap.MakeAvailable();
 						LinkSP_Texture.MakeAvailable();
+						Octoroc_Material.MakeAvailable();
+						Octoroc_Pixmap.MakeAvailable();
+						Octoroc_Texture.MakeAvailable();
+						Tektike_Material.MakeAvailable();
+						Tektike_Pixmap.MakeAvailable();
+						Tektike_Texture.MakeAvailable();
 					}
 				}
 				public static Duality.ContentRef<Duality.Resources.Material> SlenderMan1_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\Enemies\SlenderMan1.Material.res"); }}
@@ -257,12 +275,18 @@ namespace GameRes
 				public static Duality.ContentRef<Duality.Resources.Prefab> Blue_Knight_1_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\LinkWorld\Blue Knight 1.Prefab.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Prefab> Blue_Knight_2_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\LinkWorld\Blue Knight 2.Prefab.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Prefab> Blue_Knight_3_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\LinkWorld\Blue Knight 3.Prefab.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Prefab> Chicken_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\LinkWorld\Chicken.Prefab.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Prefab> LinkBoss_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\LinkWorld\LinkBoss.Prefab.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Prefab> Octoroc_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\LinkWorld\Octoroc.Prefab.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Prefab> Tektike_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\LinkWorld\Tektike.Prefab.res"); }}
 				public static void LoadAll() {
 					Blue_Knight_1_Prefab.MakeAvailable();
 					Blue_Knight_2_Prefab.MakeAvailable();
 					Blue_Knight_3_Prefab.MakeAvailable();
+					Chicken_Prefab.MakeAvailable();
 					LinkBoss_Prefab.MakeAvailable();
+					Octoroc_Prefab.MakeAvailable();
+					Tektike_Prefab.MakeAvailable();
 				}
 			}
 			public static class MarioWorld {
