@@ -236,6 +236,18 @@ namespace GameRes
 			}
 		}
 		public static class Music {
+			public static class Goku_World {
+				public static void LoadAll() {
+				}
+			}
+			public static class Mario_World {
+				public static Duality.ContentRef<Duality.Resources.AudioData> MarioWorld_AudioData { get { return Duality.ContentProvider.RequestContent<Duality.Resources.AudioData>(@"Data\Music\Mario World\MarioWorld.AudioData.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Sound> MarioWorld_Sound { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Sound>(@"Data\Music\Mario World\MarioWorld.Sound.res"); }}
+				public static void LoadAll() {
+					MarioWorld_AudioData.MakeAvailable();
+					MarioWorld_Sound.MakeAvailable();
+				}
+			}
 			public static class Menu {
 				public static Duality.ContentRef<Duality.Resources.AudioData> Main_Menu_AudioData { get { return Duality.ContentProvider.RequestContent<Duality.Resources.AudioData>(@"Data\Music\Menu\Main Menu.AudioData.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Sound> Main_Menu_Sound { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Sound>(@"Data\Music\Menu\Main Menu.Sound.res"); }}
@@ -244,8 +256,15 @@ namespace GameRes
 					Main_Menu_Sound.MakeAvailable();
 				}
 			}
+			public static class Zelda_World {
+				public static void LoadAll() {
+				}
+			}
 			public static void LoadAll() {
+				Goku_World.LoadAll();
+				Mario_World.LoadAll();
 				Menu.LoadAll();
+				Zelda_World.LoadAll();
 			}
 		}
 		public static class Prefabs {
