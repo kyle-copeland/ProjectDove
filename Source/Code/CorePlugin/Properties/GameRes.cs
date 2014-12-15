@@ -391,6 +391,9 @@ namespace GameRes
 				public static Duality.ContentRef<Duality.Resources.Material> Mario_Sky_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Scenes\Backgrounds\Mario_Sky.Material.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Pixmap> Mario_Sky_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Scenes\Backgrounds\Mario_Sky.Pixmap.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Texture> Mario_Sky_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Scenes\Backgrounds\Mario_Sky.Texture.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Material> SlendermanBackground_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Scenes\Backgrounds\SlendermanBackground.Material.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Pixmap> SlendermanBackground_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Scenes\Backgrounds\SlendermanBackground.Pixmap.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Texture> SlendermanBackground_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Scenes\Backgrounds\SlendermanBackground.Texture.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Material> StartScene_1_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Scenes\Backgrounds\StartScene_1.Material.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Pixmap> StartScene_1_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Scenes\Backgrounds\StartScene_1.Pixmap.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Texture> StartScene_1_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Scenes\Backgrounds\StartScene_1.Texture.res"); }}
@@ -429,6 +432,9 @@ namespace GameRes
 					Mario_Sky_Material.MakeAvailable();
 					Mario_Sky_Pixmap.MakeAvailable();
 					Mario_Sky_Texture.MakeAvailable();
+					SlendermanBackground_Material.MakeAvailable();
+					SlendermanBackground_Pixmap.MakeAvailable();
+					SlendermanBackground_Texture.MakeAvailable();
 					StartScene_1_Material.MakeAvailable();
 					StartScene_1_Pixmap.MakeAvailable();
 					StartScene_1_Texture.MakeAvailable();

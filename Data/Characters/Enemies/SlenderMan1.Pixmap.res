@@ -198,11 +198,7 @@
       </item>
     </_items>
     <_size dataType="Int">1</_size>
-<<<<<<< HEAD
     <_version dataType="Int">6</_version>
-=======
-    <_version dataType="Int">2</_version>
->>>>>>> d17ceb8fa1f7a10a7eb95aaa336d31dabc8704a5
   </layers>
   <sourcePath dataType="String">Source\Media\SlenderMan1.png</sourcePath>
 </root>
