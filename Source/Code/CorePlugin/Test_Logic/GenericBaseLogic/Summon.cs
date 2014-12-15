@@ -189,7 +189,7 @@ namespace Dove_Game.Test_Logic
             float bulletBodyPos = direction == Direction.Right ? spriteRadius : -spriteRadius;
             body.ClearShapes();
             CircleShapeInfo circleShape = new CircleShapeInfo(spriteRadius, new Vector2(playerPos.X + bulletBodyPos, 0f), 1.0f);
-            circleShape.IsSensor = false;
+            circleShape.IsSensor = true;
             body.AddShape(circleShape);
             body.CollisionCategory = CollisionCategory.Cat2;
             body.CollidesWith = CollisionCategory.Cat1;

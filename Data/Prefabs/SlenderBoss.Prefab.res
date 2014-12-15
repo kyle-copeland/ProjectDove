@@ -16,17 +16,17 @@
           <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
           <parentTransform />
           <pos dataType="Struct" type="OpenTK.Vector3">
-            <X dataType="Float">86</X>
-            <Y dataType="Float">-22</Y>
+            <X dataType="Float">121</X>
+            <Y dataType="Float">111</Y>
             <Z dataType="Float">-2</Z>
           </pos>
           <posAbs dataType="Struct" type="OpenTK.Vector3">
-            <X dataType="Float">86</X>
-            <Y dataType="Float">-22</Y>
+            <X dataType="Float">121</X>
+            <Y dataType="Float">111</Y>
             <Z dataType="Float">-2</Z>
           </posAbs>
-          <scale dataType="Float">5</scale>
-          <scaleAbs dataType="Float">5</scaleAbs>
+          <scale dataType="Float">1</scale>
+          <scaleAbs dataType="Float">1</scaleAbs>
           <vel dataType="Struct" type="OpenTK.Vector3">
             <X dataType="Float">0</X>
             <Y dataType="Float">0</Y>
@@ -100,29 +100,30 @@
                 <sensor dataType="Bool">false</sensor>
                 <vertices dataType="Array" type="OpenTK.Vector2[]" id="1439249348">
                   <item dataType="Struct" type="OpenTK.Vector2">
-                    <X dataType="Float">-23</X>
-                    <Y dataType="Float">-18</Y>
+                    <X dataType="Float">-9</X>
+                    <Y dataType="Float">-16.5</Y>
                   </item>
                   <item dataType="Struct" type="OpenTK.Vector2">
-                    <X dataType="Float">-4</X>
-                    <Y dataType="Float">-18</Y>
+                    <X dataType="Float">10</X>
+                    <Y dataType="Float">-16.5</Y>
                   </item>
                   <item dataType="Struct" type="OpenTK.Vector2">
-                    <X dataType="Float">-5</X>
-                    <Y dataType="Float">17</Y>
+                    <X dataType="Float">9</X>
+                    <Y dataType="Float">18.5</Y>
                   </item>
                   <item dataType="Struct" type="OpenTK.Vector2">
-                    <X dataType="Float">-24</X>
-                    <Y dataType="Float">17</Y>
+                    <X dataType="Float">-10</X>
+                    <Y dataType="Float">18.5</Y>
                   </item>
                 </vertices>
               </item>
             </_items>
             <_size dataType="Int">1</_size>
-            <_version dataType="Int">3</_version>
+            <_version dataType="Int">5</_version>
           </shapes>
         </item>
         <item dataType="Struct" type="Dove_Game.Enemies.SlenderBoss" id="1713414277">
+          <_frozen dataType="Bool">false</_frozen>
           <active dataType="Bool">true</active>
           <attackCooldown dataType="Float">5000</attackCooldown>
           <attacks dataType="Array" type="Dove_Game.Enemies.BossAttack[]" id="1698848549">
@@ -147,7 +148,7 @@
           <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
           <lastFrame dataType="Int">0</lastFrame>
           <movementSpeed dataType="Float">5</movementSpeed>
-          <nextAttack dataType="Int">0</nextAttack>
+          <nextAttack dataType="Int">-1</nextAttack>
           <playerPosition dataType="Enum" type="Dove_Game.Direction" name="Left" value="0" />
           <seqWalkLeft />
           <seqWalkRight />
@@ -161,7 +162,7 @@
         </item>
       </_items>
       <_size dataType="Int">4</_size>
-      <_version dataType="Int">4</_version>
+      <_version dataType="Int">6</_version>
     </compList>
     <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="3737092352" surrogate="true">
       <header />
