@@ -260,6 +260,14 @@ namespace GameRes
 					Main_Menu_Sound.MakeAvailable();
 				}
 			}
+			public static class Slender {
+				public static Duality.ContentRef<Duality.Resources.AudioData> SlenderMan_AudioData { get { return Duality.ContentProvider.RequestContent<Duality.Resources.AudioData>(@"Data\Music\Slender\SlenderMan.AudioData.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Sound> SlenderMan_Sound { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Sound>(@"Data\Music\Slender\SlenderMan.Sound.res"); }}
+				public static void LoadAll() {
+					SlenderMan_AudioData.MakeAvailable();
+					SlenderMan_Sound.MakeAvailable();
+				}
+			}
 			public static class Zelda_World {
 				public static Duality.ContentRef<Duality.Resources.AudioData> Zelda_Forest_AudioData { get { return Duality.ContentProvider.RequestContent<Duality.Resources.AudioData>(@"Data\Music\Zelda World\Zelda Forest.AudioData.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Sound> Zelda_Forest_Sound { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Sound>(@"Data\Music\Zelda World\Zelda Forest.Sound.res"); }}
@@ -272,6 +280,7 @@ namespace GameRes
 				Goku_World.LoadAll();
 				Mario_World.LoadAll();
 				Menu.LoadAll();
+				Slender.LoadAll();
 				Zelda_World.LoadAll();
 			}
 		}
