@@ -16,17 +16,17 @@
           <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
           <parentTransform />
           <pos dataType="Struct" type="OpenTK.Vector3">
-            <X dataType="Float">208</X>
-            <Y dataType="Float">154</Y>
+            <X dataType="Float">160</X>
+            <Y dataType="Float">52</Y>
             <Z dataType="Float">-8</Z>
           </pos>
           <posAbs dataType="Struct" type="OpenTK.Vector3">
-            <X dataType="Float">208</X>
-            <Y dataType="Float">154</Y>
+            <X dataType="Float">160</X>
+            <Y dataType="Float">52</Y>
             <Z dataType="Float">-8</Z>
           </posAbs>
-          <scale dataType="Float">10</scale>
-          <scaleAbs dataType="Float">10</scaleAbs>
+          <scale dataType="Float">1</scale>
+          <scaleAbs dataType="Float">1</scaleAbs>
           <vel dataType="Struct" type="OpenTK.Vector3">
             <X dataType="Float">0</X>
             <Y dataType="Float">0</Y>
@@ -119,7 +119,7 @@
               </item>
             </_items>
             <_size dataType="Int">1</_size>
-            <_version dataType="Int">3</_version>
+            <_version dataType="Int">4</_version>
           </shapes>
         </item>
         <item dataType="Struct" type="Dove_Game.JumpRover" id="1246081358">
@@ -131,7 +131,7 @@
           <force dataType="Float">100</force>
           <gameobj dataType="ObjectRef">2162531623</gameobj>
           <groundSprite dataType="Int">0</groundSprite>
-          <healthPts dataType="Int">50</healthPts>
+          <healthPts dataType="Int">10</healthPts>
           <impulse dataType="Float">3</impulse>
           <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
           <lastFrame dataType="Int">0</lastFrame>

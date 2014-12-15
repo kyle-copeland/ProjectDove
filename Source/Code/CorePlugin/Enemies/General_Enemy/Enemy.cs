@@ -29,7 +29,13 @@ namespace Dove_Game.Enemies
 
         public float WeaponTimer { get { return this.weaponTimer; } set { this.weaponTimer = value; } }
         public float WeaponDelay { get { return this.weaponDelay; } set { this.weaponDelay = value; } }
-    
+
+
+        public override void OnUpdate()
+        {
+            if (HealthPoints <= 0) //check if dead
+                this.GameObj.DisposeLater();
+        }
         public virtual void Move(Vector2 unitDirection)
         {
             RigidBody body = this.GameObj.RigidBody;
@@ -47,13 +53,18 @@ namespace Dove_Game.Enemies
         public override void OnCollisionBegin(Component sender, CollisionEventArgs args)
         {
             PlayerOne mainCharacter = args.CollideWith.GetComponent<PlayerOne>();
-            if (mainCharacter != null && !mainCharacter.isAttacking)
+            if (mainCharacter != null)
                 mainCharacter.doDamage(10);
 
             //if wall hit change Directions
             else if (args.CollideWith != null)
                 this.ChangeDirection();
+
+           
         }
+
+       
+      
 
         public void ChangeDirection()
         {
@@ -82,7 +93,7 @@ namespace Dove_Game.Enemies
         //All Enemies will be of collision category 2
         public override void OnInit(Component.InitContext context)
         {
-            HealthPoints = 50;
+            HealthPoints = 10;
             this.GameObj.RigidBody.Mass = 50;
             this.GameObj.RigidBody.CollisionCategory = CollisionCategory.Cat3;
             this.GameObj.RigidBody.CollidesWith = CollisionCategory.Cat1 | CollisionCategory.Cat2 | CollisionCategory.Cat4 | CollisionCategory.Cat5;
@@ -111,6 +122,7 @@ namespace Dove_Game.Enemies
             return false;
         }
 
+         //Check if dead after being hit
         public override void OnCollisionEnd(Component sender, CollisionEventArgs args) { }
         public override void OnCollisionSolve(Component sender, CollisionEventArgs args) { }
     }

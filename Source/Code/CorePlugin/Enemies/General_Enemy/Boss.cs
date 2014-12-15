@@ -68,7 +68,7 @@ namespace Dove_Game.Enemies
               
                 Move(Vector2.UnitX);
             }
-           
+            base.OnUpdate();
         }
 
         public override void Move(Vector2 unitDirection)

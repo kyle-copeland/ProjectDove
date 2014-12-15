@@ -23,6 +23,14 @@ namespace Dove_Game
                 RigidBody r = this.GameObj.RigidBody;
                 r.ApplyLocalForce(Vector2.UnitX * force * -1.0f * Time.TimeMult);
             }
+            base.OnUpdate();
+        }
+
+
+        public override void OnInit(InitContext context)
+        {
+            base.OnInit(context);
+            this.HealthPoints = 100;
         }
     }
 }

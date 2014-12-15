@@ -20,8 +20,9 @@ namespace Dove_Game
         {
             if (HealthPoints <= 0)
                 this.GameObj.DisposeLater();
-
+            base.OnUpdate();
             this.Move(Vector2.UnitX);
+            
         }
 
         public override void OnCollisionEnd(Component sender, CollisionEventArgs args)
