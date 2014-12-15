@@ -479,10 +479,16 @@
             </shapes>
           </item>
           <item dataType="Struct" type="Dove_Game.Enemies.DBZ_World.GokuBoss" id="692839585">
+            <_frozen dataType="Bool">false</_frozen>
             <active dataType="Bool">true</active>
             <attackCooldown dataType="Float">1000</attackCooldown>
-            <attacks dataType="Array" type="Dove_Game.Enemies.BossAttack[]" id="2023009277" length="3" />
+            <attacks dataType="Array" type="Dove_Game.Enemies.BossAttack[]" id="2023009277">
+              <item />
+              <item />
+              <item />
+            </attacks>
             <attackTimer dataType="Float">1000</attackTimer>
+            <autoShoot dataType="Bool">true</autoShoot>
             <bulletBlueprint dataType="Struct" type="Duality.ContentRef`1[[Dove_Game.BulletBlueprint]]">
               <contentPath dataType="String">Data\Scenes\SpecialAttacks\RocketBullet.BulletBlueprint.res</contentPath>
             </bulletBlueprint>
@@ -510,6 +516,8 @@
               <_size dataType="Int">4</_size>
               <_version dataType="Int">4</_version>
             </seqWalk>
+            <seqWalkLeft />
+            <seqWalkRight />
             <touchDamage dataType="Int">10</touchDamage>
             <vectorMove dataType="Struct" type="OpenTK.Vector2">
               <X dataType="Float">0</X>
@@ -628,9 +636,9 @@
             <angularVel dataType="Float">0</angularVel>
             <bodyType dataType="Enum" type="Duality.Components.Physics.BodyType" name="Dynamic" value="1" />
             <colCat dataType="Enum" type="Duality.Components.Physics.CollisionCategory" name="Cat1" value="1" />
-            <colWith dataType="Enum" type="Duality.Components.Physics.CollisionCategory" name="Cat2, Cat3, Cat4, Cat5" value="30" />
+            <colWith dataType="Enum" type="Duality.Components.Physics.CollisionCategory" name="Cat2, Cat3, Cat4, Cat5, Cat7" value="94" />
             <continous dataType="Bool">false</continous>
-            <explicitMass dataType="Float">0</explicitMass>
+            <explicitMass dataType="Float">3.09</explicitMass>
             <fixedAngle dataType="Bool">true</fixedAngle>
             <gameobj dataType="ObjectRef">3186364968</gameobj>
             <ignoreGravity dataType="Bool">false</ignoreGravity>
@@ -716,7 +724,7 @@
           <item dataType="Struct" type="Dove_Game.PlayerOne" id="288668236">
             <_attacking dataType="Bool">false</_attacking>
             <_elaspedRespawnTime dataType="Float">0</_elaspedRespawnTime>
-            <_playerJumped dataType="Bool">false</_playerJumped>
+            <_movementOffset dataType="Float">0.75</_movementOffset>
             <_summonedCharacter />
             <active dataType="Bool">true</active>
             <currentSA />
@@ -724,8 +732,8 @@
             <gameobj dataType="ObjectRef">3186364968</gameobj>
             <healthPts dataType="Int">100</healthPts>
             <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
+            <isStunned dataType="Bool">false</isStunned>
             <lastFrame dataType="Int">0</lastFrame>
-            <sensorCount dataType="Int">0</sensorCount>
             <vectorMove dataType="Struct" type="OpenTK.Vector2">
               <X dataType="Float">0</X>
               <Y dataType="Float">0</Y>

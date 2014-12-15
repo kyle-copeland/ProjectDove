@@ -34,6 +34,8 @@ namespace Dove_Game.Test_Logic
 
         //Link
         public static ContentRef<Material> bomb = GameRes.Data.Scenes.SpecialAttacks.Bomb_Material;
+        public static ContentRef<Material> explosion = GameRes.Data.Scenes.SpecialAttacks.BombSpriteAnimation_Material;
+
 		// Material and resource references for special attacks.
         public static ContentRef<Material> kameBlast = GameRes.Data.Scenes.SpecialAttacks.Kamehameha_2_Material;
         public static ContentRef<SpecialAttack_Goku> SS_Goku = GameRes.Data.Scenes.SpecialAttacks.SSGoku_SpecialAttack_Goku;

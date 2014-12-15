@@ -715,6 +715,9 @@ namespace GameRes
 				public static Duality.ContentRef<Duality.Resources.Material> Bomb_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Scenes\SpecialAttacks\Bomb.Material.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Pixmap> Bomb_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Scenes\SpecialAttacks\Bomb.Pixmap.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Texture> Bomb_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Scenes\SpecialAttacks\Bomb.Texture.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Material> BombSpriteAnimation_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Scenes\SpecialAttacks\BombSpriteAnimation.Material.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Pixmap> BombSpriteAnimation_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Scenes\SpecialAttacks\BombSpriteAnimation.Pixmap.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Texture> BombSpriteAnimation_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Scenes\SpecialAttacks\BombSpriteAnimation.Texture.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Material> Kamehameha_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Scenes\SpecialAttacks\Kamehameha.Material.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Pixmap> Kamehameha_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Scenes\SpecialAttacks\Kamehameha.Pixmap.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Texture> Kamehameha_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Scenes\SpecialAttacks\Kamehameha.Texture.res"); }}
@@ -730,6 +733,9 @@ namespace GameRes
 					Bomb_Material.MakeAvailable();
 					Bomb_Pixmap.MakeAvailable();
 					Bomb_Texture.MakeAvailable();
+					BombSpriteAnimation_Material.MakeAvailable();
+					BombSpriteAnimation_Pixmap.MakeAvailable();
+					BombSpriteAnimation_Texture.MakeAvailable();
 					Kamehameha_Material.MakeAvailable();
 					Kamehameha_Pixmap.MakeAvailable();
 					Kamehameha_Texture.MakeAvailable();
