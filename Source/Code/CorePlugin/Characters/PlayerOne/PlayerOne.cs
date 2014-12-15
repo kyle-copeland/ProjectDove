@@ -233,8 +233,8 @@ namespace Dove_Game
                     foe.doDamage(20);
                 }
 
-                Transform playerMovement = this.GameObj.Transform;
-                playerMovement.MoveBy(MovementVector * -1.0f * 10.0f);
+                // Transform playerMovement = this.GameObj.Transform;
+                // playerMovement.MoveBy(MovementVector * -1.0f * 10.0f);
             }
 
             var kaiMonkey = args.CollideWith.GetComponent<KaiMonkey>();

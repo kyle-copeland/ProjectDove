@@ -79,10 +79,12 @@ namespace Dove_Game.Test_Logic
                 //CurrentCanvas.State.ColorTint = ColorRgba.Black;
                 if (endOverlayMaterial != null)
                 {
+                    var cam = Scene.Current.FindGameObject<CameraController>();
+
                     var endOverlay = Scene.Current.FindGameObject<EndGameOverlay>();
                     var endRenderer = endOverlay.GetComponent<SpriteRenderer>();
                     var endTransform = endOverlay.GetComponent<Transform>();
-                    endTransform.Pos = new Vector3(0, 0, -10);
+                    endTransform.Pos = new Vector3(cam.Transform.Pos.X, cam.Transform.Pos.Y, -5.0f);
                     endRenderer.SharedMaterial = endOverlayMaterial;
                 }
 
