@@ -7,68 +7,68 @@
       <item dataType="Struct" type="Duality.Rect">
         <H dataType="Float">68.6</H>
         <W dataType="Float">79</W>
-        <X dataType="Float">11</X>
-        <Y dataType="Float">0</Y>
+        <X dataType="Float">21</X>
+        <Y dataType="Float">4</Y>
+      </item>
+      <item dataType="Struct" type="Duality.Rect">
+        <H dataType="Float">68.6</H>
+        <W dataType="Float">78</W>
+        <X dataType="Float">78</X>
+        <Y dataType="Float">4</Y>
+      </item>
+      <item dataType="Struct" type="Duality.Rect">
+        <H dataType="Float">68.6</H>
+        <W dataType="Float">79</W>
+        <X dataType="Float">144</X>
+        <Y dataType="Float">4</Y>
+      </item>
+      <item dataType="Struct" type="Duality.Rect">
+        <H dataType="Float">68.6</H>
+        <W dataType="Float">79</W>
+        <X dataType="Float">21</X>
+        <Y dataType="Float">67</Y>
+      </item>
+      <item dataType="Struct" type="Duality.Rect">
+        <H dataType="Float">68.6</H>
+        <W dataType="Float">75</W>
+        <X dataType="Float">79</X>
+        <Y dataType="Float">68.6</Y>
+      </item>
+      <item dataType="Struct" type="Duality.Rect">
+        <H dataType="Float">68.6</H>
+        <W dataType="Float">79</W>
+        <X dataType="Float">138</X>
+        <Y dataType="Float">68.6</Y>
+      </item>
+      <item dataType="Struct" type="Duality.Rect">
+        <H dataType="Float">68.6</H>
+        <W dataType="Float">79</W>
+        <X dataType="Float">21</X>
+        <Y dataType="Float">133</Y>
+      </item>
+      <item dataType="Struct" type="Duality.Rect">
+        <H dataType="Float">68.6</H>
+        <W dataType="Float">79</W>
+        <X dataType="Float">79</X>
+        <Y dataType="Float">134</Y>
+      </item>
+      <item dataType="Struct" type="Duality.Rect">
+        <H dataType="Float">68.6</H>
+        <W dataType="Float">79</W>
+        <X dataType="Float">139</X>
+        <Y dataType="Float">134</Y>
+      </item>
+      <item dataType="Struct" type="Duality.Rect">
+        <H dataType="Float">68.6</H>
+        <W dataType="Float">79</W>
+        <X dataType="Float">20</X>
+        <Y dataType="Float">200</Y>
       </item>
       <item dataType="Struct" type="Duality.Rect">
         <H dataType="Float">68.6</H>
         <W dataType="Float">79</W>
         <X dataType="Float">77</X>
-        <Y dataType="Float">0</Y>
-      </item>
-      <item dataType="Struct" type="Duality.Rect">
-        <H dataType="Float">68.6</H>
-        <W dataType="Float">79</W>
-        <X dataType="Float">158</X>
-        <Y dataType="Float">0</Y>
-      </item>
-      <item dataType="Struct" type="Duality.Rect">
-        <H dataType="Float">68.6</H>
-        <W dataType="Float">79</W>
-        <X dataType="Float">0</X>
-        <Y dataType="Float">68.6</Y>
-      </item>
-      <item dataType="Struct" type="Duality.Rect">
-        <H dataType="Float">68.6</H>
-        <W dataType="Float">79</W>
-        <X dataType="Float">79</X>
-        <Y dataType="Float">68.6</Y>
-      </item>
-      <item dataType="Struct" type="Duality.Rect">
-        <H dataType="Float">68.6</H>
-        <W dataType="Float">79</W>
-        <X dataType="Float">158</X>
-        <Y dataType="Float">68.6</Y>
-      </item>
-      <item dataType="Struct" type="Duality.Rect">
-        <H dataType="Float">68.6</H>
-        <W dataType="Float">79</W>
-        <X dataType="Float">0</X>
-        <Y dataType="Float">137.2</Y>
-      </item>
-      <item dataType="Struct" type="Duality.Rect">
-        <H dataType="Float">68.6</H>
-        <W dataType="Float">79</W>
-        <X dataType="Float">79</X>
-        <Y dataType="Float">137.2</Y>
-      </item>
-      <item dataType="Struct" type="Duality.Rect">
-        <H dataType="Float">68.6</H>
-        <W dataType="Float">79</W>
-        <X dataType="Float">158</X>
-        <Y dataType="Float">137.2</Y>
-      </item>
-      <item dataType="Struct" type="Duality.Rect">
-        <H dataType="Float">68.6</H>
-        <W dataType="Float">79</W>
-        <X dataType="Float">0</X>
-        <Y dataType="Float">205.799988</Y>
-      </item>
-      <item dataType="Struct" type="Duality.Rect">
-        <H dataType="Float">68.6</H>
-        <W dataType="Float">79</W>
-        <X dataType="Float">79</X>
-        <Y dataType="Float">205.799988</Y>
+        <Y dataType="Float">202</Y>
       </item>
       <item dataType="Struct" type="Duality.Rect">
         <H dataType="Float">68.6</H>
@@ -79,114 +79,114 @@
       <item dataType="Struct" type="Duality.Rect">
         <H dataType="Float">68.6</H>
         <W dataType="Float">79</W>
-        <X dataType="Float">0</X>
-        <Y dataType="Float">274.4</Y>
+        <X dataType="Float">20</X>
+        <Y dataType="Float">267</Y>
       </item>
       <item dataType="Struct" type="Duality.Rect">
         <H dataType="Float">68.6</H>
         <W dataType="Float">79</W>
         <X dataType="Float">79</X>
-        <Y dataType="Float">274.4</Y>
+        <Y dataType="Float">267</Y>
       </item>
       <item dataType="Struct" type="Duality.Rect">
         <H dataType="Float">68.6</H>
         <W dataType="Float">79</W>
-        <X dataType="Float">158</X>
-        <Y dataType="Float">274.4</Y>
+        <X dataType="Float">137</X>
+        <Y dataType="Float">267</Y>
       </item>
       <item dataType="Struct" type="Duality.Rect">
         <H dataType="Float">68.6</H>
         <W dataType="Float">79</W>
-        <X dataType="Float">0</X>
-        <Y dataType="Float">343</Y>
+        <X dataType="Float">21</X>
+        <Y dataType="Float">330</Y>
+      </item>
+      <item dataType="Struct" type="Duality.Rect">
+        <H dataType="Float">68.6</H>
+        <W dataType="Float">78</W>
+        <X dataType="Float">89</X>
+        <Y dataType="Float">330</Y>
       </item>
       <item dataType="Struct" type="Duality.Rect">
         <H dataType="Float">68.6</H>
         <W dataType="Float">79</W>
-        <X dataType="Float">79</X>
-        <Y dataType="Float">343</Y>
+        <X dataType="Float">145</X>
+        <Y dataType="Float">332</Y>
       </item>
       <item dataType="Struct" type="Duality.Rect">
         <H dataType="Float">68.6</H>
         <W dataType="Float">79</W>
-        <X dataType="Float">158</X>
-        <Y dataType="Float">343</Y>
+        <X dataType="Float">29</X>
+        <Y dataType="Float">396</Y>
+      </item>
+      <item dataType="Struct" type="Duality.Rect">
+        <H dataType="Float">68.6</H>
+        <W dataType="Float">76</W>
+        <X dataType="Float">89</X>
+        <Y dataType="Float">396</Y>
+      </item>
+      <item dataType="Struct" type="Duality.Rect">
+        <H dataType="Float">68.6</H>
+        <W dataType="Float">78</W>
+        <X dataType="Float">144</X>
+        <Y dataType="Float">396</Y>
       </item>
       <item dataType="Struct" type="Duality.Rect">
         <H dataType="Float">68.6</H>
         <W dataType="Float">79</W>
-        <X dataType="Float">0</X>
-        <Y dataType="Float">411.599976</Y>
+        <X dataType="Float">27</X>
+        <Y dataType="Float">462</Y>
       </item>
       <item dataType="Struct" type="Duality.Rect">
         <H dataType="Float">68.6</H>
         <W dataType="Float">79</W>
-        <X dataType="Float">79</X>
-        <Y dataType="Float">411.599976</Y>
+        <X dataType="Float">87</X>
+        <Y dataType="Float">462</Y>
       </item>
       <item dataType="Struct" type="Duality.Rect">
         <H dataType="Float">68.6</H>
         <W dataType="Float">79</W>
-        <X dataType="Float">158</X>
-        <Y dataType="Float">411.599976</Y>
-      </item>
-      <item dataType="Struct" type="Duality.Rect">
-        <H dataType="Float">68.6</H>
-        <W dataType="Float">79</W>
-        <X dataType="Float">0</X>
-        <Y dataType="Float">480.199982</Y>
-      </item>
-      <item dataType="Struct" type="Duality.Rect">
-        <H dataType="Float">68.6</H>
-        <W dataType="Float">79</W>
-        <X dataType="Float">79</X>
-        <Y dataType="Float">480.199982</Y>
-      </item>
-      <item dataType="Struct" type="Duality.Rect">
-        <H dataType="Float">68.6</H>
-        <W dataType="Float">79</W>
-        <X dataType="Float">158</X>
-        <Y dataType="Float">480.199982</Y>
-      </item>
-      <item dataType="Struct" type="Duality.Rect">
-        <H dataType="Float">68.6</H>
-        <W dataType="Float">79</W>
-        <X dataType="Float">0</X>
-        <Y dataType="Float">548.8</Y>
-      </item>
-      <item dataType="Struct" type="Duality.Rect">
-        <H dataType="Float">68.6</H>
-        <W dataType="Float">79</W>
-        <X dataType="Float">79</X>
-        <Y dataType="Float">548.8</Y>
-      </item>
-      <item dataType="Struct" type="Duality.Rect">
-        <H dataType="Float">68.6</H>
-        <W dataType="Float">79</W>
-        <X dataType="Float">158</X>
-        <Y dataType="Float">548.8</Y>
+        <X dataType="Float">143</X>
+        <Y dataType="Float">461</Y>
       </item>
       <item dataType="Struct" type="Duality.Rect">
         <H dataType="Float">68.6</H>
         <W dataType="Float">79</W>
         <X dataType="Float">0</X>
-        <Y dataType="Float">617.399963</Y>
+        <Y dataType="Float">540</Y>
       </item>
       <item dataType="Struct" type="Duality.Rect">
         <H dataType="Float">68.6</H>
         <W dataType="Float">79</W>
-        <X dataType="Float">79</X>
-        <Y dataType="Float">617.399963</Y>
+        <X dataType="Float">89</X>
+        <Y dataType="Float">530</Y>
       </item>
       <item dataType="Struct" type="Duality.Rect">
         <H dataType="Float">68.6</H>
         <W dataType="Float">79</W>
-        <X dataType="Float">158</X>
-        <Y dataType="Float">617.399963</Y>
+        <X dataType="Float">146</X>
+        <Y dataType="Float">529</Y>
+      </item>
+      <item dataType="Struct" type="Duality.Rect">
+        <H dataType="Float">68.6</H>
+        <W dataType="Float">79</W>
+        <X dataType="Float">26</X>
+        <Y dataType="Float">597</Y>
+      </item>
+      <item dataType="Struct" type="Duality.Rect">
+        <H dataType="Float">68.6</H>
+        <W dataType="Float">79</W>
+        <X dataType="Float">85</X>
+        <Y dataType="Float">596</Y>
+      </item>
+      <item dataType="Struct" type="Duality.Rect">
+        <H dataType="Float">68.6</H>
+        <W dataType="Float">79</W>
+        <X dataType="Float">144</X>
+        <Y dataType="Float">596</Y>
       </item>
     </_items>
     <_size dataType="Int">30</_size>
-    <_version dataType="Int">88</_version>
+    <_version dataType="Int">1171</_version>
   </atlas>
   <layers dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Resources.Pixmap+Layer]]" id="2035693768">
     <_items dataType="Array" type="Duality.Resources.Pixmap+Layer[]" id="2696347487" length="4">
@@ -198,7 +198,7 @@
       </item>
     </_items>
     <_size dataType="Int">1</_size>
-    <_version dataType="Int">2</_version>
+    <_version dataType="Int">6</_version>
   </layers>
   <sourcePath dataType="String">Source\Media\SlenderMan1.png</sourcePath>
 </root>

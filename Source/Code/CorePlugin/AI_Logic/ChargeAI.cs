@@ -13,13 +13,16 @@ namespace Dove_Game
 {
     [Serializable]
     [RequiredComponent(typeof(RigidBody))]
-    public class ChargeAI : Component,ICmpUpdatable
+    public class ChargeAI : Enemies.Enemy
     {
-        public float force { get; set; }
-        void ICmpUpdatable.OnUpdate()
+        public float force = 10.0f;
+        public override void OnUpdate()
         {
-            RigidBody r = this.GameObj.RigidBody;
-            r.ApplyLocalForce(Vector2.UnitX * force * -1.0f * Time.TimeMult);
+            if (DetectPlayerOneNearby())
+            {
+                RigidBody r = this.GameObj.RigidBody;
+                r.ApplyLocalForce(Vector2.UnitX * force * -1.0f * Time.TimeMult);
+            }
         }
     }
 }

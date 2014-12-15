@@ -51,7 +51,7 @@ namespace Dove_Game.Enemies
                 mainCharacter.doDamage(10);
 
             //if wall hit change Directions
-            if (args.CollideWith != null)
+            else if (args.CollideWith != null)
                 this.ChangeDirection();
         }
 
@@ -102,7 +102,7 @@ namespace Dove_Game.Enemies
             {
                 float mainPos = playerOne.GameObj.Transform.Pos.X;
                 float enemyPos = GameObj.Transform.Pos.X;
-                const float relativeOffset = 150.0f;
+                const float relativeOffset = 500.0f;
 
                 if (mainPos >= enemyPos - relativeOffset && mainPos <= enemyPos + relativeOffset)
                     return true;
@@ -110,6 +110,9 @@ namespace Dove_Game.Enemies
 
             return false;
         }
+
+        public override void OnCollisionEnd(Component sender, CollisionEventArgs args) { }
+        public override void OnCollisionSolve(Component sender, CollisionEventArgs args) { }
     }
 
 

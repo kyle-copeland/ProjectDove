@@ -30,7 +30,8 @@ namespace Dove_Game.Enemies
         //Special boss attack information
         protected BossAttack[] attacks = null;
         protected float attackTimer = 4000.0f;
-        protected float attackCooldown = 4000.0f;
+        public float attackCooldown = ATTACK_INTERVAL;
+        public const float ATTACK_INTERVAL = 4000.0f;
         public int nextAttack = NONE;
         public const int NONE = -1;
 
@@ -51,7 +52,8 @@ namespace Dove_Game.Enemies
             {
                 if (nextAttack == NONE)
                     nextAttack = specialAttackPicker.Next(attacks.Length);
-                attacks[2].attack(this);
+                 
+                attacks[1].attack(this);
                 attackTimer = attackCooldown;
             }
             else if (nextAttack == NONE)

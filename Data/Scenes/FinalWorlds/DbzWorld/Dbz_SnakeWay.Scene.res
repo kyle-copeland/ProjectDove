@@ -655,7 +655,7 @@
         <_items dataType="Array" type="Duality.Component[]" id="3505850798" length="4">
           <item dataType="Struct" type="Dove_Game.Test_Logic.SnakeWayLevelController" id="1559528530">
             <_currentEnemy />
-            <_delayProgress dataType="Float">114.4514</_delayProgress>
+            <_delayProgress dataType="Float">1950.605</_delayProgress>
             <_enemyList dataType="Struct" type="System.Collections.Generic.List`1[[Duality.ContentRef`1[[Duality.Resources.Prefab]]]]" id="3508549878">
               <_items dataType="Array" type="Duality.ContentRef`1[[Duality.Resources.Prefab]][]" id="3511198944" length="8">
                 <item dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Prefab]]">
@@ -679,11 +679,12 @@
             </_enemyList>
             <_headerList dataType="Struct" type="System.Collections.Generic.List`1[[System.String]]" id="3707518490">
               <_items dataType="Array" type="System.String[]" id="1989115844" length="4">
+                <item dataType="String">READY</item>
                 <item dataType="String">SET</item>
                 <item dataType="String">GO !!!</item>
               </_items>
-              <_size dataType="Int">2</_size>
-              <_version dataType="Int">4</_version>
+              <_size dataType="Int">3</_size>
+              <_version dataType="Int">3</_version>
             </_headerList>
             <_levelCompleted dataType="Bool">false</_levelCompleted>
             <_levelStarted dataType="Bool">false</_levelStarted>
@@ -719,6 +720,99 @@
       </identifier>
       <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
       <name dataType="String">SnakeWayController</name>
+      <parent />
+      <prefabLink />
+    </item>
+    <item dataType="Struct" type="Duality.GameObject" id="3230065414">
+      <active dataType="Bool">true</active>
+      <children />
+      <compList dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Component]]" id="76034512">
+        <_items dataType="Array" type="Duality.Component[]" id="2235229884" length="4">
+          <item dataType="Struct" type="Duality.Components.Transform" id="1295413050">
+            <active dataType="Bool">true</active>
+            <angle dataType="Float">0</angle>
+            <angleAbs dataType="Float">0</angleAbs>
+            <angleVel dataType="Float">0</angleVel>
+            <angleVelAbs dataType="Float">0</angleVelAbs>
+            <deriveAngle dataType="Bool">true</deriveAngle>
+            <gameobj dataType="ObjectRef">3230065414</gameobj>
+            <ignoreParent dataType="Bool">false</ignoreParent>
+            <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
+            <parentTransform />
+            <pos dataType="Struct" type="OpenTK.Vector3">
+              <X dataType="Float">0</X>
+              <Y dataType="Float">0</Y>
+              <Z dataType="Float">0</Z>
+            </pos>
+            <posAbs dataType="Struct" type="OpenTK.Vector3">
+              <X dataType="Float">0</X>
+              <Y dataType="Float">0</Y>
+              <Z dataType="Float">0</Z>
+            </posAbs>
+            <scale dataType="Float">1</scale>
+            <scaleAbs dataType="Float">1</scaleAbs>
+            <vel dataType="Struct" type="OpenTK.Vector3">
+              <X dataType="Float">0</X>
+              <Y dataType="Float">0</Y>
+              <Z dataType="Float">0</Z>
+            </vel>
+            <velAbs dataType="Struct" type="OpenTK.Vector3">
+              <X dataType="Float">0</X>
+              <Y dataType="Float">0</Y>
+              <Z dataType="Float">0</Z>
+            </velAbs>
+          </item>
+          <item dataType="Struct" type="Duality.Components.SoundEmitter" id="978990005">
+            <active dataType="Bool">true</active>
+            <gameobj dataType="ObjectRef">3230065414</gameobj>
+            <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
+            <sources dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Components.SoundEmitter+Source]]" id="1994610073">
+              <_items dataType="Array" type="Duality.Components.SoundEmitter+Source[]" id="2379967566" length="4">
+                <item dataType="Struct" type="Duality.Components.SoundEmitter+Source" id="254277328">
+                  <looped dataType="Bool">true</looped>
+                  <offset dataType="Struct" type="OpenTK.Vector3">
+                    <X dataType="Float">0</X>
+                    <Y dataType="Float">0</Y>
+                    <Z dataType="Float">0</Z>
+                  </offset>
+                  <paused dataType="Bool">false</paused>
+                  <pitch dataType="Float">1</pitch>
+                  <sound dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Sound]]">
+                    <contentPath dataType="String">Data\Music\Goku World\Goku Snake Way.Sound.res</contentPath>
+                  </sound>
+                  <volume dataType="Float">1</volume>
+                </item>
+              </_items>
+              <_size dataType="Int">1</_size>
+              <_version dataType="Int">1</_version>
+            </sources>
+          </item>
+        </_items>
+        <_size dataType="Int">2</_size>
+        <_version dataType="Int">2</_version>
+      </compList>
+      <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="3510161006" surrogate="true">
+        <header />
+        <body>
+          <keys dataType="Array" type="System.Type[]" id="898387618">
+            <item dataType="ObjectRef">3433332224</item>
+            <item dataType="Type" id="3974125328" value="Duality.Components.SoundEmitter" />
+          </keys>
+          <values dataType="Array" type="Duality.Component[]" id="1729075978">
+            <item dataType="ObjectRef">1295413050</item>
+            <item dataType="ObjectRef">978990005</item>
+          </values>
+        </body>
+      </compMap>
+      <compTransform dataType="ObjectRef">1295413050</compTransform>
+      <identifier dataType="Struct" type="System.Guid" surrogate="true">
+        <header>
+          <data dataType="Array" type="System.Byte[]" id="2697993042">zq0zebWvjE64pBallbKYRA==</data>
+        </header>
+        <body />
+      </identifier>
+      <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
+      <name dataType="String">Goku Snake Way</name>
       <parent />
       <prefabLink />
     </item>
