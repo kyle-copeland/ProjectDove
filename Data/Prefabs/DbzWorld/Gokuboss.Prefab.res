@@ -18,12 +18,12 @@
           <pos dataType="Struct" type="OpenTK.Vector3">
             <X dataType="Float">170</X>
             <Y dataType="Float">93</Y>
-            <Z dataType="Float">-0.02</Z>
+            <Z dataType="Float">0</Z>
           </pos>
           <posAbs dataType="Struct" type="OpenTK.Vector3">
             <X dataType="Float">170</X>
             <Y dataType="Float">93</Y>
-            <Z dataType="Float">-0.02</Z>
+            <Z dataType="Float">0</Z>
           </posAbs>
           <scale dataType="Float">1</scale>
           <scaleAbs dataType="Float">1</scaleAbs>
@@ -40,8 +40,8 @@
         </item>
         <item dataType="Struct" type="Duality.Components.Renderers.AnimSpriteRenderer" id="2002040147">
           <active dataType="Bool">true</active>
-          <animDuration dataType="Float">5</animDuration>
-          <animFirstFrame dataType="Int">0</animFirstFrame>
+          <animDuration dataType="Float">2</animDuration>
+          <animFirstFrame dataType="Int">10</animFirstFrame>
           <animFrameCount dataType="Int">2</animFrameCount>
           <animLoopMode dataType="Enum" type="Duality.Components.Renderers.AnimSpriteRenderer+LoopMode" name="Loop" value="1" />
           <animPaused dataType="Bool">false</animPaused>
@@ -79,7 +79,7 @@
           <colWith dataType="Enum" type="Duality.Components.Physics.CollisionCategory" name="Cat1, Cat2, Cat4, Cat5" value="27" />
           <continous dataType="Bool">false</continous>
           <explicitMass dataType="Float">50</explicitMass>
-          <fixedAngle dataType="Bool">false</fixedAngle>
+          <fixedAngle dataType="Bool">true</fixedAngle>
           <gameobj dataType="ObjectRef">2294604766</gameobj>
           <ignoreGravity dataType="Bool">false</ignoreGravity>
           <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
@@ -119,7 +119,7 @@
               </item>
             </_items>
             <_size dataType="Int">1</_size>
-            <_version dataType="Int">3</_version>
+            <_version dataType="Int">11</_version>
           </shapes>
         </item>
         <item dataType="Struct" type="Dove_Game.Enemies.DBZ_World.GokuBoss" id="311612985">
