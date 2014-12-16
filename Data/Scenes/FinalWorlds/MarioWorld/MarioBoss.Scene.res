@@ -96,7 +96,7 @@
           <item dataType="Struct" type="Dove_Game.Test_Logic.CameraController" id="1876756781">
             <active dataType="Bool">true</active>
             <followObject dataType="Struct" type="Duality.Components.Transform" id="868980226">
-              <active dataType="Bool">true</active>
+              <active dataType="Bool">false</active>
               <gameobj dataType="Struct" type="Duality.GameObject" id="2803632590">
                 <active dataType="Bool">true</active>
                 <children />
@@ -104,7 +104,7 @@
                   <_items dataType="Array" type="Duality.Component[]" id="386972822">
                     <item dataType="ObjectRef">868980226</item>
                     <item dataType="Struct" type="Duality.Components.Renderers.AnimSpriteRenderer" id="2511067971">
-                      <active dataType="Bool">true</active>
+                      <active dataType="Bool">false</active>
                       <gameobj dataType="ObjectRef">2803632590</gameobj>
                       <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
                     </item>

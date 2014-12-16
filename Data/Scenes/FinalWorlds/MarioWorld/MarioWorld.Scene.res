@@ -129,7 +129,7 @@
       <active dataType="Bool">true</active>
       <children />
       <compList dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Component]]" id="2221754817">
-        <_items dataType="Array" type="Duality.Component[]" id="3164372142" length="4">
+        <_items dataType="Array" type="Duality.Component[]" id="3164372142">
           <item dataType="Struct" type="Duality.Components.Transform" id="926917799">
             <active dataType="Bool">true</active>
             <angle dataType="Float">0.00141311623</angle>
@@ -143,13 +143,13 @@
             <parentTransform />
             <pos dataType="Struct" type="OpenTK.Vector3">
               <X dataType="Float">23</X>
-              <Y dataType="Float">143.03389</Y>
-              <Z dataType="Float">-54.58519</Z>
+              <Y dataType="Float">120.961319</Y>
+              <Z dataType="Float">-70.1340561</Z>
             </pos>
             <posAbs dataType="Struct" type="OpenTK.Vector3">
               <X dataType="Float">23</X>
-              <Y dataType="Float">143.03389</Y>
-              <Z dataType="Float">-54.58519</Z>
+              <Y dataType="Float">120.961319</Y>
+              <Z dataType="Float">-70.1340561</Z>
             </posAbs>
             <scale dataType="Float">1</scale>
             <scaleAbs dataType="Float">1</scaleAbs>
@@ -209,7 +209,7 @@
                 </item>
               </_items>
               <_size dataType="Int">2</_size>
-              <_version dataType="Int">657578</_version>
+              <_version dataType="Int">659246</_version>
             </passes>
             <perspective dataType="Enum" type="Duality.Drawing.PerspectiveMode" name="Parallax" value="1" />
             <visibilityMask dataType="Enum" type="Duality.Drawing.VisibilityFlag" name="All" value="4294967295" />
@@ -329,9 +329,13 @@
                           <_size dataType="Int">0</_size>
                           <_version dataType="Int">1</_version>
                         </childIndex>
-                        <componentType dataType="ObjectRef">2635616462</componentType>
-                        <prop dataType="PropertyInfo" id="4207066764" value="P:Dove_Game.PlayerOne:MovementOffset" />
-                        <val dataType="Float">0.3</val>
+                        <componentType dataType="ObjectRef">3653553262</componentType>
+                        <prop dataType="PropertyInfo" id="4207066764" value="P:Duality.Components.Transform:RelativePos" />
+                        <val dataType="Struct" type="OpenTK.Vector3">
+                          <X dataType="Float">23</X>
+                          <Y dataType="Float">241</Y>
+                          <Z dataType="Float">0</Z>
+                        </val>
                       </item>
                       <item dataType="Struct" type="Duality.Resources.PrefabLink+VarMod">
                         <childIndex dataType="Struct" type="System.Collections.Generic.List`1[[System.Int32]]" id="1657025290">
@@ -339,17 +343,13 @@
                           <_size dataType="Int">0</_size>
                           <_version dataType="Int">1</_version>
                         </childIndex>
-                        <componentType dataType="ObjectRef">3653553262</componentType>
-                        <prop dataType="PropertyInfo" id="3445160984" value="P:Duality.Components.Transform:RelativePos" />
-                        <val dataType="Struct" type="OpenTK.Vector3">
-                          <X dataType="Float">23</X>
-                          <Y dataType="Float">241</Y>
-                          <Z dataType="Float">0</Z>
-                        </val>
+                        <componentType dataType="ObjectRef">2635616462</componentType>
+                        <prop dataType="PropertyInfo" id="3445160984" value="P:Dove_Game.PlayerOne:MovementOffset" />
+                        <val dataType="Float">0.3</val>
                       </item>
                     </_items>
                     <_size dataType="Int">4</_size>
-                    <_version dataType="Int">3246</_version>
+                    <_version dataType="Int">3250</_version>
                   </changes>
                   <obj dataType="ObjectRef">989477508</obj>
                   <prefab dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Prefab]]">
@@ -362,9 +362,15 @@
             <gameobj dataType="ObjectRef">2861570163</gameobj>
             <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
           </item>
+          <item dataType="Struct" type="Dove_Game.Test_Logic.MarioWorldController" id="3093342225">
+            <_mainCharacter dataType="ObjectRef">2386748072</_mainCharacter>
+            <active dataType="Bool">true</active>
+            <gameobj dataType="ObjectRef">2861570163</gameobj>
+            <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
+          </item>
         </_items>
-        <_size dataType="Int">3</_size>
-        <_version dataType="Int">3</_version>
+        <_size dataType="Int">4</_size>
+        <_version dataType="Int">4</_version>
       </compList>
       <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="3294550240" surrogate="true">
         <header />
@@ -373,11 +379,13 @@
             <item dataType="ObjectRef">3653553262</item>
             <item dataType="Type" id="3026401398" value="Duality.Components.Camera" />
             <item dataType="Type" id="3050422554" value="Dove_Game.Test_Logic.CameraController" />
+            <item dataType="Type" id="3807706006" value="Dove_Game.Test_Logic.MarioWorldController" />
           </keys>
           <values dataType="Array" type="Duality.Component[]" id="1866590920">
             <item dataType="ObjectRef">926917799</item>
             <item dataType="ObjectRef">3398845970</item>
             <item dataType="ObjectRef">2594863248</item>
+            <item dataType="ObjectRef">3093342225</item>
           </values>
         </body>
       </compMap>
@@ -459,7 +467,7 @@
                 <_version dataType="Int">1</_version>
               </childIndex>
               <componentType dataType="ObjectRef">3653553262</componentType>
-              <prop dataType="ObjectRef">3445160984</prop>
+              <prop dataType="ObjectRef">4207066764</prop>
               <val dataType="Struct" type="OpenTK.Vector3">
                 <X dataType="Float">206</X>
                 <Y dataType="Float">202</Y>
@@ -555,7 +563,7 @@
                 <_version dataType="Int">1</_version>
               </childIndex>
               <componentType dataType="ObjectRef">3653553262</componentType>
-              <prop dataType="ObjectRef">3445160984</prop>
+              <prop dataType="ObjectRef">4207066764</prop>
               <val dataType="Struct" type="OpenTK.Vector3">
                 <X dataType="Float">-268</X>
                 <Y dataType="Float">250</Y>
@@ -1251,7 +1259,7 @@
                 <_version dataType="Int">1</_version>
               </childIndex>
               <componentType dataType="ObjectRef">3653553262</componentType>
-              <prop dataType="ObjectRef">3445160984</prop>
+              <prop dataType="ObjectRef">4207066764</prop>
               <val dataType="Struct" type="OpenTK.Vector3">
                 <X dataType="Float">398</X>
                 <Y dataType="Float">251</Y>
@@ -4398,7 +4406,52 @@
       <name dataType="String">Thwomp</name>
       <parent />
       <prefabLink dataType="Struct" type="Duality.Resources.PrefabLink" id="4127550917">
-        <changes />
+        <changes dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Resources.PrefabLink+VarMod]]" id="3641492756">
+          <_items dataType="Array" type="Duality.Resources.PrefabLink+VarMod[]" id="2791778404" length="4">
+            <item dataType="Struct" type="Duality.Resources.PrefabLink+VarMod">
+              <childIndex dataType="Struct" type="System.Collections.Generic.List`1[[System.Int32]]" id="3449417416">
+                <_items dataType="Array" type="System.Int32[]" id="2455428716" />
+                <_size dataType="Int">0</_size>
+                <_version dataType="Int">1</_version>
+              </childIndex>
+              <componentType dataType="ObjectRef">4077022302</componentType>
+              <prop dataType="ObjectRef">258811938</prop>
+              <val dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Components.Physics.ShapeInfo]]" id="2723296990">
+                <_items dataType="Array" type="Duality.Components.Physics.ShapeInfo[]" id="111542666" length="4">
+                  <item dataType="Struct" type="Duality.Components.Physics.PolyShapeInfo" id="3560683488">
+                    <density dataType="Float">1</density>
+                    <friction dataType="Float">0.3</friction>
+                    <parent />
+                    <restitution dataType="Float">0.5</restitution>
+                    <sensor dataType="Bool">false</sensor>
+                    <vertices dataType="Array" type="OpenTK.Vector2[]" id="4072483804">
+                      <item dataType="Struct" type="OpenTK.Vector2">
+                        <X dataType="Float">-75</X>
+                        <Y dataType="Float">-83</Y>
+                      </item>
+                      <item dataType="Struct" type="OpenTK.Vector2">
+                        <X dataType="Float">85</X>
+                        <Y dataType="Float">-83</Y>
+                      </item>
+                      <item dataType="Struct" type="OpenTK.Vector2">
+                        <X dataType="Float">85</X>
+                        <Y dataType="Float">95</Y>
+                      </item>
+                      <item dataType="Struct" type="OpenTK.Vector2">
+                        <X dataType="Float">-75</X>
+                        <Y dataType="Float">95</Y>
+                      </item>
+                    </vertices>
+                  </item>
+                </_items>
+                <_size dataType="Int">1</_size>
+                <_version dataType="Int">7</_version>
+              </val>
+            </item>
+          </_items>
+          <_size dataType="Int">1</_size>
+          <_version dataType="Int">3</_version>
+        </changes>
         <obj dataType="ObjectRef">1783965493</obj>
         <prefab dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Prefab]]">
           <contentPath dataType="String">Data\Prefabs\MarioWorld\Thwomp.Prefab.res</contentPath>
@@ -4747,7 +4800,7 @@
                 <_version dataType="Int">1</_version>
               </childIndex>
               <componentType dataType="ObjectRef">3653553262</componentType>
-              <prop dataType="ObjectRef">3445160984</prop>
+              <prop dataType="ObjectRef">4207066764</prop>
               <val dataType="Struct" type="OpenTK.Vector3">
                 <X dataType="Float">176</X>
                 <Y dataType="Float">188</Y>
@@ -4761,16 +4814,26 @@
                 <_version dataType="Int">1</_version>
               </childIndex>
               <componentType dataType="ObjectRef">4077022302</componentType>
+              <prop dataType="PropertyInfo" id="497294938" value="P:Duality.Components.Physics.RigidBody:IgnoreGravity" />
+              <val dataType="Bool">true</val>
+            </item>
+            <item dataType="Struct" type="Duality.Resources.PrefabLink+VarMod">
+              <childIndex dataType="Struct" type="System.Collections.Generic.List`1[[System.Int32]]" id="1859495816">
+                <_items dataType="Array" type="System.Int32[]" id="1916031436" />
+                <_size dataType="Int">0</_size>
+                <_version dataType="Int">1</_version>
+              </childIndex>
+              <componentType dataType="ObjectRef">4077022302</componentType>
               <prop dataType="ObjectRef">258811938</prop>
-              <val dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Components.Physics.ShapeInfo]]" id="497294938">
-                <_items dataType="Array" type="Duality.Components.Physics.ShapeInfo[]" id="728255670" length="4">
-                  <item dataType="Struct" type="Duality.Components.Physics.PolyShapeInfo" id="2286509920">
+              <val dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Components.Physics.ShapeInfo]]" id="403495742">
+                <_items dataType="Array" type="Duality.Components.Physics.ShapeInfo[]" id="1109976906" length="4">
+                  <item dataType="Struct" type="Duality.Components.Physics.PolyShapeInfo" id="3536072544">
                     <density dataType="Float">1</density>
                     <friction dataType="Float">0.3</friction>
                     <parent />
                     <restitution dataType="Float">0.3</restitution>
                     <sensor dataType="Bool">false</sensor>
-                    <vertices dataType="Array" type="OpenTK.Vector2[]" id="3704809692">
+                    <vertices dataType="Array" type="OpenTK.Vector2[]" id="595232988">
                       <item dataType="Struct" type="OpenTK.Vector2">
                         <X dataType="Float">35.49996</X>
                         <Y dataType="Float">33.0000229</Y>
@@ -4791,32 +4854,32 @@
                   </item>
                 </_items>
                 <_size dataType="Int">1</_size>
-                <_version dataType="Int">3</_version>
+                <_version dataType="Int">7</_version>
               </val>
             </item>
             <item dataType="Struct" type="Duality.Resources.PrefabLink+VarMod">
-              <childIndex dataType="Struct" type="System.Collections.Generic.List`1[[System.Int32]]" id="1859495816">
-                <_items dataType="Array" type="System.Int32[]" id="1916031436" />
+              <childIndex dataType="Struct" type="System.Collections.Generic.List`1[[System.Int32]]" id="686873716">
+                <_items dataType="Array" type="System.Int32[]" id="766895080" />
+                <_size dataType="Int">0</_size>
+                <_version dataType="Int">1</_version>
+              </childIndex>
+              <componentType dataType="ObjectRef">4077022302</componentType>
+              <prop dataType="PropertyInfo" id="3769757890" value="P:Duality.Components.Physics.RigidBody:Mass" />
+              <val dataType="Float">3</val>
+            </item>
+            <item dataType="Struct" type="Duality.Resources.PrefabLink+VarMod">
+              <childIndex dataType="Struct" type="System.Collections.Generic.List`1[[System.Int32]]" id="1873076544">
+                <_items dataType="Array" type="System.Int32[]" id="3441737428" />
                 <_size dataType="Int">0</_size>
                 <_version dataType="Int">1</_version>
               </childIndex>
               <componentType dataType="ObjectRef">4077022302</componentType>
               <prop dataType="ObjectRef">261688990</prop>
-              <val dataType="Enum" type="Duality.Components.Physics.BodyType" name="Dynamic" value="1" />
-            </item>
-            <item dataType="Struct" type="Duality.Resources.PrefabLink+VarMod">
-              <childIndex dataType="Struct" type="System.Collections.Generic.List`1[[System.Int32]]" id="403495742">
-                <_items dataType="ObjectRef">1916031436</_items>
-                <_size dataType="Int">0</_size>
-                <_version dataType="Int">1</_version>
-              </childIndex>
-              <componentType dataType="ObjectRef">4077022302</componentType>
-              <prop dataType="PropertyInfo" id="686873716" value="P:Duality.Components.Physics.RigidBody:IgnoreGravity" />
-              <val dataType="Bool">true</val>
+              <val dataType="Enum" type="Duality.Components.Physics.BodyType" name="Static" value="0" />
             </item>
           </_items>
-          <_size dataType="Int">11</_size>
-          <_version dataType="Int">313</_version>
+          <_size dataType="Int">12</_size>
+          <_version dataType="Int">330</_version>
         </changes>
         <obj dataType="ObjectRef">1766329854</obj>
         <prefab dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Prefab]]">
@@ -4890,7 +4953,7 @@
                 <_version dataType="Int">1</_version>
               </childIndex>
               <componentType dataType="ObjectRef">3653553262</componentType>
-              <prop dataType="ObjectRef">3445160984</prop>
+              <prop dataType="ObjectRef">4207066764</prop>
               <val dataType="Struct" type="OpenTK.Vector3">
                 <X dataType="Float">172</X>
                 <Y dataType="Float">202</Y>
@@ -4973,7 +5036,7 @@
                 <_version dataType="Int">1</_version>
               </childIndex>
               <componentType dataType="ObjectRef">3653553262</componentType>
-              <prop dataType="ObjectRef">3445160984</prop>
+              <prop dataType="ObjectRef">4207066764</prop>
               <val dataType="Struct" type="OpenTK.Vector3">
                 <X dataType="Float">158</X>
                 <Y dataType="Float">202</Y>
@@ -5056,7 +5119,7 @@
                 <_version dataType="Int">1</_version>
               </childIndex>
               <componentType dataType="ObjectRef">3653553262</componentType>
-              <prop dataType="ObjectRef">3445160984</prop>
+              <prop dataType="ObjectRef">4207066764</prop>
               <val dataType="Struct" type="OpenTK.Vector3">
                 <X dataType="Float">-472</X>
                 <Y dataType="Float">197</Y>
@@ -5159,7 +5222,7 @@
                 <_version dataType="Int">1</_version>
               </childIndex>
               <componentType dataType="ObjectRef">3653553262</componentType>
-              <prop dataType="ObjectRef">3445160984</prop>
+              <prop dataType="ObjectRef">4207066764</prop>
               <val dataType="Struct" type="OpenTK.Vector3">
                 <X dataType="Float">-485</X>
                 <Y dataType="Float">197</Y>
@@ -5252,7 +5315,7 @@
                 <_version dataType="Int">1</_version>
               </childIndex>
               <componentType dataType="ObjectRef">3653553262</componentType>
-              <prop dataType="ObjectRef">3445160984</prop>
+              <prop dataType="ObjectRef">4207066764</prop>
               <val dataType="Struct" type="OpenTK.Vector3">
                 <X dataType="Float">-499</X>
                 <Y dataType="Float">197</Y>
@@ -5345,7 +5408,7 @@
                 <_version dataType="Int">1</_version>
               </childIndex>
               <componentType dataType="ObjectRef">3653553262</componentType>
-              <prop dataType="ObjectRef">3445160984</prop>
+              <prop dataType="ObjectRef">4207066764</prop>
               <val dataType="Struct" type="OpenTK.Vector3">
                 <X dataType="Float">-513</X>
                 <Y dataType="Float">197</Y>
@@ -5428,7 +5491,7 @@
                 <_version dataType="Int">1</_version>
               </childIndex>
               <componentType dataType="ObjectRef">3653553262</componentType>
-              <prop dataType="ObjectRef">3445160984</prop>
+              <prop dataType="ObjectRef">4207066764</prop>
               <val dataType="Struct" type="OpenTK.Vector3">
                 <X dataType="Float">-98</X>
                 <Y dataType="Float">204</Y>
@@ -5511,7 +5574,7 @@
                 <_version dataType="Int">1</_version>
               </childIndex>
               <componentType dataType="ObjectRef">3653553262</componentType>
-              <prop dataType="ObjectRef">3445160984</prop>
+              <prop dataType="ObjectRef">4207066764</prop>
               <val dataType="Struct" type="OpenTK.Vector3">
                 <X dataType="Float">50</X>
                 <Y dataType="Float">43</Y>
@@ -5594,7 +5657,7 @@
                 <_version dataType="Int">1</_version>
               </childIndex>
               <componentType dataType="ObjectRef">3653553262</componentType>
-              <prop dataType="ObjectRef">3445160984</prop>
+              <prop dataType="ObjectRef">4207066764</prop>
               <val dataType="Struct" type="OpenTK.Vector3">
                 <X dataType="Float">63</X>
                 <Y dataType="Float">43</Y>
@@ -5832,7 +5895,7 @@
                 <_version dataType="Int">1</_version>
               </childIndex>
               <componentType dataType="ObjectRef">3653553262</componentType>
-              <prop dataType="ObjectRef">3445160984</prop>
+              <prop dataType="ObjectRef">4207066764</prop>
               <val dataType="Struct" type="OpenTK.Vector3">
                 <X dataType="Float">-264</X>
                 <Y dataType="Float">213</Y>
@@ -5956,7 +6019,7 @@
                 <_version dataType="Int">1</_version>
               </childIndex>
               <componentType dataType="ObjectRef">3653553262</componentType>
-              <prop dataType="ObjectRef">3445160984</prop>
+              <prop dataType="ObjectRef">4207066764</prop>
               <val dataType="Struct" type="OpenTK.Vector3">
                 <X dataType="Float">-190</X>
                 <Y dataType="Float">300</Y>

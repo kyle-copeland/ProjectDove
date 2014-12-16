@@ -347,7 +347,7 @@
       <compList dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Component]]" id="1891297452">
         <_items dataType="Array" type="Duality.Component[]" id="3789595364">
           <item dataType="Struct" type="Duality.Components.Transform" id="2942716566">
-            <active dataType="Bool">false</active>
+            <active dataType="Bool">true</active>
             <gameobj dataType="ObjectRef">582401634</gameobj>
             <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
           </item>
@@ -555,14 +555,14 @@
               <componentType dataType="ObjectRef">1717510894</componentType>
               <prop dataType="ObjectRef">3443847714</prop>
               <val dataType="Struct" type="OpenTK.Vector3">
-                <X dataType="Float">-120.999741</X>
-                <Y dataType="Float">67.56229</Y>
-                <Z dataType="Float">-210.546173</Z>
+                <X dataType="Float">-120.999939</X>
+                <Y dataType="Float">-43.09749</Y>
+                <Z dataType="Float">-367.852966</Z>
               </val>
             </item>
           </_items>
           <_size dataType="Int">3</_size>
-          <_version dataType="Int">567</_version>
+          <_version dataType="Int">1263</_version>
         </changes>
         <obj dataType="ObjectRef">84651140</obj>
         <prefab dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Prefab]]">

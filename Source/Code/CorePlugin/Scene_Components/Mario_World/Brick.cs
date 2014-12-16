@@ -25,7 +25,7 @@ namespace Dove_Game.Scene_Components.Mario_World
 
         void ICmpCollisionListener.OnCollisionBegin(Component sender, CollisionEventArgs args)
         {
-            if (args.CollideWith.Name == "MainCharacter" && playerOne.GameObj.Transform.Pos.Y > this.GameObj.Transform.Pos.Y)
+            if (args.CollideWith.Name == "MainCharacter" && playerOne.GameObj.Transform.Pos.Y > this.GameObj.Transform.Pos.Y + 28)
             {
                 this.GameObj.DisposeLater();
             }
