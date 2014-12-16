@@ -9,6 +9,7 @@ using Duality.Resources;
 using Duality.Components.Physics;
 using OpenTK.Input;
 using OpenTK;
+using Dove_Game.Enemies.Mario_World;
 
 namespace Dove_Game.Test_Logic
 {
@@ -16,14 +17,20 @@ namespace Dove_Game.Test_Logic
     public class MarioCastleController : Component, ICmpUpdatable, ICmpInitializable
     {
         private PlayerOne _mainCharacter;
+        private GameObject _fireball;
         private bool _reachedBoss;
         private int _brickCount;
+        private float _fireballDropTimer;
+        private bool _fireballPlaced;
 
         void ICmpInitializable.OnInit(Component.InitContext context)
         {
             _mainCharacter = Scene.Current.FindComponent<PlayerOne>();
             _reachedBoss = false;
             _brickCount = 0;
+            _fireballDropTimer = 1000.0f;
+            _fireball = GameRes.Data.Prefabs.MarioWorld.Fireball_Prefab.Res.Instantiate(); 
+           _fireballPlaced = false;
         }
 
         void ICmpInitializable.OnShutdown(Component.ShutdownContext context)
@@ -32,6 +39,25 @@ namespace Dove_Game.Test_Logic
 
         void ICmpUpdatable.OnUpdate()
         {
+            _fireballDropTimer -= Time.MsPFMult * Time.TimeMult;
+            if (_fireballDropTimer < 0.0f && !_fireballPlaced)
+            {
+                _fireballPlaced = true;
+                _fireball = GameRes.Data.Prefabs.MarioWorld.Fireball_Prefab.Res.Instantiate();
+                _fireball.BreakPrefabLink();
+                //_fireball.RemoveComponent<Fireball>();
+                _fireball.Transform.Pos = new OpenTK.Vector3(-1148, 26, 0);
+                this.GameObj.ParentScene.AddObject(_fireball);
+            }
+
+            if (_fireballPlaced && _fireball.Transform.Pos.Y > 189)
+            {
+                _fireball.DisposeLater();
+                _fireballDropTimer = 1000.0f;
+                _fireballPlaced = false;
+            }
+
+
             if (!_reachedBoss && _mainCharacter.GameObj.Transform.Pos.X > 590)
             {
                 //_reachedBoss = true;

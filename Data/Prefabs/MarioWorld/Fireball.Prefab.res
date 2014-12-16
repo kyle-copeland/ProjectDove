@@ -16,13 +16,13 @@
           <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
           <parentTransform />
           <pos dataType="Struct" type="OpenTK.Vector3">
-            <X dataType="Float">329</X>
-            <Y dataType="Float">303</Y>
+            <X dataType="Float">-1324</X>
+            <Y dataType="Float">173</Y>
             <Z dataType="Float">0</Z>
           </pos>
           <posAbs dataType="Struct" type="OpenTK.Vector3">
-            <X dataType="Float">329</X>
-            <Y dataType="Float">303</Y>
+            <X dataType="Float">-1324</X>
+            <Y dataType="Float">173</Y>
             <Z dataType="Float">0</Z>
           </posAbs>
           <scale dataType="Float">0.168801233</scale>
@@ -76,7 +76,7 @@
           <angularVel dataType="Float">0</angularVel>
           <bodyType dataType="Enum" type="Duality.Components.Physics.BodyType" name="Dynamic" value="1" />
           <colCat dataType="Enum" type="Duality.Components.Physics.CollisionCategory" name="Cat3" value="4" />
-          <colWith dataType="Enum" type="Duality.Components.Physics.CollisionCategory" name="Cat1, Cat3, Cat4, Cat5" value="29" />
+          <colWith dataType="Enum" type="Duality.Components.Physics.CollisionCategory" name="Cat1, Cat3, Cat5" value="21" />
           <continous dataType="Bool">false</continous>
           <explicitMass dataType="Float">500</explicitMass>
           <fixedAngle dataType="Bool">true</fixedAngle>
@@ -106,7 +106,7 @@
               </item>
             </_items>
             <_size dataType="Int">1</_size>
-            <_version dataType="Int">3</_version>
+            <_version dataType="Int">7</_version>
           </shapes>
         </item>
         <item dataType="Struct" type="Dove_Game.Enemies.Mario_World.Fireball" id="4222736335">

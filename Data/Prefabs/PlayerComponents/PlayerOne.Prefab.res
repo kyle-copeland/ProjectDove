@@ -5,7 +5,7 @@
     <compList dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Component]]" id="1120444292">
       <_items dataType="Array" type="Duality.Component[]" id="4131199044">
         <item dataType="Struct" type="Duality.Components.Transform" id="123647283">
-          <active dataType="Bool">false</active>
+          <active dataType="Bool">true</active>
           <angle dataType="Float">0</angle>
           <angleAbs dataType="Float">0</angleAbs>
           <angleVel dataType="Float">0</angleVel>
@@ -16,14 +16,14 @@
           <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
           <parentTransform />
           <pos dataType="Struct" type="OpenTK.Vector3">
-            <X dataType="Float">-121</X>
-            <Y dataType="Float">95</Y>
-            <Z dataType="Float">-0.01</Z>
+            <X dataType="Float">-1201</X>
+            <Y dataType="Float">146</Y>
+            <Z dataType="Float">0</Z>
           </pos>
           <posAbs dataType="Struct" type="OpenTK.Vector3">
-            <X dataType="Float">-121</X>
-            <Y dataType="Float">95</Y>
-            <Z dataType="Float">-0.01</Z>
+            <X dataType="Float">-1201</X>
+            <Y dataType="Float">146</Y>
+            <Z dataType="Float">0</Z>
           </posAbs>
           <scale dataType="Float">0.637993336</scale>
           <scaleAbs dataType="Float">0.637993336</scaleAbs>
@@ -39,7 +39,7 @@
           </velAbs>
         </item>
         <item dataType="Struct" type="Duality.Components.Renderers.AnimSpriteRenderer" id="1765735028">
-          <active dataType="Bool">false</active>
+          <active dataType="Bool">true</active>
           <animDuration dataType="Float">5</animDuration>
           <animFirstFrame dataType="Int">16</animFirstFrame>
           <animFrameCount dataType="Int">1</animFrameCount>
@@ -109,7 +109,7 @@
               </item>
             </_items>
             <_size dataType="Int">1</_size>
-            <_version dataType="Int">4</_version>
+            <_version dataType="Int">20</_version>
           </joints>
           <linearDamp dataType="Float">0.3</linearDamp>
           <linearVel dataType="Struct" type="OpenTK.Vector2">
@@ -146,7 +146,7 @@
               </item>
             </_items>
             <_size dataType="Int">1</_size>
-            <_version dataType="Int">5</_version>
+            <_version dataType="Int">21</_version>
           </shapes>
         </item>
         <item dataType="Struct" type="Dove_Game.PlayerOne" id="3455570211">
