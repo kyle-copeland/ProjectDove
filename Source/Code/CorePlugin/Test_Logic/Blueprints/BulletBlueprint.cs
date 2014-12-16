@@ -24,7 +24,7 @@ namespace Dove_Game
         }
 
         //TODO: Allow for sprite sheets to be uses to allow bullets to face different directions
-        public Bullet CreateBullet(Direction direction, ContentRef<Material> bulletMaterial, bool isAnimated = false, List<int> seq = null,int rows=1, int columns = 1)
+        public EnemyBullet CreateBullet(Direction direction, ContentRef<Material> bulletMaterial, bool isAnimated = false, List<int> seq = null,int rows=1, int columns = 1)
         {
             GameObject obj = new GameObject("Bullet");
             Transform transform = obj.AddComponent<Transform>();
@@ -39,11 +39,12 @@ namespace Dove_Game
 
             body.ClearShapes();
             CircleShapeInfo circleShape = new CircleShapeInfo(spriteRadius, Vector2.Zero, 1.0f);
-            circleShape.IsSensor = false;
+            circleShape.IsSensor = true;
             body.AddShape(circleShape);
             body.CollisionCategory = CollisionCategory.Cat2;
             body.CollidesWith = CollisionCategory.Cat1;
             body.IgnoreGravity = true;
+    
             body.FixedAngle = true;
             AnimSpriteRenderer sprite = obj.AddComponent<AnimSpriteRenderer>();
             sprite.SharedMaterial = spriteMaterial;

@@ -29,6 +29,8 @@ namespace Dove_Game.Test_Logic
             {
                 temp.doDamage(10);
             }
+
+            this.GameObj.DisposeLater();
         }
 
         public override void OnCollisionEnd(Component sender, CollisionEventArgs args)

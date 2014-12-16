@@ -11,7 +11,7 @@ namespace Dove_Game.Test_Logic
 {
     public static class Summon
     {
-        public static GameObject SummonGameObject(SideCharacter SC_Choice, Attack Atk_Choice, Character main)
+        public static GameObject SummonGameObject(SideCharacter SC_Choice, Attack Atk_Choice, Character main, bool isEnemy = false)
         {
             float playerOnePosX = main.GameObj.Transform.Pos.X;
             float playerOnePosY = main.GameObj.Transform.Pos.Y;
@@ -77,7 +77,7 @@ namespace Dove_Game.Test_Logic
                         //  spriteSize = spriteMaterial.MainTexture.IsAvailable ? spriteMaterial.MainTexture.Res.Size : new Vector2(5, 5);
                         //  spriteSize.X /= 2.25f;
                         //  spriteSize.Y /= 2.0f;
-                        createKamehameha(ref summonPiece, new Vector2(playerOneRectX, playerOneRectY), main.CharDirection, spriteSize);
+                        createKamehameha(ref summonPiece, new Vector2(playerOneRectX, playerOneRectY), main.CharDirection, spriteSize,isEnemy);
                         break;
 
                     case Attack.PlayerBullet:
@@ -156,7 +156,7 @@ namespace Dove_Game.Test_Logic
             return summonPiece;
         }
 
-        public static void createKamehameha(ref GameObject summonPiece, Vector2 gokuPos, Direction direction, Vector2 spriteSize)
+        public static void createKamehameha(ref GameObject summonPiece, Vector2 gokuPos, Direction direction, Vector2 spriteSize, bool isEnemy = false)
         {
             RigidBody body = summonPiece.GetComponent<RigidBody>();
             float offset = direction == Direction.Right ? spriteSize.X : -spriteSize.X;
@@ -176,10 +176,10 @@ namespace Dove_Game.Test_Logic
             // Attach the polygon rigid body to the game object's rigid body and set collision category.
             body.AddShape(polyShape);
             body.CollisionCategory = CollisionCategory.Cat2;
-            body.CollidesWith = CollisionCategory.Cat3;
 
             // Set lifetime and blueprint for this object
             summonPiece.GetComponent<Kamehameha>().InitFrom(direction);
+            body.CollidesWith = isEnemy ? CollisionCategory.Cat1 : CollisionCategory.Cat3;
         }
 
         public static void createBullet(ref GameObject summonPiece, Vector2 playerPos, Direction direction, Vector2 spriteSize)

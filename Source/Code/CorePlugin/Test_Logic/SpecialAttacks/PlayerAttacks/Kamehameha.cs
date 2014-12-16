@@ -29,8 +29,8 @@ namespace Dove_Game.Test_Logic
 
         public override void OnInit(Component.InitContext context)
         {
-            this.GameObj.RigidBody.CollisionCategory = CollisionCategory.Cat2;
-            this.GameObj.RigidBody.CollidesWith = CollisionCategory.Cat3;
+           /* this.GameObj.RigidBody.CollisionCategory = CollisionCategory.Cat2;
+            this.GameObj.RigidBody.CollidesWith = CollisionCategory.Cat3;*/
         }
 
         public override void OnShutdown(Component.ShutdownContext context)
@@ -41,7 +41,7 @@ namespace Dove_Game.Test_Logic
         // If the attack hits an enemy, apply damage.
         public override void OnCollisionBegin(Component sender, CollisionEventArgs args)
         {
-            Enemy temp = args.CollideWith.GetComponent<Enemy>();
+            Character temp = args.CollideWith.GetComponent<Character>();
             if (temp != null)
             {
                 temp.doDamage(100);
