@@ -3,8 +3,8 @@
   <basePixmap dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Pixmap]]">
     <contentPath dataType="String">Data\Scenes\Components\PiranhaPlant.Pixmap.res</contentPath>
   </basePixmap>
-  <filterMag dataType="Enum" type="OpenTK.Graphics.OpenGL.TextureMagFilter" name="Linear" value="9729" />
-  <filterMin dataType="Enum" type="OpenTK.Graphics.OpenGL.TextureMinFilter" name="LinearMipmapLinear" value="9987" />
+  <filterMag dataType="Enum" type="OpenTK.Graphics.OpenGL.TextureMagFilter" name="Nearest" value="9728" />
+  <filterMin dataType="Enum" type="OpenTK.Graphics.OpenGL.TextureMinFilter" name="Nearest" value="9728" />
   <pixelformat dataType="Enum" type="OpenTK.Graphics.OpenGL.PixelInternalFormat" name="Rgba" value="6408" />
   <size dataType="Struct" type="OpenTK.Vector2">
     <X dataType="Float">38</X>

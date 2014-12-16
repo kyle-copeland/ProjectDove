@@ -68,6 +68,7 @@
     <Compile Include="Scene_Components\Mario_World\Brick.cs" />
     <Compile Include="Scene_Components\Mario_World\Flag.cs" />
     <Compile Include="Scene_Components\Mario_World\LevelControllers\MarioCastleController.cs" />
+    <Compile Include="Scene_Components\Mario_World\LevelControllers\MarioWorldController.cs" />
     <Compile Include="Scene_Components\Mario_World\QuestionBox.cs" />
     <Compile Include="Scene_Components\General_World\EndGameOverlay.cs" />
     <Compile Include="Scene_Components\General_World\StartScene.cs" />

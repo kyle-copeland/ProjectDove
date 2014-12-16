@@ -27,7 +27,7 @@ namespace Dove_Game
         {
             PlayerOne temp = args.CollideWith.GetComponent<PlayerOne>();
             if (temp != null)
-                temp.doDamage(50);
+                temp.doDamage(25);
         }
 
         public override void OnCollisionEnd(Component sender, CollisionEventArgs args)

@@ -16,7 +16,8 @@ namespace Dove_Game.Scene_Components.Mario_World
         private PlayerOne playerOne;
         private AnimSpriteRenderer qbSprite;
         private float initYPosition;
-        public Boolean hit;
+        private bool hit;
+        private float tempTimer;
 
         void ICmpInitializable.OnInit(Component.InitContext context)
         {
@@ -24,6 +25,7 @@ namespace Dove_Game.Scene_Components.Mario_World
             qbSprite = this.GameObj.GetComponent<AnimSpriteRenderer>();
             initYPosition = this.GameObj.Transform.Pos.Y;
             hit = false;
+            tempTimer = 1000.0f;
         }
 
         void ICmpInitializable.OnShutdown(Component.ShutdownContext context)
@@ -32,22 +34,23 @@ namespace Dove_Game.Scene_Components.Mario_World
 
         void ICmpUpdatable.OnUpdate()
         {
-            if (hit && this.GameObj.Transform.Pos.Y > initYPosition)
+            if (hit)
             {
-                this.GameObj.RigidBody.BodyType = Duality.Components.Physics.BodyType.Static;
-                qbSprite.AnimFirstFrame = 2;
-                qbSprite.UpdateVisibleFrames();
+                tempTimer -= Time.MsPFMult * Time.TimeMult;
+                if (tempTimer < 0)
+                {
+                    qbSprite.AnimFirstFrame = 2;
+                    qbSprite.UpdateVisibleFrames();
+                }
             }
         }
 
         void ICmpCollisionListener.OnCollisionBegin(Component sender, CollisionEventArgs args)
         {
-            if (!hit && args.CollideWith.Name == "MainCharacter" && playerOne.GameObj.Transform.Pos.Y > this.GameObj.Transform.Pos.Y)
+            if (!hit && args.CollideWith.Name == "MainCharacter" && playerOne.GameObj.Transform.Pos.Y > this.GameObj.Transform.Pos.Y + 30)
             {
                 qbSprite.AnimFirstFrame = 1;
                 qbSprite.UpdateVisibleFrames();
-                this.GameObj.RigidBody.IgnoreGravity = false;
-                this.GameObj.RigidBody.ApplyLocalForce(-Vector2.UnitY * 20);
                 hit = true;
             }
         }
