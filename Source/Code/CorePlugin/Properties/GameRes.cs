@@ -267,6 +267,12 @@ namespace GameRes
 				public static Duality.ContentRef<Duality.Resources.Material> Goku_Aura_2d_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\Side Characters\Goku_Aura_2d.Material.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Pixmap> Goku_Aura_2d_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\Side Characters\Goku_Aura_2d.Pixmap.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Texture> Goku_Aura_2d_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Characters\Side Characters\Goku_Aura_2d.Texture.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Material> Goku_Final_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\Side Characters\Goku_Final.Material.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Pixmap> Goku_Final_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\Side Characters\Goku_Final.Pixmap.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Texture> Goku_Final_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Characters\Side Characters\Goku_Final.Texture.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Material> goku_static_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\Side Characters\goku_static.Material.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Pixmap> goku_static_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\Side Characters\goku_static.Pixmap.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Texture> goku_static_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Characters\Side Characters\goku_static.Texture.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Material> Navis_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\Side Characters\Navis.Material.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Pixmap> Navis_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\Side Characters\Navis.Pixmap.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Texture> Navis_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Characters\Side Characters\Navis.Texture.res"); }}
@@ -289,6 +295,12 @@ namespace GameRes
 					Goku_Aura_2d_Material.MakeAvailable();
 					Goku_Aura_2d_Pixmap.MakeAvailable();
 					Goku_Aura_2d_Texture.MakeAvailable();
+					Goku_Final_Material.MakeAvailable();
+					Goku_Final_Pixmap.MakeAvailable();
+					Goku_Final_Texture.MakeAvailable();
+					goku_static_Material.MakeAvailable();
+					goku_static_Pixmap.MakeAvailable();
+					goku_static_Texture.MakeAvailable();
 					Navis_Material.MakeAvailable();
 					Navis_Pixmap.MakeAvailable();
 					Navis_Texture.MakeAvailable();
