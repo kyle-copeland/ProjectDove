@@ -277,15 +277,15 @@
             </iconMat>
             <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
             <text dataType="Struct" type="Duality.Drawing.FormattedText" id="2205946354">
-              <displayedText dataType="String">Press Enter To</displayedText>
+              <displayedText dataType="String">Press Enter To Play</displayedText>
               <elements dataType="Array" type="Duality.Drawing.FormattedText+Element[]" id="3720228816">
                 <item dataType="Struct" type="Duality.Drawing.FormattedText+TextElement" id="3739896508">
-                  <text dataType="String">Press Enter To</text>
+                  <text dataType="String">Press Enter To Play</text>
                 </item>
               </elements>
               <flowAreas />
               <fontGlyphCount dataType="Array" type="System.Int32[]" id="2919121518">
-                <item dataType="Int">14</item>
+                <item dataType="Int">19</item>
               </fontGlyphCount>
               <fonts dataType="Array" type="Duality.ContentRef`1[[Duality.Resources.Font]][]" id="742055852">
                 <item dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Font]]">
@@ -297,7 +297,7 @@
               <lineAlign dataType="Enum" type="Duality.Alignment" name="Center" value="0" />
               <maxHeight dataType="Int">0</maxHeight>
               <maxWidth dataType="Int">0</maxWidth>
-              <sourceText dataType="String">Press Enter To</sourceText>
+              <sourceText dataType="String">Press Enter To Play</sourceText>
               <wrapMode dataType="Enum" type="Duality.Drawing.FormattedText+WrapMode" name="Word" value="1" />
             </text>
             <visibilityGroup dataType="Enum" type="Duality.Drawing.VisibilityFlag" name="Group0" value="1" />
@@ -421,48 +421,6 @@
       </identifier>
       <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
       <name dataType="String">Main Menu</name>
-      <parent />
-      <prefabLink />
-    </item>
-    <item dataType="Struct" type="Duality.GameObject" id="3460620578">
-      <active dataType="Bool">true</active>
-      <children />
-      <compList dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Component]]" id="2286156012">
-        <_items dataType="Array" type="Duality.Component[]" id="1712848996" length="4">
-          <item dataType="Struct" type="Dove_Game.Test_Logic.DrawHealth" id="2318313192">
-            <_respawnNeeded dataType="Bool">false</_respawnNeeded>
-            <active dataType="Bool">true</active>
-            <font dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Font]]">
-              <contentPath />
-            </font>
-            <gameobj dataType="ObjectRef">3460620578</gameobj>
-            <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
-            <playerOne />
-          </item>
-        </_items>
-        <_size dataType="Int">1</_size>
-        <_version dataType="Int">1</_version>
-      </compList>
-      <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="640262454" surrogate="true">
-        <header />
-        <body>
-          <keys dataType="Array" type="System.Type[]" id="2971551526">
-            <item dataType="Type" id="2718958848" value="Dove_Game.Test_Logic.DrawHealth" />
-          </keys>
-          <values dataType="Array" type="Duality.Component[]" id="1790732986">
-            <item dataType="ObjectRef">2318313192</item>
-          </values>
-        </body>
-      </compMap>
-      <compTransform />
-      <identifier dataType="Struct" type="System.Guid" surrogate="true">
-        <header>
-          <data dataType="Array" type="System.Byte[]" id="598717478">ja0m7GJff0yR0n2gpx/e0A==</data>
-        </header>
-        <body />
-      </identifier>
-      <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
-      <name dataType="String">DrawHealth</name>
       <parent />
       <prefabLink />
     </item>

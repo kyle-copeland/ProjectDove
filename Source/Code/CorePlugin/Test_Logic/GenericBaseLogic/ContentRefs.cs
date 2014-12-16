@@ -21,6 +21,20 @@ namespace Dove_Game.Test_Logic
         public static ContentRef<Material> BigHeadGoku = GameRes.Data.Characters.DialogImage.bigheadgoku_Material;
         public static ContentRef<Material> GokuHero = GameRes.Data.Characters.DialogImage.goku_hero_Material;
 
+        // Dialog backgrounds
+        public static ContentRef<Material> CastleBM = GameRes.Data.Characters.DialogImage.CastleTextBM_Material;
+        public static ContentRef<Material> CastleGB = GameRes.Data.Characters.DialogImage.CastleTextGB_Material;
+        public static ContentRef<Material> CastleGM = GameRes.Data.Characters.DialogImage.CastleTextGM_Material;
+        public static ContentRef<Material> CastleUB = GameRes.Data.Characters.DialogImage.CastleTextUB_Material;
+        public static ContentRef<Material> CastleUG = GameRes.Data.Characters.DialogImage.CastleTextUG_Material;
+        public static ContentRef<Material> CastleUM = GameRes.Data.Characters.DialogImage.CastleTextUM_Material;
+        public static ContentRef<Material> DbzKKP_GKK = GameRes.Data.Characters.DialogImage.DBZBackgroundTGKK_Material;
+        public static ContentRef<Material> DbzKKP_UG = GameRes.Data.Characters.DialogImage.DBZBackgroundTUG_Material;
+        public static ContentRef<Material> DbzKKP_UKK = GameRes.Data.Characters.DialogImage.DBZBackgroundTUKK_Material;
+        public static ContentRef<Material> SlenderGU = GameRes.Data.Characters.DialogImage.SlendermanBackgroundText_Material;
+        public static ContentRef<Material> SlenderGS = GameRes.Data.Characters.DialogImage.SlendermanBackgroundTextGS_Material;
+        public static ContentRef<Material> SlenderUS = GameRes.Data.Characters.DialogImage.SlendermanBackgroundTextUS_Material;
+
         public static ContentRef<Material> GokuContentRef = GameRes.Data.Characters.Side_Characters.Goku_2d_2_Material;
         public static ContentRef<Material> BowserContentRef = GameRes.Data.Characters.Side_Characters.Bowser_Material;
         public static ContentRef<Material> NaviContentRef = GameRes.Data.Characters.Side_Characters.Navis_Material;

@@ -113,7 +113,7 @@ namespace Dove_Game.Test_Logic
                     // Load kai dialog and transition to Goku boss fight.
                     WorldSelectionMap.SceneLoadHandler = delegate(object sender, EventArgs e)
                     {
-                        DrawDialog.AssignDialogScript(sender, e, DialogScripts.IntroScript);
+                        DrawDialog.AssignDialogScript(sender, e, DialogScripts.DbzLevelTwoPost);
                     };
                     Scene.Entered += WorldSelectionMap.SceneLoadHandler;
                     Scene.SwitchTo(ContentRefs.DbzLevelTwoPost);

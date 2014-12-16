@@ -102,6 +102,7 @@ namespace Dove_Game.Test_Logic
 
         public void OnUpdate()
         {
+            LevelCompleted = true;
             if (PrevSceneName != Scene.Current.Name)
             {
                 PrevScene = Scene.Current;
@@ -121,7 +122,7 @@ namespace Dove_Game.Test_Logic
                     DrawDialog.AssignDialogScript(sender, e, DialogScripts.DbzLevelOnePost);
                 };
                 Scene.Entered += WorldSelectionMap.SceneLoadHandler;
-                Scene.SwitchTo(ContentRefs.DbzLevelOnePost);
+                Scene.SwitchTo(ContentRefs.DbzLevelTwoPre);
             }
 
             if (MainCharacter == null)
@@ -180,6 +181,16 @@ namespace Dove_Game.Test_Logic
             {
                 DrawOverlay.DrawOversizedHeader(canvas, "Congrats! You win.");
                 DelayProgress -= Time.MsPFMult * Time.TimeMult;
+
+                //if (DelayProgress <= 0f)
+                //{
+                //    WorldSelectionMap.SceneLoadHandler = delegate(object sender, EventArgs e)
+                //    {
+                //        DrawDialog.AssignDialogScript(sender, e, DialogScripts.DbzLevelOnePost);
+                //    };
+                //    Scene.Entered += WorldSelectionMap.SceneLoadHandler;
+                //    Scene.SwitchTo(ContentRefs.DbzLevelOnePost);
+                //}
             }
         }
 

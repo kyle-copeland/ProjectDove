@@ -11,16 +11,88 @@ namespace GameRes
 				public static Duality.ContentRef<Duality.Resources.Material> bigheadgoku_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\DialogImage\bigheadgoku.Material.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Pixmap> bigheadgoku_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\DialogImage\bigheadgoku.Pixmap.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Texture> bigheadgoku_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Characters\DialogImage\bigheadgoku.Texture.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Material> CastleTextBM_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\DialogImage\CastleTextBM.Material.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Pixmap> CastleTextBM_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\DialogImage\CastleTextBM.Pixmap.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Texture> CastleTextBM_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Characters\DialogImage\CastleTextBM.Texture.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Material> CastleTextGB_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\DialogImage\CastleTextGB.Material.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Pixmap> CastleTextGB_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\DialogImage\CastleTextGB.Pixmap.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Texture> CastleTextGB_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Characters\DialogImage\CastleTextGB.Texture.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Material> CastleTextGM_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\DialogImage\CastleTextGM.Material.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Pixmap> CastleTextGM_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\DialogImage\CastleTextGM.Pixmap.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Texture> CastleTextGM_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Characters\DialogImage\CastleTextGM.Texture.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Material> CastleTextUB_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\DialogImage\CastleTextUB.Material.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Pixmap> CastleTextUB_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\DialogImage\CastleTextUB.Pixmap.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Texture> CastleTextUB_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Characters\DialogImage\CastleTextUB.Texture.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Material> CastleTextUG_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\DialogImage\CastleTextUG.Material.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Pixmap> CastleTextUG_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\DialogImage\CastleTextUG.Pixmap.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Texture> CastleTextUG_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Characters\DialogImage\CastleTextUG.Texture.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Material> CastleTextUM_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\DialogImage\CastleTextUM.Material.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Pixmap> CastleTextUM_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\DialogImage\CastleTextUM.Pixmap.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Texture> CastleTextUM_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Characters\DialogImage\CastleTextUM.Texture.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Material> DBZBackgroundTGKK_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\DialogImage\DBZBackgroundTGKK.Material.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Pixmap> DBZBackgroundTGKK_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\DialogImage\DBZBackgroundTGKK.Pixmap.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Texture> DBZBackgroundTGKK_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Characters\DialogImage\DBZBackgroundTGKK.Texture.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Material> DBZBackgroundTUG_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\DialogImage\DBZBackgroundTUG.Material.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Pixmap> DBZBackgroundTUG_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\DialogImage\DBZBackgroundTUG.Pixmap.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Texture> DBZBackgroundTUG_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Characters\DialogImage\DBZBackgroundTUG.Texture.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Material> DBZBackgroundTUKK_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\DialogImage\DBZBackgroundTUKK.Material.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Pixmap> DBZBackgroundTUKK_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\DialogImage\DBZBackgroundTUKK.Pixmap.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Texture> DBZBackgroundTUKK_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Characters\DialogImage\DBZBackgroundTUKK.Texture.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Material> goku_hero_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\DialogImage\goku_hero.Material.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Pixmap> goku_hero_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\DialogImage\goku_hero.Pixmap.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Texture> goku_hero_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Characters\DialogImage\goku_hero.Texture.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Material> SlendermanBackgroundText_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\DialogImage\SlendermanBackgroundText.Material.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Pixmap> SlendermanBackgroundText_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\DialogImage\SlendermanBackgroundText.Pixmap.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Texture> SlendermanBackgroundText_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Characters\DialogImage\SlendermanBackgroundText.Texture.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Material> SlendermanBackgroundTextGS_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\DialogImage\SlendermanBackgroundTextGS.Material.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Pixmap> SlendermanBackgroundTextGS_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\DialogImage\SlendermanBackgroundTextGS.Pixmap.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Texture> SlendermanBackgroundTextGS_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Characters\DialogImage\SlendermanBackgroundTextGS.Texture.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Material> SlendermanBackgroundTextUS_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\DialogImage\SlendermanBackgroundTextUS.Material.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Pixmap> SlendermanBackgroundTextUS_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\DialogImage\SlendermanBackgroundTextUS.Pixmap.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Texture> SlendermanBackgroundTextUS_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Characters\DialogImage\SlendermanBackgroundTextUS.Texture.res"); }}
 				public static void LoadAll() {
 					bigheadgoku_Material.MakeAvailable();
 					bigheadgoku_Pixmap.MakeAvailable();
 					bigheadgoku_Texture.MakeAvailable();
+					CastleTextBM_Material.MakeAvailable();
+					CastleTextBM_Pixmap.MakeAvailable();
+					CastleTextBM_Texture.MakeAvailable();
+					CastleTextGB_Material.MakeAvailable();
+					CastleTextGB_Pixmap.MakeAvailable();
+					CastleTextGB_Texture.MakeAvailable();
+					CastleTextGM_Material.MakeAvailable();
+					CastleTextGM_Pixmap.MakeAvailable();
+					CastleTextGM_Texture.MakeAvailable();
+					CastleTextUB_Material.MakeAvailable();
+					CastleTextUB_Pixmap.MakeAvailable();
+					CastleTextUB_Texture.MakeAvailable();
+					CastleTextUG_Material.MakeAvailable();
+					CastleTextUG_Pixmap.MakeAvailable();
+					CastleTextUG_Texture.MakeAvailable();
+					CastleTextUM_Material.MakeAvailable();
+					CastleTextUM_Pixmap.MakeAvailable();
+					CastleTextUM_Texture.MakeAvailable();
+					DBZBackgroundTGKK_Material.MakeAvailable();
+					DBZBackgroundTGKK_Pixmap.MakeAvailable();
+					DBZBackgroundTGKK_Texture.MakeAvailable();
+					DBZBackgroundTUG_Material.MakeAvailable();
+					DBZBackgroundTUG_Pixmap.MakeAvailable();
+					DBZBackgroundTUG_Texture.MakeAvailable();
+					DBZBackgroundTUKK_Material.MakeAvailable();
+					DBZBackgroundTUKK_Pixmap.MakeAvailable();
+					DBZBackgroundTUKK_Texture.MakeAvailable();
 					goku_hero_Material.MakeAvailable();
 					goku_hero_Pixmap.MakeAvailable();
 					goku_hero_Texture.MakeAvailable();
+					SlendermanBackgroundText_Material.MakeAvailable();
+					SlendermanBackgroundText_Pixmap.MakeAvailable();
+					SlendermanBackgroundText_Texture.MakeAvailable();
+					SlendermanBackgroundTextGS_Material.MakeAvailable();
+					SlendermanBackgroundTextGS_Pixmap.MakeAvailable();
+					SlendermanBackgroundTextGS_Texture.MakeAvailable();
+					SlendermanBackgroundTextUS_Material.MakeAvailable();
+					SlendermanBackgroundTextUS_Pixmap.MakeAvailable();
+					SlendermanBackgroundTextUS_Texture.MakeAvailable();
 				}
 			}
 			public static class Enemies {
@@ -361,6 +433,7 @@ namespace GameRes
 					PlayerOne_Prefab.MakeAvailable();
 				}
 			}
+			public static Duality.ContentRef<Duality.Resources.Prefab> DrawDialogController_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\DrawDialogController.Prefab.res"); }}
 			public static Duality.ContentRef<Duality.Resources.Prefab> SlenderBoss_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\SlenderBoss.Prefab.res"); }}
 			public static Duality.ContentRef<Duality.Resources.Prefab> Wall_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\Wall.Prefab.res"); }}
 			public static Duality.ContentRef<Duality.Resources.Prefab> White_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\White.Prefab.res"); }}
@@ -369,6 +442,7 @@ namespace GameRes
 				LinkWorld.LoadAll();
 				MarioWorld.LoadAll();
 				PlayerComponents.LoadAll();
+				DrawDialogController_Prefab.MakeAvailable();
 				SlenderBoss_Prefab.MakeAvailable();
 				Wall_Prefab.MakeAvailable();
 				White_Prefab.MakeAvailable();
