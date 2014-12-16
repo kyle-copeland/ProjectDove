@@ -309,6 +309,226 @@
       </prefabLink>
     </item>
     <item dataType="ObjectRef">1877348687</item>
+    <item dataType="Struct" type="Duality.GameObject" id="2151202776">
+      <active dataType="Bool">true</active>
+      <children />
+      <compList dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Component]]" id="2770231870">
+        <_items dataType="Array" type="Duality.Component[]" id="3468491280" length="4">
+          <item dataType="Struct" type="Duality.Components.Transform" id="216550412">
+            <active dataType="Bool">true</active>
+            <angle dataType="Float">0</angle>
+            <angleAbs dataType="Float">0</angleAbs>
+            <angleVel dataType="Float">0</angleVel>
+            <angleVelAbs dataType="Float">0</angleVelAbs>
+            <deriveAngle dataType="Bool">true</deriveAngle>
+            <gameobj dataType="ObjectRef">2151202776</gameobj>
+            <ignoreParent dataType="Bool">false</ignoreParent>
+            <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
+            <parentTransform />
+            <pos dataType="Struct" type="OpenTK.Vector3">
+              <X dataType="Float">0</X>
+              <Y dataType="Float">0</Y>
+              <Z dataType="Float">0</Z>
+            </pos>
+            <posAbs dataType="Struct" type="OpenTK.Vector3">
+              <X dataType="Float">0</X>
+              <Y dataType="Float">0</Y>
+              <Z dataType="Float">0</Z>
+            </posAbs>
+            <scale dataType="Float">1</scale>
+            <scaleAbs dataType="Float">1</scaleAbs>
+            <vel dataType="Struct" type="OpenTK.Vector3">
+              <X dataType="Float">0</X>
+              <Y dataType="Float">0</Y>
+              <Z dataType="Float">0</Z>
+            </vel>
+            <velAbs dataType="Struct" type="OpenTK.Vector3">
+              <X dataType="Float">0</X>
+              <Y dataType="Float">0</Y>
+              <Z dataType="Float">0</Z>
+            </velAbs>
+          </item>
+          <item dataType="Struct" type="Duality.Components.SoundEmitter" id="4195094663">
+            <active dataType="Bool">true</active>
+            <gameobj dataType="ObjectRef">2151202776</gameobj>
+            <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
+            <sources dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Components.SoundEmitter+Source]]" id="917556067">
+              <_items dataType="Array" type="Duality.Components.SoundEmitter+Source[]" id="3099172582" length="4">
+                <item dataType="Struct" type="Duality.Components.SoundEmitter+Source" id="4166481280">
+                  <looped dataType="Bool">true</looped>
+                  <offset dataType="Struct" type="OpenTK.Vector3">
+                    <X dataType="Float">0</X>
+                    <Y dataType="Float">0</Y>
+                    <Z dataType="Float">0</Z>
+                  </offset>
+                  <paused dataType="Bool">false</paused>
+                  <pitch dataType="Float">1</pitch>
+                  <sound dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Sound]]">
+                    <contentPath dataType="String">Data\Music\Goku World\Goku Snake Way.Sound.res</contentPath>
+                  </sound>
+                  <volume dataType="Float">1</volume>
+                </item>
+              </_items>
+              <_size dataType="Int">1</_size>
+              <_version dataType="Int">1</_version>
+            </sources>
+          </item>
+          <item dataType="Struct" type="Dove_Game.Scene_Components.DBZ_World.DbzBossLevelController" id="548768644">
+            <_boss />
+            <_nextDialog dataType="Struct" type="System.Collections.Generic.List`1[[Dove_Game.Test_Logic.DialogComponent]]" id="2839561068">
+              <_items dataType="Array" type="Dove_Game.Test_Logic.DialogComponent[]" id="1082752868" length="16">
+                <item dataType="Struct" type="Dove_Game.Test_Logic.DialogComponent" id="3310248900">
+                  <_x003C_DialogMessage_x003E_k__BackingField dataType="String">Goku: Man that was awesome! You sure are strong! Even though I can’t fight the ultimate evil myself, I’m sure you’ll give him a run for his money. If you ever need my help, just summon me and I’ll help with a quick Kamehameha.</_x003C_DialogMessage_x003E_k__BackingField>
+                  <_x003C_DialogSprite_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
+                    <contentPath dataType="String">Data\Characters\DialogImage\DBZBackgroundTUG.Material.res</contentPath>
+                  </_x003C_DialogSprite_x003E_k__BackingField>
+                  <_x003C_nextScriptDialog_x003E_k__BackingField dataType="Int">-1</_x003C_nextScriptDialog_x003E_k__BackingField>
+                  <_x003C_PlayerOneDialog_x003E_k__BackingField dataType="Bool">false</_x003C_PlayerOneDialog_x003E_k__BackingField>
+                  <_x003C_PostSceneRef_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Scene]]">
+                    <contentPath />
+                  </_x003C_PostSceneRef_x003E_k__BackingField>
+                </item>
+                <item dataType="Struct" type="Dove_Game.Test_Logic.DialogComponent" id="2552808854">
+                  <_x003C_DialogMessage_x003E_k__BackingField dataType="String">Unknown: Great, that should make things easier. Thanks a lot!</_x003C_DialogMessage_x003E_k__BackingField>
+                  <_x003C_DialogSprite_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
+                    <contentPath dataType="String">Data\Characters\DialogImage\DBZBackgroundTUG.Material.res</contentPath>
+                  </_x003C_DialogSprite_x003E_k__BackingField>
+                  <_x003C_nextScriptDialog_x003E_k__BackingField dataType="Int">-1</_x003C_nextScriptDialog_x003E_k__BackingField>
+                  <_x003C_PlayerOneDialog_x003E_k__BackingField dataType="Bool">false</_x003C_PlayerOneDialog_x003E_k__BackingField>
+                  <_x003C_PostSceneRef_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Scene]]">
+                    <contentPath />
+                  </_x003C_PostSceneRef_x003E_k__BackingField>
+                </item>
+                <item dataType="Struct" type="Dove_Game.Test_Logic.DialogComponent" id="2551109248">
+                  <_x003C_DialogMessage_x003E_k__BackingField dataType="String">Bowser's Minion: HELPPPPP!!! My master bowser has been locked up by Mario and Mario is going to destroy everythinggggg.</_x003C_DialogMessage_x003E_k__BackingField>
+                  <_x003C_DialogSprite_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
+                    <contentPath dataType="String">Data\Characters\DialogImage\DBZBackgroundTGKK.Material.res</contentPath>
+                  </_x003C_DialogSprite_x003E_k__BackingField>
+                  <_x003C_nextScriptDialog_x003E_k__BackingField dataType="Int">-1</_x003C_nextScriptDialog_x003E_k__BackingField>
+                  <_x003C_PlayerOneDialog_x003E_k__BackingField dataType="Bool">false</_x003C_PlayerOneDialog_x003E_k__BackingField>
+                  <_x003C_PostSceneRef_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Scene]]">
+                    <contentPath />
+                  </_x003C_PostSceneRef_x003E_k__BackingField>
+                </item>
+                <item dataType="Struct" type="Dove_Game.Test_Logic.DialogComponent" id="2020282402">
+                  <_x003C_DialogMessage_x003E_k__BackingField dataType="String">Unknown: Wait that doesn’t make sense, isn’t Mario the good guy?</_x003C_DialogMessage_x003E_k__BackingField>
+                  <_x003C_DialogSprite_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
+                    <contentPath dataType="String">Data\Characters\DialogImage\DBZBackgroundTUG.Material.res</contentPath>
+                  </_x003C_DialogSprite_x003E_k__BackingField>
+                  <_x003C_nextScriptDialog_x003E_k__BackingField dataType="Int">-1</_x003C_nextScriptDialog_x003E_k__BackingField>
+                  <_x003C_PlayerOneDialog_x003E_k__BackingField dataType="Bool">false</_x003C_PlayerOneDialog_x003E_k__BackingField>
+                  <_x003C_PostSceneRef_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Scene]]">
+                    <contentPath />
+                  </_x003C_PostSceneRef_x003E_k__BackingField>
+                </item>
+                <item dataType="Struct" type="Dove_Game.Test_Logic.DialogComponent" id="3348238300">
+                  <_x003C_DialogMessage_x003E_k__BackingField dataType="String">--- Slenderman's Evil Laugh Echoes ---</_x003C_DialogMessage_x003E_k__BackingField>
+                  <_x003C_DialogSprite_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
+                    <contentPath dataType="String">Data\Characters\DialogImage\DBZBackgroundTGKK.Material.res</contentPath>
+                  </_x003C_DialogSprite_x003E_k__BackingField>
+                  <_x003C_nextScriptDialog_x003E_k__BackingField dataType="Int">-1</_x003C_nextScriptDialog_x003E_k__BackingField>
+                  <_x003C_PlayerOneDialog_x003E_k__BackingField dataType="Bool">false</_x003C_PlayerOneDialog_x003E_k__BackingField>
+                  <_x003C_PostSceneRef_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Scene]]">
+                    <contentPath />
+                  </_x003C_PostSceneRef_x003E_k__BackingField>
+                </item>
+                <item dataType="Struct" type="Dove_Game.Test_Logic.DialogComponent" id="4269755646">
+                  <_x003C_DialogMessage_x003E_k__BackingField dataType="String">Goku: Wait, who was that?</_x003C_DialogMessage_x003E_k__BackingField>
+                  <_x003C_DialogSprite_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
+                    <contentPath dataType="String">Data\Characters\DialogImage\DBZBackgroundTGKK.Material.res</contentPath>
+                  </_x003C_DialogSprite_x003E_k__BackingField>
+                  <_x003C_nextScriptDialog_x003E_k__BackingField dataType="Int">-1</_x003C_nextScriptDialog_x003E_k__BackingField>
+                  <_x003C_PlayerOneDialog_x003E_k__BackingField dataType="Bool">false</_x003C_PlayerOneDialog_x003E_k__BackingField>
+                  <_x003C_PostSceneRef_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Scene]]">
+                    <contentPath />
+                  </_x003C_PostSceneRef_x003E_k__BackingField>
+                </item>
+                <item dataType="Struct" type="Dove_Game.Test_Logic.DialogComponent" id="1787744056">
+                  <_x003C_DialogMessage_x003E_k__BackingField dataType="String">King Kai: That’s slenderman, goku!!!! He’s the ultimate evil that no one can face b/c they can’t look at him!</_x003C_DialogMessage_x003E_k__BackingField>
+                  <_x003C_DialogSprite_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
+                    <contentPath dataType="String">Data\Characters\DialogImage\DBZBackgroundTGKK.Material.res</contentPath>
+                  </_x003C_DialogSprite_x003E_k__BackingField>
+                  <_x003C_nextScriptDialog_x003E_k__BackingField dataType="Int">-1</_x003C_nextScriptDialog_x003E_k__BackingField>
+                  <_x003C_PlayerOneDialog_x003E_k__BackingField dataType="Bool">false</_x003C_PlayerOneDialog_x003E_k__BackingField>
+                  <_x003C_PostSceneRef_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Scene]]">
+                    <contentPath />
+                  </_x003C_PostSceneRef_x003E_k__BackingField>
+                </item>
+                <item dataType="Struct" type="Dove_Game.Test_Logic.DialogComponent" id="3505952618">
+                  <_x003C_DialogMessage_x003E_k__BackingField dataType="String">Unknown: Do you think Slenderman is behind all this? Meta Knight mentioned that the good guys are now bad guys and that people are disappearing…</_x003C_DialogMessage_x003E_k__BackingField>
+                  <_x003C_DialogSprite_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
+                    <contentPath dataType="String">Data\Characters\DialogImage\DBZBackgroundTUG.Material.res</contentPath>
+                  </_x003C_DialogSprite_x003E_k__BackingField>
+                  <_x003C_nextScriptDialog_x003E_k__BackingField dataType="Int">-1</_x003C_nextScriptDialog_x003E_k__BackingField>
+                  <_x003C_PlayerOneDialog_x003E_k__BackingField dataType="Bool">false</_x003C_PlayerOneDialog_x003E_k__BackingField>
+                  <_x003C_PostSceneRef_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Scene]]">
+                    <contentPath />
+                  </_x003C_PostSceneRef_x003E_k__BackingField>
+                </item>
+                <item dataType="Struct" type="Dove_Game.Test_Logic.DialogComponent" id="2753411636">
+                  <_x003C_DialogMessage_x003E_k__BackingField dataType="String">Goku: We don’t know for sure, but I have a feeling you’re right Unknown. We don’t have much time, lets go rescue Bowser!</_x003C_DialogMessage_x003E_k__BackingField>
+                  <_x003C_DialogSprite_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
+                    <contentPath dataType="String">Data\Characters\DialogImage\DBZBackgroundTUG.Material.res</contentPath>
+                  </_x003C_DialogSprite_x003E_k__BackingField>
+                  <_x003C_nextScriptDialog_x003E_k__BackingField dataType="Int">-1</_x003C_nextScriptDialog_x003E_k__BackingField>
+                  <_x003C_PlayerOneDialog_x003E_k__BackingField dataType="Bool">false</_x003C_PlayerOneDialog_x003E_k__BackingField>
+                  <_x003C_PostSceneRef_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Scene]]">
+                    <contentPath />
+                  </_x003C_PostSceneRef_x003E_k__BackingField>
+                </item>
+                <item dataType="Struct" type="Dove_Game.Test_Logic.DialogComponent" id="2721846662">
+                  <_x003C_DialogMessage_x003E_k__BackingField dataType="String">Bowser's Minion: YIPPEE</_x003C_DialogMessage_x003E_k__BackingField>
+                  <_x003C_DialogSprite_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
+                    <contentPath dataType="String">Data\Characters\DialogImage\DBZBackgroundTGKK.Material.res</contentPath>
+                  </_x003C_DialogSprite_x003E_k__BackingField>
+                  <_x003C_nextScriptDialog_x003E_k__BackingField dataType="Int">1</_x003C_nextScriptDialog_x003E_k__BackingField>
+                  <_x003C_PlayerOneDialog_x003E_k__BackingField dataType="Bool">false</_x003C_PlayerOneDialog_x003E_k__BackingField>
+                  <_x003C_PostSceneRef_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Scene]]">
+                    <contentPath dataType="String">Data\Scenes\DialogScenes\MarioWorld\MarioLevelOnePre.Scene.res</contentPath>
+                  </_x003C_PostSceneRef_x003E_k__BackingField>
+                </item>
+              </_items>
+              <_size dataType="Int">10</_size>
+              <_version dataType="Int">10</_version>
+            </_nextDialog>
+            <_nextScene dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Scene]]">
+              <contentPath dataType="String">Data\Scenes\DialogScenes\DbzWorld\DbzGokuFightPost.Scene.res</contentPath>
+            </_nextScene>
+            <active dataType="Bool">true</active>
+            <gameobj dataType="ObjectRef">2151202776</gameobj>
+            <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
+          </item>
+        </_items>
+        <_size dataType="Int">3</_size>
+        <_version dataType="Int">3</_version>
+      </compList>
+      <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="388811274" surrogate="true">
+        <header />
+        <body>
+          <keys dataType="Array" type="System.Type[]" id="3523087900">
+            <item dataType="ObjectRef">2530523054</item>
+            <item dataType="Type" id="3420467652" value="Duality.Components.SoundEmitter" />
+            <item dataType="Type" id="3182682518" value="Dove_Game.Scene_Components.DBZ_World.DbzBossLevelController" />
+          </keys>
+          <values dataType="Array" type="Duality.Component[]" id="3806157846">
+            <item dataType="ObjectRef">216550412</item>
+            <item dataType="ObjectRef">4195094663</item>
+            <item dataType="ObjectRef">548768644</item>
+          </values>
+        </body>
+      </compMap>
+      <compTransform dataType="ObjectRef">216550412</compTransform>
+      <identifier dataType="Struct" type="System.Guid" surrogate="true">
+        <header>
+          <data dataType="Array" type="System.Byte[]" id="847584136">+fkYbCAHV0a6M+sNB0LFdg==</data>
+        </header>
+        <body />
+      </identifier>
+      <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
+      <name dataType="String">DbzBoss</name>
+      <parent />
+      <prefabLink />
+    </item>
   </serializeObj>
   <sourcePath />
 </root>

@@ -59,6 +59,12 @@ namespace Dove_Game.Enemies.DBZ_World
                         enemyTransform.Pos = new Vector3(main.CharDirection == Direction.Left ? 
                             mainTransform.Pos.X + 95.0f : mainTransform.Pos.X - 95.0f, mainTransform.Pos.Y - 15.0f, mainTransform.Pos.Z);
 
+                        if (enemyTransform.Pos.X > 450f)
+                            enemyTransform.Pos = new Vector3(-450.0f, mainTransform.Pos.Y - 15.0f, mainTransform.Pos.Z);
+
+                        else if (enemyTransform.Pos.X < -450f)
+                            enemyTransform.Pos = new Vector3(450.0f, mainTransform.Pos.Y - 15.0f, mainTransform.Pos.Z);
+
                         CharDirection = main.GameObj.Transform.Pos.X > GameObj.Transform.Pos.X ? Direction.Left : Direction.Right;
                     }
                 }
@@ -71,7 +77,7 @@ namespace Dove_Game.Enemies.DBZ_World
                     enemySprite.AnimFirstFrame = CharDirection == Direction.Left ? 0 : 6;
 
                     var offset = main.CharDirection == Direction.Right ? -30.0f : 30.0f;
-                    GameObj.RigidBody.ApplyWorldImpulse(Vector2.UnitX*offset);
+                    GameObj.RigidBody.ApplyLocalForce(Vector2.UnitX*offset);
                     ChargeDelay = DelayTime;
                 }
 

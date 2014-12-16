@@ -32,6 +32,13 @@ namespace Dove_Game.Test_Logic
             set { _awaitingInput = value; }
         }
 
+        private int _currentDialogPos;
+        public int CurrentDialogPos
+        {
+            get { return _currentDialogPos; }
+            set { _currentDialogPos = value; }
+        }
+
         [NonSerialized]
         private CanvasBuffer _buffer = null;
 
@@ -50,7 +57,7 @@ namespace Dove_Game.Test_Logic
 
         public static void AssignDialogScript(object sender, EventArgs e, List<DialogComponent> dscript)
         {
-           DialogScript = dscript.ToList();
+            DialogScript = dscript;
             Scene.Entered -= WorldSelectionMap.SceneLoadHandler;
         }
 
@@ -59,10 +66,11 @@ namespace Dove_Game.Test_Logic
             // Create a buffer to cache and re-use vertices. Not required, but will boost performance.
             if (this._buffer == null) this._buffer = new CanvasBuffer();
             
-            if (DialogScript != null && DialogScript.Count > 0 && !AwaitingInput)
+            if (DialogScript != null && DialogScript.Count > CurrentDialogPos && !AwaitingInput)
             {
-                CurrentDialog = DialogScript.First();
-                DialogScript.Remove(CurrentDialog);
+                CurrentDialog = DialogScript.ElementAt(CurrentDialogPos); // DialogScript.First();
+                CurrentDialogPos++;
+                // DialogScript.Remove(CurrentDialog);
                 AwaitingInput = true;
             }
 
@@ -79,6 +87,7 @@ namespace Dove_Game.Test_Logic
                     var spriteTransform = dialogSprite.AddComponent<Transform>();
                     spriteMaterial = dialogSprite.AddComponent<SpriteRenderer>();
                     spriteTransform.Pos = new Vector3(0, 0f, 0f);
+                    spriteTransform.Scale *= 3.0f;
                     Scene.Current.AddObject(dialogSprite);
                 }
 
@@ -139,18 +148,43 @@ namespace Dove_Game.Test_Logic
         {
             if (AwaitingInput && DualityApp.Keyboard.KeyHit(Key.Space))
             {
-                if (DialogScript.Count == 0)
+                if (DialogScript.Count == CurrentDialogPos)
                 {
                     if (CurrentDialog.nextScriptDialog != null)
                     {
-                        WorldSelectionMap.SceneLoadHandler = delegate(object sender, EventArgs e)
+                        var nextScript = new List<DialogComponent>();
+
+                        switch (CurrentDialog.nextScriptDialog)
                         {
-                            AssignDialogScript(sender, e, CurrentDialog.nextScriptDialog);
-                        };
-                        Scene.Entered += WorldSelectionMap.SceneLoadHandler;
+                            case 0:
+                                nextScript = DialogScripts.DbzLevelTwoPre;
+                                break;
+                            case 1:
+                                nextScript = DialogScripts.MarioLevelOnePre;
+                                break;
+                            case 2:
+                                nextScript = DialogScripts.LinkLevelOnePre;
+                                break;
+                            case 3:
+                                nextScript = DialogScripts.FinalBossPre;
+                                break;
+                        }
+
+                        if (nextScript.Count > 0)
+                        {
+                            WorldSelectionMap.SceneLoadHandler = delegate(object sender, EventArgs e)
+                            {
+                                AssignDialogScript(sender, e, nextScript);
+                            };
+
+                            Scene.Entered += WorldSelectionMap.SceneLoadHandler;
+                        }
                     }
 
-                    Scene.SwitchTo(CurrentDialog.PostSceneRef, true);
+                    var nextScene = CurrentDialog.PostSceneRef;
+                    AwaitingInput = false;
+                    CurrentDialog = null;
+                    Scene.SwitchTo(nextScene, true);
                 }
                 
                 AwaitingInput = false;

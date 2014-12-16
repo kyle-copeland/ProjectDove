@@ -28,6 +28,8 @@ namespace Dove_Game.Enemies
             this.bulletMaterial = Test_Logic.ContentRefs.rocketBullet;
             attackCooldown = 5000.0f;
             attackTimer = 5000.0f;
+
+            this.autoShoot = false;
             attacks = new BossAttack[] { new Stun(), new BlackoutScreen(), new Charge() };
         }
 
@@ -71,8 +73,8 @@ namespace Dove_Game.Enemies
                     SpriteRenderer sprite = screenBlackout.AddComponent<SpriteRenderer>();
                     Transform transform = screenBlackout.AddComponent<Transform>();
                     sprite.SharedMaterial = Test_Logic.ContentRefs.staticScreen;
-                    sprite.Rect = Rect.AlignCenter(0, 0, 4000, 4000);
-                    transform.Pos = new Vector3(boss.GameObj.Transform.GetWorldPoint(Vector2.Zero), -2.0f);
+                    sprite.Rect = Rect.AlignCenter(0, 0, 1222, 650 );
+                    transform.Pos = new Vector3(boss.GameObj.Transform.GetWorldPoint(Vector2.Zero), -5.0f);
                     Scene.Current.AddObject(screenBlackout);
                     
                     boss.nextAttack = BLACKOUT;

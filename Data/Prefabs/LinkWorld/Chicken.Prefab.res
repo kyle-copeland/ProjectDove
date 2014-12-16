@@ -16,17 +16,17 @@
           <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
           <parentTransform />
           <pos dataType="Struct" type="OpenTK.Vector3">
-            <X dataType="Float">350</X>
-            <Y dataType="Float">123</Y>
+            <X dataType="Float">316</X>
+            <Y dataType="Float">38</Y>
             <Z dataType="Float">0</Z>
           </pos>
           <posAbs dataType="Struct" type="OpenTK.Vector3">
-            <X dataType="Float">350</X>
-            <Y dataType="Float">123</Y>
+            <X dataType="Float">316</X>
+            <Y dataType="Float">38</Y>
             <Z dataType="Float">0</Z>
           </posAbs>
-          <scale dataType="Float">4</scale>
-          <scaleAbs dataType="Float">4</scaleAbs>
+          <scale dataType="Float">1</scale>
+          <scaleAbs dataType="Float">1</scaleAbs>
           <vel dataType="Struct" type="OpenTK.Vector3">
             <X dataType="Float">0</X>
             <Y dataType="Float">0</Y>
@@ -79,7 +79,7 @@
           <colWith dataType="Enum" type="Duality.Components.Physics.CollisionCategory" name="Cat1, Cat2, Cat4, Cat5" value="27" />
           <continous dataType="Bool">false</continous>
           <explicitMass dataType="Float">50</explicitMass>
-          <fixedAngle dataType="Bool">false</fixedAngle>
+          <fixedAngle dataType="Bool">true</fixedAngle>
           <gameobj dataType="ObjectRef">975940092</gameobj>
           <ignoreGravity dataType="Bool">false</ignoreGravity>
           <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
@@ -119,7 +119,7 @@
               </item>
             </_items>
             <_size dataType="Int">1</_size>
-            <_version dataType="Int">3</_version>
+            <_version dataType="Int">4</_version>
           </shapes>
         </item>
         <item dataType="Struct" type="Dove_Game.ChargeAI" id="1693339483">
@@ -129,7 +129,7 @@
           <direction dataType="Enum" type="Dove_Game.Direction" name="Right" value="1" />
           <force dataType="Float">10</force>
           <gameobj dataType="ObjectRef">975940092</gameobj>
-          <healthPts dataType="Int">50</healthPts>
+          <healthPts dataType="Int">10</healthPts>
           <impulse dataType="Float">3</impulse>
           <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
           <lastFrame dataType="Int">0</lastFrame>

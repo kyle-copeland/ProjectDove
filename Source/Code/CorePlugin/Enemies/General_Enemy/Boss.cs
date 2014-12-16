@@ -26,11 +26,12 @@ namespace Dove_Game.Enemies
         // each boss must specify its bullet information
         protected ContentRef<BulletBlueprint> bulletBlueprint = Test_Logic.ContentRefs.BBP_Default.Res; 
         protected ContentRef<Material> bulletMaterial = null;
-        protected int BulletSpeed = 30;
+        protected int BulletSpeed = 8;
         //Special boss attack information
         protected BossAttack[] attacks = null;
         protected float attackTimer = 4000.0f;
-        protected float attackCooldown = 4000.0f;
+        public float attackCooldown = ATTACK_INTERVAL;
+        public const float ATTACK_INTERVAL = 4000.0f;
         public int nextAttack = NONE;
         public const int NONE = -1;
 
@@ -51,7 +52,8 @@ namespace Dove_Game.Enemies
             {
                 if (nextAttack == NONE)
                     nextAttack = specialAttackPicker.Next(attacks.Length);
-                attacks[1].attack(this);
+                 
+                attacks[nextAttack].attack(this);
                 attackTimer = attackCooldown;
             }
             else if (nextAttack == NONE)
@@ -66,7 +68,7 @@ namespace Dove_Game.Enemies
               
                 Move(Vector2.UnitX);
             }
-           
+            base.OnUpdate();
         }
 
         public override void Move(Vector2 unitDirection)
@@ -85,7 +87,7 @@ namespace Dove_Game.Enemies
             {
                 float mainPosition = playerOne.GameObj.Transform.Pos.X;
                 float bossPosition = this.GameObj.Transform.Pos.X;
-                int relativeOffset = 150;
+                int relativeOffset = 30;
                 //if boss is moving right and player on left
                 float distance = bossPosition - mainPosition;
                 if (distance > relativeOffset &&  this.CharDirection == Direction.Right)
@@ -110,9 +112,9 @@ namespace Dove_Game.Enemies
             //reset bullet timer
             WeaponTimer = WeaponDelay;
 
-            Bullet bullet = bulletBlueprint.Res.CreateBullet(CharDirection,bulletMaterial);
-
-            bullet.Fire(body.LinearVelocity, transform.GetWorldPoint(localPos), transform.Angle + localAngle, BulletSpeed);
+            Test_Logic.EnemyBullet bullet = bulletBlueprint.Res.CreateBullet(CharDirection,bulletMaterial);
+            bullet.GameObj.Transform.Scale = 0.25f;
+            bullet.Fire(body.LinearVelocity, transform.GetWorldPoint(localPos), 0, BulletSpeed);
             Scene.Current.AddObject(bullet.GameObj);
         }
 
@@ -146,6 +148,7 @@ namespace Dove_Game.Enemies
                     else
                         sprite.CustomFrameSequence = seqWalkRight;
                     sprite.AnimLoopMode = AnimSpriteRenderer.LoopMode.PingPong;
+                    sprite.AnimDuration = 2.0f;
                 }
             }
         }

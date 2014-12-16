@@ -78,6 +78,8 @@ namespace Dove_Game.Test_Logic
             set { _blendMaterial = value; }
         }
 
+        public static bool ResetGame;
+
         void ICmpUpdatable.OnUpdate()
         {
             if (GameOver && DualityApp.Keyboard[Key.Enter])
@@ -85,18 +87,28 @@ namespace Dove_Game.Test_Logic
                 var endOverlay = Scene.Current.FindGameObject<EndGameOverlay>();
                 var endRenderer = endOverlay.GetComponent<SpriteRenderer>();
                 var endTransform = endOverlay.GetComponent<Transform>();
-                endTransform.Pos = new Vector3(0, 0, 10);
+                
+                endTransform.Pos = new Vector3(-245.0f, 0, 10.0f);
                 endRenderer.SharedMaterial = Material.SolidBlack;
 
                 GameOver = false;
                 GameWin = false;
-                GameController.ReloadScene();
+                GameStarted = false;
 
-                Scene.SwitchTo(ContentRefs.StartScene);
+                ResetGame = true;
+                //GameController.ReloadScene();
+
+                // Scene.SwitchTo(ContentRefs.WorldMapScene);
+            }
+
+            if (ResetGame)
+            {
+                ResetGame = false;
+                Scene.SwitchTo(ContentRefs.WorldMapScene);
             }
 
             // If the game has ended, nothing to do here
-            else if (GameOver || GameWin)
+            if (GameOver || GameWin)
                 return;
             
             if (MainCharacter == null)

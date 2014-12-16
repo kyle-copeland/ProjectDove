@@ -66,17 +66,20 @@ namespace Dove_Game
                         RigidBody body = boss.GameObj.RigidBody;
                         Transform transform = boss.GameObj.Transform;
                         ContentRef<Material> fireballMaterial = GameRes.Data.Scenes.Bullets.Fireball_Material;
-
-                        Bullet fireball = Test_Logic.ContentRefs.BBP_Default.Res.CreateBullet(boss.CharDirection, fireballMaterial, true, new List<int> { 4, 5, 6, 7 });
+                        int fireballMaterialRows = 4;
+                        int fireballMaterialCols = 4;
+                        Bullet fireball = Test_Logic.ContentRefs.BBP_Default.Res.CreateBullet(boss.CharDirection, fireballMaterial, true, new List<int> { 4, 5, 6, 7 },fireballMaterialRows,fireballMaterialCols);
 
                         fireball.Fire(body.LinearVelocity, transform.GetWorldPoint(Vector2.Zero), (seq[5 - fireballsLeft] * speed).Y, (seq[5 - fireballsLeft] * speed).X);
                         Scene.Current.AddObject(fireball.GameObj);
                        
                         fireballsLeft--;
+                        boss.attackCooldown = 200.0f;
                         if(fireballsLeft == 0)
                         {
                             boss.nextAttack = NONE;
                             fireballsLeft = NONE;
+                            boss.attackCooldown = ATTACK_INTERVAL;
                         }
                         else
                             boss.nextAttack = FIREBALL_RAINBOW;

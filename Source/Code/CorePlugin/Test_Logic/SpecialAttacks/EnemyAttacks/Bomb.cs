@@ -55,10 +55,10 @@ namespace Dove_Game
             GameObject explosion = new GameObject("Explosion");
             
             RigidBody body = explosion.AddComponent<RigidBody>();
-            Material spriteMaterial = Material.SolidBlack.Res;
+            Material spriteMaterial = ContentRefs.explosion.Res;
            // Vector2 spriteSize = spriteMaterial.MainTexture.Res.Size;
             Vector2 spriteSize = new Vector2(100, 100);
-            float spriteRadius = MathF.Max(spriteSize.X, spriteSize.Y) * 0.5f;
+            float spriteRadius = MathF.Max(spriteSize.X, spriteSize.Y) * 0.3f;
             body.ClearShapes();
             CircleShapeInfo circleShape = new CircleShapeInfo(spriteRadius, Vector2.Zero, 1.0f);
             circleShape.IsSensor = false;
@@ -69,6 +69,10 @@ namespace Dove_Game
             AnimSpriteRenderer sprite = explosion.AddComponent<AnimSpriteRenderer>();
             sprite.SharedMaterial = spriteMaterial;
             sprite.Rect = Rect.AlignCenter(0, 0, spriteSize.X, spriteSize.Y);
+            sprite.AnimFirstFrame = 0;
+            sprite.AnimFrameCount = 3;
+            sprite.AnimDuration = 0.5f;
+            transform.Scale = 1.5f;
             Explosion comp = explosion.AddComponent<Explosion>();
            
             comp.InitFrom();

@@ -5,7 +5,7 @@
     <compList dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Component]]" id="1120444292">
       <_items dataType="Array" type="Duality.Component[]" id="4131199044">
         <item dataType="Struct" type="Duality.Components.Transform" id="123647283">
-          <active dataType="Bool">true</active>
+          <active dataType="Bool">false</active>
           <angle dataType="Float">0</angle>
           <angleAbs dataType="Float">0</angleAbs>
           <angleVel dataType="Float">0</angleVel>
@@ -16,14 +16,14 @@
           <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
           <parentTransform />
           <pos dataType="Struct" type="OpenTK.Vector3">
-            <X dataType="Float">185</X>
-            <Y dataType="Float">251</Y>
-            <Z dataType="Float">0</Z>
+            <X dataType="Float">-121</X>
+            <Y dataType="Float">95</Y>
+            <Z dataType="Float">-0.01</Z>
           </pos>
           <posAbs dataType="Struct" type="OpenTK.Vector3">
-            <X dataType="Float">185</X>
-            <Y dataType="Float">251</Y>
-            <Z dataType="Float">0</Z>
+            <X dataType="Float">-121</X>
+            <Y dataType="Float">95</Y>
+            <Z dataType="Float">-0.01</Z>
           </posAbs>
           <scale dataType="Float">0.637993336</scale>
           <scaleAbs dataType="Float">0.637993336</scaleAbs>
@@ -39,7 +39,7 @@
           </velAbs>
         </item>
         <item dataType="Struct" type="Duality.Components.Renderers.AnimSpriteRenderer" id="1765735028">
-          <active dataType="Bool">true</active>
+          <active dataType="Bool">false</active>
           <animDuration dataType="Float">5</animDuration>
           <animFirstFrame dataType="Int">16</animFirstFrame>
           <animFrameCount dataType="Int">1</animFrameCount>
@@ -76,9 +76,9 @@
           <angularVel dataType="Float">0</angularVel>
           <bodyType dataType="Enum" type="Duality.Components.Physics.BodyType" name="Dynamic" value="1" />
           <colCat dataType="Enum" type="Duality.Components.Physics.CollisionCategory" name="Cat1" value="1" />
-          <colWith dataType="Enum" type="Duality.Components.Physics.CollisionCategory" name="Cat2, Cat3, Cat4, Cat5" value="30" />
+          <colWith dataType="Enum" type="Duality.Components.Physics.CollisionCategory" name="Cat2, Cat3, Cat4, Cat5, Cat7" value="94" />
           <continous dataType="Bool">false</continous>
-          <explicitMass dataType="Float">0</explicitMass>
+          <explicitMass dataType="Float">3.09</explicitMass>
           <fixedAngle dataType="Bool">true</fixedAngle>
           <gameobj dataType="ObjectRef">2058299647</gameobj>
           <ignoreGravity dataType="Bool">false</ignoreGravity>
@@ -109,7 +109,7 @@
               </item>
             </_items>
             <_size dataType="Int">1</_size>
-            <_version dataType="Int">3</_version>
+            <_version dataType="Int">4</_version>
           </joints>
           <linearDamp dataType="Float">0.3</linearDamp>
           <linearVel dataType="Struct" type="OpenTK.Vector2">
@@ -127,32 +127,32 @@
                 <sensor dataType="Bool">false</sensor>
                 <vertices dataType="Array" type="OpenTK.Vector2[]" id="1159751936">
                   <item dataType="Struct" type="OpenTK.Vector2">
-                    <X dataType="Float">-18</X>
-                    <Y dataType="Float">-32</Y>
+                    <X dataType="Float">-25.4999886</X>
+                    <Y dataType="Float">-18.0000019</Y>
                   </item>
                   <item dataType="Struct" type="OpenTK.Vector2">
-                    <X dataType="Float">1</X>
-                    <Y dataType="Float">-32</Y>
+                    <X dataType="Float">-6.49998856</X>
+                    <Y dataType="Float">-18.0000019</Y>
                   </item>
                   <item dataType="Struct" type="OpenTK.Vector2">
-                    <X dataType="Float">1</X>
-                    <Y dataType="Float">8</Y>
+                    <X dataType="Float">-6.49998856</X>
+                    <Y dataType="Float">21.9999981</Y>
                   </item>
                   <item dataType="Struct" type="OpenTK.Vector2">
-                    <X dataType="Float">-18</X>
-                    <Y dataType="Float">8</Y>
+                    <X dataType="Float">-25.4999886</X>
+                    <Y dataType="Float">21.9999981</Y>
                   </item>
                 </vertices>
               </item>
             </_items>
             <_size dataType="Int">1</_size>
-            <_version dataType="Int">4</_version>
+            <_version dataType="Int">5</_version>
           </shapes>
         </item>
         <item dataType="Struct" type="Dove_Game.PlayerOne" id="3455570211">
           <_attacking dataType="Bool">false</_attacking>
           <_elaspedRespawnTime dataType="Float">0</_elaspedRespawnTime>
-          <_sensorCount dataType="Int">0</_sensorCount>
+          <_movementOffset dataType="Float">0.75</_movementOffset>
           <_summonedCharacter />
           <active dataType="Bool">true</active>
           <currentSA />

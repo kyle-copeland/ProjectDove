@@ -16,9 +16,9 @@ namespace Dove_Game.Test_Logic
 
         public ContentRef<Material> DialogSprite { get; set; }
         public ContentRef<Scene> PostSceneRef { get; set; }
-        public List<DialogComponent> nextScriptDialog { get; set; }
+        public int nextScriptDialog { get; set; }
 
-        public DialogComponent(bool choosePlayerOne, string message, ContentRef<Material> sprite, ContentRef<Scene> postScene, List<DialogComponent> enterScriptDialog)
+        public DialogComponent(bool choosePlayerOne, string message, ContentRef<Material> sprite, ContentRef<Scene> postScene, int enterScriptDialog)
         {
             PlayerOneDialog = choosePlayerOne;
             DialogMessage = message;

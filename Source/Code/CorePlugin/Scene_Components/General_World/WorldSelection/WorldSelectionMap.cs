@@ -144,6 +144,7 @@ namespace Dove_Game.Test_Logic
 
         public void OnInit(Component.InitContext context)
         {
+            GameController.LifeCount = 3;
             WorldIndex = 0;
             WorldList = new List<WorldComponent>()
             {
