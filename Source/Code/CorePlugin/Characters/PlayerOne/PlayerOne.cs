@@ -28,6 +28,8 @@ namespace Dove_Game
         private Character _summonedCharacter;
         private float _elaspedRespawnTime;
 
+        private float maxVelocity;
+
         public bool isStunned = false;
 
         public float ElaspedRespawnTime
@@ -95,7 +97,8 @@ namespace Dove_Game
                     }
                     CharDirection = Direction.Left;
                     MovementVector = Vector2.UnitX * -1.0f;
-                    playerOne.ApplyWorldImpulse(-Vector2.UnitX * MovementOffset);
+                    if(Math.Abs(playerOne.LinearVelocity.X) < maxVelocity)
+                        playerOne.ApplyWorldImpulse(-Vector2.UnitX * MovementOffset);
                     //playerMovement.MoveBy(MovementVector * Time.TimeMult);
                 }
 
@@ -111,12 +114,13 @@ namespace Dove_Game
                     }
                     CharDirection = Direction.Right;
                     MovementVector = Vector2.UnitX * 1.0f;
-                    playerOne.ApplyWorldImpulse(Vector2.UnitX * MovementOffset);
+                    if (Math.Abs(playerOne.LinearVelocity.X) < maxVelocity)
+                        playerOne.ApplyWorldImpulse(Vector2.UnitX * MovementOffset);
                     //playerMovement.MoveBy(MovementVector * Time.TimeMult);
                 }
 
                 // Move up
-                else if (DualityApp.Keyboard[Key.Up] && Enemies.Boss.onGround(this.GameObj.RigidBody))
+                if (DualityApp.Keyboard[Key.Up] && Enemies.Boss.onGround(this.GameObj.RigidBody))
                 {
                     if (CharDirection == Direction.Right)
                         playerSprite.AnimFirstFrame = 0;
@@ -128,7 +132,7 @@ namespace Dove_Game
                     playerSprite.AnimLoopMode = AnimSpriteRenderer.LoopMode.Loop;
                     
                     MovementVector = Vector2.UnitY * -1.0f;
-                    playerOne.ApplyLocalImpulse(-Vector2.UnitY * 40.0f);
+                    playerOne.ApplyLocalImpulse(-Vector2.UnitY * 30.0f);
                 }
 
                 // Gun Sequence
@@ -274,9 +278,10 @@ namespace Dove_Game
 
         public override void OnInit(Component.InitContext context)
         {
-            MovementOffset = 0.75f;
+            MovementOffset = 0.35f;
             HealthPoints = 100;
             ElaspedRespawnTime = 0.0f;
+            maxVelocity = 5.0f;
             this.GameObj.RigidBody.Mass = 3.09f;
             this.GameObj.RigidBody.CollisionCategory = CollisionCategory.Cat1;
             this.GameObj.RigidBody.CollidesWith = CollisionCategory.Cat3 | CollisionCategory.Cat2 | CollisionCategory.Cat4 | CollisionCategory.Cat5 | CollisionCategory.Cat7;
