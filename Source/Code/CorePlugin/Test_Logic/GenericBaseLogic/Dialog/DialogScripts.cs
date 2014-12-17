@@ -81,7 +81,7 @@ namespace Dove_Game.Test_Logic
             new DialogComponent(false, "Unknown: Do you think Slenderman is behind all this? Meta Knight mentioned that the good guys are now bad guys and that people are disappearing…", ContentRefs.DbzKKP_UG, null, -1),
             new DialogComponent(false, "Goku: We don’t know for sure, but I have a feeling you’re right Unknown. We don’t have much time, lets go rescue Bowser!", ContentRefs.DbzKKP_UG, null, -1),
             
-            new DialogComponent(false, "Bowser's Minion: YIPPEE", ContentRefs.DbzKKP_UM, GameRes.Data.Scenes.DialogScenes.MarioWorld.MarioLevelOnePre_Scene, 1)
+            new DialogComponent(false, "Bowser's Minion: YIPPEE", ContentRefs.DbzKKP_UM, GameRes.Data.Scenes.DialogScenes.MarioWorld.PeachTransition_Scene, 1)
         };
 
         public static List<DialogComponent> MarioLevelOnePre = new List<DialogComponent>
