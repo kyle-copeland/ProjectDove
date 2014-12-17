@@ -32,6 +32,11 @@ namespace Dove_Game.Test_Logic
             {
                 _mainCharacter.doDamage(100);
             }
+
+            if (_mainCharacter.GameObj.Transform.Pos.X > 824)
+            {
+                Scene.SwitchTo(GameRes.Data.Scenes.FinalWorlds.MarioWorld.MarioCastle_Scene);
+            }
         }
     }
 }

@@ -59,6 +59,7 @@ namespace Dove_Game.Test_Logic
         {
             DialogScript = dscript;
             Scene.Entered -= WorldSelectionMap.SceneLoadHandler;
+            WorldSelectionMap.SceneLoadHandler = null;
         }
 
         public void Draw(IDrawDevice device)
@@ -87,13 +88,19 @@ namespace Dove_Game.Test_Logic
                     var spriteTransform = dialogSprite.AddComponent<Transform>();
                     spriteMaterial = dialogSprite.AddComponent<SpriteRenderer>();
                     spriteTransform.Pos = new Vector3(0, 0f, 0f);
-                    spriteTransform.Scale *= 3.0f;
                     Scene.Current.AddObject(dialogSprite);
                 }
 
                 // Otherwise, retrieve and set the sprite object.
                 else 
                     spriteMaterial = dialogSprite.GetComponent<SpriteRenderer>();
+
+                var scaleFactor = 3.0f;
+                if (CurrentDialog.DialogSprite.Name == "DBZShenron" ||
+                    CurrentDialog.DialogSprite.Name == "Dragonballs")
+                    scaleFactor = 2.0f;
+
+                dialogSprite.GetComponent<Transform>().Scale = scaleFactor;
 
                 // Update the sprite's image.
                 spriteMaterial.SharedMaterial = CurrentDialog.DialogSprite;
@@ -105,7 +112,7 @@ namespace Dove_Game.Test_Logic
                 canvas.State.ColorTint = ColorRgba.VeryLightGrey.WithAlpha(0.5f);
 
                 var dialog = string.Format(CurrentDialog.DialogMessage);
-                const int substringLimit = 70;
+                const int substringLimit = 90;
                 var substringCount = dialog.Count() / substringLimit;
                 var offset = 0f;
 
@@ -113,11 +120,11 @@ namespace Dove_Game.Test_Logic
                 {
                     if (dialog.Count() > substringLimit)
                     {
-                        canvas.DrawText(dialog.Substring(0, substringLimit), 0f, (device.TargetSize.Y / 4.0f) + 70.0f + offset, 0.0f, Alignment.Center);
+                        canvas.DrawText(dialog.Substring(0, substringLimit), 0f, (device.TargetSize.Y / 4.0f) + 40.0f + offset, 0.0f, Alignment.Center);
                         dialog = dialog.Substring(substringLimit);
                     }
                     else
-                        canvas.DrawText(dialog, 0f, (device.TargetSize.Y / 4.0f) + 70.0f + offset, 0.0f, Alignment.Center);
+                        canvas.DrawText(dialog, 0f, (device.TargetSize.Y / 4.0f) + 40.0f + offset, 0.0f, Alignment.Center);
 
                     offset += 10.0f;
                 }
@@ -130,7 +137,7 @@ namespace Dove_Game.Test_Logic
                     new VertexC1P3(new Vector3(0.0f + (device.TargetSize.X * 0.2875f), device.TargetSize.Y / 4.0f, 0f), ColorRgba.VeryLightGrey)
                 };
 
-                canvas.DrawVertices(points, VertexMode.LineLoop);
+                //canvas.DrawVertices(points, VertexMode.LineLoop);
                 //canvas.DrawPolygon(points, 0f, 0f);
                 //canvas.DrawRect(0.0f - (device.TargetSize.X * 0.4875f), device.TargetSize.Y/4.0f, device.TargetSize.X * 0.975f, 140.0f);
 
@@ -184,6 +191,8 @@ namespace Dove_Game.Test_Logic
                     var nextScene = CurrentDialog.PostSceneRef;
                     AwaitingInput = false;
                     CurrentDialog = null;
+                    DialogScript = null;
+                    CurrentDialogPos = 0;
                     Scene.SwitchTo(nextScene, true);
                 }
                 

@@ -22,18 +22,40 @@ namespace Dove_Game.Test_Logic
         public static ContentRef<Material> GokuHero = GameRes.Data.Characters.DialogImage.goku_hero_Material;
 
         // Dialog backgrounds
-        public static ContentRef<Material> CastleBM = GameRes.Data.Characters.DialogImage.CastleTextBM_Material;
-        public static ContentRef<Material> CastleGB = GameRes.Data.Characters.DialogImage.CastleTextGB_Material;
-        public static ContentRef<Material> CastleGM = GameRes.Data.Characters.DialogImage.CastleTextGM_Material;
-        public static ContentRef<Material> CastleUB = GameRes.Data.Characters.DialogImage.CastleTextUB_Material;
-        public static ContentRef<Material> CastleUG = GameRes.Data.Characters.DialogImage.CastleTextUG_Material;
-        public static ContentRef<Material> CastleUM = GameRes.Data.Characters.DialogImage.CastleTextUM_Material;
-        public static ContentRef<Material> DbzKKP_GKK = GameRes.Data.Characters.DialogImage.DBZBackgroundTGKK_Material;
-        public static ContentRef<Material> DbzKKP_UG = GameRes.Data.Characters.DialogImage.DBZBackgroundTUG_Material;
-        public static ContentRef<Material> DbzKKP_UKK = GameRes.Data.Characters.DialogImage.DBZBackgroundTUKK_Material;
-        public static ContentRef<Material> SlenderGU = GameRes.Data.Characters.DialogImage.SlendermanBackgroundText_Material;
-        public static ContentRef<Material> SlenderGS = GameRes.Data.Characters.DialogImage.SlendermanBackgroundTextGS_Material;
-        public static ContentRef<Material> SlenderUS = GameRes.Data.Characters.DialogImage.SlendermanBackgroundTextUS_Material;
+        public static ContentRef<Material> First_UMK = GameRes.Data.Characters.DialogImage.FirstWorld.WhispyBackgroundTextUM_Material;
+
+        public static ContentRef<Material> DbzSW_US = GameRes.Data.Characters.DialogImage.DbzWorld.SnakeWay.DBZBackgroundTUS_Material;
+        public static ContentRef<Material> DbzSW_UMK = GameRes.Data.Characters.DialogImage.DbzWorld.SnakeWay.DBZBackgroundTUMK_Material;
+        public static ContentRef<Material> DbzSW_DB = GameRes.Data.Characters.DialogImage.DbzWorld.SnakeWay.Dragonballs_Material;
+        public static ContentRef<Material> DbzSW_DBZS = GameRes.Data.Characters.DialogImage.DbzWorld.SnakeWay.DBZ_Shenron_Material;
+
+        public static ContentRef<Material> DbzKKP_GKK = GameRes.Data.Characters.DialogImage.DbzWorld.KingKai.KingPlanetTGKK_Material;
+        public static ContentRef<Material> DbzKKP_UG = GameRes.Data.Characters.DialogImage.DbzWorld.KingKai.KingPlanetTUG_Material;
+        public static ContentRef<Material> DbzKKP_UKK = GameRes.Data.Characters.DialogImage.DbzWorld.KingKai.KingPlanetTUKK_Material;
+        public static ContentRef<Material> DbzKKP_UM = GameRes.Data.Characters.DialogImage.DbzWorld.KingKai.KingPlanetTUMinion_copy_Material;
+
+        public static ContentRef<Material> MarioLand_GP = GameRes.Data.Characters.DialogImage.MarioWorld.MarioLand.MarioWorld1TGP_Material;
+        public static ContentRef<Material> MarioLand_UG = GameRes.Data.Characters.DialogImage.MarioWorld.MarioLand.MarioWorld1TUG_Material;
+        public static ContentRef<Material> MarioLand_UP = GameRes.Data.Characters.DialogImage.MarioWorld.MarioLand.MarioWorld1TUP_Material;
+
+        public static ContentRef<Material> CastleBM = GameRes.Data.Characters.DialogImage.MarioWorld.MarioCastle.CastleTextBM_Material;
+        public static ContentRef<Material> CastleGB = GameRes.Data.Characters.DialogImage.MarioWorld.MarioCastle.CastleTextGB_Material;
+        public static ContentRef<Material> CastleGM = GameRes.Data.Characters.DialogImage.MarioWorld.MarioCastle.CastleTextGM_Material;
+        public static ContentRef<Material> CastleUB = GameRes.Data.Characters.DialogImage.MarioWorld.MarioCastle.CastleTextUB_Material;
+        public static ContentRef<Material> CastleUG = GameRes.Data.Characters.DialogImage.MarioWorld.MarioCastle.CastleTextUG_Material;
+        public static ContentRef<Material> CastleUM = GameRes.Data.Characters.DialogImage.MarioWorld.MarioCastle.CastleTextUM_Material;
+
+        public static ContentRef<Material> LinkForestUG = GameRes.Data.Characters.DialogImage.LinkWorld.LinkForest.LinkForestTextUG_Material;
+
+        public static ContentRef<Material> LinkCastleGL = GameRes.Data.Characters.DialogImage.LinkWorld.LinkCastle.LinkBossTextGL_Material        ;
+        public static ContentRef<Material> LinkCastleGN = GameRes.Data.Characters.DialogImage.LinkWorld.LinkCastle.LinkBossTextGN_Material;
+        public static ContentRef<Material> LinkCastleUL = GameRes.Data.Characters.DialogImage.LinkWorld.LinkCastle.LinkBossTextUL_Material;
+        public static ContentRef<Material> LinkCastleUG = GameRes.Data.Characters.DialogImage.LinkWorld.LinkCastle.LinkBossTextUG_Material;
+        public static ContentRef<Material> LinkCastleUN = GameRes.Data.Characters.DialogImage.LinkWorld.LinkCastle.LinkBossTextUN_Material;
+
+        public static ContentRef<Material> SlenderGU = GameRes.Data.Characters.DialogImage.FinalWorld.SlendermanBackgroundText_Material;
+        public static ContentRef<Material> SlenderGS = GameRes.Data.Characters.DialogImage.FinalWorld.SlendermanBackgroundTextGS_Material;
+        public static ContentRef<Material> SlenderUS = GameRes.Data.Characters.DialogImage.FinalWorld.SlendermanBackgroundTextUS_Material;
 
         public static ContentRef<Material> GokuContentRef = GameRes.Data.Characters.Side_Characters.Goku_2d_2_Material;
         public static ContentRef<Material> BowserContentRef = GameRes.Data.Characters.Side_Characters.Bowser_Material;
@@ -85,7 +107,8 @@ namespace Dove_Game.Test_Logic
         // Dialog scenes
         public static ContentRef<Scene> IntroDialog = GameRes.Data.Scenes.DialogScenes.FinalWorld.IntroDialog_Scene;
         public static ContentRef<Scene> DbzLevelOnePre = GameRes.Data.Scenes.DialogScenes.DbzWorld.DbzLevelOnePre_Scene;
-        public static ContentRef<Scene> DbzLevelOnePost = GameRes.Data.Scenes.DialogScenes.DbzWorld.DbzLevelOnePost_Scene;
+        public static ContentRef<Scene> DbzLevelOnePost = GameRes.Data.Scenes.DialogScenes.DbzWorld.DbzLevelOnePost_Scene; 
+        public static ContentRef<Scene> DbzPreKingkaiDialog = GameRes.Data.Scenes.DialogScenes.DbzWorld.DbzPreKingKai_Scene;
         public static ContentRef<Scene> DbzLevelTwoPre = GameRes.Data.Scenes.DialogScenes.DbzWorld.DbzLevelTwoPre_Scene;
         public static ContentRef<Scene> DbzLevelTwoPost = GameRes.Data.Scenes.DialogScenes.DbzWorld.DbzLevelTwoPost_Scene;
         public static ContentRef<Scene> DbzGokuFightPost = GameRes.Data.Scenes.DialogScenes.DbzWorld.DbzGokuFightPost_Scene;

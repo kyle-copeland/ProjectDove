@@ -40,12 +40,12 @@ namespace Dove_Game.Scene_Components.General_World.GameControllers
         public void OnUpdate()
         {
             // Just testing linkage for now
-            WorldSelectionMap.SceneLoadHandler = delegate(object sender, EventArgs e)
-            {
-                DrawDialog.AssignDialogScript(sender, e, NextDialog);
-            };
-            Scene.Entered += WorldSelectionMap.SceneLoadHandler;
-            Scene.SwitchTo(NextScene);
+            //WorldSelectionMap.SceneLoadHandler = delegate(object sender, EventArgs e)
+            //{
+            //    DrawDialog.AssignDialogScript(sender, e, NextDialog);
+            //};
+            //Scene.Entered += WorldSelectionMap.SceneLoadHandler;
+            //Scene.SwitchTo(NextScene);
 
             if (GameController.GamePaused) return;
 

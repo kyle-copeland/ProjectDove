@@ -68,9 +68,11 @@ namespace Dove_Game
             Transform playerMovement = this.GameObj.Transform;
             AnimSpriteRenderer playerSprite = this.GameObj.GetComponent<AnimSpriteRenderer>();
 
+            if (!GameController.GamePaused)
+            {
             if (HealthPoints <= 0)
             {
-                ElaspedRespawnTime += Time.MsPFMult * Time.TimeMult;
+                    ElaspedRespawnTime += Time.MsPFMult*Time.TimeMult;
 
                 playerSprite.AnimDuration = 4;
                 playerSprite.AnimFirstFrame = 21;
@@ -118,7 +120,7 @@ namespace Dove_Game
                         playerOne.ApplyWorldImpulse(Vector2.UnitX * MovementOffset);
                     //playerMovement.MoveBy(MovementVector * Time.TimeMult);
                 }
-
+                
                 else if ((DualityApp.Keyboard.KeyReleased(Key.Left) || DualityApp.Keyboard.KeyReleased(Key.Right)) && Enemies.Boss.onGround(this.GameObj.RigidBody))
                 {
                     if (CharDirection == Direction.Right)
@@ -165,11 +167,13 @@ namespace Dove_Game
                         playerSprite.AnimDuration = 0.25f;
                         playerSprite.UpdateVisibleFrames();
 
-                        GameObject rocketBullet = Summon.SummonGameObject(SideCharacter.NoCharacter, Attack.PlayerBullet, this);
+                        GameObject rocketBullet = Summon.SummonGameObject(SideCharacter.NoCharacter, Attack.PlayerBullet,
+                            this);
                         CurrentSpecialAttack = rocketBullet.GetComponent<PlayerOneBullet>();
                         const float bulletSpeed = 20;
 
-                        ((PlayerOneBullet)CurrentSpecialAttack).Fire(playerOne.LinearVelocity, playerMovement.Pos.Xy, 0f, bulletSpeed);
+                        ((PlayerOneBullet) CurrentSpecialAttack).Fire(playerOne.LinearVelocity, playerMovement.Pos.Xy,
+                            0f, bulletSpeed);
                         Scene.Current.AddObject(rocketBullet);
                     }
                 }
@@ -220,7 +224,7 @@ namespace Dove_Game
                 if (playerSprite.CurrentFrame != LastFrame && playerSprite.CurrentFrame == 33)
                 {
                     isAttacking = false;
-                    playerSprite.CustomFrameSequence = new List<int>() { 33 };
+                        playerSprite.CustomFrameSequence = new List<int>() {33};
                     playerSprite.AnimLoopMode = AnimSpriteRenderer.LoopMode.Once;
                 }
 
@@ -239,6 +243,7 @@ namespace Dove_Game
             }
 
             weaponTimer -= Time.TimeMult * Time.MsPFMult;
+        }
         }
 
         // Collision detection
