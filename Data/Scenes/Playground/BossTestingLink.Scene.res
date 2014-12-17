@@ -241,7 +241,7 @@
       <active dataType="Bool">true</active>
       <children />
       <compList dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Component]]" id="240212880">
-        <_items dataType="Array" type="Duality.Component[]" id="136173884">
+        <_items dataType="Array" type="Duality.Component[]" id="136173884" length="4">
           <item dataType="Struct" type="Duality.Components.Transform" id="741179002">
             <active dataType="Bool">true</active>
             <gameobj dataType="ObjectRef">2675831366</gameobj>
@@ -257,11 +257,6 @@
             <gameobj dataType="ObjectRef">2675831366</gameobj>
             <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
           </item>
-          <item dataType="Struct" type="Dove_Game.Enemies.Zelda_World.LinkBoss" id="3527626437">
-            <active dataType="Bool">true</active>
-            <gameobj dataType="ObjectRef">2675831366</gameobj>
-            <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
-          </item>
         </_items>
         <_size dataType="Int">4</_size>
         <_version dataType="Int">20</_version>
@@ -273,13 +268,11 @@
             <item dataType="ObjectRef">1717510894</item>
             <item dataType="Type" id="3778121360" value="Duality.Components.Renderers.AnimSpriteRenderer" />
             <item dataType="ObjectRef">1683402974</item>
-            <item dataType="Type" id="4156727022" value="Dove_Game.Enemies.Zelda_World.LinkBoss" />
           </keys>
           <values dataType="Array" type="Duality.Component[]" id="891616394">
             <item dataType="ObjectRef">741179002</item>
             <item dataType="ObjectRef">2383266747</item>
             <item dataType="ObjectRef">1443640594</item>
-            <item dataType="ObjectRef">3527626437</item>
           </values>
         </body>
       </compMap>
