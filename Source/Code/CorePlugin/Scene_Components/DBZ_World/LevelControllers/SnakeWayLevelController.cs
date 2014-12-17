@@ -122,7 +122,8 @@ namespace Dove_Game.Test_Logic
                     DrawDialog.AssignDialogScript(sender, e, DialogScripts.DbzLevelOnePost);
                 };
                 Scene.Entered += WorldSelectionMap.SceneLoadHandler;
-                Scene.SwitchTo(ContentRefs.DbzLevelTwoPre);
+                Scene.Current.DisposeLater();
+                Scene.SwitchTo(GameRes.Data.Scenes.DialogScenes.DbzWorld.DbzLevelOnePost_Scene);
             }
 
             if (MainCharacter == null)

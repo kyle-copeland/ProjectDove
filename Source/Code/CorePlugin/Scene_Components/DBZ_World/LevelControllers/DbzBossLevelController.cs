@@ -16,7 +16,7 @@ namespace Dove_Game.Scene_Components.DBZ_World
         public override void OnInit(Component.InitContext context)
         {
             NextDialog = DialogScripts.DbzGokuFightPost;
-            NextScene = ContentRefs.DbzGokuFightPost;
+            NextScene = GameRes.Data.Scenes.DialogScenes.DbzWorld.DbzGokuFightPost_Scene;
         }
     }
 }

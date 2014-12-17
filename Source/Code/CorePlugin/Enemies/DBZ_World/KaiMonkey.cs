@@ -53,11 +53,11 @@ namespace Dove_Game.Enemies.DBZ_World
                     
                     if (playerDirection == Direction.Left)
                     {
-                        monkeyRigid.ApplyWorldImpulse(-Vector2.UnitX * 4.0f);
+                        monkeyRigid.ApplyWorldImpulse(-Vector2.UnitX * 1.0f);
                     }
                     else if (playerDirection == Direction.Right)
                     {
-                        monkeyRigid.ApplyWorldImpulse(Vector2.UnitX * 4.0f);
+                        monkeyRigid.ApplyWorldImpulse(Vector2.UnitX * 1.0f);
                     }
 
                     playerSprite.AnimFirstFrame = playerOne.CharDirection == Direction.Left ? 0 : 5;
