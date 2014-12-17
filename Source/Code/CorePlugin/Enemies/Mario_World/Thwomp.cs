@@ -45,7 +45,7 @@ namespace Dove_Game
             // ATTACK 
             else if (difference < 15 && this.GameObj.Transform.Vel.Length == 0)
             {
-                this.GameObj.RigidBody.ApplyLocalImpulse(Vector2.UnitY * 10000.0f);
+                this.GameObj.RigidBody.ApplyLocalImpulse(Vector2.UnitY * 20000.0f);
                 thwompSprite.AnimFirstFrame = 2;
             }
 
