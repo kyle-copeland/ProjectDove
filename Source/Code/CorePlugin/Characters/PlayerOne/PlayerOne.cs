@@ -103,20 +103,31 @@ namespace Dove_Game
                 }
 
                 // Move right
-                else if (DualityApp.Keyboard[Key.Right])
+                else if (DualityApp.Keyboard[Key.Right] )
                 {
                     if (Enemies.Boss.onGround(this.GameObj.RigidBody))
                     {
                         playerSprite.AnimDuration = 1;
                         playerSprite.AnimFirstFrame = 8;
                         playerSprite.AnimFrameCount = 4;
-                        playerSprite.AnimLoopMode = AnimSpriteRenderer.LoopMode.Loop;
+                        playerSprite.AnimLoopMode = AnimSpriteRenderer.LoopMode.PingPong;
                     }
                     CharDirection = Direction.Right;
                     MovementVector = Vector2.UnitX * 1.0f;
                     if (Math.Abs(playerOne.LinearVelocity.X) < maxVelocity)
                         playerOne.ApplyWorldImpulse(Vector2.UnitX * MovementOffset);
                     //playerMovement.MoveBy(MovementVector * Time.TimeMult);
+                }
+                
+                else if ((DualityApp.Keyboard.KeyReleased(Key.Left) || DualityApp.Keyboard.KeyReleased(Key.Right)) &&  Enemies.Boss.onGround(this.GameObj.RigidBody))
+                {
+                    if (CharDirection == Direction.Right)
+                        playerSprite.AnimFirstFrame = 16;
+                    else if (CharDirection == Direction.Left)
+                        playerSprite.AnimFirstFrame = 12;
+
+                    playerSprite.AnimFrameCount = 1;
+                    playerSprite.AnimLoopMode = AnimSpriteRenderer.LoopMode.PingPong;
                 }
 
                 // Move up
@@ -203,16 +214,7 @@ namespace Dove_Game
                     Scene.Current.AddObject(navi);
                 }
 
-                else if (Enemies.Boss.onGround(this.GameObj.RigidBody))
-                {
-                    if (CharDirection == Direction.Right)
-                        playerSprite.AnimFirstFrame = 16;
-                    else if (CharDirection == Direction.Left)
-                        playerSprite.AnimFirstFrame = 12;
-
-                    playerSprite.AnimFrameCount = 1;
-                    playerSprite.AnimLoopMode = AnimSpriteRenderer.LoopMode.Loop;
-                }
+                
 
                /* // All custom frame sequences end in 27, the current default animation for the Goku SpriteSheet. Reset after an attack animation.
                 if (playerSprite.CurrentFrame != LastFrame && playerSprite.CurrentFrame == 33)
