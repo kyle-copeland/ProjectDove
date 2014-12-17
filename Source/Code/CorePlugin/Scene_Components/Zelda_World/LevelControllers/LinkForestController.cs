@@ -33,13 +33,8 @@ namespace Dove_Game.Scene_Components.Zelda_World.LevelControllers
 
             if (_mainCharacter.GameObj.Transform.Pos.X > 1400)
             {
-                WorldSelectionMap.SceneLoadHandler = delegate(object sender, EventArgs e)
-                {
-                    DrawDialog.AssignDialogScript(sender, e, DialogScripts.LinkLevelOnePostBossPre);
-                };
-                Scene.Entered += WorldSelectionMap.SceneLoadHandler;
                 Scene.Current.DisposeLater();
-                Scene.SwitchTo(GameRes.Data.Scenes.DialogScenes.LinkWorld.LinkLevelOnePostBossPre_Scene);
+                Scene.SwitchTo(GameRes.Data.Scenes.DialogScenes.LinkWorld.NaviTransition_Scene);
             }
         }
     }

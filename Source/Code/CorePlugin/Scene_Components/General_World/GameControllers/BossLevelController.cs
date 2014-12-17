@@ -11,7 +11,7 @@ using OpenTK.Input;
 namespace Dove_Game.Scene_Components.General_World.GameControllers
 {
     [Serializable]
-    public abstract class BossLevelController : Component, ICmpUpdatable, ICmpInitializable
+    public class BossLevelController : Component, ICmpUpdatable, ICmpInitializable
     {
         private Boss _boss;
 
@@ -40,13 +40,13 @@ namespace Dove_Game.Scene_Components.General_World.GameControllers
         public void OnUpdate()
         {
             // Just testing linkage for now
-            WorldSelectionMap.SceneLoadHandler = delegate(object sender, EventArgs e)
-            {
-                DrawDialog.AssignDialogScript(sender, e, NextDialog);
-            };
-            Scene.Entered += WorldSelectionMap.SceneLoadHandler;
-            Scene.Current.DisposeLater();
-            Scene.SwitchTo(NextScene);
+            //WorldSelectionMap.SceneLoadHandler = delegate(object sender, EventArgs e)
+            //{
+            //    DrawDialog.AssignDialogScript(sender, e, NextDialog);
+            //};
+            //Scene.Entered += WorldSelectionMap.SceneLoadHandler;
+            //Scene.Current.DisposeLater();
+            //Scene.SwitchTo(NextScene);
 
             if (GameController.GamePaused) return;
 
@@ -77,7 +77,10 @@ namespace Dove_Game.Scene_Components.General_World.GameControllers
             }
         }
 
-        public abstract void OnInit(Component.InitContext context);
+        public virtual void OnInit(Component.InitContext context)
+        {
+            
+        }
 
         public void OnShutdown(Component.ShutdownContext context)
         {

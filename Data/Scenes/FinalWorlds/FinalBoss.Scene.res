@@ -110,33 +110,6 @@
         </prefab>
       </prefabLink>
     </item>
-    <item dataType="Struct" type="Duality.GameObject" id="3195318730">
-      <active dataType="Bool">true</active>
-      <children />
-      <compList dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Component]]" id="356904596">
-        <_items dataType="Array" type="Duality.Component[]" id="775932772" length="4" />
-        <_size dataType="Int">0</_size>
-        <_version dataType="Int">2</_version>
-      </compList>
-      <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="2418923574" surrogate="true">
-        <header />
-        <body>
-          <keys dataType="Array" type="System.Type[]" id="2958383934" />
-          <values dataType="Array" type="Duality.Component[]" id="1469945354" />
-        </body>
-      </compMap>
-      <compTransform />
-      <identifier dataType="Struct" type="System.Guid" surrogate="true">
-        <header>
-          <data dataType="Array" type="System.Byte[]" id="1081446990">n/ykRdA4Gk21s8MmVoxDTw==</data>
-        </header>
-        <body />
-      </identifier>
-      <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
-      <name dataType="String">DrawHealth</name>
-      <parent />
-      <prefabLink />
-    </item>
     <item dataType="Struct" type="Duality.GameObject" id="3721578079">
       <active dataType="Bool">true</active>
       <children />
@@ -377,7 +350,7 @@
       <active dataType="Bool">true</active>
       <children />
       <compList dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Component]]" id="76275682">
-        <_items dataType="Array" type="Duality.Component[]" id="4216313488" length="4">
+        <_items dataType="Array" type="Duality.Component[]" id="4216313488">
           <item dataType="Struct" type="Duality.Components.Transform" id="517582304">
             <active dataType="Bool">true</active>
             <angle dataType="Float">0</angle>
@@ -463,9 +436,19 @@
               <_version dataType="Int">10</_version>
             </shapes>
           </item>
+          <item dataType="Struct" type="Dove_Game.Scene_Components.General_World.GameControllers.BossLevelController" id="1442622311">
+            <_boss />
+            <_nextDialog />
+            <_nextScene dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Scene]]">
+              <contentPath />
+            </_nextScene>
+            <active dataType="Bool">true</active>
+            <gameobj dataType="ObjectRef">2452234668</gameobj>
+            <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
+          </item>
         </_items>
-        <_size dataType="Int">3</_size>
-        <_version dataType="Int">3</_version>
+        <_size dataType="Int">4</_size>
+        <_version dataType="Int">4</_version>
       </compList>
       <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="3920512138" surrogate="true">
         <header />
@@ -474,11 +457,13 @@
             <item dataType="ObjectRef">2242396206</item>
             <item dataType="ObjectRef">1853029134</item>
             <item dataType="ObjectRef">1932056282</item>
+            <item dataType="Type" id="104335212" value="Dove_Game.Scene_Components.General_World.GameControllers.BossLevelController" />
           </keys>
           <values dataType="Array" type="Duality.Component[]" id="2148418526">
             <item dataType="ObjectRef">517582304</item>
             <item dataType="ObjectRef">4094401236</item>
             <item dataType="ObjectRef">1220043896</item>
+            <item dataType="ObjectRef">1442622311</item>
           </values>
         </body>
       </compMap>

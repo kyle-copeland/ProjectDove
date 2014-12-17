@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Remoting.Messaging;
 using System.Text;
-
+using Dove_Game.Test_Logic;
 using Duality;
 using Duality.Resources;
 using Duality.Components.Physics;
 using OpenTK.Input;
 using OpenTK;
 
-namespace Dove_Game.Test_Logic
+namespace Dove_Game.Scene_Components.Mario_World.LevelControllers
 {
     [Serializable]
     public class MarioWorldController : Component, ICmpUpdatable, ICmpInitializable

@@ -880,7 +880,7 @@
       <compList dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Component]]" id="2838109960">
         <_items dataType="Array" type="Duality.Component[]" id="2606537580" length="4">
           <item dataType="Struct" type="Dove_Game.Test_Logic.KaiLevelController" id="4115803015">
-            <_delayProgress dataType="Float">1656.732</_delayProgress>
+            <_delayProgress dataType="Float">1891.39917</_delayProgress>
             <_gotTheMonkey dataType="Bool">false</_gotTheMonkey>
             <_headerList dataType="Struct" type="System.Collections.Generic.List`1[[System.String]]" id="2959362395">
               <_items dataType="Array" type="System.String[]" id="2795064726" length="4">

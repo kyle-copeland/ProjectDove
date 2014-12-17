@@ -361,6 +361,10 @@ namespace GameRes
 						Thwomp_Texture.MakeAvailable();
 					}
 				}
+				public static class Mario_World {
+					public static void LoadAll() {
+					}
+				}
 				public static class ZeldaWorld {
 					public static Duality.ContentRef<Duality.Resources.Material> Blue_Knight_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\Enemies\ZeldaWorld\Blue Knight.Material.res"); }}
 					public static Duality.ContentRef<Duality.Resources.Pixmap> Blue_Knight_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\Enemies\ZeldaWorld\Blue Knight.Pixmap.res"); }}
@@ -395,6 +399,10 @@ namespace GameRes
 						Tektike_Texture.MakeAvailable();
 					}
 				}
+				public static class Zelda_World {
+					public static void LoadAll() {
+					}
+				}
 				public static Duality.ContentRef<Duality.Resources.Material> SlenderMan1_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\Enemies\SlenderMan1.Material.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Pixmap> SlenderMan1_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\Enemies\SlenderMan1.Pixmap.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Texture> SlenderMan1_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Characters\Enemies\SlenderMan1.Texture.res"); }}
@@ -404,7 +412,9 @@ namespace GameRes
 				public static void LoadAll() {
 					Dbz_World.LoadAll();
 					MarioWorld.LoadAll();
+					Mario_World.LoadAll();
 					ZeldaWorld.LoadAll();
+					Zelda_World.LoadAll();
 					SlenderMan1_Material.MakeAvailable();
 					SlenderMan1_Pixmap.MakeAvailable();
 					SlenderMan1_Texture.MakeAvailable();

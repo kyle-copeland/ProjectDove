@@ -91,7 +91,7 @@ namespace Dove_Game.Test_Logic
         public void OnUpdate()
         {
             //Skip level code
-            //CaughtMonkey = true;
+            CaughtMonkey = true;
             
             if (PrevSceneName != Scene.Current.Name)
             {

@@ -411,7 +411,7 @@
       <active dataType="Bool">true</active>
       <children />
       <compList dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Component]]" id="2156468896">
-        <_items dataType="Array" type="Duality.Component[]" id="436473052" length="4">
+        <_items dataType="Array" type="Duality.Component[]" id="436473052">
           <item dataType="Struct" type="Duality.Components.Transform" id="1433310186">
             <active dataType="Bool">true</active>
             <angle dataType="Float">0</angle>
@@ -497,9 +497,15 @@
               <_version dataType="Int">2</_version>
             </shapes>
           </item>
+          <item dataType="Struct" type="Dove_Game.Scene_Components.Zelda_World.LevelControllers.LinkForestController" id="2732159319">
+            <_mainCharacter dataType="ObjectRef">2381945138</_mainCharacter>
+            <active dataType="Bool">true</active>
+            <gameobj dataType="ObjectRef">3367962550</gameobj>
+            <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
+          </item>
         </_items>
-        <_size dataType="Int">3</_size>
-        <_version dataType="Int">3</_version>
+        <_size dataType="Int">4</_size>
+        <_version dataType="Int">4</_version>
       </compList>
       <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="844453006" surrogate="true">
         <header />
@@ -508,11 +514,13 @@
             <item dataType="ObjectRef">1091465068</item>
             <item dataType="ObjectRef">3033484176</item>
             <item dataType="ObjectRef">2685372984</item>
+            <item dataType="Type" id="1564811472" value="Dove_Game.Scene_Components.Zelda_World.LevelControllers.LinkForestController" />
           </keys>
           <values dataType="Array" type="Duality.Component[]" id="3823726666">
             <item dataType="ObjectRef">1433310186</item>
             <item dataType="ObjectRef">715161822</item>
             <item dataType="ObjectRef">2135771778</item>
+            <item dataType="ObjectRef">2732159319</item>
           </values>
         </body>
       </compMap>
@@ -712,15 +720,9 @@
               <_version dataType="Int">1</_version>
             </sources>
           </item>
-          <item dataType="Struct" type="Dove_Game.Scene_Components.Zelda_World.LevelControllers.LinkForestController" id="335830515">
-            <_mainCharacter dataType="ObjectRef">2381945138</_mainCharacter>
-            <active dataType="Bool">true</active>
-            <gameobj dataType="ObjectRef">971633746</gameobj>
-            <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
-          </item>
         </_items>
-        <_size dataType="Int">3</_size>
-        <_version dataType="Int">3</_version>
+        <_size dataType="Int">2</_size>
+        <_version dataType="Int">4</_version>
       </compList>
       <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="2068492950" surrogate="true">
         <header />
@@ -728,12 +730,10 @@
           <keys dataType="Array" type="System.Type[]" id="2799392662">
             <item dataType="ObjectRef">1091465068</item>
             <item dataType="Type" id="66482208" value="Duality.Components.SoundEmitter" />
-            <item dataType="Type" id="3692094350" value="Dove_Game.Scene_Components.Zelda_World.LevelControllers.LinkForestController" />
           </keys>
           <values dataType="Array" type="Duality.Component[]" id="3368357594">
             <item dataType="ObjectRef">3331948678</item>
             <item dataType="ObjectRef">3015525633</item>
-            <item dataType="ObjectRef">335830515</item>
           </values>
         </body>
       </compMap>
@@ -2111,7 +2111,7 @@
       <active dataType="Bool">true</active>
       <children />
       <compList dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Component]]" id="859076908">
-        <_items dataType="Array" type="Duality.Component[]" id="1349426916">
+        <_items dataType="Array" type="Duality.Component[]" id="1349426916" length="4">
           <item dataType="Struct" type="Duality.Components.Transform" id="1471258390">
             <active dataType="Bool">true</active>
             <gameobj dataType="ObjectRef">3405910754</gameobj>
@@ -2127,14 +2127,9 @@
             <gameobj dataType="ObjectRef">3405910754</gameobj>
             <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
           </item>
-          <item dataType="Struct" type="Dove_Game.EyeThwomp" id="2930731139">
-            <active dataType="Bool">true</active>
-            <gameobj dataType="ObjectRef">3405910754</gameobj>
-            <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
-          </item>
         </_items>
-        <_size dataType="Int">4</_size>
-        <_version dataType="Int">4</_version>
+        <_size dataType="Int">3</_size>
+        <_version dataType="Int">5</_version>
       </compList>
       <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="463841718" surrogate="true">
         <header />
@@ -2143,13 +2138,11 @@
             <item dataType="ObjectRef">1091465068</item>
             <item dataType="ObjectRef">2695021622</item>
             <item dataType="ObjectRef">2685372984</item>
-            <item dataType="Type" id="3833345920" value="Dove_Game.EyeThwomp" />
           </keys>
           <values dataType="Array" type="Duality.Component[]" id="2689136442">
             <item dataType="ObjectRef">1471258390</item>
             <item dataType="ObjectRef">3113346135</item>
             <item dataType="ObjectRef">2173719982</item>
-            <item dataType="ObjectRef">2930731139</item>
           </values>
         </body>
       </compMap>
@@ -2194,7 +2187,7 @@
       <active dataType="Bool">true</active>
       <children />
       <compList dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Component]]" id="3057740546">
-        <_items dataType="Array" type="Duality.Component[]" id="569511312">
+        <_items dataType="Array" type="Duality.Component[]" id="569511312" length="4">
           <item dataType="Struct" type="Duality.Components.Transform" id="431365440">
             <active dataType="Bool">true</active>
             <gameobj dataType="ObjectRef">2366017804</gameobj>
@@ -2210,14 +2203,9 @@
             <gameobj dataType="ObjectRef">2366017804</gameobj>
             <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
           </item>
-          <item dataType="Struct" type="Dove_Game.EyeThwomp" id="1890838189">
-            <active dataType="Bool">true</active>
-            <gameobj dataType="ObjectRef">2366017804</gameobj>
-            <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
-          </item>
         </_items>
-        <_size dataType="Int">4</_size>
-        <_version dataType="Int">4</_version>
+        <_size dataType="Int">3</_size>
+        <_version dataType="Int">5</_version>
       </compList>
       <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="3948092298" surrogate="true">
         <header />
@@ -2226,13 +2214,11 @@
             <item dataType="ObjectRef">1091465068</item>
             <item dataType="ObjectRef">2695021622</item>
             <item dataType="ObjectRef">2685372984</item>
-            <item dataType="ObjectRef">3833345920</item>
           </keys>
           <values dataType="Array" type="Duality.Component[]" id="1562894494">
             <item dataType="ObjectRef">431365440</item>
             <item dataType="ObjectRef">2073453185</item>
             <item dataType="ObjectRef">1133827032</item>
-            <item dataType="ObjectRef">1890838189</item>
           </values>
         </body>
       </compMap>

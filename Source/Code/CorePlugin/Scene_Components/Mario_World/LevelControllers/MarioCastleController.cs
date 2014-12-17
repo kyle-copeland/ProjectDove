@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Remoting.Messaging;
 using System.Text;
-
+using Dove_Game.Test_Logic;
 using Duality;
 using Duality.Resources;
 using Duality.Components.Physics;
@@ -11,7 +11,7 @@ using OpenTK.Input;
 using OpenTK;
 using Dove_Game.Enemies.Mario_World;
 
-namespace Dove_Game.Test_Logic
+namespace Dove_Game.Scene_Components.Mario_World.LevelControllers
 {
     [Serializable]
     public class MarioCastleController : Component, ICmpUpdatable, ICmpInitializable
@@ -46,7 +46,7 @@ namespace Dove_Game.Test_Logic
         void ICmpUpdatable.OnUpdate()
         {
             //To skip level
-            //_mainCharacter.GameObj.Transform.Pos = new Vector3(885.0f, _mainCharacter.GameObj.Transform.Pos.Y, _mainCharacter.GameObj.Transform.Pos.Z);
+            _mainCharacter.GameObj.Transform.Pos = new Vector3(885.0f, _mainCharacter.GameObj.Transform.Pos.Y, _mainCharacter.GameObj.Transform.Pos.Z);
 
             if (_mainCharacter.GameObj.Transform.Pos.Y > 200) // Fallen into Lava
             {
