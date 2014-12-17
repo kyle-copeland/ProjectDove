@@ -109,7 +109,7 @@ namespace Dove_Game.Test_Logic
                     }
                     else if (_marioAppearTimer < 0 && _marioRise)
                     {
-                        // GO TO DIALOG SCENE HERE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                        Scene.SwitchTo(GameRes.Data.Scenes.FinalWorlds.MarioWorld.MarioBoss_Scene);
                     }
                 }
 
