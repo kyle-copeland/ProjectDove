@@ -45,6 +45,9 @@ namespace Dove_Game.Test_Logic
 
         void ICmpUpdatable.OnUpdate()
         {
+            //To skip level
+            _mainCharacter.GameObj.Transform.Pos = new Vector3(885.0f, _mainCharacter.GameObj.Transform.Pos.Y, _mainCharacter.GameObj.Transform.Pos.Z);
+
             if (_mainCharacter.GameObj.Transform.Pos.Y > 200) // Fallen into Lava
             {
                 _mainCharacter.doDamage(100);
@@ -111,7 +114,12 @@ namespace Dove_Game.Test_Logic
                     }
                     else if (_marioAppearTimer < 0 && _marioRise)
                     {
-                        Scene.SwitchTo(GameRes.Data.Scenes.FinalWorlds.MarioWorld.MarioBoss_Scene);
+                        WorldSelectionMap.SceneLoadHandler = delegate(object sender, EventArgs e)
+                        {
+                            DrawDialog.AssignDialogScript(sender, e, DialogScripts.MarioLevelTwoPostBossPre);
+                        };
+                        Scene.Entered += WorldSelectionMap.SceneLoadHandler;
+                        Scene.SwitchTo(GameRes.Data.Scenes.DialogScenes.MarioWorld.MarioLevelTwoPostBossPre_Scene);
                     }
                 }
 

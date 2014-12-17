@@ -178,7 +178,7 @@
                       </item>
                     </_items>
                     <_size dataType="Int">2</_size>
-                    <_version dataType="Int">1166</_version>
+                    <_version dataType="Int">926</_version>
                   </changes>
                   <obj dataType="ObjectRef">984674574</obj>
                   <prefab dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Prefab]]">
@@ -1441,8 +1441,8 @@
                 <_version dataType="Int">1</_version>
               </childIndex>
               <componentType dataType="ObjectRef">1091465068</componentType>
-              <prop dataType="ObjectRef">1657253598</prop>
-              <val dataType="Float">1.86095071</val>
+              <prop dataType="ObjectRef">1954856738</prop>
+              <val dataType="Float">2.27731061</val>
             </item>
           </_items>
           <_size dataType="Int">2</_size>
@@ -1534,8 +1534,8 @@
                 <_version dataType="Int">1</_version>
               </childIndex>
               <componentType dataType="ObjectRef">1091465068</componentType>
-              <prop dataType="ObjectRef">1657253598</prop>
-              <val dataType="Float">1.58086169</val>
+              <prop dataType="ObjectRef">1954856738</prop>
+              <val dataType="Float">2.37003636</val>
             </item>
           </_items>
           <_size dataType="Int">2</_size>

@@ -4,48 +4,6 @@
     <Y dataType="Float">33</Y>
   </globalGravity>
   <serializeObj dataType="Array" type="Duality.GameObject[]" id="427169525">
-    <item dataType="Struct" type="Duality.GameObject" id="1936460728">
-      <active dataType="Bool">true</active>
-      <children />
-      <compList dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Component]]" id="2938727518">
-        <_items dataType="Array" type="Duality.Component[]" id="558361872" length="4">
-          <item dataType="Struct" type="Dove_Game.Test_Logic.DrawDialog" id="3502353452">
-            <_awaitingInput dataType="Bool">false</_awaitingInput>
-            <_currentDialog />
-            <_font dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Font]]">
-              <contentPath />
-            </_font>
-            <active dataType="Bool">true</active>
-            <gameobj dataType="ObjectRef">1936460728</gameobj>
-            <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
-          </item>
-        </_items>
-        <_size dataType="Int">1</_size>
-        <_version dataType="Int">1</_version>
-      </compList>
-      <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="16753930" surrogate="true">
-        <header />
-        <body>
-          <keys dataType="Array" type="System.Type[]" id="2155873148">
-            <item dataType="Type" id="1428327492" value="Dove_Game.Test_Logic.DrawDialog" />
-          </keys>
-          <values dataType="Array" type="Duality.Component[]" id="1093111958">
-            <item dataType="ObjectRef">3502353452</item>
-          </values>
-        </body>
-      </compMap>
-      <compTransform />
-      <identifier dataType="Struct" type="System.Guid" surrogate="true">
-        <header>
-          <data dataType="Array" type="System.Byte[]" id="3797203752">6Es3BlshMUCO/VRqNb5lYQ==</data>
-        </header>
-        <body />
-      </identifier>
-      <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
-      <name dataType="String">DrawDialog</name>
-      <parent />
-      <prefabLink />
-    </item>
     <item dataType="Struct" type="Duality.GameObject" id="2767387042">
       <active dataType="Bool">true</active>
       <children />
@@ -161,6 +119,49 @@
       </identifier>
       <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
       <name dataType="String">Camera</name>
+      <parent />
+      <prefabLink />
+    </item>
+    <item dataType="Struct" type="Duality.GameObject" id="2905257697">
+      <active dataType="Bool">true</active>
+      <children />
+      <compList dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Component]]" id="612315683">
+        <_items dataType="Array" type="Duality.Component[]" id="1153357926" length="4">
+          <item dataType="Struct" type="Dove_Game.Test_Logic.DrawDialog" id="176183125">
+            <_awaitingInput dataType="Bool">false</_awaitingInput>
+            <_currentDialog />
+            <_currentDialogPos dataType="Int">0</_currentDialogPos>
+            <_font dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Font]]">
+              <contentPath />
+            </_font>
+            <active dataType="Bool">true</active>
+            <gameobj dataType="ObjectRef">2905257697</gameobj>
+            <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
+          </item>
+        </_items>
+        <_size dataType="Int">1</_size>
+        <_version dataType="Int">1</_version>
+      </compList>
+      <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="1250652280" surrogate="true">
+        <header />
+        <body>
+          <keys dataType="Array" type="System.Type[]" id="1669546825">
+            <item dataType="Type" id="50518926" value="Dove_Game.Test_Logic.DrawDialog" />
+          </keys>
+          <values dataType="Array" type="Duality.Component[]" id="3257912128">
+            <item dataType="ObjectRef">176183125</item>
+          </values>
+        </body>
+      </compMap>
+      <compTransform />
+      <identifier dataType="Struct" type="System.Guid" surrogate="true">
+        <header>
+          <data dataType="Array" type="System.Byte[]" id="170443115">MfwgMAqKWkqceRfV1FYRig==</data>
+        </header>
+        <body />
+      </identifier>
+      <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
+      <name dataType="String">DrawDialog</name>
       <parent />
       <prefabLink />
     </item>

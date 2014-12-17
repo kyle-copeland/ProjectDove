@@ -142,7 +142,7 @@ namespace Dove_Game.Test_Logic
             new DialogComponent(false, "Unknown: I don’t see Link anywhere… It sure is dark here though.", ContentRefs.LinkForestUG, null, -1),
             new DialogComponent(false, "Goku: Yeah I’m getting an eery feeling here. It’s different from how Mario’s land was…", ContentRefs.LinkForestUG, null, -1),
             
-            new DialogComponent(false, "Unknown: Let’s go deeper into the forest, maybe Link is at the end.", ContentRefs.LinkForestUG, ContentRefs.LinkForest, -1)
+            new DialogComponent(false, "Unknown: Let’s go deeper into the forest, maybe Link is at the end.", ContentRefs.LinkForestUG, GameRes.Data.Scenes.FinalWorlds.LinkWorld.Link_Forest_Scene, -1)
         };
 
         public static List<DialogComponent> LinkLevelOnePostBossPre = new List<DialogComponent>
@@ -157,7 +157,7 @@ namespace Dove_Game.Test_Logic
             new DialogComponent(false, "Unknown: I don’t think I can do this… ", ContentRefs.LinkCastleUG, null, -1),
             new DialogComponent(false, "Goku: I know you can.", ContentRefs.LinkCastleUG, null, -1),
             
-            new DialogComponent(false, "Link: Him? He can’t even hurt a fly or in this case me. ", ContentRefs.LinkCastleUL, ContentRefs.LinkBossFight, -1)
+            new DialogComponent(false, "Link: Him? He can’t even hurt a fly or in this case me. ", ContentRefs.LinkCastleUL, GameRes.Data.Scenes.FinalWorlds.LinkWorld.LinkBoss_Scene, -1)
         };
 
         public static List<DialogComponent> LinkLevelBossPost = new List<DialogComponent>
@@ -172,7 +172,7 @@ namespace Dove_Game.Test_Logic
             new DialogComponent(false, "Navi: I don’t think we can…", ContentRefs.LinkCastleUN, null, -1),
             new DialogComponent(false, "Goku: I can teleport us, everyone gather around.", ContentRefs.LinkCastleUG, null, -1),
             
-            new DialogComponent(false, "Unknown: No matter what happens, it has been an honor battling alongside you heroes. Let our efforts not be in vain, lets vanquish this evil once and for all!", ContentRefs.LinkCastleUG, ContentRefs.FinalBossPre, 3)
+            new DialogComponent(false, "Unknown: No matter what happens, it has been an honor battling alongside you heroes. Let our efforts not be in vain, lets vanquish this evil once and for all!", ContentRefs.LinkCastleUG, GameRes.Data.Scenes.DialogScenes.FinalWorld.FinalBossPre_Scene, 3)
         };
 
         public static List<DialogComponent> FinalBossPre = new List<DialogComponent>
@@ -186,7 +186,7 @@ namespace Dove_Game.Test_Logic
             new DialogComponent(false, "Goku: Wrong, theres one more hero you missed.", ContentRefs.SlenderGS, null, -1),
             new DialogComponent(false, "Slenderman: And who is that?", ContentRefs.SlenderGS, null, -1),
             
-            new DialogComponent(false, "Unknown: Me. I won’t let you our universe fall to your tyranny. I’m here to destroy you!", ContentRefs.SlenderUS, ContentRefs.FinalBossFight, -1)
+            new DialogComponent(false, "Unknown: Me. I won’t let you our universe fall to your tyranny. I’m here to destroy you!", ContentRefs.SlenderUS, GameRes.Data.Scenes.FinalWorlds.FinalBoss_Scene, -1)
         };
     }
 }

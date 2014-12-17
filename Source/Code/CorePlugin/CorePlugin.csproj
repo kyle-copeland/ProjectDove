@@ -70,6 +70,8 @@
     <Compile Include="Scene_Components\DBZ_World\LevelControllers\PreKingKaiDialogController.cs" />
     <Compile Include="Scene_Components\General_World\GameControllers\BossLevelController.cs" />
     <Compile Include="Scene_Components\General_World\GameControllers\DrawDialogController.cs" />
+    <Compile Include="Scene_Components\General_World\GameControllers\FinalBossTransitionController.cs" />
+    <Compile Include="Scene_Components\General_World\GameControllers\FirstWorldIntroController.cs" />
     <Compile Include="Scene_Components\General_World\GameControllers\PredialogController.cs" />
     <Compile Include="Scene_Components\Mario_World\Brick.cs" />
     <Compile Include="Scene_Components\Mario_World\Flag.cs" />
@@ -83,6 +85,7 @@
     <Compile Include="Scene_Components\General_World\StartScene.cs" />
     <Compile Include="Scene_Components\General_World\GameControllers\CameraController.cs" />
     <Compile Include="Scene_Components\Zelda_World\LevelControllers\LinkForestController.cs" />
+    <Compile Include="Scene_Components\Zelda_World\LevelControllers\NaviTransitionController.cs" />
     <Compile Include="Scene_Components\Zelda_World\LinkBossLevelController.cs" />
     <Compile Include="Test_Logic\GenericBaseLogic\Dialog\DialogComponent.cs" />
     <Compile Include="Test_Logic\GenericBaseLogic\Dialog\DialogScripts.cs" />
