@@ -12,7 +12,7 @@ namespace Dove_Game.Scene_Components.Mario_World
 {
     [Serializable]
     public class Heart : Component, ICmpCollisionListener
-            {
+    {
         void ICmpCollisionListener.OnCollisionBegin(Component sender, CollisionEventArgs args)
         {
             if (args.CollideWith.Name == "MainCharacter")

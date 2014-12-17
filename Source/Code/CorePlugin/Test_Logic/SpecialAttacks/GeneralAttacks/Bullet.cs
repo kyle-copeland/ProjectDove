@@ -20,7 +20,7 @@ namespace Dove_Game
         // Set lifetime and direction of special attack.
         public virtual void InitFrom(Direction direction)
         {
-            Lifetime = 800.0f;
+            Lifetime = 350.0f;
             AttackDirection = direction;
         }
 
