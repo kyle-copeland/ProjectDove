@@ -19,10 +19,10 @@ namespace Dove_Game
     [RequiredComponent(typeof(RigidBody))]
     public class Goku : Character
     {
-        private List<int> defaultFrameSequence = new List<int>() { 33 };
-        private List<int> dissolveFrameSequence = new List<int>() { 33, 33, 33, 33, 30, 31, 32, 10, 11, 33 };
-        private List<int> rightKamehamehaFrameSequence = new List<int>() { 33, 0, 1 };
-        private List<int> leftKamehamehaFrameSequence = new List<int>() { 33, 0, 1 };
+        private List<int> defaultFrameSequence = new List<int>() { 14 };
+        private List<int> dissolveFrameSequence = new List<int>() { 14, 15, 14, 15, 14, 15, 14 ,15 , 14, 15 };
+        private List<int> rightKamehamehaFrameSequence = new List<int>() { 14, 0, 1 };
+        private List<int> leftKamehamehaFrameSequence = new List<int>() { 14, 9, 8 };
         private bool finishedKamehameha;
 
         public List<int> kamehamehaFrameSequence
@@ -48,7 +48,7 @@ namespace Dove_Game
                 playerSprite.UpdateVisibleFrames();
 
                 // Pause animation on blast frame for dramatic effect and create kamehameha.
-                if (playerSprite.CurrentFrame == 1)
+                if (playerSprite.CurrentFrame == 1 || playerSprite.CurrentFrame == 8)
                 {
                     playerSprite.AnimPaused = true;
                     GameObject kame = Summon.SummonGameObject(SideCharacter.NoCharacter, Attack.Kamehameha, this);
@@ -66,7 +66,7 @@ namespace Dove_Game
                 CurrentSpecialAttack = null;
             }
 
-            if (finishedKamehameha && playerSprite.CurrentFrame == 33)
+            if (finishedKamehameha && playerSprite.CurrentFrame == 14)
             {
                 playerSprite.CustomFrameSequence = dissolveFrameSequence;
                 playerSprite.AnimLoopMode = AnimSpriteRenderer.LoopMode.Once;
@@ -74,7 +74,7 @@ namespace Dove_Game
                 playerSprite.UpdateVisibleFrames();
 
                 // All custom frame sequences end in 27, the current default animation for the Goku SpriteSheet. Reset after an attack animation.
-                if (playerSprite.CurrentFrame != LastFrame && playerSprite.CurrentFrame == 33)
+                if (playerSprite.CurrentFrame != LastFrame && playerSprite.CurrentFrame == 14)
                 {
                     this.GameObj.DisposeLater();
                 }

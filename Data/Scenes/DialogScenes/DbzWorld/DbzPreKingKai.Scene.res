@@ -488,7 +488,7 @@
           <item dataType="Struct" type="Dove_Game.PlayerOne" id="779772173">
             <_attacking dataType="Bool">false</_attacking>
             <_elaspedRespawnTime dataType="Float">0</_elaspedRespawnTime>
-            <_movementOffset dataType="Float">0.75</_movementOffset>
+            <_movementOffset dataType="Float">0.35</_movementOffset>
             <_summonedCharacter />
             <active dataType="Bool">true</active>
             <currentSA />
@@ -498,10 +498,13 @@
             <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
             <isStunned dataType="Bool">false</isStunned>
             <lastFrame dataType="Int">0</lastFrame>
+            <maxVelocity dataType="Float">5</maxVelocity>
             <vectorMove dataType="Struct" type="OpenTK.Vector2">
               <X dataType="Float">0</X>
               <Y dataType="Float">0</Y>
             </vectorMove>
+            <weaponCooldown dataType="Float">250</weaponCooldown>
+            <weaponTimer dataType="Float">0</weaponTimer>
           </item>
         </_items>
         <_size dataType="Int">4</_size>
@@ -562,7 +565,7 @@
                 <item dataType="Struct" type="Dove_Game.Test_Logic.DialogComponent" id="2368560416">
                   <_x003C_DialogMessage_x003E_k__BackingField dataType="String">King Kai: ??? Who are you and why are you on my planet?</_x003C_DialogMessage_x003E_k__BackingField>
                   <_x003C_DialogSprite_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
-                    <contentPath dataType="String">Data\Characters\DialogImage\DbzWorld\SnakeWay\DBZBackgroundTUKK.Material.res</contentPath>
+                    <contentPath dataType="String">Data\Characters\DialogImage\DbzWorld\KingKai\KingPlanetTUKK.Material.res</contentPath>
                   </_x003C_DialogSprite_x003E_k__BackingField>
                   <_x003C_nextScriptDialog_x003E_k__BackingField dataType="Int">-1</_x003C_nextScriptDialog_x003E_k__BackingField>
                   <_x003C_PlayerOneDialog_x003E_k__BackingField dataType="Bool">false</_x003C_PlayerOneDialog_x003E_k__BackingField>
@@ -573,7 +576,7 @@
                 <item dataType="Struct" type="Dove_Game.Test_Logic.DialogComponent" id="965418894">
                   <_x003C_DialogMessage_x003E_k__BackingField dataType="String">Unknown: I... mean no harm…. I was told that I should come and see you to figure out what has happened to me… to figure out who I am...</_x003C_DialogMessage_x003E_k__BackingField>
                   <_x003C_DialogSprite_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
-                    <contentPath dataType="String">Data\Characters\DialogImage\DbzWorld\SnakeWay\DBZBackgroundTUKK.Material.res</contentPath>
+                    <contentPath dataType="String">Data\Characters\DialogImage\DbzWorld\KingKai\KingPlanetTUKK.Material.res</contentPath>
                   </_x003C_DialogSprite_x003E_k__BackingField>
                   <_x003C_nextScriptDialog_x003E_k__BackingField dataType="Int">-1</_x003C_nextScriptDialog_x003E_k__BackingField>
                   <_x003C_PlayerOneDialog_x003E_k__BackingField dataType="Bool">false</_x003C_PlayerOneDialog_x003E_k__BackingField>
@@ -584,7 +587,7 @@
                 <item dataType="Struct" type="Dove_Game.Test_Logic.DialogComponent" id="723268668">
                   <_x003C_DialogMessage_x003E_k__BackingField dataType="String">King Kai: I don’t just give information to anyone, you’ll have to prove your worth. I’ll give you the same task I give all my potential students. If you can catch my monkey on my planet I’ll help you out. But I must tell you, it’s no easy task!</_x003C_DialogMessage_x003E_k__BackingField>
                   <_x003C_DialogSprite_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
-                    <contentPath dataType="String">Data\Characters\DialogImage\DbzWorld\SnakeWay\DBZBackgroundTUKK.Material.res</contentPath>
+                    <contentPath dataType="String">Data\Characters\DialogImage\DbzWorld\KingKai\KingPlanetTUKK.Material.res</contentPath>
                   </_x003C_DialogSprite_x003E_k__BackingField>
                   <_x003C_nextScriptDialog_x003E_k__BackingField dataType="Int">-1</_x003C_nextScriptDialog_x003E_k__BackingField>
                   <_x003C_PlayerOneDialog_x003E_k__BackingField dataType="Bool">false</_x003C_PlayerOneDialog_x003E_k__BackingField>
@@ -660,6 +663,99 @@
           <contentPath dataType="String">Data\Prefabs\DbzWorld\KingKai.Prefab.res</contentPath>
         </prefab>
       </prefabLink>
+    </item>
+    <item dataType="Struct" type="Duality.GameObject" id="1111051516">
+      <active dataType="Bool">true</active>
+      <children />
+      <compList dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Component]]" id="2594316434">
+        <_items dataType="Array" type="Duality.Component[]" id="2379777104" length="4">
+          <item dataType="Struct" type="Duality.Components.Transform" id="3471366448">
+            <active dataType="Bool">true</active>
+            <angle dataType="Float">0</angle>
+            <angleAbs dataType="Float">0</angleAbs>
+            <angleVel dataType="Float">0</angleVel>
+            <angleVelAbs dataType="Float">0</angleVelAbs>
+            <deriveAngle dataType="Bool">true</deriveAngle>
+            <gameobj dataType="ObjectRef">1111051516</gameobj>
+            <ignoreParent dataType="Bool">false</ignoreParent>
+            <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
+            <parentTransform />
+            <pos dataType="Struct" type="OpenTK.Vector3">
+              <X dataType="Float">0</X>
+              <Y dataType="Float">0</Y>
+              <Z dataType="Float">0</Z>
+            </pos>
+            <posAbs dataType="Struct" type="OpenTK.Vector3">
+              <X dataType="Float">0</X>
+              <Y dataType="Float">0</Y>
+              <Z dataType="Float">0</Z>
+            </posAbs>
+            <scale dataType="Float">1</scale>
+            <scaleAbs dataType="Float">1</scaleAbs>
+            <vel dataType="Struct" type="OpenTK.Vector3">
+              <X dataType="Float">0</X>
+              <Y dataType="Float">0</Y>
+              <Z dataType="Float">0</Z>
+            </vel>
+            <velAbs dataType="Struct" type="OpenTK.Vector3">
+              <X dataType="Float">0</X>
+              <Y dataType="Float">0</Y>
+              <Z dataType="Float">0</Z>
+            </velAbs>
+          </item>
+          <item dataType="Struct" type="Duality.Components.SoundEmitter" id="3154943403">
+            <active dataType="Bool">true</active>
+            <gameobj dataType="ObjectRef">1111051516</gameobj>
+            <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
+            <sources dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Components.SoundEmitter+Source]]" id="900073663">
+              <_items dataType="Array" type="Duality.Components.SoundEmitter+Source[]" id="1927467438" length="4">
+                <item dataType="Struct" type="Duality.Components.SoundEmitter+Source" id="2236249424">
+                  <looped dataType="Bool">true</looped>
+                  <offset dataType="Struct" type="OpenTK.Vector3">
+                    <X dataType="Float">0</X>
+                    <Y dataType="Float">0</Y>
+                    <Z dataType="Float">0</Z>
+                  </offset>
+                  <paused dataType="Bool">false</paused>
+                  <pitch dataType="Float">1</pitch>
+                  <sound dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Sound]]">
+                    <contentPath dataType="String">Data\Music\Goku World\KingKai.Sound.res</contentPath>
+                  </sound>
+                  <volume dataType="Float">1</volume>
+                </item>
+              </_items>
+              <_size dataType="Int">1</_size>
+              <_version dataType="Int">1</_version>
+            </sources>
+          </item>
+        </_items>
+        <_size dataType="Int">2</_size>
+        <_version dataType="Int">2</_version>
+      </compList>
+      <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="2454073802" surrogate="true">
+        <header />
+        <body>
+          <keys dataType="Array" type="System.Type[]" id="1554032328">
+            <item dataType="ObjectRef">412620000</item>
+            <item dataType="Type" id="3904519788" value="Duality.Components.SoundEmitter" />
+          </keys>
+          <values dataType="Array" type="Duality.Component[]" id="3230865118">
+            <item dataType="ObjectRef">3471366448</item>
+            <item dataType="ObjectRef">3154943403</item>
+          </values>
+        </body>
+      </compMap>
+      <compTransform dataType="ObjectRef">3471366448</compTransform>
+      <identifier dataType="Struct" type="System.Guid" surrogate="true">
+        <header>
+          <data dataType="Array" type="System.Byte[]" id="3997557556">HAvFL/yHdEeiyOpKTz2vlA==</data>
+        </header>
+        <body />
+      </identifier>
+      <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
+      <name dataType="String">KingKai</name>
+      <parent />
+      <prefabLink />
     </item>
   </serializeObj>
   <sourcePath />

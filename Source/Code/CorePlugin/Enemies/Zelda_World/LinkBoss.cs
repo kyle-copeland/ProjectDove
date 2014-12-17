@@ -107,7 +107,7 @@ namespace Dove_Game.Enemies.Zelda_World
                     List<int> seqArrow = boss.PlayerPosition == Direction.Right ? new List<int> { 0, 1, 2, 3 } : new List<int> { 4, 5, 6, 7 };
 
                     int spriteRowsArrow = 8;
-                    Bullet arrow = Test_Logic.ContentRefs.BBP_Default.Res.CreateBullet(boss.CharDirection, GameRes.Data.Scenes.Bullets.Arrows_Material, true, seqArrow, spriteRowsArrow);
+                    Test_Logic.EnemyBullet arrow = Test_Logic.ContentRefs.BBP_Default.Res.CreateBullet(boss.CharDirection, GameRes.Data.Scenes.Bullets.Arrows_Material, true, seqArrow, spriteRowsArrow);
                     int bulletSpeed = 5;
 
                     arrow.Fire(boss.GameObj.RigidBody.LinearVelocity, boss.GameObj.Transform.GetWorldPoint(Vector2.Zero), 0, bulletSpeed);

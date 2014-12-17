@@ -178,6 +178,7 @@ namespace GameRes
 						}
 					}
 					public static void LoadAll() {
+						LinkCastle.LoadAll();
 						LinkForest.LoadAll();
 					}
 				}
@@ -497,15 +498,23 @@ namespace GameRes
 			public static class Goku_World {
 				public static Duality.ContentRef<Duality.Resources.AudioData> Goku_Snake_Way_AudioData { get { return Duality.ContentProvider.RequestContent<Duality.Resources.AudioData>(@"Data\Music\Goku World\Goku Snake Way.AudioData.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Sound> Goku_Snake_Way_Sound { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Sound>(@"Data\Music\Goku World\Goku Snake Way.Sound.res"); }}
+				public static Duality.ContentRef<Duality.Resources.AudioData> KingKai_AudioData { get { return Duality.ContentProvider.RequestContent<Duality.Resources.AudioData>(@"Data\Music\Goku World\KingKai.AudioData.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Sound> KingKai_Sound { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Sound>(@"Data\Music\Goku World\KingKai.Sound.res"); }}
 				public static void LoadAll() {
 					Goku_Snake_Way_AudioData.MakeAvailable();
 					Goku_Snake_Way_Sound.MakeAvailable();
+					KingKai_AudioData.MakeAvailable();
+					KingKai_Sound.MakeAvailable();
 				}
 			}
 			public static class Mario_World {
+				public static Duality.ContentRef<Duality.Resources.AudioData> MarioCastle_AudioData { get { return Duality.ContentProvider.RequestContent<Duality.Resources.AudioData>(@"Data\Music\Mario World\MarioCastle.AudioData.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Sound> MarioCastle_Sound { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Sound>(@"Data\Music\Mario World\MarioCastle.Sound.res"); }}
 				public static Duality.ContentRef<Duality.Resources.AudioData> MarioWorld_AudioData { get { return Duality.ContentProvider.RequestContent<Duality.Resources.AudioData>(@"Data\Music\Mario World\MarioWorld.AudioData.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Sound> MarioWorld_Sound { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Sound>(@"Data\Music\Mario World\MarioWorld.Sound.res"); }}
 				public static void LoadAll() {
+					MarioCastle_AudioData.MakeAvailable();
+					MarioCastle_Sound.MakeAvailable();
 					MarioWorld_AudioData.MakeAvailable();
 					MarioWorld_Sound.MakeAvailable();
 				}

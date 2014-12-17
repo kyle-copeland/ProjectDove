@@ -10,6 +10,13 @@ namespace Dove_Game.Test_Logic
 {
     public class EnemyBullet : Bullet
     {
+
+        public override void InitFrom(Direction direction)
+        {
+            Lifetime = 1500.0f;
+            AttackDirection = direction;
+        }
+
         public override void OnInit(Component.InitContext context)
         {
             this.GameObj.RigidBody.CollisionCategory = CollisionCategory.Cat2;

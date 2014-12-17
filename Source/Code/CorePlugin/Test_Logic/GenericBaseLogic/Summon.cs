@@ -37,7 +37,7 @@ namespace Dove_Game.Test_Logic
                         Goku goku = summonPiece.AddComponent<Goku>();
                         goku.CharDirection = main.CharDirection;
                         spriteMaterial = ContentRefs.GokuContentRef.Res;
-                        spriteSize = new Vector2(41, 52);
+                        spriteSize = new Vector2(74, 68);
                         break;
                     case SideCharacter.Bowser:
                         Bowser bowser = summonPiece.AddComponent<Bowser>();

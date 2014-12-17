@@ -57,7 +57,7 @@ namespace Dove_Game.Test_Logic
         public static ContentRef<Material> SlenderGS = GameRes.Data.Characters.DialogImage.FinalWorld.SlendermanBackgroundTextGS_Material;
         public static ContentRef<Material> SlenderUS = GameRes.Data.Characters.DialogImage.FinalWorld.SlendermanBackgroundTextUS_Material;
 
-        public static ContentRef<Material> GokuContentRef = GameRes.Data.Characters.Side_Characters.Goku_2d_2_Material;
+        public static ContentRef<Material> GokuContentRef = GameRes.Data.Characters.Side_Characters.BothGokuSpriteSheetsSP__1__Material;
         public static ContentRef<Material> BowserContentRef = GameRes.Data.Characters.Side_Characters.Bowser_Material;
         public static ContentRef<Material> NaviContentRef = GameRes.Data.Characters.Side_Characters.Navis_Material;
 
