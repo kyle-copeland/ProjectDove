@@ -77,12 +77,12 @@
               <val dataType="Struct" type="OpenTK.Vector3">
                 <X dataType="Float">26</X>
                 <Y dataType="Float">-7</Y>
-                <Z dataType="Float">0</Z>
+                <Z dataType="Float">0.01</Z>
               </val>
             </item>
           </_items>
           <_size dataType="Int">2</_size>
-          <_version dataType="Int">8</_version>
+          <_version dataType="Int">12</_version>
         </changes>
         <obj dataType="ObjectRef">3905830553</obj>
         <prefab dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Prefab]]">
@@ -109,12 +109,12 @@
             <pos dataType="Struct" type="OpenTK.Vector3">
               <X dataType="Float">-772</X>
               <Y dataType="Float">-7</Y>
-              <Z dataType="Float">0</Z>
+              <Z dataType="Float">0.01</Z>
             </pos>
             <posAbs dataType="Struct" type="OpenTK.Vector3">
               <X dataType="Float">-772</X>
               <Y dataType="Float">-7</Y>
-              <Z dataType="Float">0</Z>
+              <Z dataType="Float">0.01</Z>
             </posAbs>
             <scale dataType="Float">1</scale>
             <scaleAbs dataType="Float">1</scaleAbs>
@@ -254,14 +254,14 @@
             <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
             <parentTransform />
             <pos dataType="Struct" type="OpenTK.Vector3">
-              <X dataType="Float">-451.714264</X>
-              <Y dataType="Float">-22.1617146</Y>
-              <Z dataType="Float">-686.3943</Z>
+              <X dataType="Float">16</X>
+              <Y dataType="Float">39</Y>
+              <Z dataType="Float">-502</Z>
             </pos>
             <posAbs dataType="Struct" type="OpenTK.Vector3">
-              <X dataType="Float">-451.714264</X>
-              <Y dataType="Float">-22.1617146</Y>
-              <Z dataType="Float">-686.3943</Z>
+              <X dataType="Float">16</X>
+              <Y dataType="Float">39</Y>
+              <Z dataType="Float">-502</Z>
             </posAbs>
             <scale dataType="Float">1</scale>
             <scaleAbs dataType="Float">1</scaleAbs>
@@ -321,7 +321,7 @@
                 </item>
               </_items>
               <_size dataType="Int">2</_size>
-              <_version dataType="Int">70274</_version>
+              <_version dataType="Int">72284</_version>
             </passes>
             <perspective dataType="Enum" type="Duality.Drawing.PerspectiveMode" name="Parallax" value="1" />
             <visibilityMask dataType="Enum" type="Duality.Drawing.VisibilityFlag" name="All" value="4294967295" />
@@ -362,172 +362,27 @@
         <_items dataType="Array" type="Duality.Component[]" id="136173884">
           <item dataType="Struct" type="Duality.Components.Transform" id="741179002">
             <active dataType="Bool">true</active>
-            <angle dataType="Float">0</angle>
-            <angleAbs dataType="Float">0</angleAbs>
-            <angleVel dataType="Float">0</angleVel>
-            <angleVelAbs dataType="Float">0</angleVelAbs>
-            <deriveAngle dataType="Bool">true</deriveAngle>
             <gameobj dataType="ObjectRef">2675831366</gameobj>
-            <ignoreParent dataType="Bool">false</ignoreParent>
             <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
-            <parentTransform />
-            <pos dataType="Struct" type="OpenTK.Vector3">
-              <X dataType="Float">338</X>
-              <Y dataType="Float">59</Y>
-              <Z dataType="Float">-2</Z>
-            </pos>
-            <posAbs dataType="Struct" type="OpenTK.Vector3">
-              <X dataType="Float">338</X>
-              <Y dataType="Float">59</Y>
-              <Z dataType="Float">-2</Z>
-            </posAbs>
-            <scale dataType="Float">1</scale>
-            <scaleAbs dataType="Float">1</scaleAbs>
-            <vel dataType="Struct" type="OpenTK.Vector3">
-              <X dataType="Float">0</X>
-              <Y dataType="Float">0</Y>
-              <Z dataType="Float">0</Z>
-            </vel>
-            <velAbs dataType="Struct" type="OpenTK.Vector3">
-              <X dataType="Float">0</X>
-              <Y dataType="Float">0</Y>
-              <Z dataType="Float">0</Z>
-            </velAbs>
           </item>
           <item dataType="Struct" type="Duality.Components.Renderers.AnimSpriteRenderer" id="2383266747">
             <active dataType="Bool">true</active>
-            <animDuration dataType="Float">0.5</animDuration>
-            <animFirstFrame dataType="Int">31</animFirstFrame>
-            <animFrameCount dataType="Int">3</animFrameCount>
-            <animLoopMode dataType="Enum" type="Duality.Components.Renderers.AnimSpriteRenderer+LoopMode" name="Loop" value="1" />
-            <animPaused dataType="Bool">false</animPaused>
-            <animTime dataType="Float">0</animTime>
-            <colorTint dataType="Struct" type="Duality.Drawing.ColorRgba">
-              <A dataType="Byte">255</A>
-              <B dataType="Byte">255</B>
-              <G dataType="Byte">255</G>
-              <R dataType="Byte">255</R>
-            </colorTint>
-            <customFrameSequence />
-            <customMat />
             <gameobj dataType="ObjectRef">2675831366</gameobj>
             <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
-            <offset dataType="Int">0</offset>
-            <pixelGrid dataType="Bool">false</pixelGrid>
-            <rect dataType="Struct" type="Duality.Rect">
-              <H dataType="Float">49</H>
-              <W dataType="Float">48</W>
-              <X dataType="Float">-24</X>
-              <Y dataType="Float">-24.5</Y>
-            </rect>
-            <rectMode dataType="Enum" type="Duality.Components.Renderers.SpriteRenderer+UVMode" name="Stretch" value="0" />
-            <sharedMat dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
-              <contentPath dataType="String">Data\Characters\Enemies\MarioWorld\BossMario (1).Material.res</contentPath>
-            </sharedMat>
-            <visibilityGroup dataType="Enum" type="Duality.Drawing.VisibilityFlag" name="Group0" value="1" />
           </item>
           <item dataType="Struct" type="Duality.Components.Physics.RigidBody" id="1443640594">
             <active dataType="Bool">true</active>
-            <angularDamp dataType="Float">0.3</angularDamp>
-            <angularVel dataType="Float">0</angularVel>
-            <bodyType dataType="Enum" type="Duality.Components.Physics.BodyType" name="Dynamic" value="1" />
-            <colCat dataType="Enum" type="Duality.Components.Physics.CollisionCategory" name="Cat3" value="4" />
-            <colWith dataType="Enum" type="Duality.Components.Physics.CollisionCategory" name="Cat1, Cat2, Cat4, Cat5" value="27" />
-            <continous dataType="Bool">false</continous>
-            <explicitMass dataType="Float">50</explicitMass>
-            <fixedAngle dataType="Bool">true</fixedAngle>
             <gameobj dataType="ObjectRef">2675831366</gameobj>
-            <ignoreGravity dataType="Bool">false</ignoreGravity>
             <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
-            <joints />
-            <linearDamp dataType="Float">0.3</linearDamp>
-            <linearVel dataType="Struct" type="OpenTK.Vector2">
-              <X dataType="Float">0</X>
-              <Y dataType="Float">0</Y>
-            </linearVel>
-            <revolutions dataType="Float">0</revolutions>
-            <shapes dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Components.Physics.ShapeInfo]]" id="1884843458">
-              <_items dataType="Array" type="Duality.Components.Physics.ShapeInfo[]" id="3547003408" length="4">
-                <item dataType="Struct" type="Duality.Components.Physics.PolyShapeInfo" id="2122306364">
-                  <density dataType="Float">1</density>
-                  <friction dataType="Float">0.3</friction>
-                  <parent dataType="ObjectRef">1443640594</parent>
-                  <restitution dataType="Float">0.3</restitution>
-                  <sensor dataType="Bool">false</sensor>
-                  <vertices dataType="Array" type="OpenTK.Vector2[]" id="4006291268">
-                    <item dataType="Struct" type="OpenTK.Vector2">
-                      <X dataType="Float">-23</X>
-                      <Y dataType="Float">-18</Y>
-                    </item>
-                    <item dataType="Struct" type="OpenTK.Vector2">
-                      <X dataType="Float">-4</X>
-                      <Y dataType="Float">-18</Y>
-                    </item>
-                    <item dataType="Struct" type="OpenTK.Vector2">
-                      <X dataType="Float">-5</X>
-                      <Y dataType="Float">17</Y>
-                    </item>
-                    <item dataType="Struct" type="OpenTK.Vector2">
-                      <X dataType="Float">-24</X>
-                      <Y dataType="Float">17</Y>
-                    </item>
-                  </vertices>
-                </item>
-              </_items>
-              <_size dataType="Int">1</_size>
-              <_version dataType="Int">5</_version>
-            </shapes>
           </item>
           <item dataType="Struct" type="Dove_Game.MarioBoss" id="308031164">
-            <_frozen dataType="Bool">false</_frozen>
             <active dataType="Bool">true</active>
-            <attackCooldown dataType="Float">1000</attackCooldown>
-            <attacks dataType="Array" type="Dove_Game.Enemies.BossAttack[]" id="2503237164">
-              <item />
-              <item />
-            </attacks>
-            <attackTimer dataType="Float">1000</attackTimer>
-            <autoShoot dataType="Bool">true</autoShoot>
-            <bulletBlueprint dataType="Struct" type="Duality.ContentRef`1[[Dove_Game.BulletBlueprint]]">
-              <contentPath dataType="String">Data\Scenes\SpecialAttacks\RocketBullet.BulletBlueprint.res</contentPath>
-            </bulletBlueprint>
-            <bulletMaterial dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
-              <contentPath dataType="String">Data\Scenes\Bullets\Rocket_Bullet.Material.res</contentPath>
-            </bulletMaterial>
-            <BulletSpeed dataType="Int">30</BulletSpeed>
-            <currentSA />
-            <direction dataType="Enum" type="Dove_Game.Direction" name="Right" value="1" />
             <gameobj dataType="ObjectRef">2675831366</gameobj>
-            <healthPts dataType="Int">50</healthPts>
-            <impulse dataType="Float">3</impulse>
             <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
-            <lastFrame dataType="Int">0</lastFrame>
-            <movementSpeed dataType="Float">5</movementSpeed>
-            <nextAttack dataType="Int">0</nextAttack>
-            <playerPosition dataType="Enum" type="Dove_Game.Direction" name="Left" value="0" />
-            <seqWalk dataType="Struct" type="System.Collections.Generic.List`1[[System.Int32]]" id="2178536374">
-              <_items dataType="Array" type="System.Int32[]" id="3613221478">
-                <item dataType="Int">31</item>
-                <item dataType="Int">32</item>
-                <item dataType="Int">33</item>
-                <item dataType="Int">34</item>
-              </_items>
-              <_size dataType="Int">4</_size>
-              <_version dataType="Int">4</_version>
-            </seqWalk>
-            <seqWalkLeft />
-            <seqWalkRight />
-            <touchDamage dataType="Int">10</touchDamage>
-            <vectorMove dataType="Struct" type="OpenTK.Vector2">
-              <X dataType="Float">0</X>
-              <Y dataType="Float">0</Y>
-            </vectorMove>
-            <weaponDelay dataType="Float">1000</weaponDelay>
-            <weaponTimer dataType="Float">0</weaponTimer>
           </item>
         </_items>
         <_size dataType="Int">4</_size>
-        <_version dataType="Int">6</_version>
+        <_version dataType="Int">10</_version>
       </compList>
       <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="2750225134" surrogate="true">
         <header />
@@ -554,9 +409,74 @@
         <body />
       </identifier>
       <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
-      <name dataType="String">BossMario (1)</name>
+      <name dataType="String">BossMario</name>
       <parent />
-      <prefabLink />
+      <prefabLink dataType="Struct" type="Duality.Resources.PrefabLink" id="761258604">
+        <changes dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Resources.PrefabLink+VarMod]]" id="2724697720">
+          <_items dataType="Array" type="Duality.Resources.PrefabLink+VarMod[]" id="1584716140" length="8">
+            <item dataType="Struct" type="Duality.Resources.PrefabLink+VarMod">
+              <childIndex dataType="Struct" type="System.Collections.Generic.List`1[[System.Int32]]" id="2213794216">
+                <_items dataType="Array" type="System.Int32[]" id="876920492" />
+                <_size dataType="Int">0</_size>
+                <_version dataType="Int">1</_version>
+              </childIndex>
+              <componentType dataType="ObjectRef">3778121360</componentType>
+              <prop dataType="PropertyInfo" id="2997768094" value="P:Duality.Components.Renderers.AnimSpriteRenderer:AnimDuration" />
+              <val dataType="Float">2</val>
+            </item>
+            <item dataType="Struct" type="Duality.Resources.PrefabLink+VarMod">
+              <childIndex dataType="Struct" type="System.Collections.Generic.List`1[[System.Int32]]" id="634923924">
+                <_items dataType="ObjectRef">876920492</_items>
+                <_size dataType="Int">0</_size>
+                <_version dataType="Int">1</_version>
+              </childIndex>
+              <componentType dataType="ObjectRef">3778121360</componentType>
+              <prop dataType="PropertyInfo" id="326815266" value="P:Duality.Components.Renderers.AnimSpriteRenderer:AnimFirstFrame" />
+              <val dataType="Int">31</val>
+            </item>
+            <item dataType="Struct" type="Duality.Resources.PrefabLink+VarMod">
+              <childIndex dataType="Struct" type="System.Collections.Generic.List`1[[System.Int32]]" id="2754837344">
+                <_items dataType="ObjectRef">876920492</_items>
+                <_size dataType="Int">0</_size>
+                <_version dataType="Int">1</_version>
+              </childIndex>
+              <componentType dataType="ObjectRef">3778121360</componentType>
+              <prop dataType="PropertyInfo" id="4261121094" value="P:Duality.Components.Renderers.AnimSpriteRenderer:AnimFrameCount" />
+              <val dataType="Int">3</val>
+            </item>
+            <item dataType="Struct" type="Duality.Resources.PrefabLink+VarMod">
+              <childIndex dataType="Struct" type="System.Collections.Generic.List`1[[System.Int32]]" id="2525122060">
+                <_items dataType="Array" type="System.Int32[]" id="1627802384" />
+                <_size dataType="Int">0</_size>
+                <_version dataType="Int">1</_version>
+              </childIndex>
+              <componentType dataType="ObjectRef">1683402974</componentType>
+              <prop dataType="PropertyInfo" id="2143608586" value="P:Duality.Components.Physics.RigidBody:BodyType" />
+              <val dataType="Enum" type="Duality.Components.Physics.BodyType" name="Dynamic" value="1" />
+            </item>
+            <item dataType="Struct" type="Duality.Resources.PrefabLink+VarMod">
+              <childIndex dataType="Struct" type="System.Collections.Generic.List`1[[System.Int32]]" id="3423769240">
+                <_items dataType="ObjectRef">677919816</_items>
+                <_size dataType="Int">0</_size>
+                <_version dataType="Int">1</_version>
+              </childIndex>
+              <componentType dataType="ObjectRef">1717510894</componentType>
+              <prop dataType="ObjectRef">3443847714</prop>
+              <val dataType="Struct" type="OpenTK.Vector3">
+                <X dataType="Float">358</X>
+                <Y dataType="Float">-18</Y>
+                <Z dataType="Float">0</Z>
+              </val>
+            </item>
+          </_items>
+          <_size dataType="Int">5</_size>
+          <_version dataType="Int">315</_version>
+        </changes>
+        <obj dataType="ObjectRef">2675831366</obj>
+        <prefab dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Prefab]]">
+          <contentPath dataType="String">Data\Prefabs\MarioWorld\BossMario.Prefab.res</contentPath>
+        </prefab>
+      </prefabLink>
     </item>
     <item dataType="Struct" type="Duality.GameObject" id="4199247595">
       <active dataType="Bool">true</active>
@@ -619,27 +539,68 @@
           <_items dataType="Array" type="Duality.Resources.PrefabLink+VarMod[]" id="132523236" length="4">
             <item dataType="Struct" type="Duality.Resources.PrefabLink+VarMod">
               <childIndex dataType="Struct" type="System.Collections.Generic.List`1[[System.Int32]]" id="3816450248">
-                <_items dataType="ObjectRef">677919816</_items>
+                <_items dataType="Array" type="System.Int32[]" id="2475784812" />
                 <_size dataType="Int">0</_size>
                 <_version dataType="Int">1</_version>
               </childIndex>
               <componentType dataType="ObjectRef">1717510894</componentType>
               <prop dataType="ObjectRef">3443847714</prop>
               <val dataType="Struct" type="OpenTK.Vector3">
-                <X dataType="Float">-510</X>
-                <Y dataType="Float">110</Y>
+                <X dataType="Float">-176</X>
+                <Y dataType="Float">31</Y>
                 <Z dataType="Float">-1</Z>
               </val>
             </item>
           </_items>
           <_size dataType="Int">1</_size>
-          <_version dataType="Int">351</_version>
+          <_version dataType="Int">685</_version>
         </changes>
         <obj dataType="ObjectRef">4199247595</obj>
         <prefab dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Prefab]]">
           <contentPath dataType="String">Data\Prefabs\PlayerComponents\PlayerOne.Prefab.res</contentPath>
         </prefab>
       </prefabLink>
+    </item>
+    <item dataType="Struct" type="Duality.GameObject" id="2585288267">
+      <active dataType="Bool">true</active>
+      <children />
+      <compList dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Component]]" id="3129296185">
+        <_items dataType="Array" type="Duality.Component[]" id="2383362766" length="4">
+          <item dataType="Struct" type="Dove_Game.Test_Logic.DrawHealth" id="1442980881">
+            <active dataType="Bool">true</active>
+            <font dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Font]]">
+              <contentPath />
+            </font>
+            <gameobj dataType="ObjectRef">2585288267</gameobj>
+            <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
+            <playerOne dataType="ObjectRef">1301550863</playerOne>
+          </item>
+        </_items>
+        <_size dataType="Int">1</_size>
+        <_version dataType="Int">1</_version>
+      </compList>
+      <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="2380545792" surrogate="true">
+        <header />
+        <body>
+          <keys dataType="Array" type="System.Type[]" id="1829098131">
+            <item dataType="Type" id="487570662" value="Dove_Game.Test_Logic.DrawHealth" />
+          </keys>
+          <values dataType="Array" type="Duality.Component[]" id="2271681272">
+            <item dataType="ObjectRef">1442980881</item>
+          </values>
+        </body>
+      </compMap>
+      <compTransform />
+      <identifier dataType="Struct" type="System.Guid" surrogate="true">
+        <header>
+          <data dataType="Array" type="System.Byte[]" id="1893473657">ExdUpEypYkmTiZdVmoUROg==</data>
+        </header>
+        <body />
+      </identifier>
+      <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
+      <name dataType="String">DrawHealth</name>
+      <parent />
+      <prefabLink />
     </item>
   </serializeObj>
   <sourcePath />

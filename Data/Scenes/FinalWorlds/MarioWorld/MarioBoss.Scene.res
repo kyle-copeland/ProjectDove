@@ -96,7 +96,7 @@
           <item dataType="Struct" type="Dove_Game.Test_Logic.CameraController" id="1876756781">
             <active dataType="Bool">true</active>
             <followObject dataType="Struct" type="Duality.Components.Transform" id="868980226">
-              <active dataType="Bool">false</active>
+              <active dataType="Bool">true</active>
               <gameobj dataType="Struct" type="Duality.GameObject" id="2803632590">
                 <active dataType="Bool">true</active>
                 <children />
@@ -104,7 +104,7 @@
                   <_items dataType="Array" type="Duality.Component[]" id="386972822">
                     <item dataType="ObjectRef">868980226</item>
                     <item dataType="Struct" type="Duality.Components.Renderers.AnimSpriteRenderer" id="2511067971">
-                      <active dataType="Bool">false</active>
+                      <active dataType="Bool">true</active>
                       <gameobj dataType="ObjectRef">2803632590</gameobj>
                       <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
                     </item>
@@ -484,7 +484,7 @@
             <active dataType="Bool">true</active>
             <angularDamp dataType="Float">0.3</angularDamp>
             <angularVel dataType="Float">0</angularVel>
-            <bodyType dataType="Enum" type="Duality.Components.Physics.BodyType" name="Dynamic" value="1" />
+            <bodyType dataType="Enum" type="Duality.Components.Physics.BodyType" name="Static" value="0" />
             <colCat dataType="Enum" type="Duality.Components.Physics.CollisionCategory" name="Cat1" value="1" />
             <colWith dataType="Enum" type="Duality.Components.Physics.CollisionCategory" name="All" value="2147483647" />
             <continous dataType="Bool">false</continous>
@@ -3600,6 +3600,99 @@
       <name dataType="String">SceneBoundary</name>
       <parent />
       <prefabLink />
+    </item>
+    <item dataType="Struct" type="Duality.GameObject" id="3736185171">
+      <active dataType="Bool">true</active>
+      <children />
+      <compList dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Component]]" id="4189181025">
+        <_items dataType="Array" type="Duality.Component[]" id="658446702">
+          <item dataType="Struct" type="Duality.Components.Transform" id="1801532807">
+            <active dataType="Bool">true</active>
+            <gameobj dataType="ObjectRef">3736185171</gameobj>
+            <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
+          </item>
+          <item dataType="Struct" type="Duality.Components.Renderers.AnimSpriteRenderer" id="3443620552">
+            <active dataType="Bool">true</active>
+            <gameobj dataType="ObjectRef">3736185171</gameobj>
+            <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
+          </item>
+          <item dataType="Struct" type="Duality.Components.Physics.RigidBody" id="2503994399">
+            <active dataType="Bool">true</active>
+            <gameobj dataType="ObjectRef">3736185171</gameobj>
+            <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
+          </item>
+          <item dataType="Struct" type="Dove_Game.MarioBoss" id="1368384969">
+            <active dataType="Bool">true</active>
+            <gameobj dataType="ObjectRef">3736185171</gameobj>
+            <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
+          </item>
+        </_items>
+        <_size dataType="Int">4</_size>
+        <_version dataType="Int">4</_version>
+      </compList>
+      <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="3443978272" surrogate="true">
+        <header />
+        <body>
+          <keys dataType="Array" type="System.Type[]" id="909345259">
+            <item dataType="ObjectRef">2524706862</item>
+            <item dataType="ObjectRef">1450190026</item>
+            <item dataType="ObjectRef">2032648606</item>
+            <item dataType="Type" id="3013929590" value="Dove_Game.MarioBoss" />
+          </keys>
+          <values dataType="Array" type="Duality.Component[]" id="3870433480">
+            <item dataType="ObjectRef">1801532807</item>
+            <item dataType="ObjectRef">3443620552</item>
+            <item dataType="ObjectRef">2503994399</item>
+            <item dataType="ObjectRef">1368384969</item>
+          </values>
+        </body>
+      </compMap>
+      <compTransform dataType="ObjectRef">1801532807</compTransform>
+      <identifier dataType="Struct" type="System.Guid" surrogate="true">
+        <header>
+          <data dataType="Array" type="System.Byte[]" id="3284657377">w+NjtNIPsEqbtmXXw/LBIA==</data>
+        </header>
+        <body />
+      </identifier>
+      <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
+      <name dataType="String">BossMario</name>
+      <parent />
+      <prefabLink dataType="Struct" type="Duality.Resources.PrefabLink" id="1448966387">
+        <changes dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Resources.PrefabLink+VarMod]]" id="3473331108">
+          <_items dataType="Array" type="Duality.Resources.PrefabLink+VarMod[]" id="3023512772" length="4">
+            <item dataType="Struct" type="Duality.Resources.PrefabLink+VarMod">
+              <childIndex dataType="Struct" type="System.Collections.Generic.List`1[[System.Int32]]" id="1019682632">
+                <_items dataType="Array" type="System.Int32[]" id="918794348" />
+                <_size dataType="Int">0</_size>
+                <_version dataType="Int">1</_version>
+              </childIndex>
+              <componentType dataType="ObjectRef">2524706862</componentType>
+              <prop dataType="PropertyInfo" id="110357726" value="P:Duality.Components.Transform:RelativeScale" />
+              <val dataType="Float">1</val>
+            </item>
+            <item dataType="Struct" type="Duality.Resources.PrefabLink+VarMod">
+              <childIndex dataType="Struct" type="System.Collections.Generic.List`1[[System.Int32]]" id="4120563636">
+                <_items dataType="ObjectRef">918794348</_items>
+                <_size dataType="Int">0</_size>
+                <_version dataType="Int">1</_version>
+              </childIndex>
+              <componentType dataType="ObjectRef">2524706862</componentType>
+              <prop dataType="ObjectRef">2797962462</prop>
+              <val dataType="Struct" type="OpenTK.Vector3">
+                <X dataType="Float">1136</X>
+                <Y dataType="Float">190</Y>
+                <Z dataType="Float">0</Z>
+              </val>
+            </item>
+          </_items>
+          <_size dataType="Int">2</_size>
+          <_version dataType="Int">624</_version>
+        </changes>
+        <obj dataType="ObjectRef">3736185171</obj>
+        <prefab dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Prefab]]">
+          <contentPath dataType="String">Data\Prefabs\MarioWorld\BossMario.Prefab.res</contentPath>
+        </prefab>
+      </prefabLink>
     </item>
   </serializeObj>
   <sourcePath />

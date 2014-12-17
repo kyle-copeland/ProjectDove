@@ -407,6 +407,7 @@ namespace GameRes
 			}
 			public static class MarioWorld {
 				public static Duality.ContentRef<Duality.Resources.Prefab> BossMario__1__Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\MarioWorld\BossMario (1).Prefab.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Prefab> BossMario_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\MarioWorld\BossMario.Prefab.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Prefab> Brick_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\MarioWorld\Brick.Prefab.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Prefab> Fireball_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\MarioWorld\Fireball.Prefab.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Prefab> Firespin_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\MarioWorld\Firespin.Prefab.res"); }}
@@ -417,6 +418,7 @@ namespace GameRes
 				public static Duality.ContentRef<Duality.Resources.Prefab> Thwomp_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\MarioWorld\Thwomp.Prefab.res"); }}
 				public static void LoadAll() {
 					BossMario__1__Prefab.MakeAvailable();
+					BossMario_Prefab.MakeAvailable();
 					Brick_Prefab.MakeAvailable();
 					Fireball_Prefab.MakeAvailable();
 					Firespin_Prefab.MakeAvailable();

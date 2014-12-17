@@ -166,9 +166,19 @@
                           <Z dataType="Float">0</Z>
                         </val>
                       </item>
+                      <item dataType="Struct" type="Duality.Resources.PrefabLink+VarMod">
+                        <childIndex dataType="Struct" type="System.Collections.Generic.List`1[[System.Int32]]" id="956061748">
+                          <_items dataType="Array" type="System.Int32[]" id="91784520" />
+                          <_size dataType="Int">0</_size>
+                          <_version dataType="Int">1</_version>
+                        </childIndex>
+                        <componentType dataType="ObjectRef">1091465068</componentType>
+                        <prop dataType="PropertyInfo" id="1954856738" value="P:Duality.Components.Transform:RelativeScale" />
+                        <val dataType="Float">0.4</val>
+                      </item>
                     </_items>
-                    <_size dataType="Int">1</_size>
-                    <_version dataType="Int">897</_version>
+                    <_size dataType="Int">2</_size>
+                    <_version dataType="Int">906</_version>
                   </changes>
                   <obj dataType="ObjectRef">984674574</obj>
                   <prefab dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Prefab]]">
