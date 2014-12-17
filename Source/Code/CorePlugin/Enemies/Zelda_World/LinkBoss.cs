@@ -17,6 +17,7 @@ namespace Dove_Game.Enemies.Zelda_World
     {
 
         private const float ATTACK_INTERVAL = 2000.0f;
+        private const int ARROW = 2;
 
         //Initalize
         public override void OnInit(Component.InitContext context)
@@ -83,20 +84,39 @@ namespace Dove_Game.Enemies.Zelda_World
         {
             private List<int> seqArrowLeft = new List<int>() { 23, 22, 21 };
             private List<int> seqArrowRight = new List<int>() { 18, 19, 20 };
+            private bool hasStarted = false;
+            private float arrowTime = 3000f;
             public void attack(Boss boss)
             {
-                //get materials
-                List<int> seqArrow = boss.PlayerPosition == Direction.Right ? new List<int> {0,1,2,3} : new List<int>{4,5,6,7};
-                boss.GameObj.GetComponent<AnimSpriteRenderer>().CustomFrameSequence = boss.PlayerPosition == Direction.Right ? seqArrowRight :  seqArrowLeft;
-                boss.GameObj.GetComponent<AnimSpriteRenderer>().AnimDuration = 1.0f;
-                int spriteRowsArrow = 8;
-                Bullet arrow = Test_Logic.ContentRefs.BBP_Default.Res.CreateBullet(boss.CharDirection, GameRes.Data.Scenes.Bullets.Arrows_Material,true, seqArrow,spriteRowsArrow);
-                int bulletSpeed = 5;
+                if(!hasStarted)
+                {
+                    AnimSpriteRenderer sprite = boss.GameObj.GetComponent<AnimSpriteRenderer>();
+                    sprite.CustomFrameSequence = boss.PlayerPosition == Direction.Right ? seqArrowRight : seqArrowLeft;
+                    sprite.AnimLoopMode = AnimSpriteRenderer.LoopMode.Loop;
+                    sprite.AnimDuration = 5.5f;
+                    
+                    
+                    boss.nextAttack = ARROW;
+                    boss.attackCooldown = arrowTime;
+                    hasStarted = true;
+                }
+                else 
+                {
+                    hasStarted = false;
+                    //get materials
+                    List<int> seqArrow = boss.PlayerPosition == Direction.Right ? new List<int> { 0, 1, 2, 3 } : new List<int> { 4, 5, 6, 7 };
 
-                arrow.Fire(boss.GameObj.RigidBody.LinearVelocity, boss.GameObj.Transform.GetWorldPoint(Vector2.Zero), 0, bulletSpeed);
-                arrow.GameObj.Transform.Scale = 1.1f;
-                Scene.Current.AddObject(arrow.GameObj);
-                boss.nextAttack = NONE;
+                    int spriteRowsArrow = 8;
+                    Bullet arrow = Test_Logic.ContentRefs.BBP_Default.Res.CreateBullet(boss.CharDirection, GameRes.Data.Scenes.Bullets.Arrows_Material, true, seqArrow, spriteRowsArrow);
+                    int bulletSpeed = 5;
+
+                    arrow.Fire(boss.GameObj.RigidBody.LinearVelocity, boss.GameObj.Transform.GetWorldPoint(Vector2.Zero), 0, bulletSpeed);
+                    arrow.GameObj.Transform.Scale = 1.1f;
+                    Scene.Current.AddObject(arrow.GameObj);
+                    boss.attackCooldown = ATTACK_INTERVAL;
+                    boss.nextAttack = NONE;
+                }
+                
             }
         }
         //Jumps in the air swinging sword around

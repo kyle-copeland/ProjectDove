@@ -21,26 +21,26 @@
             <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
             <parentTransform />
             <pos dataType="Struct" type="OpenTK.Vector3">
-              <X dataType="Float">-1149</X>
-              <Y dataType="Float">103.58857</Y>
-              <Z dataType="Float">-351.9704</Z>
+              <X dataType="Float">-1149.01428</X>
+              <Y dataType="Float">93.8119</Y>
+              <Z dataType="Float">-174.813828</Z>
             </pos>
             <posAbs dataType="Struct" type="OpenTK.Vector3">
-              <X dataType="Float">-1149</X>
-              <Y dataType="Float">103.58857</Y>
-              <Z dataType="Float">-351.9704</Z>
+              <X dataType="Float">-1149.01428</X>
+              <Y dataType="Float">93.8119</Y>
+              <Z dataType="Float">-174.813828</Z>
             </posAbs>
             <scale dataType="Float">1</scale>
             <scaleAbs dataType="Float">1</scaleAbs>
             <vel dataType="Struct" type="OpenTK.Vector3">
-              <X dataType="Float">0</X>
-              <Y dataType="Float">0</Y>
-              <Z dataType="Float">0</Z>
+              <X dataType="Float">0.0007022461</X>
+              <Y dataType="Float">-0.0286094882</Y>
+              <Z dataType="Float">0.035403993</Z>
             </vel>
             <velAbs dataType="Struct" type="OpenTK.Vector3">
-              <X dataType="Float">0</X>
-              <Y dataType="Float">0</Y>
-              <Z dataType="Float">0</Z>
+              <X dataType="Float">0.0007022461</X>
+              <Y dataType="Float">-0.0286094882</Y>
+              <Z dataType="Float">0.035403993</Z>
             </velAbs>
           </item>
           <item dataType="Struct" type="Duality.Components.Camera" id="2877630560">
@@ -88,7 +88,7 @@
                 </item>
               </_items>
               <_size dataType="Int">2</_size>
-              <_version dataType="Int">10856</_version>
+              <_version dataType="Int">12164</_version>
             </passes>
             <perspective dataType="Enum" type="Duality.Drawing.PerspectiveMode" name="Parallax" value="1" />
             <visibilityMask dataType="Enum" type="Duality.Drawing.VisibilityFlag" name="All" value="4294967295" />
@@ -869,7 +869,7 @@
             <active dataType="Bool">true</active>
             <currentSA />
             <direction dataType="Enum" type="Dove_Game.Direction" name="Right" value="1" />
-            <force dataType="Float">30</force>
+            <force dataType="Float">15</force>
             <gameobj dataType="ObjectRef">3451964777</gameobj>
             <healthPts dataType="Int">100</healthPts>
             <impulse dataType="Float">6</impulse>
@@ -1044,7 +1044,7 @@
             <active dataType="Bool">true</active>
             <currentSA />
             <direction dataType="Enum" type="Dove_Game.Direction" name="Right" value="1" />
-            <force dataType="Float">30</force>
+            <force dataType="Float">15</force>
             <gameobj dataType="ObjectRef">3046695088</gameobj>
             <healthPts dataType="Int">100</healthPts>
             <impulse dataType="Float">6</impulse>
@@ -1219,7 +1219,7 @@
             <active dataType="Bool">true</active>
             <currentSA />
             <direction dataType="Enum" type="Dove_Game.Direction" name="Right" value="1" />
-            <force dataType="Float">30</force>
+            <force dataType="Float">15</force>
             <gameobj dataType="ObjectRef">891215020</gameobj>
             <healthPts dataType="Int">100</healthPts>
             <impulse dataType="Float">6</impulse>
@@ -1429,7 +1429,7 @@
                 <_version dataType="Int">1</_version>
               </childIndex>
               <componentType dataType="ObjectRef">1091465068</componentType>
-              <prop dataType="PropertyInfo" id="3519700884" value="P:Duality.Components.Transform:RelativeScale" />
+              <prop dataType="ObjectRef">1954856738</prop>
               <val dataType="Float">2.27731061</val>
             </item>
           </_items>
@@ -1522,7 +1522,7 @@
                 <_version dataType="Int">1</_version>
               </childIndex>
               <componentType dataType="ObjectRef">1091465068</componentType>
-              <prop dataType="ObjectRef">3519700884</prop>
+              <prop dataType="ObjectRef">1954856738</prop>
               <val dataType="Float">2.37003636</val>
             </item>
           </_items>
@@ -1746,7 +1746,7 @@
             <active dataType="Bool">true</active>
             <currentSA />
             <direction dataType="Enum" type="Dove_Game.Direction" name="Right" value="1" />
-            <force dataType="Float">30</force>
+            <force dataType="Float">15</force>
             <gameobj dataType="ObjectRef">2949247759</gameobj>
             <healthPts dataType="Int">100</healthPts>
             <impulse dataType="Float">6</impulse>

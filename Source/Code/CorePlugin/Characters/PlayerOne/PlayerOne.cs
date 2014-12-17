@@ -118,8 +118,8 @@ namespace Dove_Game
                         playerOne.ApplyWorldImpulse(Vector2.UnitX * MovementOffset);
                     //playerMovement.MoveBy(MovementVector * Time.TimeMult);
                 }
-                
-                else if ((DualityApp.Keyboard.KeyReleased(Key.Left) || DualityApp.Keyboard.KeyReleased(Key.Right)) &&  Enemies.Boss.onGround(this.GameObj.RigidBody))
+
+                else if ((DualityApp.Keyboard.KeyReleased(Key.Left) || DualityApp.Keyboard.KeyReleased(Key.Right)) && Enemies.Boss.onGround(this.GameObj.RigidBody))
                 {
                     if (CharDirection == Direction.Right)
                         playerSprite.AnimFirstFrame = 16;

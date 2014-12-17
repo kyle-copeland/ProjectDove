@@ -37,7 +37,7 @@ namespace Dove_Game.Scene_Components.Mario_World
 
         void ICmpCollisionListener.OnCollisionBegin(Component sender, CollisionEventArgs args)
         {
-            if (args.CollideWith.Name == "MainCharacter" && ready)
+            if (args.CollideWith.Name == "MainCharacter")
             {
                 PlayerOne temp = args.CollideWith.GetComponent<PlayerOne>();
                 if (temp != null)
