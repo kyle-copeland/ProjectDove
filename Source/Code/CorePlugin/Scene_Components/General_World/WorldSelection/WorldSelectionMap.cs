@@ -149,16 +149,16 @@ namespace Dove_Game.Test_Logic
             WorldList = new List<WorldComponent>()
             {
                 // Mario World
-                new WorldComponent(ContentRefs.MarioLevelOnePre, new Vector2(-330.0f, -223.0f)),
+                new WorldComponent(GameRes.Data.Scenes.DialogScenes.MarioWorld.MarioLevelOnePre_Scene, new Vector2(-330.0f, -223.0f)),
 
                 // Link World
-                new WorldComponent(ContentRefs.LinkLevelOnePre, new Vector2(35.0f, -223.0f)),
+                new WorldComponent(GameRes.Data.Scenes.DialogScenes.LinkWorld.LinkLevelOnePre_Scene, new Vector2(35.0f, -223.0f)),
 
                 // Slenderboss World
-                new WorldComponent(ContentRefs.FinalBossPre, new Vector2(62.0f, -87.0f)),
+                new WorldComponent(GameRes.Data.Scenes.DialogScenes.FinalWorld.FinalBossPre_Scene, new Vector2(62.0f, -87.0f)),
 
                 // Dbz World
-                new WorldComponent(ContentRefs.DbzLevelOnePre, new Vector2(-200.0f, 92.0f))
+                new WorldComponent(GameRes.Data.Scenes.DialogScenes.DbzWorld.DbzLevelOnePre_Scene, new Vector2(-200.0f, 92.0f))
             };
 
             CurrentWorld = WorldList.First();

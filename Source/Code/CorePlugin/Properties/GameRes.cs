@@ -8,91 +8,236 @@ namespace GameRes
 	public static class Data {
 		public static class Characters {
 			public static class DialogImage {
+				public static class DbzWorld {
+					public static class KingKai {
+						public static Duality.ContentRef<Duality.Resources.Material> KingPlanetTGKK_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\DialogImage\DbzWorld\KingKai\KingPlanetTGKK.Material.res"); }}
+						public static Duality.ContentRef<Duality.Resources.Pixmap> KingPlanetTGKK_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\DialogImage\DbzWorld\KingKai\KingPlanetTGKK.Pixmap.res"); }}
+						public static Duality.ContentRef<Duality.Resources.Texture> KingPlanetTGKK_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Characters\DialogImage\DbzWorld\KingKai\KingPlanetTGKK.Texture.res"); }}
+						public static Duality.ContentRef<Duality.Resources.Material> KingPlanetTUG_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\DialogImage\DbzWorld\KingKai\KingPlanetTUG.Material.res"); }}
+						public static Duality.ContentRef<Duality.Resources.Pixmap> KingPlanetTUG_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\DialogImage\DbzWorld\KingKai\KingPlanetTUG.Pixmap.res"); }}
+						public static Duality.ContentRef<Duality.Resources.Texture> KingPlanetTUG_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Characters\DialogImage\DbzWorld\KingKai\KingPlanetTUG.Texture.res"); }}
+						public static Duality.ContentRef<Duality.Resources.Material> KingPlanetTUKK_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\DialogImage\DbzWorld\KingKai\KingPlanetTUKK.Material.res"); }}
+						public static Duality.ContentRef<Duality.Resources.Pixmap> KingPlanetTUKK_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\DialogImage\DbzWorld\KingKai\KingPlanetTUKK.Pixmap.res"); }}
+						public static Duality.ContentRef<Duality.Resources.Texture> KingPlanetTUKK_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Characters\DialogImage\DbzWorld\KingKai\KingPlanetTUKK.Texture.res"); }}
+						public static Duality.ContentRef<Duality.Resources.Material> KingPlanetTUMinion_copy_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\DialogImage\DbzWorld\KingKai\KingPlanetTUMinion copy.Material.res"); }}
+						public static Duality.ContentRef<Duality.Resources.Pixmap> KingPlanetTUMinion_copy_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\DialogImage\DbzWorld\KingKai\KingPlanetTUMinion copy.Pixmap.res"); }}
+						public static Duality.ContentRef<Duality.Resources.Texture> KingPlanetTUMinion_copy_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Characters\DialogImage\DbzWorld\KingKai\KingPlanetTUMinion copy.Texture.res"); }}
+						public static void LoadAll() {
+							KingPlanetTGKK_Material.MakeAvailable();
+							KingPlanetTGKK_Pixmap.MakeAvailable();
+							KingPlanetTGKK_Texture.MakeAvailable();
+							KingPlanetTUG_Material.MakeAvailable();
+							KingPlanetTUG_Pixmap.MakeAvailable();
+							KingPlanetTUG_Texture.MakeAvailable();
+							KingPlanetTUKK_Material.MakeAvailable();
+							KingPlanetTUKK_Pixmap.MakeAvailable();
+							KingPlanetTUKK_Texture.MakeAvailable();
+							KingPlanetTUMinion_copy_Material.MakeAvailable();
+							KingPlanetTUMinion_copy_Pixmap.MakeAvailable();
+							KingPlanetTUMinion_copy_Texture.MakeAvailable();
+						}
+					}
+					public static class SnakeWay {
+						public static Duality.ContentRef<Duality.Resources.Material> DBZBackgroundTGKK_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\DialogImage\DbzWorld\SnakeWay\DBZBackgroundTGKK.Material.res"); }}
+						public static Duality.ContentRef<Duality.Resources.Pixmap> DBZBackgroundTGKK_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\DialogImage\DbzWorld\SnakeWay\DBZBackgroundTGKK.Pixmap.res"); }}
+						public static Duality.ContentRef<Duality.Resources.Texture> DBZBackgroundTGKK_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Characters\DialogImage\DbzWorld\SnakeWay\DBZBackgroundTGKK.Texture.res"); }}
+						public static Duality.ContentRef<Duality.Resources.Material> DBZBackgroundTUG_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\DialogImage\DbzWorld\SnakeWay\DBZBackgroundTUG.Material.res"); }}
+						public static Duality.ContentRef<Duality.Resources.Pixmap> DBZBackgroundTUG_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\DialogImage\DbzWorld\SnakeWay\DBZBackgroundTUG.Pixmap.res"); }}
+						public static Duality.ContentRef<Duality.Resources.Texture> DBZBackgroundTUG_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Characters\DialogImage\DbzWorld\SnakeWay\DBZBackgroundTUG.Texture.res"); }}
+						public static Duality.ContentRef<Duality.Resources.Material> DBZBackgroundTUKK_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\DialogImage\DbzWorld\SnakeWay\DBZBackgroundTUKK.Material.res"); }}
+						public static Duality.ContentRef<Duality.Resources.Pixmap> DBZBackgroundTUKK_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\DialogImage\DbzWorld\SnakeWay\DBZBackgroundTUKK.Pixmap.res"); }}
+						public static Duality.ContentRef<Duality.Resources.Texture> DBZBackgroundTUKK_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Characters\DialogImage\DbzWorld\SnakeWay\DBZBackgroundTUKK.Texture.res"); }}
+						public static Duality.ContentRef<Duality.Resources.Material> DBZBackgroundTUMK_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\DialogImage\DbzWorld\SnakeWay\DBZBackgroundTUMK.Material.res"); }}
+						public static Duality.ContentRef<Duality.Resources.Pixmap> DBZBackgroundTUMK_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\DialogImage\DbzWorld\SnakeWay\DBZBackgroundTUMK.Pixmap.res"); }}
+						public static Duality.ContentRef<Duality.Resources.Texture> DBZBackgroundTUMK_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Characters\DialogImage\DbzWorld\SnakeWay\DBZBackgroundTUMK.Texture.res"); }}
+						public static Duality.ContentRef<Duality.Resources.Material> DBZBackgroundTUS_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\DialogImage\DbzWorld\SnakeWay\DBZBackgroundTUS.Material.res"); }}
+						public static Duality.ContentRef<Duality.Resources.Pixmap> DBZBackgroundTUS_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\DialogImage\DbzWorld\SnakeWay\DBZBackgroundTUS.Pixmap.res"); }}
+						public static Duality.ContentRef<Duality.Resources.Texture> DBZBackgroundTUS_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Characters\DialogImage\DbzWorld\SnakeWay\DBZBackgroundTUS.Texture.res"); }}
+						public static Duality.ContentRef<Duality.Resources.Material> DBZ_Shenron_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\DialogImage\DbzWorld\SnakeWay\DBZ_Shenron.Material.res"); }}
+						public static Duality.ContentRef<Duality.Resources.Pixmap> DBZ_Shenron_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\DialogImage\DbzWorld\SnakeWay\DBZ_Shenron.Pixmap.res"); }}
+						public static Duality.ContentRef<Duality.Resources.Texture> DBZ_Shenron_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Characters\DialogImage\DbzWorld\SnakeWay\DBZ_Shenron.Texture.res"); }}
+						public static Duality.ContentRef<Duality.Resources.Material> Dragonballs_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\DialogImage\DbzWorld\SnakeWay\Dragonballs.Material.res"); }}
+						public static Duality.ContentRef<Duality.Resources.Pixmap> Dragonballs_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\DialogImage\DbzWorld\SnakeWay\Dragonballs.Pixmap.res"); }}
+						public static Duality.ContentRef<Duality.Resources.Texture> Dragonballs_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Characters\DialogImage\DbzWorld\SnakeWay\Dragonballs.Texture.res"); }}
+						public static void LoadAll() {
+							DBZBackgroundTGKK_Material.MakeAvailable();
+							DBZBackgroundTGKK_Pixmap.MakeAvailable();
+							DBZBackgroundTGKK_Texture.MakeAvailable();
+							DBZBackgroundTUG_Material.MakeAvailable();
+							DBZBackgroundTUG_Pixmap.MakeAvailable();
+							DBZBackgroundTUG_Texture.MakeAvailable();
+							DBZBackgroundTUKK_Material.MakeAvailable();
+							DBZBackgroundTUKK_Pixmap.MakeAvailable();
+							DBZBackgroundTUKK_Texture.MakeAvailable();
+							DBZBackgroundTUMK_Material.MakeAvailable();
+							DBZBackgroundTUMK_Pixmap.MakeAvailable();
+							DBZBackgroundTUMK_Texture.MakeAvailable();
+							DBZBackgroundTUS_Material.MakeAvailable();
+							DBZBackgroundTUS_Pixmap.MakeAvailable();
+							DBZBackgroundTUS_Texture.MakeAvailable();
+							DBZ_Shenron_Material.MakeAvailable();
+							DBZ_Shenron_Pixmap.MakeAvailable();
+							DBZ_Shenron_Texture.MakeAvailable();
+							Dragonballs_Material.MakeAvailable();
+							Dragonballs_Pixmap.MakeAvailable();
+							Dragonballs_Texture.MakeAvailable();
+						}
+					}
+					public static void LoadAll() {
+						KingKai.LoadAll();
+						SnakeWay.LoadAll();
+					}
+				}
+				public static class FinalWorld {
+					public static Duality.ContentRef<Duality.Resources.Material> SlendermanBackgroundText_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\DialogImage\FinalWorld\SlendermanBackgroundText.Material.res"); }}
+					public static Duality.ContentRef<Duality.Resources.Pixmap> SlendermanBackgroundText_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\DialogImage\FinalWorld\SlendermanBackgroundText.Pixmap.res"); }}
+					public static Duality.ContentRef<Duality.Resources.Texture> SlendermanBackgroundText_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Characters\DialogImage\FinalWorld\SlendermanBackgroundText.Texture.res"); }}
+					public static Duality.ContentRef<Duality.Resources.Material> SlendermanBackgroundTextGS_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\DialogImage\FinalWorld\SlendermanBackgroundTextGS.Material.res"); }}
+					public static Duality.ContentRef<Duality.Resources.Pixmap> SlendermanBackgroundTextGS_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\DialogImage\FinalWorld\SlendermanBackgroundTextGS.Pixmap.res"); }}
+					public static Duality.ContentRef<Duality.Resources.Texture> SlendermanBackgroundTextGS_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Characters\DialogImage\FinalWorld\SlendermanBackgroundTextGS.Texture.res"); }}
+					public static Duality.ContentRef<Duality.Resources.Material> SlendermanBackgroundTextUS_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\DialogImage\FinalWorld\SlendermanBackgroundTextUS.Material.res"); }}
+					public static Duality.ContentRef<Duality.Resources.Pixmap> SlendermanBackgroundTextUS_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\DialogImage\FinalWorld\SlendermanBackgroundTextUS.Pixmap.res"); }}
+					public static Duality.ContentRef<Duality.Resources.Texture> SlendermanBackgroundTextUS_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Characters\DialogImage\FinalWorld\SlendermanBackgroundTextUS.Texture.res"); }}
+					public static void LoadAll() {
+						SlendermanBackgroundText_Material.MakeAvailable();
+						SlendermanBackgroundText_Pixmap.MakeAvailable();
+						SlendermanBackgroundText_Texture.MakeAvailable();
+						SlendermanBackgroundTextGS_Material.MakeAvailable();
+						SlendermanBackgroundTextGS_Pixmap.MakeAvailable();
+						SlendermanBackgroundTextGS_Texture.MakeAvailable();
+						SlendermanBackgroundTextUS_Material.MakeAvailable();
+						SlendermanBackgroundTextUS_Pixmap.MakeAvailable();
+						SlendermanBackgroundTextUS_Texture.MakeAvailable();
+					}
+				}
+				public static class FirstWorld {
+					public static Duality.ContentRef<Duality.Resources.Material> WhispyBackgroundTextUM_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\DialogImage\FirstWorld\WhispyBackgroundTextUM.Material.res"); }}
+					public static Duality.ContentRef<Duality.Resources.Pixmap> WhispyBackgroundTextUM_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\DialogImage\FirstWorld\WhispyBackgroundTextUM.Pixmap.res"); }}
+					public static Duality.ContentRef<Duality.Resources.Texture> WhispyBackgroundTextUM_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Characters\DialogImage\FirstWorld\WhispyBackgroundTextUM.Texture.res"); }}
+					public static void LoadAll() {
+						WhispyBackgroundTextUM_Material.MakeAvailable();
+						WhispyBackgroundTextUM_Pixmap.MakeAvailable();
+						WhispyBackgroundTextUM_Texture.MakeAvailable();
+					}
+				}
+				public static class LinkWorld {
+					public static class LinkCastle {
+						public static void LoadAll() {
+						}
+					}
+					public static class LinkForest {
+						public static Duality.ContentRef<Duality.Resources.Material> LinkForestTextGN_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\DialogImage\LinkWorld\LinkForest\LinkForestTextGN.Material.res"); }}
+						public static Duality.ContentRef<Duality.Resources.Pixmap> LinkForestTextGN_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\DialogImage\LinkWorld\LinkForest\LinkForestTextGN.Pixmap.res"); }}
+						public static Duality.ContentRef<Duality.Resources.Texture> LinkForestTextGN_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Characters\DialogImage\LinkWorld\LinkForest\LinkForestTextGN.Texture.res"); }}
+						public static Duality.ContentRef<Duality.Resources.Material> LinkForestTextUG_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\DialogImage\LinkWorld\LinkForest\LinkForestTextUG.Material.res"); }}
+						public static Duality.ContentRef<Duality.Resources.Pixmap> LinkForestTextUG_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\DialogImage\LinkWorld\LinkForest\LinkForestTextUG.Pixmap.res"); }}
+						public static Duality.ContentRef<Duality.Resources.Texture> LinkForestTextUG_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Characters\DialogImage\LinkWorld\LinkForest\LinkForestTextUG.Texture.res"); }}
+						public static Duality.ContentRef<Duality.Resources.Material> LinkForestTextUN_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\DialogImage\LinkWorld\LinkForest\LinkForestTextUN.Material.res"); }}
+						public static Duality.ContentRef<Duality.Resources.Pixmap> LinkForestTextUN_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\DialogImage\LinkWorld\LinkForest\LinkForestTextUN.Pixmap.res"); }}
+						public static Duality.ContentRef<Duality.Resources.Texture> LinkForestTextUN_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Characters\DialogImage\LinkWorld\LinkForest\LinkForestTextUN.Texture.res"); }}
+						public static void LoadAll() {
+							LinkForestTextGN_Material.MakeAvailable();
+							LinkForestTextGN_Pixmap.MakeAvailable();
+							LinkForestTextGN_Texture.MakeAvailable();
+							LinkForestTextUG_Material.MakeAvailable();
+							LinkForestTextUG_Pixmap.MakeAvailable();
+							LinkForestTextUG_Texture.MakeAvailable();
+							LinkForestTextUN_Material.MakeAvailable();
+							LinkForestTextUN_Pixmap.MakeAvailable();
+							LinkForestTextUN_Texture.MakeAvailable();
+						}
+					}
+					public static void LoadAll() {
+						LinkCastle.LoadAll();
+						LinkForest.LoadAll();
+					}
+				}
+				public static class MarioWorld {
+					public static class MarioCastle {
+						public static Duality.ContentRef<Duality.Resources.Material> CastleTextBM_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\DialogImage\MarioWorld\MarioCastle\CastleTextBM.Material.res"); }}
+						public static Duality.ContentRef<Duality.Resources.Pixmap> CastleTextBM_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\DialogImage\MarioWorld\MarioCastle\CastleTextBM.Pixmap.res"); }}
+						public static Duality.ContentRef<Duality.Resources.Texture> CastleTextBM_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Characters\DialogImage\MarioWorld\MarioCastle\CastleTextBM.Texture.res"); }}
+						public static Duality.ContentRef<Duality.Resources.Material> CastleTextGB_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\DialogImage\MarioWorld\MarioCastle\CastleTextGB.Material.res"); }}
+						public static Duality.ContentRef<Duality.Resources.Pixmap> CastleTextGB_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\DialogImage\MarioWorld\MarioCastle\CastleTextGB.Pixmap.res"); }}
+						public static Duality.ContentRef<Duality.Resources.Texture> CastleTextGB_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Characters\DialogImage\MarioWorld\MarioCastle\CastleTextGB.Texture.res"); }}
+						public static Duality.ContentRef<Duality.Resources.Material> CastleTextGM_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\DialogImage\MarioWorld\MarioCastle\CastleTextGM.Material.res"); }}
+						public static Duality.ContentRef<Duality.Resources.Pixmap> CastleTextGM_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\DialogImage\MarioWorld\MarioCastle\CastleTextGM.Pixmap.res"); }}
+						public static Duality.ContentRef<Duality.Resources.Texture> CastleTextGM_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Characters\DialogImage\MarioWorld\MarioCastle\CastleTextGM.Texture.res"); }}
+						public static Duality.ContentRef<Duality.Resources.Material> CastleTextUB_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\DialogImage\MarioWorld\MarioCastle\CastleTextUB.Material.res"); }}
+						public static Duality.ContentRef<Duality.Resources.Pixmap> CastleTextUB_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\DialogImage\MarioWorld\MarioCastle\CastleTextUB.Pixmap.res"); }}
+						public static Duality.ContentRef<Duality.Resources.Texture> CastleTextUB_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Characters\DialogImage\MarioWorld\MarioCastle\CastleTextUB.Texture.res"); }}
+						public static Duality.ContentRef<Duality.Resources.Material> CastleTextUG_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\DialogImage\MarioWorld\MarioCastle\CastleTextUG.Material.res"); }}
+						public static Duality.ContentRef<Duality.Resources.Pixmap> CastleTextUG_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\DialogImage\MarioWorld\MarioCastle\CastleTextUG.Pixmap.res"); }}
+						public static Duality.ContentRef<Duality.Resources.Texture> CastleTextUG_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Characters\DialogImage\MarioWorld\MarioCastle\CastleTextUG.Texture.res"); }}
+						public static Duality.ContentRef<Duality.Resources.Material> CastleTextUM_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\DialogImage\MarioWorld\MarioCastle\CastleTextUM.Material.res"); }}
+						public static Duality.ContentRef<Duality.Resources.Pixmap> CastleTextUM_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\DialogImage\MarioWorld\MarioCastle\CastleTextUM.Pixmap.res"); }}
+						public static Duality.ContentRef<Duality.Resources.Texture> CastleTextUM_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Characters\DialogImage\MarioWorld\MarioCastle\CastleTextUM.Texture.res"); }}
+						public static void LoadAll() {
+							CastleTextBM_Material.MakeAvailable();
+							CastleTextBM_Pixmap.MakeAvailable();
+							CastleTextBM_Texture.MakeAvailable();
+							CastleTextGB_Material.MakeAvailable();
+							CastleTextGB_Pixmap.MakeAvailable();
+							CastleTextGB_Texture.MakeAvailable();
+							CastleTextGM_Material.MakeAvailable();
+							CastleTextGM_Pixmap.MakeAvailable();
+							CastleTextGM_Texture.MakeAvailable();
+							CastleTextUB_Material.MakeAvailable();
+							CastleTextUB_Pixmap.MakeAvailable();
+							CastleTextUB_Texture.MakeAvailable();
+							CastleTextUG_Material.MakeAvailable();
+							CastleTextUG_Pixmap.MakeAvailable();
+							CastleTextUG_Texture.MakeAvailable();
+							CastleTextUM_Material.MakeAvailable();
+							CastleTextUM_Pixmap.MakeAvailable();
+							CastleTextUM_Texture.MakeAvailable();
+						}
+					}
+					public static class MarioLand {
+						public static Duality.ContentRef<Duality.Resources.Material> MarioWorld1TGP_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\DialogImage\MarioWorld\MarioLand\MarioWorld1TGP.Material.res"); }}
+						public static Duality.ContentRef<Duality.Resources.Pixmap> MarioWorld1TGP_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\DialogImage\MarioWorld\MarioLand\MarioWorld1TGP.Pixmap.res"); }}
+						public static Duality.ContentRef<Duality.Resources.Texture> MarioWorld1TGP_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Characters\DialogImage\MarioWorld\MarioLand\MarioWorld1TGP.Texture.res"); }}
+						public static Duality.ContentRef<Duality.Resources.Material> MarioWorld1TUG_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\DialogImage\MarioWorld\MarioLand\MarioWorld1TUG.Material.res"); }}
+						public static Duality.ContentRef<Duality.Resources.Pixmap> MarioWorld1TUG_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\DialogImage\MarioWorld\MarioLand\MarioWorld1TUG.Pixmap.res"); }}
+						public static Duality.ContentRef<Duality.Resources.Texture> MarioWorld1TUG_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Characters\DialogImage\MarioWorld\MarioLand\MarioWorld1TUG.Texture.res"); }}
+						public static Duality.ContentRef<Duality.Resources.Material> MarioWorld1TUP_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\DialogImage\MarioWorld\MarioLand\MarioWorld1TUP.Material.res"); }}
+						public static Duality.ContentRef<Duality.Resources.Pixmap> MarioWorld1TUP_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\DialogImage\MarioWorld\MarioLand\MarioWorld1TUP.Pixmap.res"); }}
+						public static Duality.ContentRef<Duality.Resources.Texture> MarioWorld1TUP_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Characters\DialogImage\MarioWorld\MarioLand\MarioWorld1TUP.Texture.res"); }}
+						public static void LoadAll() {
+							MarioWorld1TGP_Material.MakeAvailable();
+							MarioWorld1TGP_Pixmap.MakeAvailable();
+							MarioWorld1TGP_Texture.MakeAvailable();
+							MarioWorld1TUG_Material.MakeAvailable();
+							MarioWorld1TUG_Pixmap.MakeAvailable();
+							MarioWorld1TUG_Texture.MakeAvailable();
+							MarioWorld1TUP_Material.MakeAvailable();
+							MarioWorld1TUP_Pixmap.MakeAvailable();
+							MarioWorld1TUP_Texture.MakeAvailable();
+						}
+					}
+					public static void LoadAll() {
+						MarioCastle.LoadAll();
+						MarioLand.LoadAll();
+					}
+				}
 				public static Duality.ContentRef<Duality.Resources.Material> bigheadgoku_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\DialogImage\bigheadgoku.Material.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Pixmap> bigheadgoku_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\DialogImage\bigheadgoku.Pixmap.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Texture> bigheadgoku_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Characters\DialogImage\bigheadgoku.Texture.res"); }}
-				public static Duality.ContentRef<Duality.Resources.Material> CastleTextBM_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\DialogImage\CastleTextBM.Material.res"); }}
-				public static Duality.ContentRef<Duality.Resources.Pixmap> CastleTextBM_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\DialogImage\CastleTextBM.Pixmap.res"); }}
-				public static Duality.ContentRef<Duality.Resources.Texture> CastleTextBM_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Characters\DialogImage\CastleTextBM.Texture.res"); }}
-				public static Duality.ContentRef<Duality.Resources.Material> CastleTextGB_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\DialogImage\CastleTextGB.Material.res"); }}
-				public static Duality.ContentRef<Duality.Resources.Pixmap> CastleTextGB_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\DialogImage\CastleTextGB.Pixmap.res"); }}
-				public static Duality.ContentRef<Duality.Resources.Texture> CastleTextGB_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Characters\DialogImage\CastleTextGB.Texture.res"); }}
-				public static Duality.ContentRef<Duality.Resources.Material> CastleTextGM_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\DialogImage\CastleTextGM.Material.res"); }}
-				public static Duality.ContentRef<Duality.Resources.Pixmap> CastleTextGM_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\DialogImage\CastleTextGM.Pixmap.res"); }}
-				public static Duality.ContentRef<Duality.Resources.Texture> CastleTextGM_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Characters\DialogImage\CastleTextGM.Texture.res"); }}
-				public static Duality.ContentRef<Duality.Resources.Material> CastleTextUB_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\DialogImage\CastleTextUB.Material.res"); }}
-				public static Duality.ContentRef<Duality.Resources.Pixmap> CastleTextUB_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\DialogImage\CastleTextUB.Pixmap.res"); }}
-				public static Duality.ContentRef<Duality.Resources.Texture> CastleTextUB_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Characters\DialogImage\CastleTextUB.Texture.res"); }}
-				public static Duality.ContentRef<Duality.Resources.Material> CastleTextUG_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\DialogImage\CastleTextUG.Material.res"); }}
-				public static Duality.ContentRef<Duality.Resources.Pixmap> CastleTextUG_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\DialogImage\CastleTextUG.Pixmap.res"); }}
-				public static Duality.ContentRef<Duality.Resources.Texture> CastleTextUG_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Characters\DialogImage\CastleTextUG.Texture.res"); }}
-				public static Duality.ContentRef<Duality.Resources.Material> CastleTextUM_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\DialogImage\CastleTextUM.Material.res"); }}
-				public static Duality.ContentRef<Duality.Resources.Pixmap> CastleTextUM_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\DialogImage\CastleTextUM.Pixmap.res"); }}
-				public static Duality.ContentRef<Duality.Resources.Texture> CastleTextUM_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Characters\DialogImage\CastleTextUM.Texture.res"); }}
-				public static Duality.ContentRef<Duality.Resources.Material> DBZBackgroundTGKK_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\DialogImage\DBZBackgroundTGKK.Material.res"); }}
-				public static Duality.ContentRef<Duality.Resources.Pixmap> DBZBackgroundTGKK_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\DialogImage\DBZBackgroundTGKK.Pixmap.res"); }}
-				public static Duality.ContentRef<Duality.Resources.Texture> DBZBackgroundTGKK_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Characters\DialogImage\DBZBackgroundTGKK.Texture.res"); }}
-				public static Duality.ContentRef<Duality.Resources.Material> DBZBackgroundTUG_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\DialogImage\DBZBackgroundTUG.Material.res"); }}
-				public static Duality.ContentRef<Duality.Resources.Pixmap> DBZBackgroundTUG_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\DialogImage\DBZBackgroundTUG.Pixmap.res"); }}
-				public static Duality.ContentRef<Duality.Resources.Texture> DBZBackgroundTUG_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Characters\DialogImage\DBZBackgroundTUG.Texture.res"); }}
-				public static Duality.ContentRef<Duality.Resources.Material> DBZBackgroundTUKK_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\DialogImage\DBZBackgroundTUKK.Material.res"); }}
-				public static Duality.ContentRef<Duality.Resources.Pixmap> DBZBackgroundTUKK_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\DialogImage\DBZBackgroundTUKK.Pixmap.res"); }}
-				public static Duality.ContentRef<Duality.Resources.Texture> DBZBackgroundTUKK_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Characters\DialogImage\DBZBackgroundTUKK.Texture.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Material> goku_hero_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\DialogImage\goku_hero.Material.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Pixmap> goku_hero_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\DialogImage\goku_hero.Pixmap.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Texture> goku_hero_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Characters\DialogImage\goku_hero.Texture.res"); }}
-				public static Duality.ContentRef<Duality.Resources.Material> SlendermanBackgroundText_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\DialogImage\SlendermanBackgroundText.Material.res"); }}
-				public static Duality.ContentRef<Duality.Resources.Pixmap> SlendermanBackgroundText_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\DialogImage\SlendermanBackgroundText.Pixmap.res"); }}
-				public static Duality.ContentRef<Duality.Resources.Texture> SlendermanBackgroundText_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Characters\DialogImage\SlendermanBackgroundText.Texture.res"); }}
-				public static Duality.ContentRef<Duality.Resources.Material> SlendermanBackgroundTextGS_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\DialogImage\SlendermanBackgroundTextGS.Material.res"); }}
-				public static Duality.ContentRef<Duality.Resources.Pixmap> SlendermanBackgroundTextGS_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\DialogImage\SlendermanBackgroundTextGS.Pixmap.res"); }}
-				public static Duality.ContentRef<Duality.Resources.Texture> SlendermanBackgroundTextGS_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Characters\DialogImage\SlendermanBackgroundTextGS.Texture.res"); }}
-				public static Duality.ContentRef<Duality.Resources.Material> SlendermanBackgroundTextUS_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\DialogImage\SlendermanBackgroundTextUS.Material.res"); }}
-				public static Duality.ContentRef<Duality.Resources.Pixmap> SlendermanBackgroundTextUS_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\DialogImage\SlendermanBackgroundTextUS.Pixmap.res"); }}
-				public static Duality.ContentRef<Duality.Resources.Texture> SlendermanBackgroundTextUS_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Characters\DialogImage\SlendermanBackgroundTextUS.Texture.res"); }}
 				public static void LoadAll() {
+					DbzWorld.LoadAll();
+					FinalWorld.LoadAll();
+					FirstWorld.LoadAll();
+					LinkWorld.LoadAll();
+					MarioWorld.LoadAll();
 					bigheadgoku_Material.MakeAvailable();
 					bigheadgoku_Pixmap.MakeAvailable();
 					bigheadgoku_Texture.MakeAvailable();
-					CastleTextBM_Material.MakeAvailable();
-					CastleTextBM_Pixmap.MakeAvailable();
-					CastleTextBM_Texture.MakeAvailable();
-					CastleTextGB_Material.MakeAvailable();
-					CastleTextGB_Pixmap.MakeAvailable();
-					CastleTextGB_Texture.MakeAvailable();
-					CastleTextGM_Material.MakeAvailable();
-					CastleTextGM_Pixmap.MakeAvailable();
-					CastleTextGM_Texture.MakeAvailable();
-					CastleTextUB_Material.MakeAvailable();
-					CastleTextUB_Pixmap.MakeAvailable();
-					CastleTextUB_Texture.MakeAvailable();
-					CastleTextUG_Material.MakeAvailable();
-					CastleTextUG_Pixmap.MakeAvailable();
-					CastleTextUG_Texture.MakeAvailable();
-					CastleTextUM_Material.MakeAvailable();
-					CastleTextUM_Pixmap.MakeAvailable();
-					CastleTextUM_Texture.MakeAvailable();
-					DBZBackgroundTGKK_Material.MakeAvailable();
-					DBZBackgroundTGKK_Pixmap.MakeAvailable();
-					DBZBackgroundTGKK_Texture.MakeAvailable();
-					DBZBackgroundTUG_Material.MakeAvailable();
-					DBZBackgroundTUG_Pixmap.MakeAvailable();
-					DBZBackgroundTUG_Texture.MakeAvailable();
-					DBZBackgroundTUKK_Material.MakeAvailable();
-					DBZBackgroundTUKK_Pixmap.MakeAvailable();
-					DBZBackgroundTUKK_Texture.MakeAvailable();
 					goku_hero_Material.MakeAvailable();
 					goku_hero_Pixmap.MakeAvailable();
 					goku_hero_Texture.MakeAvailable();
-					SlendermanBackgroundText_Material.MakeAvailable();
-					SlendermanBackgroundText_Pixmap.MakeAvailable();
-					SlendermanBackgroundText_Texture.MakeAvailable();
-					SlendermanBackgroundTextGS_Material.MakeAvailable();
-					SlendermanBackgroundTextGS_Pixmap.MakeAvailable();
-					SlendermanBackgroundTextGS_Texture.MakeAvailable();
-					SlendermanBackgroundTextUS_Material.MakeAvailable();
-					SlendermanBackgroundTextUS_Pixmap.MakeAvailable();
-					SlendermanBackgroundTextUS_Texture.MakeAvailable();
 				}
 			}
 			public static class Enemies {
@@ -186,6 +331,10 @@ namespace GameRes
 						Thwomp_Texture.MakeAvailable();
 					}
 				}
+				public static class Mario_World {
+					public static void LoadAll() {
+					}
+				}
 				public static class ZeldaWorld {
 					public static Duality.ContentRef<Duality.Resources.Material> Blue_Knight_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\Enemies\ZeldaWorld\Blue Knight.Material.res"); }}
 					public static Duality.ContentRef<Duality.Resources.Pixmap> Blue_Knight_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\Enemies\ZeldaWorld\Blue Knight.Pixmap.res"); }}
@@ -220,6 +369,10 @@ namespace GameRes
 						Tektike_Texture.MakeAvailable();
 					}
 				}
+				public static class Zelda_World {
+					public static void LoadAll() {
+					}
+				}
 				public static Duality.ContentRef<Duality.Resources.Material> SlenderMan1_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\Enemies\SlenderMan1.Material.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Pixmap> SlenderMan1_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\Enemies\SlenderMan1.Pixmap.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Texture> SlenderMan1_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Characters\Enemies\SlenderMan1.Texture.res"); }}
@@ -229,7 +382,9 @@ namespace GameRes
 				public static void LoadAll() {
 					Dbz_World.LoadAll();
 					MarioWorld.LoadAll();
+					Mario_World.LoadAll();
 					ZeldaWorld.LoadAll();
+					Zelda_World.LoadAll();
 					SlenderMan1_Material.MakeAvailable();
 					SlenderMan1_Pixmap.MakeAvailable();
 					SlenderMan1_Texture.MakeAvailable();
@@ -276,6 +431,9 @@ namespace GameRes
 				public static Duality.ContentRef<Duality.Resources.Material> Navis_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\Side Characters\Navis.Material.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Pixmap> Navis_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\Side Characters\Navis.Pixmap.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Texture> Navis_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Characters\Side Characters\Navis.Texture.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Material> PrincessPeach_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\Side Characters\PrincessPeach.Material.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Pixmap> PrincessPeach_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\Side Characters\PrincessPeach.Pixmap.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Texture> PrincessPeach_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Characters\Side Characters\PrincessPeach.Texture.res"); }}
 				public static void LoadAll() {
 					BothGokuSpriteSheetsSP__1__Material.MakeAvailable();
 					BothGokuSpriteSheetsSP__1__Pixmap.MakeAvailable();
@@ -304,6 +462,9 @@ namespace GameRes
 					Navis_Material.MakeAvailable();
 					Navis_Pixmap.MakeAvailable();
 					Navis_Texture.MakeAvailable();
+					PrincessPeach_Material.MakeAvailable();
+					PrincessPeach_Pixmap.MakeAvailable();
+					PrincessPeach_Texture.MakeAvailable();
 				}
 			}
 			public static void LoadAll() {
@@ -698,12 +859,14 @@ namespace GameRes
 					public static Duality.ContentRef<Duality.Resources.Scene> DbzLevelOnePre_Scene { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Scene>(@"Data\Scenes\DialogScenes\DbzWorld\DbzLevelOnePre.Scene.res"); }}
 					public static Duality.ContentRef<Duality.Resources.Scene> DbzLevelTwoPost_Scene { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Scene>(@"Data\Scenes\DialogScenes\DbzWorld\DbzLevelTwoPost.Scene.res"); }}
 					public static Duality.ContentRef<Duality.Resources.Scene> DbzLevelTwoPre_Scene { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Scene>(@"Data\Scenes\DialogScenes\DbzWorld\DbzLevelTwoPre.Scene.res"); }}
+					public static Duality.ContentRef<Duality.Resources.Scene> DbzPreKingKai_Scene { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Scene>(@"Data\Scenes\DialogScenes\DbzWorld\DbzPreKingKai.Scene.res"); }}
 					public static void LoadAll() {
 						DbzGokuFightPost_Scene.MakeAvailable();
 						DbzLevelOnePost_Scene.MakeAvailable();
 						DbzLevelOnePre_Scene.MakeAvailable();
 						DbzLevelTwoPost_Scene.MakeAvailable();
 						DbzLevelTwoPre_Scene.MakeAvailable();
+						DbzPreKingKai_Scene.MakeAvailable();
 					}
 				}
 				public static class FinalWorld {
@@ -729,11 +892,13 @@ namespace GameRes
 					public static Duality.ContentRef<Duality.Resources.Scene> MarioLevelOnePostTwoPre_Scene { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Scene>(@"Data\Scenes\DialogScenes\MarioWorld\MarioLevelOnePostTwoPre.Scene.res"); }}
 					public static Duality.ContentRef<Duality.Resources.Scene> MarioLevelOnePre_Scene { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Scene>(@"Data\Scenes\DialogScenes\MarioWorld\MarioLevelOnePre.Scene.res"); }}
 					public static Duality.ContentRef<Duality.Resources.Scene> MarioLevelTwoPostBossPre_Scene { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Scene>(@"Data\Scenes\DialogScenes\MarioWorld\MarioLevelTwoPostBossPre.Scene.res"); }}
+					public static Duality.ContentRef<Duality.Resources.Scene> PeachTransition_Scene { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Scene>(@"Data\Scenes\DialogScenes\MarioWorld\PeachTransition.Scene.res"); }}
 					public static void LoadAll() {
 						MarioLevelBossPost_Scene.MakeAvailable();
 						MarioLevelOnePostTwoPre_Scene.MakeAvailable();
 						MarioLevelOnePre_Scene.MakeAvailable();
 						MarioLevelTwoPostBossPre_Scene.MakeAvailable();
+						PeachTransition_Scene.MakeAvailable();
 					}
 				}
 				public static void LoadAll() {
