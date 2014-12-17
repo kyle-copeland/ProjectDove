@@ -166,7 +166,7 @@
             <_nextDialog dataType="Struct" type="System.Collections.Generic.List`1[[Dove_Game.Test_Logic.DialogComponent]]" id="2839561068">
               <_items dataType="Array" type="Dove_Game.Test_Logic.DialogComponent[]" id="1082752868" length="16">
                 <item dataType="Struct" type="Dove_Game.Test_Logic.DialogComponent" id="3310248900">
-                  <_x003C_DialogMessage_x003E_k__BackingField dataType="String">Goku: Man that was awesome! You sure are strong! Even though I can’t fight the ultimate evil myself, I’m sure you’ll give him a run for his money. If you ever need my help, just summon me and I’ll help with a quick Kamehameha.</_x003C_DialogMessage_x003E_k__BackingField>
+                  <_x003C_DialogMessage_x003E_k__BackingField dataType="String">Goku: Man that was awesome! You sure are strong! Even though I can't fight the ultimate evil myself, I'm sure you'll give him a run for his money. If you ever need my help, just summon me and I'll help with a quick Kamehameha.</_x003C_DialogMessage_x003E_k__BackingField>
                   <_x003C_DialogSprite_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
                     <contentPath dataType="String">Data\Characters\DialogImage\DbzWorld\KingKai\KingPlanetTUG.Material.res</contentPath>
                   </_x003C_DialogSprite_x003E_k__BackingField>
@@ -199,7 +199,7 @@
                   </_x003C_PostSceneRef_x003E_k__BackingField>
                 </item>
                 <item dataType="Struct" type="Dove_Game.Test_Logic.DialogComponent" id="2020282402">
-                  <_x003C_DialogMessage_x003E_k__BackingField dataType="String">Unknown: Wait that doesn’t make sense, isn’t Mario the good guy?</_x003C_DialogMessage_x003E_k__BackingField>
+                  <_x003C_DialogMessage_x003E_k__BackingField dataType="String">Unknown: Wait that doesn't make sense, isn't Mario the good guy?</_x003C_DialogMessage_x003E_k__BackingField>
                   <_x003C_DialogSprite_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
                     <contentPath dataType="String">Data\Characters\DialogImage\DbzWorld\KingKai\KingPlanetTUG.Material.res</contentPath>
                   </_x003C_DialogSprite_x003E_k__BackingField>
@@ -232,7 +232,7 @@
                   </_x003C_PostSceneRef_x003E_k__BackingField>
                 </item>
                 <item dataType="Struct" type="Dove_Game.Test_Logic.DialogComponent" id="1787744056">
-                  <_x003C_DialogMessage_x003E_k__BackingField dataType="String">King Kai: That’s slenderman, goku!!!! He’s the ultimate evil that no one can face b/c they can’t look at him!</_x003C_DialogMessage_x003E_k__BackingField>
+                  <_x003C_DialogMessage_x003E_k__BackingField dataType="String">King Kai: That's slenderman, goku!!!! He's the ultimate evil that no one can face b/c they can't look at him!</_x003C_DialogMessage_x003E_k__BackingField>
                   <_x003C_DialogSprite_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
                     <contentPath dataType="String">Data\Characters\DialogImage\DbzWorld\KingKai\KingPlanetTGKK.Material.res</contentPath>
                   </_x003C_DialogSprite_x003E_k__BackingField>
@@ -243,7 +243,7 @@
                   </_x003C_PostSceneRef_x003E_k__BackingField>
                 </item>
                 <item dataType="Struct" type="Dove_Game.Test_Logic.DialogComponent" id="3505952618">
-                  <_x003C_DialogMessage_x003E_k__BackingField dataType="String">Unknown: Do you think Slenderman is behind all this? Meta Knight mentioned that the good guys are now bad guys and that people are disappearing…</_x003C_DialogMessage_x003E_k__BackingField>
+                  <_x003C_DialogMessage_x003E_k__BackingField dataType="String">Unknown: Do you think Slenderman is behind all this? Meta Knight mentioned that the good guys are now bad guys and that people are disappearing...</_x003C_DialogMessage_x003E_k__BackingField>
                   <_x003C_DialogSprite_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
                     <contentPath dataType="String">Data\Characters\DialogImage\DbzWorld\KingKai\KingPlanetTUG.Material.res</contentPath>
                   </_x003C_DialogSprite_x003E_k__BackingField>
@@ -254,7 +254,7 @@
                   </_x003C_PostSceneRef_x003E_k__BackingField>
                 </item>
                 <item dataType="Struct" type="Dove_Game.Test_Logic.DialogComponent" id="2753411636">
-                  <_x003C_DialogMessage_x003E_k__BackingField dataType="String">Goku: We don’t know for sure, but I have a feeling you’re right Unknown. We don’t have much time, lets go rescue Bowser!</_x003C_DialogMessage_x003E_k__BackingField>
+                  <_x003C_DialogMessage_x003E_k__BackingField dataType="String">Goku: We don't know for sure, but I have a feeling you're right Unknown. We don't have much time, lets go rescue Bowser!</_x003C_DialogMessage_x003E_k__BackingField>
                   <_x003C_DialogSprite_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
                     <contentPath dataType="String">Data\Characters\DialogImage\DbzWorld\KingKai\KingPlanetTUG.Material.res</contentPath>
                   </_x003C_DialogSprite_x003E_k__BackingField>

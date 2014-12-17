@@ -47,17 +47,17 @@ namespace Dove_Game.Enemies.DBZ_World
                 {
                     var monkeyRigid = GameObj.RigidBody;
                     var playerOne = Scene.Current.FindComponent<PlayerOne>();
-                    playerOne.MovementOffset = 0.45f;
+                    //playerOne.MovementOffset = 0.45f;
 
                     var playerDirection = playerOne.CharDirection;
                     
                     if (playerDirection == Direction.Left)
                     {
-                        monkeyRigid.ApplyWorldImpulse(-Vector2.UnitX * 1.0f);
+                        monkeyRigid.ApplyLocalImpulse(-Vector2.UnitX * 0.30f);
                     }
                     else if (playerDirection == Direction.Right)
                     {
-                        monkeyRigid.ApplyWorldImpulse(Vector2.UnitX * 1.0f);
+                        monkeyRigid.ApplyLocalImpulse(Vector2.UnitX * 0.30f);
                     }
 
                     playerSprite.AnimFirstFrame = playerOne.CharDirection == Direction.Left ? 0 : 5;
@@ -86,7 +86,7 @@ namespace Dove_Game.Enemies.DBZ_World
             {
                 var main = Scene.Current.FindComponent<PlayerOne>();
                 var mainPos = main.GameObj.Transform.Pos;
-                var offset = -200.0f;
+                var offset = -100.0f;
                 CharDirection = Direction.Left;
 
                 if (main.CharDirection == Direction.Left)

@@ -98,7 +98,7 @@ namespace Dove_Game.Test_Logic
                 var scaleFactor = 3.0f;
                 if (CurrentDialog.DialogSprite.Name == "DBZShenron" ||
                     CurrentDialog.DialogSprite.Name == "Dragonballs")
-                    scaleFactor = 2.0f;
+                    scaleFactor = 1.0f;
 
                 dialogSprite.GetComponent<Transform>().Scale = scaleFactor;
 
@@ -118,7 +118,7 @@ namespace Dove_Game.Test_Logic
 
                 for (var i = 0; i < substringCount + 1; i++)
                 {
-                    if (dialog.Count() > substringLimit)
+                    if (dialog.Count() >= substringLimit)
                     {
                         canvas.DrawText(dialog.Substring(0, substringLimit), 0f, (device.TargetSize.Y / 4.0f) + 40.0f + offset, 0.0f, Alignment.Center);
                         dialog = dialog.Substring(substringLimit);

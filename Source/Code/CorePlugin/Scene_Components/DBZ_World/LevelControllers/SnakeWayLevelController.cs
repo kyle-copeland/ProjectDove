@@ -103,7 +103,8 @@ namespace Dove_Game.Test_Logic
         public void OnUpdate()
         {
             //Skip level code
-            //LevelCompleted = true;
+            if (DualityApp.Keyboard[Key.ShiftLeft] && DualityApp.Keyboard[Key.W])
+                LevelCompleted = true;
             
             if (PrevSceneName != Scene.Current.Name)
             {

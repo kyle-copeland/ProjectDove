@@ -46,7 +46,8 @@ namespace Dove_Game.Scene_Components.Mario_World.LevelControllers
         void ICmpUpdatable.OnUpdate()
         {
             //To skip level
-            _mainCharacter.GameObj.Transform.Pos = new Vector3(885.0f, _mainCharacter.GameObj.Transform.Pos.Y, _mainCharacter.GameObj.Transform.Pos.Z);
+            if (DualityApp.Keyboard[Key.ShiftLeft] && DualityApp.Keyboard[Key.W]) 
+                _mainCharacter.GameObj.Transform.Pos = new Vector3(885.0f, _mainCharacter.GameObj.Transform.Pos.Y, _mainCharacter.GameObj.Transform.Pos.Z);
 
             if (_mainCharacter.GameObj.Transform.Pos.Y > 200) // Fallen into Lava
             {
@@ -64,7 +65,7 @@ namespace Dove_Game.Scene_Components.Mario_World.LevelControllers
                 Fireball fireballController = _fireball.GetComponent<Fireball>();
                 _fireball.Transform.Pos = new OpenTK.Vector3(-1148, 26, 0);
                 this.GameObj.ParentScene.AddObject(_fireball);
-                //fireballController.setInitYPosition(200);
+                fireballController.setInitYPosition(200);
 
             }
 

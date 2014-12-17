@@ -165,19 +165,19 @@
       <parent />
       <prefabLink />
     </item>
-    <item dataType="Struct" type="Duality.GameObject" id="2125140483">
+    <item dataType="Struct" type="Duality.GameObject" id="4283602130">
       <active dataType="Bool">true</active>
       <children />
-      <compList dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Component]]" id="2473513905">
-        <_items dataType="Array" type="Duality.Component[]" id="1184520750" length="4">
-          <item dataType="Struct" type="Duality.Components.Transform" id="190488119">
+      <compList dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Component]]" id="855545660">
+        <_items dataType="Array" type="Duality.Component[]" id="4070717252" length="4">
+          <item dataType="Struct" type="Duality.Components.Transform" id="2348949766">
             <active dataType="Bool">true</active>
             <angle dataType="Float">0</angle>
             <angleAbs dataType="Float">0</angleAbs>
             <angleVel dataType="Float">0</angleVel>
             <angleVelAbs dataType="Float">0</angleVelAbs>
             <deriveAngle dataType="Bool">true</deriveAngle>
-            <gameobj dataType="ObjectRef">2125140483</gameobj>
+            <gameobj dataType="ObjectRef">4283602130</gameobj>
             <ignoreParent dataType="Bool">false</ignoreParent>
             <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
             <parentTransform />
@@ -204,13 +204,13 @@
               <Z dataType="Float">0</Z>
             </velAbs>
           </item>
-          <item dataType="Struct" type="Duality.Components.SoundEmitter" id="4169032370">
+          <item dataType="Struct" type="Duality.Components.SoundEmitter" id="2032526721">
             <active dataType="Bool">true</active>
-            <gameobj dataType="ObjectRef">2125140483</gameobj>
+            <gameobj dataType="ObjectRef">4283602130</gameobj>
             <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
-            <sources dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Components.SoundEmitter+Source]]" id="3092435478">
-              <_items dataType="Array" type="Duality.Components.SoundEmitter+Source[]" id="765364512" length="4">
-                <item dataType="Struct" type="Duality.Components.SoundEmitter+Source" id="1867208668">
+            <sources dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Components.SoundEmitter+Source]]" id="524638493">
+              <_items dataType="Array" type="Duality.Components.SoundEmitter+Source[]" id="4062516454" length="4">
+                <item dataType="Struct" type="Duality.Components.SoundEmitter+Source" id="620965248">
                   <looped dataType="Bool">true</looped>
                   <offset dataType="Struct" type="OpenTK.Vector3">
                     <X dataType="Float">0</X>
@@ -220,7 +220,7 @@
                   <paused dataType="Bool">false</paused>
                   <pitch dataType="Float">1</pitch>
                   <sound dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Sound]]">
-                    <contentPath dataType="String">Data\Music\Mario World\MarioWorld.Sound.res</contentPath>
+                    <contentPath dataType="String">Data\Music\Slender\SlenderMan.Sound.res</contentPath>
                   </sound>
                   <volume dataType="Float">1</volume>
                 </item>
@@ -233,28 +233,28 @@
         <_size dataType="Int">2</_size>
         <_version dataType="Int">2</_version>
       </compList>
-      <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="1053539424" surrogate="true">
+      <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="3354323862" surrogate="true">
         <header />
         <body>
-          <keys dataType="Array" type="System.Type[]" id="3685437083">
+          <keys dataType="Array" type="System.Type[]" id="90391830">
             <item dataType="ObjectRef">2839245824</item>
-            <item dataType="Type" id="799890326" value="Duality.Components.SoundEmitter" />
+            <item dataType="Type" id="833067296" value="Duality.Components.SoundEmitter" />
           </keys>
-          <values dataType="Array" type="Duality.Component[]" id="3221825128">
-            <item dataType="ObjectRef">190488119</item>
-            <item dataType="ObjectRef">4169032370</item>
+          <values dataType="Array" type="Duality.Component[]" id="2199739354">
+            <item dataType="ObjectRef">2348949766</item>
+            <item dataType="ObjectRef">2032526721</item>
           </values>
         </body>
       </compMap>
-      <compTransform dataType="ObjectRef">190488119</compTransform>
+      <compTransform dataType="ObjectRef">2348949766</compTransform>
       <identifier dataType="Struct" type="System.Guid" surrogate="true">
         <header>
-          <data dataType="Array" type="System.Byte[]" id="3766692177">s1WuZAUBekeGahsbFZnayg==</data>
+          <data dataType="Array" type="System.Byte[]" id="385924278">6t0+kmz63Um7P5ed7FfQ5Q==</data>
         </header>
         <body />
       </identifier>
       <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
-      <name dataType="String">MarioWorld</name>
+      <name dataType="String">SlenderMan</name>
       <parent />
       <prefabLink />
     </item>

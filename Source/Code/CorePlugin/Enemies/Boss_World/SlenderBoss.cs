@@ -24,7 +24,7 @@ namespace Dove_Game.Enemies
         {
             base.OnInit(context);
             this.touchDamage = 10;
-            this.HealthPoints = 500;
+            this.HealthPoints = 700;
             // each boss must specify its bullet information
             this.bulletBlueprint = Test_Logic.ContentRefs.BBP_rocketBullet;
             this.bulletMaterial = Test_Logic.ContentRefs.rocketBullet;

@@ -15,7 +15,7 @@ namespace Dove_Game.Scene_Components.Zelda_World.LevelControllers
         public void OnInit(Component.InitContext context)
         {
             GameController.GamePaused = true;
-            MoveOffset = 0.75f;
+            MoveOffset = 2f;
             ReachedPlayer = false;
             NextDialog = DialogScripts.LinkLevelOnePostBossPre;
             NextScene = GameRes.Data.Scenes.DialogScenes.LinkWorld.LinkLevelOnePostBossPre_Scene;

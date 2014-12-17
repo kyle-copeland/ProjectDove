@@ -203,7 +203,26 @@
       <name dataType="String">GameOver</name>
       <parent />
       <prefabLink dataType="Struct" type="Duality.Resources.PrefabLink" id="3035339351">
-        <changes />
+        <changes dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Resources.PrefabLink+VarMod]]" id="2676153812">
+          <_items dataType="Array" type="Duality.Resources.PrefabLink+VarMod[]" id="2708333796" length="4">
+            <item dataType="Struct" type="Duality.Resources.PrefabLink+VarMod">
+              <childIndex dataType="Struct" type="System.Collections.Generic.List`1[[System.Int32]]" id="1512925384">
+                <_items dataType="Array" type="System.Int32[]" id="1479506540" />
+                <_size dataType="Int">0</_size>
+                <_version dataType="Int">1</_version>
+              </childIndex>
+              <componentType dataType="ObjectRef">2242396206</componentType>
+              <prop dataType="ObjectRef">1829927980</prop>
+              <val dataType="Struct" type="OpenTK.Vector3">
+                <X dataType="Float">-397.0001</X>
+                <Y dataType="Float">149.624924</Y>
+                <Z dataType="Float">5</Z>
+              </val>
+            </item>
+          </_items>
+          <_size dataType="Int">1</_size>
+          <_version dataType="Int">5</_version>
+        </changes>
         <obj dataType="ObjectRef">3525196159</obj>
         <prefab dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Prefab]]">
           <contentPath dataType="String">Data\Prefabs\PlayerComponents\GameEnd.Prefab.res</contentPath>

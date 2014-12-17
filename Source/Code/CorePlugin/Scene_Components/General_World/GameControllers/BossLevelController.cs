@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Dove_Game.Enemies;
+using Dove_Game.Enemies.DBZ_World;
+using Dove_Game.Enemies.Zelda_World;
 using Dove_Game.Test_Logic;
 using Duality;
 using Duality.Resources;
@@ -51,9 +53,19 @@ namespace Dove_Game.Scene_Components.General_World.GameControllers
             if (GameController.GamePaused) return;
 
             if (CurrentBoss == null)
-                CurrentBoss = Scene.Current.FindComponents<Boss>().FirstOrDefault();
+                CurrentBoss = Scene.Current.FindComponents<GokuBoss>().FirstOrDefault();
+            if (CurrentBoss == null)
+                CurrentBoss = Scene.Current.FindComponents<LinkBoss>().FirstOrDefault();
+            if (CurrentBoss == null)
+                CurrentBoss = Scene.Current.FindComponents<MarioBoss>().FirstOrDefault();
+            if (CurrentBoss == null)
+                CurrentBoss = Scene.Current.FindComponents<SlenderBoss>().FirstOrDefault();
 
-            if (CurrentBoss != null && CurrentBoss.HealthPoints <= 0)
+
+            if (DualityApp.Keyboard[Key.ShiftLeft] && DualityApp.Keyboard[Key.W] && CurrentBoss != null)
+                CurrentBoss.HealthPoints = 0;
+
+            if (CurrentBoss != null && CurrentBoss.HealthPoints <= 0 && !GameOverController.GameWin)
             {
                 var slender = Scene.Current.FindComponent<SlenderBoss>();
                 if (slender != null)

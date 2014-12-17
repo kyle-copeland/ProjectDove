@@ -10,8 +10,17 @@ namespace Dove_Game.Test_Logic
 {
     public class PlayerOneBullet : Bullet
     {
+        private int _dmg;
+
+        public int Damage
+        {
+            get { return _dmg; }
+            set { _dmg = value; }
+        }
+
         public override void OnInit(Component.InitContext context)
         {
+            Damage = 10;
             this.GameObj.RigidBody.CollisionCategory = CollisionCategory.Cat2;
             this.GameObj.RigidBody.CollidesWith = CollisionCategory.Cat3 | CollisionCategory.Cat4 | CollisionCategory.Cat6;
         }
@@ -26,7 +35,7 @@ namespace Dove_Game.Test_Logic
         {
             Enemy temp = args.CollideWith.GetComponent<Enemy>();
             if(temp != null)
-                temp.doDamage(10);
+                temp.doDamage(Damage);
             
             Lifetime = 0.0f;
         }

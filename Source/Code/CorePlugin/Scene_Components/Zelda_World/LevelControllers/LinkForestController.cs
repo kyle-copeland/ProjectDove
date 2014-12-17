@@ -29,7 +29,8 @@ namespace Dove_Game.Scene_Components.Zelda_World.LevelControllers
         void ICmpUpdatable.OnUpdate()
         {
             //To skip level
-            _mainCharacter.GameObj.Transform.Pos = new Vector3(1410.0f, _mainCharacter.GameObj.Transform.Pos.Y, _mainCharacter.GameObj.Transform.Pos.Z);
+            if (DualityApp.Keyboard[Key.ShiftLeft] && DualityApp.Keyboard[Key.W]) 
+                _mainCharacter.GameObj.Transform.Pos = new Vector3(1410.0f, _mainCharacter.GameObj.Transform.Pos.Y, _mainCharacter.GameObj.Transform.Pos.Z);
 
             if (_mainCharacter.GameObj.Transform.Pos.X > 1400)
             {

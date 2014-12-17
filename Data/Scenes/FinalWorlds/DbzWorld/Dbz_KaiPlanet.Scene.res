@@ -259,9 +259,19 @@
                           <Z dataType="Float">-1</Z>
                         </val>
                       </item>
+                      <item dataType="Struct" type="Duality.Resources.PrefabLink+VarMod">
+                        <childIndex dataType="Struct" type="System.Collections.Generic.List`1[[System.Int32]]" id="1982997780">
+                          <_items dataType="Array" type="System.Int32[]" id="3467480648" />
+                          <_size dataType="Int">0</_size>
+                          <_version dataType="Int">1</_version>
+                        </childIndex>
+                        <componentType dataType="ObjectRef">277435332</componentType>
+                        <prop dataType="PropertyInfo" id="3749390370" value="P:Duality.Components.Transform:RelativeScale" />
+                        <val dataType="Float">0.9</val>
+                      </item>
                     </_items>
-                    <_size dataType="Int">1</_size>
-                    <_version dataType="Int">1041</_version>
+                    <_size dataType="Int">2</_size>
+                    <_version dataType="Int">1048</_version>
                   </changes>
                   <obj dataType="ObjectRef">707750984</obj>
                   <prefab dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Prefab]]">
@@ -880,7 +890,7 @@
       <compList dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Component]]" id="2838109960">
         <_items dataType="Array" type="Duality.Component[]" id="2606537580" length="4">
           <item dataType="Struct" type="Dove_Game.Test_Logic.KaiLevelController" id="4115803015">
-            <_delayProgress dataType="Float">1891.39917</_delayProgress>
+            <_delayProgress dataType="Float">1731.45874</_delayProgress>
             <_gotTheMonkey dataType="Bool">false</_gotTheMonkey>
             <_headerList dataType="Struct" type="System.Collections.Generic.List`1[[System.String]]" id="2959362395">
               <_items dataType="Array" type="System.String[]" id="2795064726" length="4">

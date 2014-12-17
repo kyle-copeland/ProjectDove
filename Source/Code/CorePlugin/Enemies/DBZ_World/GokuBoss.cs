@@ -28,7 +28,7 @@ namespace Dove_Game.Enemies.DBZ_World
         {
             base.OnInit(context);
             this.touchDamage = 10;
-            this.HealthPoints = 500;
+            this.HealthPoints = 400;
             // each boss must specify its bullet information
             this.bulletBlueprint = Test_Logic.ContentRefs.BBP_Default;
             this.bulletMaterial = GameRes.Data.Scenes.Bullets.Fireball_Material;
@@ -41,7 +41,7 @@ namespace Dove_Game.Enemies.DBZ_World
         
         private class Kamehameha : BossAttack
         {
-            private const float chargeupTime = 3000.0f;
+            private const float chargeupTime = 1800.0f;
             private List<int> seqRight = new List<int> { 0, 1 };
             private List<int> seqLeft = new List<int> { 9, 8 };
             private bool hasStarted = false;
@@ -115,16 +115,30 @@ namespace Dove_Game.Enemies.DBZ_World
                 else if (bulletsLeft > 0)
                 {
                     bulletsLeft--;
-                    transform.Pos = new Vector3(transform.Pos.X- teleportLateral, transform.Pos.Y, transform.Pos.Z);
-                   
-                    ContentRef<Material> spiritballMaterial = GameRes.Data.Scenes.Bullets.Fireball_Material;
+                    if (transform.Pos.X - teleportLateral >= 454  || transform.Pos.X - teleportLateral <= -394)
+                    {
 
-                    Test_Logic.EnemyBullet fireball = Test_Logic.ContentRefs.BBP_Default.Res.CreateBullet(boss.CharDirection, spiritballMaterial,true, new List<int> {12},4,4);
+                        //end Attack
+                        bulletsLeft = -1;
+                        body.BodyType = BodyType.Dynamic;
+                        transform.Pos = new Vector3(transform.Pos.X, transform.Pos.Y + teleportHeight, transform.Pos.Z);
+                        boss.nextAttack = NONE;
+                        boss.attackCooldown = ATTACK_INTERVAL;
+                    }
+                    else
+                    {
+                        transform.Pos = new Vector3(transform.Pos.X - teleportLateral, transform.Pos.Y, transform.Pos.Z);
 
-                    fireball.Fire(body.LinearVelocity, transform.GetWorldPoint(Vector2.Zero) + new Vector2(5,60), 10f, 0);
-                    Scene.Current.AddObject(fireball.GameObj);
-                    boss.nextAttack = FLYAROUND;
-                    boss.attackCooldown = teleportSpeed;
+                        ContentRef<Material> spiritballMaterial = GameRes.Data.Scenes.Bullets.Fireball_Material;
+
+                        Test_Logic.EnemyBullet fireball = Test_Logic.ContentRefs.BBP_Default.Res.CreateBullet(boss.CharDirection, spiritballMaterial, true, new List<int> { 12 }, 4, 4);
+
+                        fireball.Fire(body.LinearVelocity, transform.GetWorldPoint(Vector2.Zero) + new Vector2(5, 60), 10f, 0);
+                        Scene.Current.AddObject(fireball.GameObj);
+                        boss.nextAttack = FLYAROUND;
+                        boss.attackCooldown = teleportSpeed;
+                    }
+                    
                 }
                 else
                 {

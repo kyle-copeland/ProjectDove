@@ -11,6 +11,7 @@ namespace Dove_Game.Test_Logic.SpecialAttacks
         // Set lifetime and direction of special attack.
         public override void InitFrom(Direction direction)
         {
+            Damage = 100;
             Lifetime = 1200.0f;
             AttackDirection = direction;
         }

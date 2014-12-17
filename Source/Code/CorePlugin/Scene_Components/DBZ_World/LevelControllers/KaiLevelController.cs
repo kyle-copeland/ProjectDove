@@ -91,7 +91,8 @@ namespace Dove_Game.Test_Logic
         public void OnUpdate()
         {
             //Skip level code
-            CaughtMonkey = true;
+            if(DualityApp.Keyboard[Key.ShiftLeft] && DualityApp.Keyboard[Key.W])
+                CaughtMonkey = true;
             
             if (PrevSceneName != Scene.Current.Name)
             {
@@ -130,7 +131,7 @@ namespace Dove_Game.Test_Logic
                     
                 if (MainCharacter.ElaspedRespawnTime >= MainCharacter.RespawnDelay)
                 {
-                    Scene.Current.DisposeLater();
+                    Scene.Current.Dispose();
                     Scene.SwitchTo(PrevScene);
                 }
             }
@@ -184,7 +185,6 @@ namespace Dove_Game.Test_Logic
         public void OnInit(Component.InitContext context)
         {
             GameController.GamePaused = true;
-
             TimeOver = false;
             TotalTime = 25000.0f;
             DelayProgress = DelayTime;

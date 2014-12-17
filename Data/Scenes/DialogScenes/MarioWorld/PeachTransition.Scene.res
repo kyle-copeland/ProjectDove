@@ -708,19 +708,19 @@
       <parent />
       <prefabLink />
     </item>
-    <item dataType="Struct" type="Duality.GameObject" id="2173015945">
+    <item dataType="Struct" type="Duality.GameObject" id="4203942238">
       <active dataType="Bool">true</active>
       <children />
-      <compList dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Component]]" id="560330955">
-        <_items dataType="Array" type="Duality.Component[]" id="980820982" length="4">
-          <item dataType="Struct" type="Duality.Components.Transform" id="238363581">
+      <compList dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Component]]" id="384490824">
+        <_items dataType="Array" type="Duality.Component[]" id="4255393900" length="4">
+          <item dataType="Struct" type="Duality.Components.Transform" id="2269289874">
             <active dataType="Bool">true</active>
             <angle dataType="Float">0</angle>
             <angleAbs dataType="Float">0</angleAbs>
             <angleVel dataType="Float">0</angleVel>
             <angleVelAbs dataType="Float">0</angleVelAbs>
             <deriveAngle dataType="Bool">true</deriveAngle>
-            <gameobj dataType="ObjectRef">2173015945</gameobj>
+            <gameobj dataType="ObjectRef">4203942238</gameobj>
             <ignoreParent dataType="Bool">false</ignoreParent>
             <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
             <parentTransform />
@@ -747,13 +747,13 @@
               <Z dataType="Float">0</Z>
             </velAbs>
           </item>
-          <item dataType="Struct" type="Duality.Components.SoundEmitter" id="4216907832">
+          <item dataType="Struct" type="Duality.Components.SoundEmitter" id="1952866829">
             <active dataType="Bool">true</active>
-            <gameobj dataType="ObjectRef">2173015945</gameobj>
+            <gameobj dataType="ObjectRef">4203942238</gameobj>
             <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
-            <sources dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Components.SoundEmitter+Source]]" id="4025543284">
-              <_items dataType="Array" type="Duality.Components.SoundEmitter+Source[]" id="2849226660" length="4">
-                <item dataType="Struct" type="Duality.Components.SoundEmitter+Source" id="3559384260">
+            <sources dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Components.SoundEmitter+Source]]" id="2746568769">
+              <_items dataType="Array" type="Duality.Components.SoundEmitter+Source[]" id="4198346158" length="4">
+                <item dataType="Struct" type="Duality.Components.SoundEmitter+Source" id="954221904">
                   <looped dataType="Bool">true</looped>
                   <offset dataType="Struct" type="OpenTK.Vector3">
                     <X dataType="Float">0</X>
@@ -776,23 +776,23 @@
         <_size dataType="Int">2</_size>
         <_version dataType="Int">2</_version>
       </compList>
-      <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="2571530312" surrogate="true">
+      <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="759842014" surrogate="true">
         <header />
         <body>
-          <keys dataType="Array" type="System.Type[]" id="73021153">
+          <keys dataType="Array" type="System.Type[]" id="2145238538">
             <item dataType="ObjectRef">2777234470</item>
-            <item dataType="Type" id="2460734318" value="Duality.Components.SoundEmitter" />
+            <item dataType="Type" id="4041760480" value="Duality.Components.SoundEmitter" />
           </keys>
-          <values dataType="Array" type="Duality.Component[]" id="142693920">
-            <item dataType="ObjectRef">238363581</item>
-            <item dataType="ObjectRef">4216907832</item>
+          <values dataType="Array" type="Duality.Component[]" id="3252657178">
+            <item dataType="ObjectRef">2269289874</item>
+            <item dataType="ObjectRef">1952866829</item>
           </values>
         </body>
       </compMap>
-      <compTransform dataType="ObjectRef">238363581</compTransform>
+      <compTransform dataType="ObjectRef">2269289874</compTransform>
       <identifier dataType="Struct" type="System.Guid" surrogate="true">
         <header>
-          <data dataType="Array" type="System.Byte[]" id="148053107">+9SsFimUd0O6lANLWmGoBQ==</data>
+          <data dataType="Array" type="System.Byte[]" id="2558786794">8VdHbtQ/4UalgKsMIhUJTg==</data>
         </header>
         <body />
       </identifier>

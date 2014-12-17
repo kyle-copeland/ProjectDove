@@ -241,12 +241,12 @@
             <pos dataType="Struct" type="OpenTK.Vector3">
               <X dataType="Float">0</X>
               <Y dataType="Float">0</Y>
-              <Z dataType="Float">0</Z>
+              <Z dataType="Float">0.01</Z>
             </pos>
             <posAbs dataType="Struct" type="OpenTK.Vector3">
               <X dataType="Float">0</X>
               <Y dataType="Float">0</Y>
-              <Z dataType="Float">0</Z>
+              <Z dataType="Float">0.01</Z>
             </posAbs>
             <scale dataType="Float">1</scale>
             <scaleAbs dataType="Float">1</scaleAbs>
@@ -486,7 +486,7 @@
             <angularDamp dataType="Float">0.3</angularDamp>
             <angularVel dataType="Float">0</angularVel>
             <bodyType dataType="Enum" type="Duality.Components.Physics.BodyType" name="Static" value="0" />
-            <colCat dataType="Enum" type="Duality.Components.Physics.CollisionCategory" name="Cat1, Cat4" value="9" />
+            <colCat dataType="Enum" type="Duality.Components.Physics.CollisionCategory" name="Cat5" value="16" />
             <colWith dataType="Enum" type="Duality.Components.Physics.CollisionCategory" name="All" value="2147483647" />
             <continous dataType="Bool">false</continous>
             <explicitMass dataType="Float">0</explicitMass>
@@ -665,7 +665,7 @@
         <_items dataType="Array" type="Duality.Component[]" id="3505850798" length="4">
           <item dataType="Struct" type="Dove_Game.Test_Logic.SnakeWayLevelController" id="1559528530">
             <_currentEnemy />
-            <_delayProgress dataType="Float">1879.01978</_delayProgress>
+            <_delayProgress dataType="Float">1806.77686</_delayProgress>
             <_enemyList dataType="Struct" type="System.Collections.Generic.List`1[[Duality.ContentRef`1[[Duality.Resources.Prefab]]]]" id="3508549878">
               <_items dataType="Array" type="Duality.ContentRef`1[[Duality.Resources.Prefab]][]" id="3511198944" length="8">
                 <item dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Prefab]]">

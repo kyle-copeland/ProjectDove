@@ -32,7 +32,7 @@ namespace Dove_Game
             this.seqWalkRight = new List<int> { 35, 36, 37 };
             base.OnInit(context);
             this.touchDamage = 10;
-            this.HealthPoints = 300;
+            this.HealthPoints = 400;
             // each boss must specify its bullet information
             this.bulletBlueprint = Test_Logic.ContentRefs.BBP_rocketBullet;
             this.bulletMaterial = Test_Logic.ContentRefs.rocketBullet;
@@ -64,7 +64,7 @@ namespace Dove_Game
         {
      
             private int fireballsLeft = NONE;
-            private float fireballRate = 200.0f;
+            private float fireballRate = 300.0f;
             private float speed = 12;
             private Vector2[] seq = new Vector2[] { new Vector2(-1, 0), new Vector2(-1, -1), new Vector2(0, -1), new Vector2(1, -1), new Vector2(1, 0) };
             private List<int> spriteSeq = new List<int> { 2, 3, 4, 5 };

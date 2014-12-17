@@ -12,7 +12,7 @@ namespace Dove_Game.Enemies.DBZ_World
 {
     [Serializable]
     [RequiredComponent(typeof(RigidBody))]
-    public class DbzEnemy : ChargeAI
+    public class DbzEnemy : RoverAI
     {
         private bool _playerNearby;
 

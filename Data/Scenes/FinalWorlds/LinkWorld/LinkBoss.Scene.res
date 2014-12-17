@@ -771,6 +771,99 @@
         </prefab>
       </prefabLink>
     </item>
+    <item dataType="Struct" type="Duality.GameObject" id="2519304332">
+      <active dataType="Bool">true</active>
+      <children />
+      <compList dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Component]]" id="274645122">
+        <_items dataType="Array" type="Duality.Component[]" id="2466718352" length="4">
+          <item dataType="Struct" type="Duality.Components.Transform" id="584651968">
+            <active dataType="Bool">true</active>
+            <angle dataType="Float">0</angle>
+            <angleAbs dataType="Float">0</angleAbs>
+            <angleVel dataType="Float">0</angleVel>
+            <angleVelAbs dataType="Float">0</angleVelAbs>
+            <deriveAngle dataType="Bool">true</deriveAngle>
+            <gameobj dataType="ObjectRef">2519304332</gameobj>
+            <ignoreParent dataType="Bool">false</ignoreParent>
+            <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
+            <parentTransform />
+            <pos dataType="Struct" type="OpenTK.Vector3">
+              <X dataType="Float">0</X>
+              <Y dataType="Float">0</Y>
+              <Z dataType="Float">0</Z>
+            </pos>
+            <posAbs dataType="Struct" type="OpenTK.Vector3">
+              <X dataType="Float">0</X>
+              <Y dataType="Float">0</Y>
+              <Z dataType="Float">0</Z>
+            </posAbs>
+            <scale dataType="Float">1</scale>
+            <scaleAbs dataType="Float">1</scaleAbs>
+            <vel dataType="Struct" type="OpenTK.Vector3">
+              <X dataType="Float">0</X>
+              <Y dataType="Float">0</Y>
+              <Z dataType="Float">0</Z>
+            </vel>
+            <velAbs dataType="Struct" type="OpenTK.Vector3">
+              <X dataType="Float">0</X>
+              <Y dataType="Float">0</Y>
+              <Z dataType="Float">0</Z>
+            </velAbs>
+          </item>
+          <item dataType="Struct" type="Duality.Components.SoundEmitter" id="268228923">
+            <active dataType="Bool">true</active>
+            <gameobj dataType="ObjectRef">2519304332</gameobj>
+            <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
+            <sources dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Components.SoundEmitter+Source]]" id="1972612271">
+              <_items dataType="Array" type="Duality.Components.SoundEmitter+Source[]" id="1083111406" length="4">
+                <item dataType="Struct" type="Duality.Components.SoundEmitter+Source" id="357891664">
+                  <looped dataType="Bool">true</looped>
+                  <offset dataType="Struct" type="OpenTK.Vector3">
+                    <X dataType="Float">0</X>
+                    <Y dataType="Float">0</Y>
+                    <Z dataType="Float">0</Z>
+                  </offset>
+                  <paused dataType="Bool">false</paused>
+                  <pitch dataType="Float">1</pitch>
+                  <sound dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Sound]]">
+                    <contentPath dataType="String">Data\Music\Zelda World\Zelda Forest.Sound.res</contentPath>
+                  </sound>
+                  <volume dataType="Float">1</volume>
+                </item>
+              </_items>
+              <_size dataType="Int">1</_size>
+              <_version dataType="Int">1</_version>
+            </sources>
+          </item>
+        </_items>
+        <_size dataType="Int">2</_size>
+        <_version dataType="Int">2</_version>
+      </compList>
+      <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="3455795338" surrogate="true">
+        <header />
+        <body>
+          <keys dataType="Array" type="System.Type[]" id="2864114520">
+            <item dataType="ObjectRef">2018402854</item>
+            <item dataType="Type" id="3323597484" value="Duality.Components.SoundEmitter" />
+          </keys>
+          <values dataType="Array" type="Duality.Component[]" id="3694498718">
+            <item dataType="ObjectRef">584651968</item>
+            <item dataType="ObjectRef">268228923</item>
+          </values>
+        </body>
+      </compMap>
+      <compTransform dataType="ObjectRef">584651968</compTransform>
+      <identifier dataType="Struct" type="System.Guid" surrogate="true">
+        <header>
+          <data dataType="Array" type="System.Byte[]" id="1959397892">J8wqvwN1PUS+ZFy/7o3Xlg==</data>
+        </header>
+        <body />
+      </identifier>
+      <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
+      <name dataType="String">Zelda Forest</name>
+      <parent />
+      <prefabLink />
+    </item>
   </serializeObj>
   <sourcePath />
 </root>
