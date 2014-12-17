@@ -21,26 +21,26 @@
             <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
             <parentTransform />
             <pos dataType="Struct" type="OpenTK.Vector3">
-              <X dataType="Float">-1149.00012</X>
-              <Y dataType="Float">38.5684166</Y>
-              <Z dataType="Float">-379.1873</Z>
+              <X dataType="Float">-1149</X>
+              <Y dataType="Float">107.179337</Y>
+              <Z dataType="Float">-146.124481</Z>
             </pos>
             <posAbs dataType="Struct" type="OpenTK.Vector3">
-              <X dataType="Float">-1149.00012</X>
-              <Y dataType="Float">38.5684166</Y>
-              <Z dataType="Float">-379.1873</Z>
+              <X dataType="Float">-1149</X>
+              <Y dataType="Float">107.179337</Y>
+              <Z dataType="Float">-146.124481</Z>
             </posAbs>
             <scale dataType="Float">1</scale>
             <scaleAbs dataType="Float">1</scaleAbs>
             <vel dataType="Struct" type="OpenTK.Vector3">
-              <X dataType="Float">-7.221056E-05</X>
-              <Y dataType="Float">-0.000336048746</Y>
-              <Z dataType="Float">-0.009270295</Z>
+              <X dataType="Float">0</X>
+              <Y dataType="Float">0</Y>
+              <Z dataType="Float">0</Z>
             </vel>
             <velAbs dataType="Struct" type="OpenTK.Vector3">
-              <X dataType="Float">-7.221056E-05</X>
-              <Y dataType="Float">-0.000336048746</Y>
-              <Z dataType="Float">-0.009270295</Z>
+              <X dataType="Float">0</X>
+              <Y dataType="Float">0</Y>
+              <Z dataType="Float">0</Z>
             </velAbs>
           </item>
           <item dataType="Struct" type="Duality.Components.Camera" id="2877630560">
@@ -88,7 +88,7 @@
                 </item>
               </_items>
               <_size dataType="Int">2</_size>
-              <_version dataType="Int">8354</_version>
+              <_version dataType="Int">9404</_version>
             </passes>
             <perspective dataType="Enum" type="Duality.Drawing.PerspectiveMode" name="Parallax" value="1" />
             <visibilityMask dataType="Enum" type="Duality.Drawing.VisibilityFlag" name="All" value="4294967295" />
