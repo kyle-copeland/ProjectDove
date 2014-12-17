@@ -13,10 +13,10 @@ namespace Dove_Game.Enemies
     [Serializable]
     [RequiredComponent(typeof(RigidBody))]
     // Base class characterizing components as enemies.
-    public abstract class Enemy : Character 
+    public class Enemy : Character 
     {
-        private float impulse = 3;
-        protected float movementSpeed = 5;
+        private float impulse;
+        protected float movementSpeed;
         private float weaponTimer = 0.0f;
         private float weaponDelay = 1000.0f;
         private bool _frozen;
@@ -63,9 +63,6 @@ namespace Dove_Game.Enemies
            
         }
 
-       
-      
-
         public void ChangeDirection()
         {
             switch (CharDirection)
@@ -93,6 +90,8 @@ namespace Dove_Game.Enemies
         //All Enemies will be of collision category 2
         public override void OnInit(Component.InitContext context)
         {
+            impulse = 6;
+            movementSpeed = 8;
             HealthPoints = 10;
             this.GameObj.RigidBody.Mass = 50;
             this.GameObj.RigidBody.CollisionCategory = CollisionCategory.Cat3;

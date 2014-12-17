@@ -72,6 +72,7 @@
     <Compile Include="Scene_Components\General_World\GameControllers\PredialogController.cs" />
     <Compile Include="Scene_Components\Mario_World\Brick.cs" />
     <Compile Include="Scene_Components\Mario_World\Flag.cs" />
+    <Compile Include="Scene_Components\Mario_World\Heart.cs" />
     <Compile Include="Scene_Components\Mario_World\LevelControllers\MarioBossLevelController.cs" />
     <Compile Include="Scene_Components\Mario_World\LevelControllers\MarioCastleController.cs" />
     <Compile Include="Scene_Components\Mario_World\LevelControllers\MarioWorldController.cs" />

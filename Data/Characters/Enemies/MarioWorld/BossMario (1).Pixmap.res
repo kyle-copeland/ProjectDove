@@ -19,13 +19,13 @@
       <item dataType="Struct" type="Duality.Rect">
         <H dataType="Float">49.22222</H>
         <W dataType="Float">48.6</W>
-        <X dataType="Float">97.2</X>
+        <X dataType="Float">93</X>
         <Y dataType="Float">0</Y>
       </item>
       <item dataType="Struct" type="Duality.Rect">
         <H dataType="Float">49.22222</H>
         <W dataType="Float">48.6</W>
-        <X dataType="Float">145.799988</X>
+        <X dataType="Float">143</X>
         <Y dataType="Float">0</Y>
       </item>
       <item dataType="Struct" type="Duality.Rect">
@@ -79,8 +79,8 @@
       <item dataType="Struct" type="Duality.Rect">
         <H dataType="Float">49.22222</H>
         <W dataType="Float">48.6</W>
-        <X dataType="Float">97.2</X>
-        <Y dataType="Float">49.22222</Y>
+        <X dataType="Float">92</X>
+        <Y dataType="Float">40</Y>
       </item>
       <item dataType="Struct" type="Duality.Rect">
         <H dataType="Float">49.22222</H>
@@ -110,7 +110,7 @@
         <H dataType="Float">49.22222</H>
         <W dataType="Float">48.6</W>
         <X dataType="Float">340.199982</X>
-        <Y dataType="Float">49.22222</Y>
+        <Y dataType="Float">40</Y>
       </item>
       <item dataType="Struct" type="Duality.Rect">
         <H dataType="Float">49.22222</H>
@@ -193,19 +193,19 @@
       <item dataType="Struct" type="Duality.Rect">
         <H dataType="Float">49.22222</H>
         <W dataType="Float">48.6</W>
-        <X dataType="Float">48.6</X>
+        <X dataType="Float">35</X>
         <Y dataType="Float">147.666656</Y>
       </item>
       <item dataType="Struct" type="Duality.Rect">
         <H dataType="Float">49.22222</H>
         <W dataType="Float">48.6</W>
-        <X dataType="Float">97.2</X>
-        <Y dataType="Float">147.666656</Y>
+        <X dataType="Float">85</X>
+        <Y dataType="Float">147</Y>
       </item>
       <item dataType="Struct" type="Duality.Rect">
         <H dataType="Float">49.22222</H>
         <W dataType="Float">48.6</W>
-        <X dataType="Float">145.799988</X>
+        <X dataType="Float">135</X>
         <Y dataType="Float">147.666656</Y>
       </item>
       <item dataType="Struct" type="Duality.Rect">
@@ -217,19 +217,19 @@
       <item dataType="Struct" type="Duality.Rect">
         <H dataType="Float">49.22222</H>
         <W dataType="Float">48.6</W>
-        <X dataType="Float">243</X>
+        <X dataType="Float">250</X>
         <Y dataType="Float">147.666656</Y>
       </item>
       <item dataType="Struct" type="Duality.Rect">
         <H dataType="Float">49.22222</H>
         <W dataType="Float">48.6</W>
-        <X dataType="Float">291.599976</X>
+        <X dataType="Float">301</X>
         <Y dataType="Float">147.666656</Y>
       </item>
       <item dataType="Struct" type="Duality.Rect">
         <H dataType="Float">49.22222</H>
         <W dataType="Float">48.6</W>
-        <X dataType="Float">340.199982</X>
+        <X dataType="Float">350</X>
         <Y dataType="Float">147.666656</Y>
       </item>
       <item dataType="Struct" type="Duality.Rect">
@@ -546,7 +546,7 @@
       </item>
     </_items>
     <_size dataType="Int">90</_size>
-    <_version dataType="Int">1195</_version>
+    <_version dataType="Int">1417</_version>
   </atlas>
   <layers dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Resources.Pixmap+Layer]]" id="2035693768">
     <_items dataType="Array" type="Duality.Resources.Pixmap+Layer[]" id="2696347487" length="4">
@@ -558,8 +558,8 @@
       </item>
     </_items>
     <_size dataType="Int">1</_size>
-    <_version dataType="Int">1</_version>
+    <_version dataType="Int">4</_version>
   </layers>
-  <sourcePath dataType="String">Source\Media\BossMario (1).png</sourcePath>
+  <sourcePath dataType="String">Source\Media\Characters\Enemies\MarioWorld\BossMario (1).png</sourcePath>
 </root>
 <!-- XmlFormatterBase Document Separator -->

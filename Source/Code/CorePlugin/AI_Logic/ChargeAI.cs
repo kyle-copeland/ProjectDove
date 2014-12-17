@@ -15,7 +15,7 @@ namespace Dove_Game
     [RequiredComponent(typeof(RigidBody))]
     public class ChargeAI : Enemies.Enemy
     {
-        public float force = 10.0f;
+        public float force = 15.0f;
         public override void OnUpdate()
         {
             if (DetectPlayerOneNearby())
@@ -31,6 +31,7 @@ namespace Dove_Game
         {
             base.OnInit(context);
             this.HealthPoints = 100;
+            force = 15.0f;
         }
     }
 }

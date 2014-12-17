@@ -25,20 +25,25 @@ namespace Dove_Game.Enemies.Mario_World
             fireballSprite = this.GameObj.GetComponent<AnimSpriteRenderer>();
         }
 
+        public void setInitYPosition(float f)
+        {
+            initYPosition = f;
+        }
+
         public override void OnUpdate()
         {
             attackTimer -= Time.MsPFMult * Time.TimeMult * 0.75f;
             if (attackTimer <= 0.0f && this.GameObj.Transform.Vel.Length == 0)
             {
-                this.GameObj.RigidBody.ApplyLocalImpulse(-Vector2.UnitY * 30000);
+                this.GameObj.RigidBody.ApplyLocalImpulse(-Vector2.UnitY * 10000);
                 attackTimer = attackCooldown;
             }
 
             // Go Invisible
             if (this.GameObj.Transform.Pos.Y <= initYPosition)
-                fireballSprite.AnimFirstFrame = 1;
-            else
                 fireballSprite.AnimFirstFrame = 0;
+            else
+                fireballSprite.AnimFirstFrame = 1;
             fireballSprite.UpdateVisibleFrames();
         }
 

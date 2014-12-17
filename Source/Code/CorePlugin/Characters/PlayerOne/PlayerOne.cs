@@ -28,6 +28,8 @@ namespace Dove_Game
         private Character _summonedCharacter;
         private float _elaspedRespawnTime;
 
+        private float maxVelocity;
+
         public bool isStunned = false;
 
         public float ElaspedRespawnTime
@@ -56,6 +58,8 @@ namespace Dove_Game
             set { _movementOffset = value; }
         }
 
+        private float weaponCooldown = 250.0f;
+        private float weaponTimer = 0.0f;
         public override void OnUpdate()
         {
             if (GameController.GamePaused) return;
@@ -66,166 +70,180 @@ namespace Dove_Game
 
             if (!GameController.GamePaused)
             {
-                if (HealthPoints <= 0)
-                {
+            if (HealthPoints <= 0)
+            {
                     ElaspedRespawnTime += Time.MsPFMult*Time.TimeMult;
 
-                    playerSprite.AnimDuration = 4;
-                    playerSprite.AnimFirstFrame = 21;
-                    playerSprite.AnimFrameCount = 3;
-                    playerSprite.AnimLoopMode = AnimSpriteRenderer.LoopMode.Once;
+                playerSprite.AnimDuration = 4;
+                playerSprite.AnimFirstFrame = 21;
+                playerSprite.AnimFrameCount = 3;
+                playerSprite.AnimLoopMode = AnimSpriteRenderer.LoopMode.Once;
 
-                    if (ElaspedRespawnTime >= RespawnDelay)
+                if (ElaspedRespawnTime >= RespawnDelay)
+                {
+                    // GameObj.DisposeLater();
+                }
+            }
+
+            else if (_summonedCharacter == null && CurrentSpecialAttack == null && !isStunned)
+            {
+                // Move left
+                if (DualityApp.Keyboard[Key.Left])
+                {
+                    if (Enemies.Boss.onGround(this.GameObj.RigidBody))
                     {
-                        // GameObj.DisposeLater();
+                    playerSprite.AnimDuration = 1;
+                    playerSprite.AnimFirstFrame = 4;
+                    playerSprite.AnimFrameCount = 4;
+                    playerSprite.AnimLoopMode = AnimSpriteRenderer.LoopMode.Loop;
                     }
+                    CharDirection = Direction.Left;
+                    MovementVector = Vector2.UnitX * -1.0f;
+                    if(Math.Abs(playerOne.LinearVelocity.X) < maxVelocity)
+                        playerOne.ApplyWorldImpulse(-Vector2.UnitX * MovementOffset);
+                    //playerMovement.MoveBy(MovementVector * Time.TimeMult);
                 }
 
-                else if (_summonedCharacter == null && CurrentSpecialAttack == null && !isStunned)
+                // Move right
+                else if (DualityApp.Keyboard[Key.Right] )
                 {
-                    // Move left
-                    if (DualityApp.Keyboard[Key.Left])
+                    if (Enemies.Boss.onGround(this.GameObj.RigidBody))
                     {
-                        playerSprite.AnimDuration = 1;
-                        playerSprite.AnimFirstFrame = 4;
-                        playerSprite.AnimFrameCount = 4;
-                        playerSprite.AnimLoopMode = AnimSpriteRenderer.LoopMode.Loop;
-
-                        CharDirection = Direction.Left;
-                        MovementVector = Vector2.UnitX*-1.0f;
-                        playerOne.ApplyWorldImpulse(-Vector2.UnitX*MovementOffset);
-                        //playerMovement.MoveBy(MovementVector * Time.TimeMult);
+                    playerSprite.AnimDuration = 1;
+                    playerSprite.AnimFirstFrame = 8;
+                    playerSprite.AnimFrameCount = 4;
+                        playerSprite.AnimLoopMode = AnimSpriteRenderer.LoopMode.PingPong;
                     }
+                    CharDirection = Direction.Right;
+                    MovementVector = Vector2.UnitX * 1.0f;
+                    if (Math.Abs(playerOne.LinearVelocity.X) < maxVelocity)
+                        playerOne.ApplyWorldImpulse(Vector2.UnitX * MovementOffset);
+                    //playerMovement.MoveBy(MovementVector * Time.TimeMult);
+                }
 
-                        // Move right
-                    else if (DualityApp.Keyboard[Key.Right])
+                else if ((DualityApp.Keyboard.KeyReleased(Key.Left) || DualityApp.Keyboard.KeyReleased(Key.Right)) &&  Enemies.Boss.onGround(this.GameObj.RigidBody))
+                {
+                    if (CharDirection == Direction.Right)
+                        playerSprite.AnimFirstFrame = 16;
+                    else if (CharDirection == Direction.Left)
+                        playerSprite.AnimFirstFrame = 12;
+
+                    playerSprite.AnimFrameCount = 1;
+                    playerSprite.AnimLoopMode = AnimSpriteRenderer.LoopMode.PingPong;
+                }
+
+                // Move up
+                if (DualityApp.Keyboard[Key.Up] && Enemies.Boss.onGround(this.GameObj.RigidBody))
+                {
+                    if (CharDirection == Direction.Right)
+                        playerSprite.AnimFirstFrame = 0;
+                    else if (CharDirection == Direction.Left)
+                        playerSprite.AnimFirstFrame = 2;
+
+                    playerSprite.AnimDuration = 1;
+                    playerSprite.AnimFrameCount = 2;
+                    playerSprite.AnimLoopMode = AnimSpriteRenderer.LoopMode.Loop;
+                    
+                    MovementVector = Vector2.UnitY * -1.0f;
+                    playerOne.ApplyLocalImpulse(-Vector2.UnitY * 30.0f);
+                }
+
+                // Gun Sequence
+                else if (DualityApp.Keyboard[Key.S])
+                {
+                    if (weaponTimer <= 0.0f)
                     {
-                        playerSprite.AnimDuration = 1;
-                        playerSprite.AnimFirstFrame = 8;
-                        playerSprite.AnimFrameCount = 4;
-                        playerSprite.AnimLoopMode = AnimSpriteRenderer.LoopMode.Loop;
+                        weaponTimer = weaponCooldown;
+                    isAttacking = true;
 
-                        CharDirection = Direction.Right;
-                        MovementVector = Vector2.UnitX*1.0f;
-                        playerOne.ApplyWorldImpulse(Vector2.UnitX*MovementOffset);
-                        //playerMovement.MoveBy(MovementVector * Time.TimeMult);
-                    }
+                    // Modify frame sequence to render punch sequence animation
+                    if (CharDirection == Direction.Right)
+                        playerSprite.AnimFirstFrame = 17;
+                    else if (CharDirection == Direction.Left)
+                        playerSprite.AnimFirstFrame = 12;
 
-                        // Move up
-                    else if (DualityApp.Keyboard[Key.Up] && Enemies.Boss.onGround(this.GameObj.RigidBody))
-                    {
-                        if (CharDirection == Direction.Right)
-                            playerSprite.AnimFirstFrame = 0;
-                        else if (CharDirection == Direction.Left)
-                            playerSprite.AnimFirstFrame = 2;
-
-                        playerSprite.AnimDuration = 1;
-                        playerSprite.AnimFrameCount = 2;
-                        playerSprite.AnimLoopMode = AnimSpriteRenderer.LoopMode.Loop;
-
-                        MovementVector = Vector2.UnitY*-1.0f;
-                        playerOne.ApplyLocalImpulse(-Vector2.UnitY*45.0f);
-                    }
-
-                        // Gun Sequence
-                    else if (DualityApp.Keyboard[Key.S])
-                    {
-                        isAttacking = true;
-
-                        // Modify frame sequence to render punch sequence animation
-                        if (CharDirection == Direction.Right)
-                            playerSprite.AnimFirstFrame = 17;
-                        else if (CharDirection == Direction.Left)
-                            playerSprite.AnimFirstFrame = 12;
-
-                        playerSprite.AnimLoopMode = AnimSpriteRenderer.LoopMode.Loop;
-                        playerSprite.AnimDuration = 3;
-                        playerSprite.UpdateVisibleFrames();
+                        playerSprite.AnimFrameCount = 3;
+                    playerSprite.AnimLoopMode = AnimSpriteRenderer.LoopMode.Loop;
+                        playerSprite.AnimDuration = 0.25f;
+                    playerSprite.UpdateVisibleFrames();
 
                         GameObject rocketBullet = Summon.SummonGameObject(SideCharacter.NoCharacter, Attack.PlayerBullet,
                             this);
-                        CurrentSpecialAttack = rocketBullet.GetComponent<PlayerOneBullet>();
-                        const float bulletSpeed = 20;
+                    CurrentSpecialAttack = rocketBullet.GetComponent<PlayerOneBullet>();
+                    const float bulletSpeed = 20;
 
                         ((PlayerOneBullet) CurrentSpecialAttack).Fire(playerOne.LinearVelocity, playerMovement.Pos.Xy,
                             0f, bulletSpeed);
-                        Scene.Current.AddObject(rocketBullet);
-                    }
-
-                        // Kamehameha special skill
-                    else if (DualityApp.Keyboard[Key.D])
-                    {
-                        isAttacking = true;
-                        playerSprite.AnimFirstFrame = 20;
-                        playerSprite.AnimLoopMode = AnimSpriteRenderer.LoopMode.Once;
-                        playerSprite.AnimFrameCount = 2;
-                        playerSprite.AnimDuration = 1;
-
-                        GameObject goku = Summon.SummonGameObject(SideCharacter.Goku, Attack.NoAttack, this);
-                        _summonedCharacter = goku.GetComponent<Goku>();
-                        Scene.Current.AddObject(goku);
-                    }
-
-                    else if (DualityApp.Keyboard[Key.R])
-                    {
-                        isAttacking = true;
-                        playerSprite.AnimFirstFrame = 20;
-                        playerSprite.AnimLoopMode = AnimSpriteRenderer.LoopMode.Once;
-                        playerSprite.AnimFrameCount = 2;
-                        playerSprite.AnimDuration = 1;
-
-                        GameObject bowser = Summon.SummonGameObject(SideCharacter.Bowser, Attack.NoAttack, this);
-                        _summonedCharacter = bowser.GetComponent<Bowser>();
-                        Scene.Current.AddObject(bowser);
-                    }
-
-                    else if (DualityApp.Keyboard[Key.F])
-                    {
-                        isAttacking = true;
-                        playerSprite.AnimFirstFrame = 20;
-                        playerSprite.AnimLoopMode = AnimSpriteRenderer.LoopMode.Once;
-                        playerSprite.AnimFrameCount = 2;
-                        playerSprite.AnimDuration = 1;
-
-                        GameObject navi = Summon.SummonGameObject(SideCharacter.Navi, Attack.NoAttack, this);
-                        _summonedCharacter = navi.GetComponent<Navi>();
-                        Scene.Current.AddObject(navi);
-                    }
-
-                    else
-                    {
-                        if (CharDirection == Direction.Right)
-                            playerSprite.AnimFirstFrame = 16;
-                        else if (CharDirection == Direction.Left)
-                            playerSprite.AnimFirstFrame = 12;
-
-                        playerSprite.AnimFrameCount = 1;
-                        playerSprite.AnimLoopMode = AnimSpriteRenderer.LoopMode.Loop;
-                    }
-
-                    // All custom frame sequences end in 27, the current default animation for the Goku SpriteSheet. Reset after an attack animation.
-                    if (playerSprite.CurrentFrame != LastFrame && playerSprite.CurrentFrame == 33)
-                    {
-                        isAttacking = false;
-                        playerSprite.CustomFrameSequence = new List<int>() {33};
-                        playerSprite.AnimLoopMode = AnimSpriteRenderer.LoopMode.Once;
-                    }
-
-                    LastFrame = playerSprite.CurrentFrame;
+                    Scene.Current.AddObject(rocketBullet);
+                }
                 }
 
-                    // Continue animation sequence after special attack ends.
-                else if ((_summonedCharacter != null && _summonedCharacter.CurrentSpecialAttack != null &&
-                          _summonedCharacter.CurrentSpecialAttack.Lifetime <= 0.0f) ||
-                         (CurrentSpecialAttack != null &&
-                          (CurrentSpecialAttack.FireDelay <= 0.0f || CurrentSpecialAttack.Lifetime <= 0.0f)))
+                // Kamehameha special skill
+                else if (DualityApp.Keyboard[Key.D])
                 {
-                    playerSprite.AnimPaused = false;
-                    CurrentSpecialAttack = null;
-                    _summonedCharacter = null;
-                    isAttacking = false;
+                    isAttacking = true;
+                    playerSprite.AnimFirstFrame = 20;
+                    playerSprite.AnimLoopMode = AnimSpriteRenderer.LoopMode.Once;
+                    playerSprite.AnimFrameCount = 2;
+                    playerSprite.AnimDuration = 1;
+
+                    GameObject goku = Summon.SummonGameObject(SideCharacter.Goku, Attack.NoAttack, this);
+                    _summonedCharacter = goku.GetComponent<Goku>();
+                    Scene.Current.AddObject(goku);
                 }
+
+                else if (DualityApp.Keyboard[Key.R])
+                {
+                    isAttacking = true;
+                    playerSprite.AnimFirstFrame = 20;
+                    playerSprite.AnimLoopMode = AnimSpriteRenderer.LoopMode.Once;
+                    playerSprite.AnimFrameCount = 2;
+                    playerSprite.AnimDuration = 1;
+
+                    GameObject bowser = Summon.SummonGameObject(SideCharacter.Bowser, Attack.NoAttack, this);
+                    _summonedCharacter = bowser.GetComponent<Bowser>();
+                    Scene.Current.AddObject(bowser);
+                }
+
+                else if (DualityApp.Keyboard[Key.F])
+                {
+                    isAttacking = true;
+                    playerSprite.AnimFirstFrame = 20;
+                    playerSprite.AnimLoopMode = AnimSpriteRenderer.LoopMode.Once;
+                    playerSprite.AnimFrameCount = 2;
+                    playerSprite.AnimDuration = 1;
+
+                    GameObject navi = Summon.SummonGameObject(SideCharacter.Navi, Attack.NoAttack, this);
+                    _summonedCharacter = navi.GetComponent<Navi>();
+                    Scene.Current.AddObject(navi);
+                }
+
+
+
+               /* // All custom frame sequences end in 27, the current default animation for the Goku SpriteSheet. Reset after an attack animation.
+                if (playerSprite.CurrentFrame != LastFrame && playerSprite.CurrentFrame == 33)
+                {
+                    isAttacking = false;
+                        playerSprite.CustomFrameSequence = new List<int>() {33};
+                    playerSprite.AnimLoopMode = AnimSpriteRenderer.LoopMode.Once;
+                }
+
+                LastFrame = playerSprite.CurrentFrame;*/
             }
+
+            // Continue animation sequence after special attack ends.
+            if ((_summonedCharacter != null && _summonedCharacter.CurrentSpecialAttack != null && _summonedCharacter.CurrentSpecialAttack.Lifetime <= 0.0f) ||
+                (CurrentSpecialAttack != null && (CurrentSpecialAttack.FireDelay <= 0.0f || CurrentSpecialAttack.Lifetime <= 0.0f)) ||
+                (CurrentSpecialAttack != null && weaponTimer == weaponCooldown))//for shooting
+            {
+                playerSprite.AnimPaused = false;
+                CurrentSpecialAttack = null;
+                _summonedCharacter = null;
+                isAttacking = false;
+            }
+
+            weaponTimer -= Time.TimeMult * Time.MsPFMult;
+        }
         }
 
         // Collision detection
@@ -267,9 +285,10 @@ namespace Dove_Game
 
         public override void OnInit(Component.InitContext context)
         {
-            MovementOffset = 0.75f;
+            MovementOffset = 0.35f;
             HealthPoints = 100;
             ElaspedRespawnTime = 0.0f;
+            maxVelocity = 5.0f;
             this.GameObj.RigidBody.Mass = 3.09f;
             this.GameObj.RigidBody.CollisionCategory = CollisionCategory.Cat1;
             this.GameObj.RigidBody.CollidesWith = CollisionCategory.Cat3 | CollisionCategory.Cat2 | CollisionCategory.Cat4 | CollisionCategory.Cat5 | CollisionCategory.Cat7;

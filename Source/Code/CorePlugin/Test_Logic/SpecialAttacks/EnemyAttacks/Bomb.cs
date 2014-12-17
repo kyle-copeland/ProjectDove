@@ -31,16 +31,17 @@ namespace Dove_Game
         }
         public override void OnInit(Component.InitContext context)
         {
-            this.GameObj.RigidBody.CollisionCategory = CollisionCategory.Cat2;
-            this.GameObj.RigidBody.CollidesWith = CollisionCategory.Cat1 | CollisionCategory.Cat4 | CollisionCategory.Cat5;
+            this.GameObj.RigidBody.CollisionCategory = CollisionCategory.Cat2 | CollisionCategory.Cat6;
+            this.GameObj.RigidBody.CollidesWith = CollisionCategory.Cat1 |CollisionCategory.Cat2 | CollisionCategory.Cat4 | CollisionCategory.Cat5;
         }
 
         public override void OnShutdown(Component.ShutdownContext context) {}
         // If the attack hits an enemy, apply damage.
         public override void OnCollisionBegin(Component sender, CollisionEventArgs args)
         {
-            PlayerOne temp = args.CollideWith.GetComponent<PlayerOne>();
-            if (temp != null)
+            PlayerOne playerOne = args.CollideWith.GetComponent<PlayerOne>();
+            PlayerOneBullet bullet = args.CollideWith.GetComponent<PlayerOneBullet>();
+            if (playerOne != null || bullet != null)
             {
                 explode();
             }
@@ -72,7 +73,7 @@ namespace Dove_Game
             sprite.AnimFirstFrame = 0;
             sprite.AnimFrameCount = 3;
             sprite.AnimDuration = 0.5f;
-            transform.Scale = 1.5f;
+            transform.Scale = 1.0f;
             Explosion comp = explosion.AddComponent<Explosion>();
            
             comp.InitFrom();

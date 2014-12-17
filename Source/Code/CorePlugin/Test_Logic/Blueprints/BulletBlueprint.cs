@@ -35,7 +35,7 @@ namespace Dove_Game
 
             Material spriteMaterial = bulletMaterial.Res ?? Material.SolidBlack.Res;
             Vector2 spriteSize = bulletMaterial.Res.MainTexture.IsAvailable ? spriteMaterial.MainTexture.Res.Size : new Vector2(20, 20);
-            float spriteRadius = MathF.Max(spriteSize.X/columns, spriteSize.Y/rows) * .5f;
+            float spriteRadius = MathF.Max(spriteSize.X/columns, spriteSize.Y/rows) * .3f;
 
             body.ClearShapes();
             CircleShapeInfo circleShape = new CircleShapeInfo(spriteRadius, Vector2.Zero, 1.0f);

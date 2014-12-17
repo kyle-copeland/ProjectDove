@@ -17,20 +17,26 @@ namespace Dove_Game.Test_Logic
     public class MarioCastleController : Component, ICmpUpdatable, ICmpInitializable
     {
         private PlayerOne _mainCharacter;
+        private GameObject _marioBoss;
         private GameObject _fireball;
-        private bool _reachedBoss;
         private int _brickCount;
         private float _fireballDropTimer;
+        private float _marioAppearTimer;
         private bool _fireballPlaced;
+        private bool _marioAppeared;
+        private bool _marioRise;
 
         void ICmpInitializable.OnInit(Component.InitContext context)
         {
             _mainCharacter = Scene.Current.FindComponent<PlayerOne>();
-            _reachedBoss = false;
+            _marioBoss = Scene.Current.FindGameObject("BossMario");
             _brickCount = 0;
             _fireballDropTimer = 1000.0f;
+            _marioAppearTimer = 500.0f;
             _fireball = GameRes.Data.Prefabs.MarioWorld.Fireball_Prefab.Res.Instantiate(); 
-           _fireballPlaced = false;
+            _fireballPlaced = false;
+            _marioAppeared = false;
+            _marioRise = false;
         }
 
         void ICmpInitializable.OnShutdown(Component.ShutdownContext context)
@@ -39,15 +45,23 @@ namespace Dove_Game.Test_Logic
 
         void ICmpUpdatable.OnUpdate()
         {
+            if (_mainCharacter.GameObj.Transform.Pos.Y > 200) // Fallen into Lava
+            {
+                _mainCharacter.doDamage(100);
+            }
+
+            // Fireball Dropper
             _fireballDropTimer -= Time.MsPFMult * Time.TimeMult;
             if (_fireballDropTimer < 0.0f && !_fireballPlaced)
             {
                 _fireballPlaced = true;
                 _fireball = GameRes.Data.Prefabs.MarioWorld.Fireball_Prefab.Res.Instantiate();
                 _fireball.BreakPrefabLink();
-                //_fireball.RemoveComponent<Fireball>();
+                Fireball fireballController = _fireball.GetComponent<Fireball>();
                 _fireball.Transform.Pos = new OpenTK.Vector3(-1148, 26, 0);
                 this.GameObj.ParentScene.AddObject(_fireball);
+                fireballController.setInitYPosition(200);
+
             }
 
             if (_fireballPlaced && _fireball.Transform.Pos.Y > 189)
@@ -57,15 +71,10 @@ namespace Dove_Game.Test_Logic
                 _fireballPlaced = false;
             }
 
-
-            if (!_reachedBoss && _mainCharacter.GameObj.Transform.Pos.X > 590)
-            {
-                //_reachedBoss = true;
-                bool _generatingCutScene = true;
-
-               
-                //10 solid bricks at X = 660
-                if (_generatingCutScene && _brickCount < 10)
+            // Reached Boss Area
+            if (_mainCharacter.GameObj.Transform.Pos.X > 590)
+            {      
+                if (_brickCount < 10)
                 {
                     _mainCharacter.GameObj.RigidBody.LinearVelocity = (Vector2.UnitY * 0);
                     GameObject solidBrick = GameRes.Data.Prefabs.MarioWorld.SolidBrickCastle_Prefab.Res.Instantiate();
@@ -79,8 +88,31 @@ namespace Dove_Game.Test_Logic
                     {
                         tempTimer -= Time.MsPFMult * Time.TimeMult * 0.00001f;
                     }
-
                 }
+
+
+                if (_mainCharacter.GameObj.Transform.Pos.X > 880)
+                {
+                    _mainCharacter.GameObj.RigidBody.LinearVelocity = (Vector2.UnitX * 0);
+                    _mainCharacter.isStunned = true;
+                    _marioAppearTimer -= Time.MsPFMult * Time.TimeMult;
+                    if (_marioAppearTimer < 0 && !_marioAppeared) 
+                    {
+                        _marioBoss.RigidBody.ApplyLocalImpulse(-Vector2.UnitY * 15);
+                        _marioAppeared = true;
+                    }
+                    else if (_marioBoss.Transform.Pos.Y < 132 && !_marioRise)
+                    {
+                        _marioBoss.RigidBody.LinearVelocity = (Vector2.UnitY * 0);
+                        _marioRise = true;
+                        _marioAppearTimer = 1000.0f;
+                    }
+                    else if (_marioAppearTimer < 0 && _marioRise)
+                    {
+                        // GO TO DIALOG SCENE HERE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                    }
+                }
+
 
             }
         }

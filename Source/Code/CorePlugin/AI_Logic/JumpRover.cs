@@ -14,7 +14,7 @@ namespace Dove_Game
     [RequiredComponent(typeof(RigidBody))]
     public class JumpRover : Enemies.Enemy
     {
-        public const float jumpForce = 10.0f;
+        public float jumpForce = 300.0f;
         public int groundSprite = 0;
         public int flySprite = 1;
         public override void OnUpdate()
@@ -43,6 +43,7 @@ namespace Dove_Game
         {
             base.OnInit(context);
             this.HealthPoints = 40;
+            jumpForce = 300.0f;
         }
     }
 }

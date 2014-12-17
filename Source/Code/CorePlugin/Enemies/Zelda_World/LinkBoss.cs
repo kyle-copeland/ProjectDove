@@ -14,19 +14,21 @@ namespace Dove_Game.Enemies.Zelda_World
     [Serializable]
     [RequiredComponent(typeof(RigidBody))]
     public class LinkBoss : Boss
-    {  
+    {
 
-        //animation sequences
+        private const float ATTACK_INTERVAL = 2000.0f;
 
         //Initalize
         public override void OnInit(Component.InitContext context)
         {
             base.OnInit(context);
             this.touchDamage = 20;
+            this.HealthPoints = 400;
             // each boss must specify its bullet information
             this.bulletBlueprint = Test_Logic.ContentRefs.BBP_rocketBullet;
             this.bulletMaterial = Test_Logic.ContentRefs.rocketBullet;
             autoShoot = false;
+            this.attackCooldown = ATTACK_INTERVAL;
             //a list of available attacks to use
             attacks = new BossAttack[] {new Whirlwind(), new BombDrop(), new ShootArrow() };
 
@@ -67,6 +69,7 @@ namespace Dove_Game.Enemies.Zelda_World
                 body.AddShape(circleShape);
                 body.IgnoreGravity = false;
                 transform.Pos = new Vector3(boss.GameObj.Transform.GetWorldPoint(Vector2.Zero), -2.0f);
+                transform.Scale = 0.5f;
                 compBomb.InitFrom();
                 Scene.Current.AddObject(bomb);
                 
@@ -88,9 +91,10 @@ namespace Dove_Game.Enemies.Zelda_World
                 boss.GameObj.GetComponent<AnimSpriteRenderer>().AnimDuration = 1.0f;
                 int spriteRowsArrow = 8;
                 Bullet arrow = Test_Logic.ContentRefs.BBP_Default.Res.CreateBullet(boss.CharDirection, GameRes.Data.Scenes.Bullets.Arrows_Material,true, seqArrow,spriteRowsArrow);
-                int bulletSpeed = 20;
+                int bulletSpeed = 5;
 
                 arrow.Fire(boss.GameObj.RigidBody.LinearVelocity, boss.GameObj.Transform.GetWorldPoint(Vector2.Zero), 0, bulletSpeed);
+                arrow.GameObj.Transform.Scale = 1.1f;
                 Scene.Current.AddObject(arrow.GameObj);
                 boss.nextAttack = NONE;
             }
@@ -108,7 +112,7 @@ namespace Dove_Game.Enemies.Zelda_World
                 sprite.CustomFrameSequence = seqWhirlwind;
                 sprite.AnimDuration = .5f;
                 sprite.AnimLoopMode = AnimSpriteRenderer.LoopMode.PingPong;
-                body.ApplyLocalImpulse(Vector2.UnitY * -180.0f);
+                body.ApplyLocalImpulse(Vector2.UnitY * -400.0f);
                 boss.nextAttack = NONE;
             }
         }

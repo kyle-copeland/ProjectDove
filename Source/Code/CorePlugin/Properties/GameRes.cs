@@ -567,6 +567,8 @@ namespace GameRes
 				}
 			}
 			public static class MarioWorld {
+				public static Duality.ContentRef<Duality.Resources.Prefab> BossMario__1__Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\MarioWorld\BossMario (1).Prefab.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Prefab> BossMario_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\MarioWorld\BossMario.Prefab.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Prefab> Brick_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\MarioWorld\Brick.Prefab.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Prefab> Fireball_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\MarioWorld\Fireball.Prefab.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Prefab> Firespin_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\MarioWorld\Firespin.Prefab.res"); }}
@@ -575,7 +577,10 @@ namespace GameRes
 				public static Duality.ContentRef<Duality.Resources.Prefab> QuestionBox_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\MarioWorld\QuestionBox.Prefab.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Prefab> SolidBrickCastle_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\MarioWorld\SolidBrickCastle.Prefab.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Prefab> Thwomp_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\MarioWorld\Thwomp.Prefab.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Prefab> ZeldaHearts_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\MarioWorld\ZeldaHearts.Prefab.res"); }}
 				public static void LoadAll() {
+					BossMario__1__Prefab.MakeAvailable();
+					BossMario_Prefab.MakeAvailable();
 					Brick_Prefab.MakeAvailable();
 					Fireball_Prefab.MakeAvailable();
 					Firespin_Prefab.MakeAvailable();
@@ -584,6 +589,7 @@ namespace GameRes
 					QuestionBox_Prefab.MakeAvailable();
 					SolidBrickCastle_Prefab.MakeAvailable();
 					Thwomp_Prefab.MakeAvailable();
+					ZeldaHearts_Prefab.MakeAvailable();
 				}
 			}
 			public static class PlayerComponents {
@@ -801,6 +807,9 @@ namespace GameRes
 				public static Duality.ContentRef<Duality.Resources.Material> Thwomp_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Scenes\Components\Thwomp.Material.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Pixmap> Thwomp_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Scenes\Components\Thwomp.Pixmap.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Texture> Thwomp_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Scenes\Components\Thwomp.Texture.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Material> ZeldaHearts_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Scenes\Components\ZeldaHearts.Material.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Pixmap> ZeldaHearts_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Scenes\Components\ZeldaHearts.Pixmap.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Texture> ZeldaHearts_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Scenes\Components\ZeldaHearts.Texture.res"); }}
 				public static void LoadAll() {
 					Brick_Material.MakeAvailable();
 					Brick_Pixmap.MakeAvailable();
@@ -850,6 +859,9 @@ namespace GameRes
 					Thwomp_Material.MakeAvailable();
 					Thwomp_Pixmap.MakeAvailable();
 					Thwomp_Texture.MakeAvailable();
+					ZeldaHearts_Material.MakeAvailable();
+					ZeldaHearts_Pixmap.MakeAvailable();
+					ZeldaHearts_Texture.MakeAvailable();
 				}
 			}
 			public static class DialogScenes {

@@ -5,6 +5,7 @@ using System.Text;
 
 using Duality;
 using Duality.Resources;
+using Duality.Components.Physics;
 using Duality.Components.Renderers;
 using OpenTK;
 
@@ -15,8 +16,10 @@ namespace Dove_Game.Scene_Components.Mario_World
     {
         private PlayerOne playerOne;
         private AnimSpriteRenderer qbSprite;
+        public GameObject heartItem { get; set; }
         private float initYPosition;
         private bool hit;
+        private bool heartAppear;
         private float tempTimer;
 
         void ICmpInitializable.OnInit(Component.InitContext context)
@@ -25,7 +28,8 @@ namespace Dove_Game.Scene_Components.Mario_World
             qbSprite = this.GameObj.GetComponent<AnimSpriteRenderer>();
             initYPosition = this.GameObj.Transform.Pos.Y;
             hit = false;
-            tempTimer = 1000.0f;
+            heartAppear = false;
+            tempTimer = 1200.0f;
         }
 
         void ICmpInitializable.OnShutdown(Component.ShutdownContext context)
@@ -36,11 +40,18 @@ namespace Dove_Game.Scene_Components.Mario_World
         {
             if (hit)
             {
+                
+                if(!heartAppear)
+                    heartItem.Transform.MoveBy(new Vector2(0, -0.1f));
+
                 tempTimer -= Time.MsPFMult * Time.TimeMult;
                 if (tempTimer < 0)
                 {
                     qbSprite.AnimFirstFrame = 2;
                     qbSprite.UpdateVisibleFrames();
+                    heartAppear = true;
+                    heartItem.RigidBody.IgnoreGravity = false;
+                    heartItem.RigidBody.CollidesWith = CollisionCategory.Cat1 | CollisionCategory.Cat4;
                 }
             }
         }
