@@ -147,32 +147,32 @@ namespace Dove_Game.Test_Logic
 
         public static List<DialogComponent> LinkLevelOnePostBossPre = new List<DialogComponent>
         {
-            new DialogComponent(false, "Navi: HEY LISTEN!!!!", ContentRefs.BigHeadGoku, null, -1),
-            new DialogComponent(false, "Goku: Look! It’s a shiny thing! ", ContentRefs.BigHeadGoku, null, -1),
-            new DialogComponent(false, "Unknown: It seems that it’s alive and it’s trying to escape from that green guy.", ContentRefs.BigHeadGoku, null, -1),
-            new DialogComponent(false, "Goku: That’s Link.. the guy that the minion told us about. ", ContentRefs.BigHeadGoku, null, -1),
-            new DialogComponent(false, "Navi: Please help me! Link is trying to use my energy to take over the forest! ", ContentRefs.BigHeadGoku, null, -1),
-            new DialogComponent(false, "Link: Do you guys actually think that you could stop me?", ContentRefs.BigHeadGoku, null, -1),
-            new DialogComponent(false, "Goku: I think this is the perfect time to show me what you can do. Don’t worry I’ll be here to help out if you need anything.", ContentRefs.BigHeadGoku, null, -1),
-            new DialogComponent(false, "Unknown: I don’t think I can do this… ", ContentRefs.BigHeadGoku, null, -1),
-            new DialogComponent(false, "Goku: I know you can.", ContentRefs.BigHeadGoku, null, -1),
+            new DialogComponent(false, "Navi: HEY LISTEN!!!!", ContentRefs.LinkCastleGN, null, -1),
+            new DialogComponent(false, "Goku: Look! It’s a shiny thing! ", ContentRefs.LinkCastleUG, null, -1),
+            new DialogComponent(false, "Unknown: It seems that it’s alive and it’s trying to escape from that green guy.", ContentRefs.LinkCastleUG, null, -1),
+            new DialogComponent(false, "Goku: That’s Link.. the guy that the minion told us about. ", ContentRefs.LinkCastleUG, null, -1),
+            new DialogComponent(false, "Navi: Please help me! Link is trying to use my energy to take over the forest! ", ContentRefs.LinkCastleUN, null, -1),
+            new DialogComponent(false, "Link: Do you guys actually think that you could stop me?", ContentRefs.LinkCastleGL, null, -1),
+            new DialogComponent(false, "Goku: I think this is the perfect time to show me what you can do. Don’t worry I’ll be here to help out if you need anything.", ContentRefs.LinkCastleUG, null, -1),
+            new DialogComponent(false, "Unknown: I don’t think I can do this… ", ContentRefs.LinkCastleUG, null, -1),
+            new DialogComponent(false, "Goku: I know you can.", ContentRefs.LinkCastleUG, null, -1),
             
-            new DialogComponent(false, "Link: Him? He can’t even hurt a fly or in this case me. ", ContentRefs.GokuHero, ContentRefs.LinkBossFight, -1)
+            new DialogComponent(false, "Link: Him? He can’t even hurt a fly or in this case me. ", ContentRefs.LinkCastleUL, ContentRefs.LinkBossFight, -1)
         };
 
         public static List<DialogComponent> LinkLevelBossPost = new List<DialogComponent>
         {
-            new DialogComponent(false, "Goku: You did good kid.", ContentRefs.BigHeadGoku, null, -1),
-            new DialogComponent(false, "Navi: Thank you! I’m free now! But I have bad news… The darkness seems to be getting stronger and stronger. I don’t think we can stop it now.. It might be too late for us…", ContentRefs.BigHeadGoku, null, -1),
-            new DialogComponent(false, "Unknown: What do you mean? There has to be a way…", ContentRefs.BigHeadGoku, null, -1),
-            new DialogComponent(false, "Navi: Maybe if we stop the darkness from it’s roots…", ContentRefs.BigHeadGoku, null, -1),
-            new DialogComponent(false, "Unknown: Where’s that?", ContentRefs.BigHeadGoku, null, -1),
-            new DialogComponent(false, "Navi: An unknown island recently appeared off the coast of Hyrule. It’s entirely consumed by darkness but I heard that he resides there.", ContentRefs.BigHeadGoku, null, -1),
-            new DialogComponent(false, "Unknown: He… Slenderman… We have to stop him! How can we get there?", ContentRefs.BigHeadGoku, null, -1),
-            new DialogComponent(false, "Navi: I don’t think we can…", ContentRefs.BigHeadGoku, null, -1),
-            new DialogComponent(false, "Goku: I can teleport us, everyone gather around.", ContentRefs.BigHeadGoku, null, -1),
+            new DialogComponent(false, "Goku: You did good kid.", ContentRefs.LinkCastleUG, null, -1),
+            new DialogComponent(false, "Navi: Thank you! I’m free now! But I have bad news… The darkness seems to be getting stronger and stronger. I don’t think we can stop it now.. It might be too late for us…", ContentRefs.LinkCastleUN, null, -1),
+            new DialogComponent(false, "Unknown: What do you mean? There has to be a way…", ContentRefs.LinkCastleUN, null, -1),
+            new DialogComponent(false, "Navi: Maybe if we stop the darkness from it’s roots…", ContentRefs.LinkCastleUG, null, -1),
+            new DialogComponent(false, "Unknown: Where’s that?", ContentRefs.LinkCastleUN, null, -1),
+            new DialogComponent(false, "Navi: An unknown island recently appeared off the coast of Hyrule. It’s entirely consumed by darkness but I heard that he resides there.", ContentRefs.LinkCastleUN, null, -1),
+            new DialogComponent(false, "Unknown: He… Slenderman… We have to stop him! How can we get there?", ContentRefs.LinkCastleUN, null, -1),
+            new DialogComponent(false, "Navi: I don’t think we can…", ContentRefs.LinkCastleUN, null, -1),
+            new DialogComponent(false, "Goku: I can teleport us, everyone gather around.", ContentRefs.LinkCastleUG, null, -1),
             
-            new DialogComponent(false, "Unknown: No matter what happens, it has been an honor battling alongside you heroes. Let our efforts not be in vain, lets vanquish this evil once and for all!", ContentRefs.GokuHero, ContentRefs.FinalBossPre, 3)
+            new DialogComponent(false, "Unknown: No matter what happens, it has been an honor battling alongside you heroes. Let our efforts not be in vain, lets vanquish this evil once and for all!", ContentRefs.LinkCastleUG, ContentRefs.FinalBossPre, 3)
         };
 
         public static List<DialogComponent> FinalBossPre = new List<DialogComponent>

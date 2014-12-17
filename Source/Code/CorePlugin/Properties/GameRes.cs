@@ -122,7 +122,37 @@ namespace GameRes
 				}
 				public static class LinkWorld {
 					public static class LinkCastle {
+						public static Duality.ContentRef<Duality.Resources.Material> LinkBossTextGL_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\DialogImage\LinkWorld\LinkCastle\LinkBossTextGL.Material.res"); }}
+						public static Duality.ContentRef<Duality.Resources.Pixmap> LinkBossTextGL_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\DialogImage\LinkWorld\LinkCastle\LinkBossTextGL.Pixmap.res"); }}
+						public static Duality.ContentRef<Duality.Resources.Texture> LinkBossTextGL_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Characters\DialogImage\LinkWorld\LinkCastle\LinkBossTextGL.Texture.res"); }}
+						public static Duality.ContentRef<Duality.Resources.Material> LinkBossTextGN_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\DialogImage\LinkWorld\LinkCastle\LinkBossTextGN.Material.res"); }}
+						public static Duality.ContentRef<Duality.Resources.Pixmap> LinkBossTextGN_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\DialogImage\LinkWorld\LinkCastle\LinkBossTextGN.Pixmap.res"); }}
+						public static Duality.ContentRef<Duality.Resources.Texture> LinkBossTextGN_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Characters\DialogImage\LinkWorld\LinkCastle\LinkBossTextGN.Texture.res"); }}
+						public static Duality.ContentRef<Duality.Resources.Material> LinkBossTextUG_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\DialogImage\LinkWorld\LinkCastle\LinkBossTextUG.Material.res"); }}
+						public static Duality.ContentRef<Duality.Resources.Pixmap> LinkBossTextUG_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\DialogImage\LinkWorld\LinkCastle\LinkBossTextUG.Pixmap.res"); }}
+						public static Duality.ContentRef<Duality.Resources.Texture> LinkBossTextUG_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Characters\DialogImage\LinkWorld\LinkCastle\LinkBossTextUG.Texture.res"); }}
+						public static Duality.ContentRef<Duality.Resources.Material> LinkBossTextUL_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\DialogImage\LinkWorld\LinkCastle\LinkBossTextUL.Material.res"); }}
+						public static Duality.ContentRef<Duality.Resources.Pixmap> LinkBossTextUL_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\DialogImage\LinkWorld\LinkCastle\LinkBossTextUL.Pixmap.res"); }}
+						public static Duality.ContentRef<Duality.Resources.Texture> LinkBossTextUL_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Characters\DialogImage\LinkWorld\LinkCastle\LinkBossTextUL.Texture.res"); }}
+						public static Duality.ContentRef<Duality.Resources.Material> LinkBossTextUN_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\DialogImage\LinkWorld\LinkCastle\LinkBossTextUN.Material.res"); }}
+						public static Duality.ContentRef<Duality.Resources.Pixmap> LinkBossTextUN_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\DialogImage\LinkWorld\LinkCastle\LinkBossTextUN.Pixmap.res"); }}
+						public static Duality.ContentRef<Duality.Resources.Texture> LinkBossTextUN_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Characters\DialogImage\LinkWorld\LinkCastle\LinkBossTextUN.Texture.res"); }}
 						public static void LoadAll() {
+							LinkBossTextGL_Material.MakeAvailable();
+							LinkBossTextGL_Pixmap.MakeAvailable();
+							LinkBossTextGL_Texture.MakeAvailable();
+							LinkBossTextGN_Material.MakeAvailable();
+							LinkBossTextGN_Pixmap.MakeAvailable();
+							LinkBossTextGN_Texture.MakeAvailable();
+							LinkBossTextUG_Material.MakeAvailable();
+							LinkBossTextUG_Pixmap.MakeAvailable();
+							LinkBossTextUG_Texture.MakeAvailable();
+							LinkBossTextUL_Material.MakeAvailable();
+							LinkBossTextUL_Pixmap.MakeAvailable();
+							LinkBossTextUL_Texture.MakeAvailable();
+							LinkBossTextUN_Material.MakeAvailable();
+							LinkBossTextUN_Pixmap.MakeAvailable();
+							LinkBossTextUN_Texture.MakeAvailable();
 						}
 					}
 					public static class LinkForest {

@@ -47,6 +47,12 @@ namespace Dove_Game.Test_Logic
 
         public static ContentRef<Material> LinkForestUG = GameRes.Data.Characters.DialogImage.LinkWorld.LinkForest.LinkForestTextUG_Material;
 
+        public static ContentRef<Material> LinkCastleGL = GameRes.Data.Characters.DialogImage.LinkWorld.LinkCastle.LinkBossTextGL_Material        ;
+        public static ContentRef<Material> LinkCastleGN = GameRes.Data.Characters.DialogImage.LinkWorld.LinkCastle.LinkBossTextGN_Material;
+        public static ContentRef<Material> LinkCastleUL = GameRes.Data.Characters.DialogImage.LinkWorld.LinkCastle.LinkBossTextUL_Material;
+        public static ContentRef<Material> LinkCastleUG = GameRes.Data.Characters.DialogImage.LinkWorld.LinkCastle.LinkBossTextUG_Material;
+        public static ContentRef<Material> LinkCastleUN = GameRes.Data.Characters.DialogImage.LinkWorld.LinkCastle.LinkBossTextUN_Material;
+
         public static ContentRef<Material> SlenderGU = GameRes.Data.Characters.DialogImage.FinalWorld.SlendermanBackgroundText_Material;
         public static ContentRef<Material> SlenderGS = GameRes.Data.Characters.DialogImage.FinalWorld.SlendermanBackgroundTextGS_Material;
         public static ContentRef<Material> SlenderUS = GameRes.Data.Characters.DialogImage.FinalWorld.SlendermanBackgroundTextUS_Material;
