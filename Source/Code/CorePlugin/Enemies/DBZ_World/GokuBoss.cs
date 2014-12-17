@@ -20,6 +20,7 @@ namespace Dove_Game.Enemies.DBZ_World
         private const int FLYAROUND = 1;
         private const int KAMAHAMEHA = 0;
         private const int CHARGE = 2;
+        public const float ATTACK_INTERVAL = 4000.0f;
         //animation sequences
         private List<int> seqWalk = new List<int> { 31, 32, 33, 34 };
 
@@ -31,7 +32,7 @@ namespace Dove_Game.Enemies.DBZ_World
             // each boss must specify its bullet information
             this.bulletBlueprint = Test_Logic.ContentRefs.BBP_Default;
             this.bulletMaterial = GameRes.Data.Scenes.Bullets.Fireball_Material;
-
+            this.attackCooldown = ATTACK_INTERVAL;
             this.seqWalkLeft = new List<int> { 11, 10 };
             this.seqWalkRight = new List<int> { 2, 3 };
             attacks = new BossAttack[] { new Kamehameha(), new Flyaround(), new Charge() };

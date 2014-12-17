@@ -20,8 +20,8 @@ namespace Dove_Game
     [RequiredComponent(typeof(RigidBody))]
     public class MarioBoss : Enemies.Boss
     {
-     
 
+        private const float ATTACK_INTERVAL = 2000.0f;
         private const int FIREBALL_RAINBOW = 1;
         //animation sequences
         private List<int> seqWalk = new List<int> { 31, 32, 33, 34 };
