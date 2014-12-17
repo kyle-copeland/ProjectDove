@@ -139,7 +139,7 @@ namespace Dove_Game.Enemies
         //Aux. functions
         public static bool onGround(RigidBody body)
         {
-            return Math.Abs(body.LinearVelocity.Y) <= 0.02f;
+            return Math.Abs(body.LinearVelocity.Y) <= 0.005f;
         }
 
         private  void updateWalkAnimation()

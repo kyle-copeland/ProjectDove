@@ -50,7 +50,7 @@ namespace Dove_Game
 
             if (args.CollideWith.RigidBody.CollisionCategory == CollisionCategory.Cat5)
             {
-                ChangeDirection();
+                this.GameObj.RigidBody.ApplyLocalImpulse(-Vector2.UnitY * 2500.0f);
                 stopped = false;
             }
         }
