@@ -37,7 +37,7 @@ namespace Dove_Game.Test_Logic
                         Goku goku = summonPiece.AddComponent<Goku>();
                         goku.CharDirection = main.CharDirection;
                         spriteMaterial = ContentRefs.GokuContentRef.Res;
-                        spriteSize = new Vector2(41, 52);
+                        spriteSize = new Vector2(74, 68);
                         break;
                     case SideCharacter.Bowser:
                         Bowser bowser = summonPiece.AddComponent<Bowser>();
@@ -87,11 +87,11 @@ namespace Dove_Game.Test_Logic
                         sprite.AnimDuration = 1;
                         sprite.AnimFrameCount = 1;
                         sprite.AnimLoopMode = AnimSpriteRenderer.LoopMode.Loop;
-                        sprite.AnimFirstFrame = playerBullet.AttackDirection == Direction.Right ? 1 : 0;
+                        sprite.AnimFirstFrame = playerBullet.AttackDirection == Direction.Right ? 0 : 1;
 
-                        spriteMaterial = ContentRefs.rocketBullet.Res;
+                        spriteMaterial = ContentRefs.playerBullet.Res;
                         spriteSize = spriteMaterial.MainTexture.IsAvailable ? spriteMaterial.MainTexture.Res.Size : new Vector2(5, 5);
-                        spriteSize.X /= 2.0f;
+                        spriteSize.Y /= 2.0f;
                         createBullet(ref summonPiece, new Vector2(playerOneRectX, playerOneRectY), main.CharDirection, spriteSize);
                         break;
 

@@ -361,10 +361,6 @@ namespace GameRes
 						Thwomp_Texture.MakeAvailable();
 					}
 				}
-				public static class Mario_World {
-					public static void LoadAll() {
-					}
-				}
 				public static class ZeldaWorld {
 					public static Duality.ContentRef<Duality.Resources.Material> Blue_Knight_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\Enemies\ZeldaWorld\Blue Knight.Material.res"); }}
 					public static Duality.ContentRef<Duality.Resources.Pixmap> Blue_Knight_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\Enemies\ZeldaWorld\Blue Knight.Pixmap.res"); }}
@@ -399,10 +395,6 @@ namespace GameRes
 						Tektike_Texture.MakeAvailable();
 					}
 				}
-				public static class Zelda_World {
-					public static void LoadAll() {
-					}
-				}
 				public static Duality.ContentRef<Duality.Resources.Material> SlenderMan1_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Characters\Enemies\SlenderMan1.Material.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Pixmap> SlenderMan1_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Characters\Enemies\SlenderMan1.Pixmap.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Texture> SlenderMan1_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Characters\Enemies\SlenderMan1.Texture.res"); }}
@@ -412,9 +404,7 @@ namespace GameRes
 				public static void LoadAll() {
 					Dbz_World.LoadAll();
 					MarioWorld.LoadAll();
-					Mario_World.LoadAll();
 					ZeldaWorld.LoadAll();
-					Zelda_World.LoadAll();
 					SlenderMan1_Material.MakeAvailable();
 					SlenderMan1_Pixmap.MakeAvailable();
 					SlenderMan1_Texture.MakeAvailable();
@@ -514,15 +504,23 @@ namespace GameRes
 			public static class Goku_World {
 				public static Duality.ContentRef<Duality.Resources.AudioData> Goku_Snake_Way_AudioData { get { return Duality.ContentProvider.RequestContent<Duality.Resources.AudioData>(@"Data\Music\Goku World\Goku Snake Way.AudioData.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Sound> Goku_Snake_Way_Sound { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Sound>(@"Data\Music\Goku World\Goku Snake Way.Sound.res"); }}
+				public static Duality.ContentRef<Duality.Resources.AudioData> KingKai_AudioData { get { return Duality.ContentProvider.RequestContent<Duality.Resources.AudioData>(@"Data\Music\Goku World\KingKai.AudioData.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Sound> KingKai_Sound { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Sound>(@"Data\Music\Goku World\KingKai.Sound.res"); }}
 				public static void LoadAll() {
 					Goku_Snake_Way_AudioData.MakeAvailable();
 					Goku_Snake_Way_Sound.MakeAvailable();
+					KingKai_AudioData.MakeAvailable();
+					KingKai_Sound.MakeAvailable();
 				}
 			}
 			public static class Mario_World {
+				public static Duality.ContentRef<Duality.Resources.AudioData> MarioCastle_AudioData { get { return Duality.ContentProvider.RequestContent<Duality.Resources.AudioData>(@"Data\Music\Mario World\MarioCastle.AudioData.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Sound> MarioCastle_Sound { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Sound>(@"Data\Music\Mario World\MarioCastle.Sound.res"); }}
 				public static Duality.ContentRef<Duality.Resources.AudioData> MarioWorld_AudioData { get { return Duality.ContentProvider.RequestContent<Duality.Resources.AudioData>(@"Data\Music\Mario World\MarioWorld.AudioData.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Sound> MarioWorld_Sound { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Sound>(@"Data\Music\Mario World\MarioWorld.Sound.res"); }}
 				public static void LoadAll() {
+					MarioCastle_AudioData.MakeAvailable();
+					MarioCastle_Sound.MakeAvailable();
 					MarioWorld_AudioData.MakeAvailable();
 					MarioWorld_Sound.MakeAvailable();
 				}
@@ -773,6 +771,9 @@ namespace GameRes
 				public static Duality.ContentRef<Duality.Resources.Material> BowserFireball_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Scenes\Bullets\BowserFireball.Material.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Pixmap> BowserFireball_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Scenes\Bullets\BowserFireball.Pixmap.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Texture> BowserFireball_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Scenes\Bullets\BowserFireball.Texture.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Material> Bullet2_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Scenes\Bullets\Bullet2.Material.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Pixmap> Bullet2_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Scenes\Bullets\Bullet2.Pixmap.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Texture> Bullet2_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Scenes\Bullets\Bullet2.Texture.res"); }}
 				public static Duality.ContentRef<Dove_Game.BulletBlueprint> BulletBlueprint_BulletBlueprint { get { return Duality.ContentProvider.RequestContent<Dove_Game.BulletBlueprint>(@"Data\Scenes\Bullets\BulletBlueprint.BulletBlueprint.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Material> CellAttack_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Scenes\Bullets\CellAttack.Material.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Pixmap> CellAttack_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Scenes\Bullets\CellAttack.Pixmap.res"); }}
@@ -794,6 +795,9 @@ namespace GameRes
 					BowserFireball_Material.MakeAvailable();
 					BowserFireball_Pixmap.MakeAvailable();
 					BowserFireball_Texture.MakeAvailable();
+					Bullet2_Material.MakeAvailable();
+					Bullet2_Pixmap.MakeAvailable();
+					Bullet2_Texture.MakeAvailable();
 					BulletBlueprint_BulletBlueprint.MakeAvailable();
 					CellAttack_Material.MakeAvailable();
 					CellAttack_Pixmap.MakeAvailable();

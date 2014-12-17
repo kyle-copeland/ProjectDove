@@ -150,21 +150,10 @@
           </shapes>
         </item>
         <item dataType="Struct" type="Dove_Game.Firespin" id="3425010436">
+          <_x003C_FirespinSpeed_x003E_k__BackingField dataType="Float">0</_x003C_FirespinSpeed_x003E_k__BackingField>
           <active dataType="Bool">true</active>
-          <currentSA />
-          <direction dataType="Enum" type="Dove_Game.Direction" name="Right" value="1" />
           <gameobj dataType="ObjectRef">2954041051</gameobj>
-          <healthPts dataType="Int">0</healthPts>
-          <impulse dataType="Float">10</impulse>
           <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
-          <lastFrame dataType="Int">0</lastFrame>
-          <movementSpeed dataType="Float">15</movementSpeed>
-          <vectorMove dataType="Struct" type="OpenTK.Vector2">
-            <X dataType="Float">0</X>
-            <Y dataType="Float">0</Y>
-          </vectorMove>
-          <weaponDelay dataType="Float">1000</weaponDelay>
-          <weaponTimer dataType="Float">0</weaponTimer>
         </item>
       </_items>
       <_size dataType="Int">4</_size>

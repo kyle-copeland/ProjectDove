@@ -12,6 +12,7 @@
           <item dataType="Struct" type="Dove_Game.Test_Logic.DrawDialog" id="3502353452">
             <_awaitingInput dataType="Bool">false</_awaitingInput>
             <_currentDialog />
+            <_currentDialogPos dataType="Int">0</_currentDialogPos>
             <_font dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Font]]">
               <contentPath />
             </_font>
@@ -63,14 +64,14 @@
             <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
             <parentTransform />
             <pos dataType="Struct" type="OpenTK.Vector3">
-              <X dataType="Float">0</X>
-              <Y dataType="Float">0</Y>
-              <Z dataType="Float">-500</Z>
+              <X dataType="Float">87.89427</X>
+              <Y dataType="Float">-85.06404</Y>
+              <Z dataType="Float">-1160.04785</Z>
             </pos>
             <posAbs dataType="Struct" type="OpenTK.Vector3">
-              <X dataType="Float">0</X>
-              <Y dataType="Float">0</Y>
-              <Z dataType="Float">-500</Z>
+              <X dataType="Float">87.89427</X>
+              <Y dataType="Float">-85.06404</Y>
+              <Z dataType="Float">-1160.04785</Z>
             </posAbs>
             <scale dataType="Float">1</scale>
             <scaleAbs dataType="Float">1</scaleAbs>
@@ -93,7 +94,7 @@
             <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
             <nearZ dataType="Float">0</nearZ>
             <passes dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Components.Camera+Pass]]" id="3779760733">
-              <_items dataType="Array" type="Duality.Components.Camera+Pass[]" id="552855398" length="4">
+              <_items dataType="Array" type="Duality.Components.Camera+Pass[]" id="552855398" length="8">
                 <item dataType="Struct" type="Duality.Components.Camera+Pass" id="772249472">
                   <clearColor dataType="Struct" type="Duality.Drawing.ColorRgba">
                     <A dataType="Byte">0</A>
@@ -130,7 +131,7 @@
                 </item>
               </_items>
               <_size dataType="Int">2</_size>
-              <_version dataType="Int">2</_version>
+              <_version dataType="Int">728</_version>
             </passes>
             <perspective dataType="Enum" type="Duality.Drawing.PerspectiveMode" name="Parallax" value="1" />
             <visibilityMask dataType="Enum" type="Duality.Drawing.VisibilityFlag" name="All" value="4294967295" />
@@ -161,6 +162,99 @@
       </identifier>
       <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
       <name dataType="String">Camera</name>
+      <parent />
+      <prefabLink />
+    </item>
+    <item dataType="Struct" type="Duality.GameObject" id="1909557006">
+      <active dataType="Bool">true</active>
+      <children />
+      <compList dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Component]]" id="4077041560">
+        <_items dataType="Array" type="Duality.Component[]" id="3445552172" length="4">
+          <item dataType="Struct" type="Duality.Components.Transform" id="4269871938">
+            <active dataType="Bool">true</active>
+            <angle dataType="Float">0</angle>
+            <angleAbs dataType="Float">0</angleAbs>
+            <angleVel dataType="Float">0</angleVel>
+            <angleVelAbs dataType="Float">0</angleVelAbs>
+            <deriveAngle dataType="Bool">true</deriveAngle>
+            <gameobj dataType="ObjectRef">1909557006</gameobj>
+            <ignoreParent dataType="Bool">false</ignoreParent>
+            <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
+            <parentTransform />
+            <pos dataType="Struct" type="OpenTK.Vector3">
+              <X dataType="Float">0</X>
+              <Y dataType="Float">0</Y>
+              <Z dataType="Float">0</Z>
+            </pos>
+            <posAbs dataType="Struct" type="OpenTK.Vector3">
+              <X dataType="Float">0</X>
+              <Y dataType="Float">0</Y>
+              <Z dataType="Float">0</Z>
+            </posAbs>
+            <scale dataType="Float">1</scale>
+            <scaleAbs dataType="Float">1</scaleAbs>
+            <vel dataType="Struct" type="OpenTK.Vector3">
+              <X dataType="Float">0</X>
+              <Y dataType="Float">0</Y>
+              <Z dataType="Float">0</Z>
+            </vel>
+            <velAbs dataType="Struct" type="OpenTK.Vector3">
+              <X dataType="Float">0</X>
+              <Y dataType="Float">0</Y>
+              <Z dataType="Float">0</Z>
+            </velAbs>
+          </item>
+          <item dataType="Struct" type="Duality.Components.SoundEmitter" id="3953448893">
+            <active dataType="Bool">true</active>
+            <gameobj dataType="ObjectRef">1909557006</gameobj>
+            <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
+            <sources dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Components.SoundEmitter+Source]]" id="4200135153">
+              <_items dataType="Array" type="Duality.Components.SoundEmitter+Source[]" id="1391133614" length="4">
+                <item dataType="Struct" type="Duality.Components.SoundEmitter+Source" id="2032011600">
+                  <looped dataType="Bool">true</looped>
+                  <offset dataType="Struct" type="OpenTK.Vector3">
+                    <X dataType="Float">0</X>
+                    <Y dataType="Float">0</Y>
+                    <Z dataType="Float">0</Z>
+                  </offset>
+                  <paused dataType="Bool">false</paused>
+                  <pitch dataType="Float">1</pitch>
+                  <sound dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Sound]]">
+                    <contentPath dataType="String">Data\Music\Mario World\MarioCastle.Sound.res</contentPath>
+                  </sound>
+                  <volume dataType="Float">1</volume>
+                </item>
+              </_items>
+              <_size dataType="Int">1</_size>
+              <_version dataType="Int">1</_version>
+            </sources>
+          </item>
+        </_items>
+        <_size dataType="Int">2</_size>
+        <_version dataType="Int">2</_version>
+      </compList>
+      <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="2140334878" surrogate="true">
+        <header />
+        <body>
+          <keys dataType="Array" type="System.Type[]" id="288454746">
+            <item dataType="ObjectRef">2839245824</item>
+            <item dataType="Type" id="45130752" value="Duality.Components.SoundEmitter" />
+          </keys>
+          <values dataType="Array" type="Duality.Component[]" id="2067276218">
+            <item dataType="ObjectRef">4269871938</item>
+            <item dataType="ObjectRef">3953448893</item>
+          </values>
+        </body>
+      </compMap>
+      <compTransform dataType="ObjectRef">4269871938</compTransform>
+      <identifier dataType="Struct" type="System.Guid" surrogate="true">
+        <header>
+          <data dataType="Array" type="System.Byte[]" id="3734635610">VMmWhUdPbU6gsbshVoSRNw==</data>
+        </header>
+        <body />
+      </identifier>
+      <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
+      <name dataType="String">MarioCastle</name>
       <parent />
       <prefabLink />
     </item>
