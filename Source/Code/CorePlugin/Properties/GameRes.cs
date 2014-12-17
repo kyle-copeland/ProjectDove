@@ -410,10 +410,13 @@ namespace GameRes
 				public static Duality.ContentRef<Duality.Resources.Prefab> Brick_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\MarioWorld\Brick.Prefab.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Prefab> Fireball_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\MarioWorld\Fireball.Prefab.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Prefab> Firespin_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\MarioWorld\Firespin.Prefab.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Prefab> Goomba_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\MarioWorld\Goomba.Prefab.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Prefab> Koopa_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\MarioWorld\Koopa.Prefab.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Prefab> Pipe_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\MarioWorld\Pipe.Prefab.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Prefab> PiranhaPlant_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\MarioWorld\PiranhaPlant.Prefab.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Prefab> QuestionBox_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\MarioWorld\QuestionBox.Prefab.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Prefab> SolidBrickCastle_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\MarioWorld\SolidBrickCastle.Prefab.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Prefab> Spike_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\MarioWorld\Spike.Prefab.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Prefab> Thwomp_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\MarioWorld\Thwomp.Prefab.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Prefab> ZeldaHearts_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\MarioWorld\ZeldaHearts.Prefab.res"); }}
 				public static void LoadAll() {
@@ -421,10 +424,13 @@ namespace GameRes
 					Brick_Prefab.MakeAvailable();
 					Fireball_Prefab.MakeAvailable();
 					Firespin_Prefab.MakeAvailable();
+					Goomba_Prefab.MakeAvailable();
+					Koopa_Prefab.MakeAvailable();
 					Pipe_Prefab.MakeAvailable();
 					PiranhaPlant_Prefab.MakeAvailable();
 					QuestionBox_Prefab.MakeAvailable();
 					SolidBrickCastle_Prefab.MakeAvailable();
+					Spike_Prefab.MakeAvailable();
 					Thwomp_Prefab.MakeAvailable();
 					ZeldaHearts_Prefab.MakeAvailable();
 				}
@@ -446,6 +452,7 @@ namespace GameRes
 				}
 			}
 			public static Duality.ContentRef<Duality.Resources.Prefab> DrawDialogController_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\DrawDialogController.Prefab.res"); }}
+			public static Duality.ContentRef<Duality.Resources.Prefab> Paper_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\Paper.Prefab.res"); }}
 			public static Duality.ContentRef<Duality.Resources.Prefab> SlenderBoss_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\SlenderBoss.Prefab.res"); }}
 			public static Duality.ContentRef<Duality.Resources.Prefab> Wall_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\Wall.Prefab.res"); }}
 			public static Duality.ContentRef<Duality.Resources.Prefab> White_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\White.Prefab.res"); }}
@@ -455,6 +462,7 @@ namespace GameRes
 				MarioWorld.LoadAll();
 				PlayerComponents.LoadAll();
 				DrawDialogController_Prefab.MakeAvailable();
+				Paper_Prefab.MakeAvailable();
 				SlenderBoss_Prefab.MakeAvailable();
 				Wall_Prefab.MakeAvailable();
 				White_Prefab.MakeAvailable();
@@ -620,9 +628,18 @@ namespace GameRes
 				public static Duality.ContentRef<Duality.Resources.Material> Flagpole_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Scenes\Components\Flagpole.Material.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Pixmap> Flagpole_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Scenes\Components\Flagpole.Pixmap.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Texture> Flagpole_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Scenes\Components\Flagpole.Texture.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Material> Goomba_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Scenes\Components\Goomba.Material.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Pixmap> Goomba_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Scenes\Components\Goomba.Pixmap.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Texture> Goomba_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Scenes\Components\Goomba.Texture.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Material> KameBlast_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Scenes\Components\KameBlast.Material.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Pixmap> KameBlast_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Scenes\Components\KameBlast.Pixmap.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Texture> KameBlast_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Scenes\Components\KameBlast.Texture.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Material> Koopa_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Scenes\Components\Koopa.Material.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Pixmap> Koopa_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Scenes\Components\Koopa.Pixmap.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Texture> Koopa_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Scenes\Components\Koopa.Texture.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Material> Paper_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Scenes\Components\Paper.Material.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Pixmap> Paper_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Scenes\Components\Paper.Pixmap.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Texture> Paper_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Scenes\Components\Paper.Texture.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Material> Pipe_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Scenes\Components\Pipe.Material.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Pixmap> Pipe_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Scenes\Components\Pipe.Pixmap.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Texture> Pipe_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Scenes\Components\Pipe.Texture.res"); }}
@@ -641,9 +658,15 @@ namespace GameRes
 				public static Duality.ContentRef<Duality.Resources.Material> SolidBrickCastle_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Scenes\Components\SolidBrickCastle.Material.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Pixmap> SolidBrickCastle_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Scenes\Components\SolidBrickCastle.Pixmap.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Texture> SolidBrickCastle_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Scenes\Components\SolidBrickCastle.Texture.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Material> Spike_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Scenes\Components\Spike.Material.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Pixmap> Spike_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Scenes\Components\Spike.Pixmap.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Texture> Spike_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Scenes\Components\Spike.Texture.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Material> Thwomp_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Scenes\Components\Thwomp.Material.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Pixmap> Thwomp_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Scenes\Components\Thwomp.Pixmap.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Texture> Thwomp_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Scenes\Components\Thwomp.Texture.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Material> Worm_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Scenes\Components\Worm.Material.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Pixmap> Worm_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Scenes\Components\Worm.Pixmap.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Texture> Worm_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Scenes\Components\Worm.Texture.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Material> ZeldaHearts_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Scenes\Components\ZeldaHearts.Material.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Pixmap> ZeldaHearts_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Scenes\Components\ZeldaHearts.Pixmap.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Texture> ZeldaHearts_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Scenes\Components\ZeldaHearts.Texture.res"); }}
@@ -672,9 +695,18 @@ namespace GameRes
 					Flagpole_Material.MakeAvailable();
 					Flagpole_Pixmap.MakeAvailable();
 					Flagpole_Texture.MakeAvailable();
+					Goomba_Material.MakeAvailable();
+					Goomba_Pixmap.MakeAvailable();
+					Goomba_Texture.MakeAvailable();
 					KameBlast_Material.MakeAvailable();
 					KameBlast_Pixmap.MakeAvailable();
 					KameBlast_Texture.MakeAvailable();
+					Koopa_Material.MakeAvailable();
+					Koopa_Pixmap.MakeAvailable();
+					Koopa_Texture.MakeAvailable();
+					Paper_Material.MakeAvailable();
+					Paper_Pixmap.MakeAvailable();
+					Paper_Texture.MakeAvailable();
 					Pipe_Material.MakeAvailable();
 					Pipe_Pixmap.MakeAvailable();
 					Pipe_Texture.MakeAvailable();
@@ -693,9 +725,15 @@ namespace GameRes
 					SolidBrickCastle_Material.MakeAvailable();
 					SolidBrickCastle_Pixmap.MakeAvailable();
 					SolidBrickCastle_Texture.MakeAvailable();
+					Spike_Material.MakeAvailable();
+					Spike_Pixmap.MakeAvailable();
+					Spike_Texture.MakeAvailable();
 					Thwomp_Material.MakeAvailable();
 					Thwomp_Pixmap.MakeAvailable();
 					Thwomp_Texture.MakeAvailable();
+					Worm_Material.MakeAvailable();
+					Worm_Pixmap.MakeAvailable();
+					Worm_Texture.MakeAvailable();
 					ZeldaHearts_Material.MakeAvailable();
 					ZeldaHearts_Pixmap.MakeAvailable();
 					ZeldaHearts_Texture.MakeAvailable();

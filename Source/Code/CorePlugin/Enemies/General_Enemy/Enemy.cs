@@ -93,7 +93,7 @@ namespace Dove_Game.Enemies
             impulse = 6;
             movementSpeed = 8;
             HealthPoints = 10;
-            this.GameObj.RigidBody.Mass = 50;
+            //this.GameObj.RigidBody.Mass = 50;
             this.GameObj.RigidBody.CollisionCategory = CollisionCategory.Cat3;
             this.GameObj.RigidBody.CollidesWith = CollisionCategory.Cat1 | CollisionCategory.Cat2 | CollisionCategory.Cat4 | CollisionCategory.Cat5;
         }

@@ -18,8 +18,8 @@ namespace Dove_Game.Scene_Components.Mario_World
         private AnimSpriteRenderer qbSprite;
         public GameObject heartItem { get; set; }
         private float initYPosition;
-        private bool hit;
-        private bool heartAppear;
+        public bool hit { get; set; }
+        public bool heartAppear { get; set; }
         private float tempTimer;
 
         void ICmpInitializable.OnInit(Component.InitContext context)
@@ -40,9 +40,10 @@ namespace Dove_Game.Scene_Components.Mario_World
         {
             if (hit)
             {
-                
-                if(!heartAppear)
+                if (!heartAppear)
+                {
                     heartItem.Transform.MoveBy(new Vector2(0, -0.1f));
+                }
 
                 tempTimer -= Time.MsPFMult * Time.TimeMult;
                 if (tempTimer < 0)
