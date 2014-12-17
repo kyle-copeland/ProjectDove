@@ -29,6 +29,8 @@ namespace Dove_Game.Test_Logic
         public void doDamage(int dmg)
         {
             HealthPoints -= dmg;
+            if (HealthPoints > 100)
+                HealthPoints = 100;
         }
 
         abstract public void OnUpdate();

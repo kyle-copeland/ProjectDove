@@ -122,7 +122,7 @@ namespace Dove_Game
                     playerSprite.AnimLoopMode = AnimSpriteRenderer.LoopMode.Loop;
                     
                     MovementVector = Vector2.UnitY * -1.0f;
-                    playerOne.ApplyLocalImpulse(-Vector2.UnitY * 45.0f);
+                    playerOne.ApplyLocalImpulse(-Vector2.UnitY * 40.0f);
                 }
 
                 // Gun Sequence
