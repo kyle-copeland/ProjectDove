@@ -751,6 +751,9 @@ namespace GameRes
 				public static Duality.ContentRef<Duality.Resources.Material> BowserFireball_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Scenes\Bullets\BowserFireball.Material.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Pixmap> BowserFireball_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Scenes\Bullets\BowserFireball.Pixmap.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Texture> BowserFireball_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Scenes\Bullets\BowserFireball.Texture.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Material> Bullet2_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Scenes\Bullets\Bullet2.Material.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Pixmap> Bullet2_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Scenes\Bullets\Bullet2.Pixmap.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Texture> Bullet2_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Scenes\Bullets\Bullet2.Texture.res"); }}
 				public static Duality.ContentRef<Dove_Game.BulletBlueprint> BulletBlueprint_BulletBlueprint { get { return Duality.ContentProvider.RequestContent<Dove_Game.BulletBlueprint>(@"Data\Scenes\Bullets\BulletBlueprint.BulletBlueprint.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Material> CellAttack_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Scenes\Bullets\CellAttack.Material.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Pixmap> CellAttack_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Scenes\Bullets\CellAttack.Pixmap.res"); }}
@@ -772,6 +775,9 @@ namespace GameRes
 					BowserFireball_Material.MakeAvailable();
 					BowserFireball_Pixmap.MakeAvailable();
 					BowserFireball_Texture.MakeAvailable();
+					Bullet2_Material.MakeAvailable();
+					Bullet2_Pixmap.MakeAvailable();
+					Bullet2_Texture.MakeAvailable();
 					BulletBlueprint_BulletBlueprint.MakeAvailable();
 					CellAttack_Material.MakeAvailable();
 					CellAttack_Pixmap.MakeAvailable();

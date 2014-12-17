@@ -50,6 +50,7 @@ namespace Dove_Game.Test_Logic
                 _mainCharacter.doDamage(100);
             }
 
+
             // Fireball Dropper
             _fireballDropTimer -= Time.MsPFMult * Time.TimeMult;
             if (_fireballDropTimer < 0.0f && !_fireballPlaced)
@@ -70,6 +71,7 @@ namespace Dove_Game.Test_Logic
                 _fireballDropTimer = 1000.0f;
                 _fireballPlaced = false;
             }
+
 
             // Reached Boss Area
             if (_mainCharacter.GameObj.Transform.Pos.X > 590)
