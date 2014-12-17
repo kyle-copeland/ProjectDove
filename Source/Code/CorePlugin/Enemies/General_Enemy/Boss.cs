@@ -39,6 +39,7 @@ namespace Dove_Game.Enemies
         private Direction playerPosition = Direction.Left;
         public Direction PlayerPosition { get { return playerPosition; } }
 
+        public float HeartTimer { get; set; }
         //Animations
         protected List<int> seqWalkLeft;
         protected List<int> seqWalkRight;
@@ -67,6 +68,11 @@ namespace Dove_Game.Enemies
                 
               
                 Move(Vector2.UnitX);
+            }
+            HeartTimer -= Time.MsPFMult * Time.TimeMult;
+            if(HeartTimer <= 0)
+            {
+                Scene.Current.FindGameObject("ZeldaHearts").DisposeLater();
             }
             base.OnUpdate();
         }

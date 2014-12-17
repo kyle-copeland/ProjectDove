@@ -589,6 +589,7 @@ namespace GameRes
 				public static Duality.ContentRef<Duality.Resources.Prefab> Blue_Knight_2_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\LinkWorld\Blue Knight 2.Prefab.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Prefab> Blue_Knight_3_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\LinkWorld\Blue Knight 3.Prefab.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Prefab> Chicken_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\LinkWorld\Chicken.Prefab.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Prefab> EyeThwomp_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\LinkWorld\EyeThwomp.Prefab.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Prefab> LinkBoss_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\LinkWorld\LinkBoss.Prefab.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Prefab> Octoroc_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\LinkWorld\Octoroc.Prefab.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Prefab> Tektike_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\LinkWorld\Tektike.Prefab.res"); }}
@@ -597,6 +598,7 @@ namespace GameRes
 					Blue_Knight_2_Prefab.MakeAvailable();
 					Blue_Knight_3_Prefab.MakeAvailable();
 					Chicken_Prefab.MakeAvailable();
+					EyeThwomp_Prefab.MakeAvailable();
 					LinkBoss_Prefab.MakeAvailable();
 					Octoroc_Prefab.MakeAvailable();
 					Tektike_Prefab.MakeAvailable();
@@ -821,6 +823,9 @@ namespace GameRes
 				public static Duality.ContentRef<Duality.Resources.Material> CloudsT_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Scenes\Components\CloudsT.Material.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Pixmap> CloudsT_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Scenes\Components\CloudsT.Pixmap.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Texture> CloudsT_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Scenes\Components\CloudsT.Texture.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Material> EyeThwomp_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Scenes\Components\EyeThwomp.Material.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Pixmap> EyeThwomp_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Scenes\Components\EyeThwomp.Pixmap.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Texture> EyeThwomp_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Scenes\Components\EyeThwomp.Texture.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Material> Fireball_Material { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Material>(@"Data\Scenes\Components\Fireball.Material.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Pixmap> Fireball_Pixmap { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Pixmap>(@"Data\Scenes\Components\Fireball.Pixmap.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Texture> Fireball_Texture { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Texture>(@"Data\Scenes\Components\Fireball.Texture.res"); }}
@@ -888,6 +893,9 @@ namespace GameRes
 					CloudsT_Material.MakeAvailable();
 					CloudsT_Pixmap.MakeAvailable();
 					CloudsT_Texture.MakeAvailable();
+					EyeThwomp_Material.MakeAvailable();
+					EyeThwomp_Pixmap.MakeAvailable();
+					EyeThwomp_Texture.MakeAvailable();
 					Fireball_Material.MakeAvailable();
 					Fireball_Pixmap.MakeAvailable();
 					Fireball_Texture.MakeAvailable();

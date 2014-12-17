@@ -92,10 +92,10 @@ namespace Dove_Game
                 {
                     if (Enemies.Boss.onGround(this.GameObj.RigidBody))
                     {
-                    playerSprite.AnimDuration = 1;
-                    playerSprite.AnimFirstFrame = 4;
-                    playerSprite.AnimFrameCount = 4;
-                    playerSprite.AnimLoopMode = AnimSpriteRenderer.LoopMode.Loop;
+                        playerSprite.AnimDuration = 1;
+                        playerSprite.AnimFirstFrame = 4;
+                        playerSprite.AnimFrameCount = 4;
+                        playerSprite.AnimLoopMode = AnimSpriteRenderer.LoopMode.Loop;
                     }
                     CharDirection = Direction.Left;
                     MovementVector = Vector2.UnitX * -1.0f;
@@ -109,9 +109,9 @@ namespace Dove_Game
                 {
                     if (Enemies.Boss.onGround(this.GameObj.RigidBody))
                     {
-                    playerSprite.AnimDuration = 1;
-                    playerSprite.AnimFirstFrame = 8;
-                    playerSprite.AnimFrameCount = 4;
+                        playerSprite.AnimDuration = 1;
+                        playerSprite.AnimFirstFrame = 8;
+                        playerSprite.AnimFrameCount = 4;
                         playerSprite.AnimLoopMode = AnimSpriteRenderer.LoopMode.PingPong;
                     }
                     CharDirection = Direction.Right;
@@ -120,8 +120,8 @@ namespace Dove_Game
                         playerOne.ApplyWorldImpulse(Vector2.UnitX * MovementOffset);
                     //playerMovement.MoveBy(MovementVector * Time.TimeMult);
                 }
-
-                else if ((DualityApp.Keyboard.KeyReleased(Key.Left) || DualityApp.Keyboard.KeyReleased(Key.Right)) &&  Enemies.Boss.onGround(this.GameObj.RigidBody))
+                
+                else if ((DualityApp.Keyboard.KeyReleased(Key.Left) || DualityApp.Keyboard.KeyReleased(Key.Right)) && Enemies.Boss.onGround(this.GameObj.RigidBody))
                 {
                     if (CharDirection == Direction.Right)
                         playerSprite.AnimFirstFrame = 16;
@@ -154,28 +154,28 @@ namespace Dove_Game
                     if (weaponTimer <= 0.0f)
                     {
                         weaponTimer = weaponCooldown;
-                    isAttacking = true;
+                        isAttacking = true;
 
-                    // Modify frame sequence to render punch sequence animation
-                    if (CharDirection == Direction.Right)
-                        playerSprite.AnimFirstFrame = 17;
-                    else if (CharDirection == Direction.Left)
-                        playerSprite.AnimFirstFrame = 12;
+                        // Modify frame sequence to render punch sequence animation
+                        if (CharDirection == Direction.Right)
+                            playerSprite.AnimFirstFrame = 17;
+                        else if (CharDirection == Direction.Left)
+                            playerSprite.AnimFirstFrame = 12;
 
                         playerSprite.AnimFrameCount = 3;
-                    playerSprite.AnimLoopMode = AnimSpriteRenderer.LoopMode.Loop;
+                        playerSprite.AnimLoopMode = AnimSpriteRenderer.LoopMode.Loop;
                         playerSprite.AnimDuration = 0.25f;
-                    playerSprite.UpdateVisibleFrames();
+                        playerSprite.UpdateVisibleFrames();
 
                         GameObject rocketBullet = Summon.SummonGameObject(SideCharacter.NoCharacter, Attack.PlayerBullet,
                             this);
-                    CurrentSpecialAttack = rocketBullet.GetComponent<PlayerOneBullet>();
-                    const float bulletSpeed = 20;
+                        CurrentSpecialAttack = rocketBullet.GetComponent<PlayerOneBullet>();
+                        const float bulletSpeed = 20;
 
                         ((PlayerOneBullet) CurrentSpecialAttack).Fire(playerOne.LinearVelocity, playerMovement.Pos.Xy,
                             0f, bulletSpeed);
-                    Scene.Current.AddObject(rocketBullet);
-                }
+                        Scene.Current.AddObject(rocketBullet);
+                    }
                 }
 
                 // Kamehameha special skill
@@ -218,7 +218,7 @@ namespace Dove_Game
                     Scene.Current.AddObject(navi);
                 }
 
-
+                
 
                /* // All custom frame sequences end in 27, the current default animation for the Goku SpriteSheet. Reset after an attack animation.
                 if (playerSprite.CurrentFrame != LastFrame && playerSprite.CurrentFrame == 33)

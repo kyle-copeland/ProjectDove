@@ -198,7 +198,7 @@
       </item>
     </_items>
     <_size dataType="Int">1</_size>
-    <_version dataType="Int">6</_version>
+    <_version dataType="Int">8</_version>
   </layers>
   <sourcePath dataType="String">Source\Media\SlenderMan1.png</sourcePath>
 </root>
