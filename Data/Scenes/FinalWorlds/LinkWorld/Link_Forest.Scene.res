@@ -174,11 +174,11 @@
                         </childIndex>
                         <componentType dataType="ObjectRef">1091465068</componentType>
                         <prop dataType="PropertyInfo" id="1954856738" value="P:Duality.Components.Transform:RelativeScale" />
-                        <val dataType="Float">0.4</val>
+                        <val dataType="Float">0.8</val>
                       </item>
                     </_items>
                     <_size dataType="Int">2</_size>
-                    <_version dataType="Int">906</_version>
+                    <_version dataType="Int">926</_version>
                   </changes>
                   <obj dataType="ObjectRef">984674574</obj>
                   <prefab dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Prefab]]">
@@ -869,7 +869,7 @@
             <active dataType="Bool">true</active>
             <currentSA />
             <direction dataType="Enum" type="Dove_Game.Direction" name="Right" value="1" />
-            <force dataType="Float">30</force>
+            <force dataType="Float">15</force>
             <gameobj dataType="ObjectRef">3451964777</gameobj>
             <healthPts dataType="Int">100</healthPts>
             <impulse dataType="Float">6</impulse>
@@ -1044,7 +1044,7 @@
             <active dataType="Bool">true</active>
             <currentSA />
             <direction dataType="Enum" type="Dove_Game.Direction" name="Right" value="1" />
-            <force dataType="Float">30</force>
+            <force dataType="Float">15</force>
             <gameobj dataType="ObjectRef">3046695088</gameobj>
             <healthPts dataType="Int">100</healthPts>
             <impulse dataType="Float">6</impulse>
@@ -1219,7 +1219,7 @@
             <active dataType="Bool">true</active>
             <currentSA />
             <direction dataType="Enum" type="Dove_Game.Direction" name="Right" value="1" />
-            <force dataType="Float">30</force>
+            <force dataType="Float">15</force>
             <gameobj dataType="ObjectRef">891215020</gameobj>
             <healthPts dataType="Int">100</healthPts>
             <impulse dataType="Float">6</impulse>
@@ -1429,7 +1429,7 @@
                 <_version dataType="Int">1</_version>
               </childIndex>
               <componentType dataType="ObjectRef">1091465068</componentType>
-              <prop dataType="PropertyInfo" id="3519700884" value="P:Duality.Components.Transform:RelativeScale" />
+              <prop dataType="ObjectRef">1954856738</prop>
               <val dataType="Float">2.27731061</val>
             </item>
           </_items>
@@ -1522,7 +1522,7 @@
                 <_version dataType="Int">1</_version>
               </childIndex>
               <componentType dataType="ObjectRef">1091465068</componentType>
-              <prop dataType="ObjectRef">3519700884</prop>
+              <prop dataType="ObjectRef">1954856738</prop>
               <val dataType="Float">2.37003636</val>
             </item>
           </_items>
@@ -1746,7 +1746,7 @@
             <active dataType="Bool">true</active>
             <currentSA />
             <direction dataType="Enum" type="Dove_Game.Direction" name="Right" value="1" />
-            <force dataType="Float">30</force>
+            <force dataType="Float">15</force>
             <gameobj dataType="ObjectRef">2949247759</gameobj>
             <healthPts dataType="Int">100</healthPts>
             <impulse dataType="Float">6</impulse>

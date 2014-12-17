@@ -420,7 +420,7 @@
       <active dataType="Bool">true</active>
       <children />
       <compList dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Component]]" id="1136534306">
-        <_items dataType="Array" type="Duality.Component[]" id="2715556624" length="4">
+        <_items dataType="Array" type="Duality.Component[]" id="2715556624">
           <item dataType="Struct" type="Duality.Components.Transform" id="1866047136">
             <active dataType="Bool">true</active>
             <angle dataType="Float">0</angle>
@@ -506,9 +506,156 @@
               <_version dataType="Int">2</_version>
             </shapes>
           </item>
+          <item dataType="Struct" type="Dove_Game.Scene_Components.Mario_World.LevelControllers.MarioBossLevelController" id="2615544721">
+            <_boss />
+            <_nextDialog dataType="Struct" type="System.Collections.Generic.List`1[[Dove_Game.Test_Logic.DialogComponent]]" id="150721525">
+              <_items dataType="Array" type="Dove_Game.Test_Logic.DialogComponent[]" id="3735980150" length="16">
+                <item dataType="Struct" type="Dove_Game.Test_Logic.DialogComponent" id="1645248480">
+                  <_x003C_DialogMessage_x003E_k__BackingField dataType="String">Bowser: Thank you for rescuing me, I was afraid there was no hope. For doing so, you’ve gain my trust and abilities.</_x003C_DialogMessage_x003E_k__BackingField>
+                  <_x003C_DialogSprite_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
+                    <contentPath dataType="String">Data\Characters\DialogImage\MarioWorld\MarioCastle\CastleTextUB.Material.res</contentPath>
+                  </_x003C_DialogSprite_x003E_k__BackingField>
+                  <_x003C_nextScriptDialog_x003E_k__BackingField dataType="Int">-1</_x003C_nextScriptDialog_x003E_k__BackingField>
+                  <_x003C_PlayerOneDialog_x003E_k__BackingField dataType="Bool">false</_x003C_PlayerOneDialog_x003E_k__BackingField>
+                  <_x003C_PostSceneRef_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Scene]]">
+                    <contentPath />
+                  </_x003C_PostSceneRef_x003E_k__BackingField>
+                </item>
+                <item dataType="Struct" type="Dove_Game.Test_Logic.DialogComponent" id="3416155022">
+                  <_x003C_DialogMessage_x003E_k__BackingField dataType="String">Unknown: Awesome! I can feel his powers coursing through my body.</_x003C_DialogMessage_x003E_k__BackingField>
+                  <_x003C_DialogSprite_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
+                    <contentPath dataType="String">Data\Characters\DialogImage\MarioWorld\MarioCastle\CastleTextUG.Material.res</contentPath>
+                  </_x003C_DialogSprite_x003E_k__BackingField>
+                  <_x003C_nextScriptDialog_x003E_k__BackingField dataType="Int">-1</_x003C_nextScriptDialog_x003E_k__BackingField>
+                  <_x003C_PlayerOneDialog_x003E_k__BackingField dataType="Bool">false</_x003C_PlayerOneDialog_x003E_k__BackingField>
+                  <_x003C_PostSceneRef_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Scene]]">
+                    <contentPath />
+                  </_x003C_PostSceneRef_x003E_k__BackingField>
+                </item>
+                <item dataType="Struct" type="Dove_Game.Test_Logic.DialogComponent" id="2062003964">
+                  <_x003C_DialogMessage_x003E_k__BackingField dataType="String">Mario: Hey guys, I’m sorry… I don’t know what happened back there. I was skipping through the town center one moment and the next I wake up in Bowser’s castle.</_x003C_DialogMessage_x003E_k__BackingField>
+                  <_x003C_DialogSprite_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
+                    <contentPath dataType="String">Data\Characters\DialogImage\MarioWorld\MarioCastle\CastleTextGM.Material.res</contentPath>
+                  </_x003C_DialogSprite_x003E_k__BackingField>
+                  <_x003C_nextScriptDialog_x003E_k__BackingField dataType="Int">-1</_x003C_nextScriptDialog_x003E_k__BackingField>
+                  <_x003C_PlayerOneDialog_x003E_k__BackingField dataType="Bool">false</_x003C_PlayerOneDialog_x003E_k__BackingField>
+                  <_x003C_PostSceneRef_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Scene]]">
+                    <contentPath />
+                  </_x003C_PostSceneRef_x003E_k__BackingField>
+                </item>
+                <item dataType="Struct" type="Dove_Game.Test_Logic.DialogComponent" id="776169234">
+                  <_x003C_DialogMessage_x003E_k__BackingField dataType="String">Goku: You were under Slenderman’s spell and threatened to destroy the world. Good thing we got here in time?</_x003C_DialogMessage_x003E_k__BackingField>
+                  <_x003C_DialogSprite_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
+                    <contentPath dataType="String">Data\Characters\DialogImage\MarioWorld\MarioCastle\CastleTextGM.Material.res</contentPath>
+                  </_x003C_DialogSprite_x003E_k__BackingField>
+                  <_x003C_nextScriptDialog_x003E_k__BackingField dataType="Int">-1</_x003C_nextScriptDialog_x003E_k__BackingField>
+                  <_x003C_PlayerOneDialog_x003E_k__BackingField dataType="Bool">false</_x003C_PlayerOneDialog_x003E_k__BackingField>
+                  <_x003C_PostSceneRef_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Scene]]">
+                    <contentPath />
+                  </_x003C_PostSceneRef_x003E_k__BackingField>
+                </item>
+                <item dataType="Struct" type="Dove_Game.Test_Logic.DialogComponent" id="1255022232">
+                  <_x003C_DialogMessage_x003E_k__BackingField dataType="String">Mario: Aw jeez really? Next time I’m staying in my pipe…</_x003C_DialogMessage_x003E_k__BackingField>
+                  <_x003C_DialogSprite_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
+                    <contentPath dataType="String">Data\Characters\DialogImage\MarioWorld\MarioCastle\CastleTextGM.Material.res</contentPath>
+                  </_x003C_DialogSprite_x003E_k__BackingField>
+                  <_x003C_nextScriptDialog_x003E_k__BackingField dataType="Int">-1</_x003C_nextScriptDialog_x003E_k__BackingField>
+                  <_x003C_PlayerOneDialog_x003E_k__BackingField dataType="Bool">false</_x003C_PlayerOneDialog_x003E_k__BackingField>
+                  <_x003C_PostSceneRef_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Scene]]">
+                    <contentPath />
+                  </_x003C_PostSceneRef_x003E_k__BackingField>
+                </item>
+                <item dataType="Struct" type="Dove_Game.Test_Logic.DialogComponent" id="4253948326">
+                  <_x003C_DialogMessage_x003E_k__BackingField dataType="String">Unknown: Haha no need to be so hard on yourself. Whatever happened is in the past, I’m just glad its over.</_x003C_DialogMessage_x003E_k__BackingField>
+                  <_x003C_DialogSprite_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
+                    <contentPath dataType="String">Data\Characters\DialogImage\MarioWorld\MarioCastle\CastleTextUM.Material.res</contentPath>
+                  </_x003C_DialogSprite_x003E_k__BackingField>
+                  <_x003C_nextScriptDialog_x003E_k__BackingField dataType="Int">-1</_x003C_nextScriptDialog_x003E_k__BackingField>
+                  <_x003C_PlayerOneDialog_x003E_k__BackingField dataType="Bool">false</_x003C_PlayerOneDialog_x003E_k__BackingField>
+                  <_x003C_PostSceneRef_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Scene]]">
+                    <contentPath />
+                  </_x003C_PostSceneRef_x003E_k__BackingField>
+                </item>
+                <item dataType="Struct" type="Dove_Game.Test_Logic.DialogComponent" id="1061384180">
+                  <_x003C_DialogMessage_x003E_k__BackingField dataType="String">Bowser: Heroes, I’m afraid to say that things are far from over.</_x003C_DialogMessage_x003E_k__BackingField>
+                  <_x003C_DialogSprite_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
+                    <contentPath dataType="String">Data\Characters\DialogImage\MarioWorld\MarioCastle\CastleTextGB.Material.res</contentPath>
+                  </_x003C_DialogSprite_x003E_k__BackingField>
+                  <_x003C_nextScriptDialog_x003E_k__BackingField dataType="Int">-1</_x003C_nextScriptDialog_x003E_k__BackingField>
+                  <_x003C_PlayerOneDialog_x003E_k__BackingField dataType="Bool">false</_x003C_PlayerOneDialog_x003E_k__BackingField>
+                  <_x003C_PostSceneRef_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Scene]]">
+                    <contentPath />
+                  </_x003C_PostSceneRef_x003E_k__BackingField>
+                </item>
+                <item dataType="Struct" type="Dove_Game.Test_Logic.DialogComponent" id="3453755562">
+                  <_x003C_DialogMessage_x003E_k__BackingField dataType="String">Goku: What do you mean?</_x003C_DialogMessage_x003E_k__BackingField>
+                  <_x003C_DialogSprite_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
+                    <contentPath dataType="String">Data\Characters\DialogImage\MarioWorld\MarioCastle\CastleTextBM.Material.res</contentPath>
+                  </_x003C_DialogSprite_x003E_k__BackingField>
+                  <_x003C_nextScriptDialog_x003E_k__BackingField dataType="Int">-1</_x003C_nextScriptDialog_x003E_k__BackingField>
+                  <_x003C_PlayerOneDialog_x003E_k__BackingField dataType="Bool">false</_x003C_PlayerOneDialog_x003E_k__BackingField>
+                  <_x003C_PostSceneRef_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Scene]]">
+                    <contentPath />
+                  </_x003C_PostSceneRef_x003E_k__BackingField>
+                </item>
+                <item dataType="Struct" type="Dove_Game.Test_Logic.DialogComponent" id="1525123088">
+                  <_x003C_DialogMessage_x003E_k__BackingField dataType="String">Bowser: I’ve just heard that Hyrule is currently suffering from the fate. Their hero, Link, has suddenly had a change of heart and their world will soon plummet into eternal chaos…</_x003C_DialogMessage_x003E_k__BackingField>
+                  <_x003C_DialogSprite_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
+                    <contentPath dataType="String">Data\Characters\DialogImage\MarioWorld\MarioCastle\CastleTextUB.Material.res</contentPath>
+                  </_x003C_DialogSprite_x003E_k__BackingField>
+                  <_x003C_nextScriptDialog_x003E_k__BackingField dataType="Int">-1</_x003C_nextScriptDialog_x003E_k__BackingField>
+                  <_x003C_PlayerOneDialog_x003E_k__BackingField dataType="Bool">false</_x003C_PlayerOneDialog_x003E_k__BackingField>
+                  <_x003C_PostSceneRef_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Scene]]">
+                    <contentPath />
+                  </_x003C_PostSceneRef_x003E_k__BackingField>
+                </item>
+                <item dataType="Struct" type="Dove_Game.Test_Logic.DialogComponent" id="4060494526">
+                  <_x003C_DialogMessage_x003E_k__BackingField dataType="String">Mario: You guys must head there immediately! Don’t let their world fall to the forces of evil! Here, use my insta-warp pipe! It will take you to Hyrule immediately!</_x003C_DialogMessage_x003E_k__BackingField>
+                  <_x003C_DialogSprite_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
+                    <contentPath dataType="String">Data\Characters\DialogImage\MarioWorld\MarioCastle\CastleTextGM.Material.res</contentPath>
+                  </_x003C_DialogSprite_x003E_k__BackingField>
+                  <_x003C_nextScriptDialog_x003E_k__BackingField dataType="Int">-1</_x003C_nextScriptDialog_x003E_k__BackingField>
+                  <_x003C_PlayerOneDialog_x003E_k__BackingField dataType="Bool">false</_x003C_PlayerOneDialog_x003E_k__BackingField>
+                  <_x003C_PostSceneRef_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Scene]]">
+                    <contentPath />
+                  </_x003C_PostSceneRef_x003E_k__BackingField>
+                </item>
+                <item dataType="Struct" type="Dove_Game.Test_Logic.DialogComponent" id="43148076">
+                  <_x003C_DialogMessage_x003E_k__BackingField dataType="String">Goku: Thanks Mario! We owe ya!</_x003C_DialogMessage_x003E_k__BackingField>
+                  <_x003C_DialogSprite_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
+                    <contentPath dataType="String">Data\Characters\DialogImage\MarioWorld\MarioCastle\CastleTextGM.Material.res</contentPath>
+                  </_x003C_DialogSprite_x003E_k__BackingField>
+                  <_x003C_nextScriptDialog_x003E_k__BackingField dataType="Int">-1</_x003C_nextScriptDialog_x003E_k__BackingField>
+                  <_x003C_PlayerOneDialog_x003E_k__BackingField dataType="Bool">false</_x003C_PlayerOneDialog_x003E_k__BackingField>
+                  <_x003C_PostSceneRef_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Scene]]">
+                    <contentPath />
+                  </_x003C_PostSceneRef_x003E_k__BackingField>
+                </item>
+                <item dataType="Struct" type="Dove_Game.Test_Logic.DialogComponent" id="449518338">
+                  <_x003C_DialogMessage_x003E_k__BackingField dataType="String">Unknown: Let’s roll!</_x003C_DialogMessage_x003E_k__BackingField>
+                  <_x003C_DialogSprite_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
+                    <contentPath dataType="String">Data\Characters\DialogImage\MarioWorld\MarioCastle\CastleTextUG.Material.res</contentPath>
+                  </_x003C_DialogSprite_x003E_k__BackingField>
+                  <_x003C_nextScriptDialog_x003E_k__BackingField dataType="Int">2</_x003C_nextScriptDialog_x003E_k__BackingField>
+                  <_x003C_PlayerOneDialog_x003E_k__BackingField dataType="Bool">false</_x003C_PlayerOneDialog_x003E_k__BackingField>
+                  <_x003C_PostSceneRef_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Scene]]">
+                    <contentPath dataType="String">Data\Scenes\DialogScenes\LinkWorld\LinkLevelOnePre.Scene.res</contentPath>
+                  </_x003C_PostSceneRef_x003E_k__BackingField>
+                </item>
+              </_items>
+              <_size dataType="Int">12</_size>
+              <_version dataType="Int">12</_version>
+            </_nextDialog>
+            <_nextScene dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Scene]]">
+              <contentPath dataType="String">Data\Scenes\DialogScenes\MarioWorld\MarioLevelBossPost.Scene.res</contentPath>
+            </_nextScene>
+            <active dataType="Bool">true</active>
+            <gameobj dataType="ObjectRef">3800699500</gameobj>
+            <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
+          </item>
         </_items>
-        <_size dataType="Int">3</_size>
-        <_version dataType="Int">3</_version>
+        <_size dataType="Int">4</_size>
+        <_version dataType="Int">4</_version>
       </compList>
       <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="1116720906" surrogate="true">
         <header />
@@ -517,11 +664,13 @@
             <item dataType="ObjectRef">2524706862</item>
             <item dataType="ObjectRef">1213498094</item>
             <item dataType="ObjectRef">2032648606</item>
+            <item dataType="Type" id="390727788" value="Dove_Game.Scene_Components.Mario_World.LevelControllers.MarioBossLevelController" />
           </keys>
           <values dataType="Array" type="Duality.Component[]" id="1181000926">
             <item dataType="ObjectRef">1866047136</item>
             <item dataType="ObjectRef">1147898772</item>
             <item dataType="ObjectRef">2568508728</item>
+            <item dataType="ObjectRef">2615544721</item>
           </values>
         </body>
       </compMap>

@@ -28,6 +28,9 @@ namespace Dove_Game.Test_Logic
 
         void ICmpUpdatable.OnUpdate()
         {
+            //To skip level
+            _mainCharacter.GameObj.Transform.Pos = new Vector3(830.0f, _mainCharacter.GameObj.Transform.Pos.Y, _mainCharacter.GameObj.Transform.Pos.Z);
+
             if (_mainCharacter.GameObj.Transform.Pos.Y > 300) // Fallen into Lava
             {
                 _mainCharacter.doDamage(100);
@@ -35,7 +38,12 @@ namespace Dove_Game.Test_Logic
 
             if (_mainCharacter.GameObj.Transform.Pos.X > 824)
             {
-                Scene.SwitchTo(GameRes.Data.Scenes.FinalWorlds.MarioWorld.MarioCastle_Scene);
+                WorldSelectionMap.SceneLoadHandler = delegate(object sender, EventArgs e)
+                {
+                    DrawDialog.AssignDialogScript(sender, e, DialogScripts.MarioLevelOnePostTwoPre);
+                };
+                Scene.Entered += WorldSelectionMap.SceneLoadHandler;
+                Scene.SwitchTo(GameRes.Data.Scenes.DialogScenes.MarioWorld.MarioLevelOnePostTwoPre_Scene);
             }
         }
     }

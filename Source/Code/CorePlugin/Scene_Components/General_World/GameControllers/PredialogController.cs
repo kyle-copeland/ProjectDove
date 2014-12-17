@@ -45,7 +45,7 @@ namespace Dove_Game.Scene_Components.General_World.GameControllers
             set { _moveOffset = value; }
         }
 
-        public void OnUpdate()
+        public virtual void OnUpdate()
         {
             if (ReachedPlayer)
             {

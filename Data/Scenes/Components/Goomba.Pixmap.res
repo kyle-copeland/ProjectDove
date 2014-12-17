@@ -31,12 +31,12 @@
       <item dataType="Struct" type="Duality.Resources.Pixmap+Layer" id="1485019246" custom="true">
         <body>
           <version dataType="Int">3</version>
-          <pixelData dataType="Array" type="System.Byte[]" id="2204481104">iVBORw0KGgoAAAANSUhEUgAAADkAAAATCAYAAAAqL6XVAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJVSURBVFhHtZUxchNBEEWlG/gIzp1wBEIiyjkJISEhxQkIdQSOwBEIfQRCk5FQRahs2NeeP/xpzViWdvlVz17NdP/9vTuyd6WUDtPnhZ/7/b4A13UtlPtGmFZ7raH/8E8R6uubXXFYq3sh782YVnut5elHrxbq4eNNxygc6gx7rfLaCtfbSgv163DbkcKpPpTMVnttiRSBBDcnyJ/DfTl+/xRwzZoFEy1c1SZeo7DXgloo/WEAD+ehvEZ91QNt5jUKey1S9905Ho8tnMMae+modd+pRZt4jcLCTKNagbpQPGUFG8EeNZNwW3p1IZN4204nH1D9XSiOk4IphIflt45cCsfNtvTK0kDxIBOsab+pDcnNRsGANUfrlw55pZd0Mhh1ju8taOBQ9yYhB3Gj5/bxWGhDPld7bt+8UBsu9/Jg/OEI1dfepjDyQvH4/lU8aeB6VENv9UD/zUtvHnRKgGvfm3iFwhB0fDHwZpAx+9TVns5oUXi5z8wr+bhXOxW8KWqE+vUm9dlr9HbxqF5NYfz6y9OTGIXjM/uC+trnaj5i5APcZ+ITHhqSYbh+CdTOhgzTu3e73x++3RagSGEEgdg7/LgJqKev9qPmoxrqNaiDv+418EFxIhQeD35z1P2BgY6/aoDe6tHUwmkQUIMMtK5jQU+lGxJUox4PAL4+GRLFoNT4A8vfb2Wjhmt6au+JukHtxgGfFXwyoHQyKIz80n2GPqpz/GFB3j/x1P+Rqhawwmfh674fOuPj9SO/S31eQvMcSSFyka+P9rPO1c/Ws7zuEkKllN1fKubWJBNpd2wAAAAASUVORK5CYII=</pixelData>
+          <pixelData dataType="Array" type="System.Byte[]" id="2204481104">iVBORw0KGgoAAAANSUhEUgAAADkAAAATCAYAAAAqL6XVAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJ9SURBVFhHtVcxUsNADHR+kCekp+EJlFQMPQ0lJSXDCyjzBJ7AEyh5AiV0NMxQujNekRV7ss4J8ZEZTc53urVWJ+nkbhiGTqX7/d2Pw/fVajVAMB4Fc/aL+7LnlliHvK+mM0vw8bwbVP5CNBJcgrWEIPYayfCzE4RRL7frQjAXicZTbYm1lBz3q00X4wPECX5sN4MKSAtR6nv4CthirFYE9RCNHAVEQO5rezn0z3cmGGNOSFIfe6OzFmO1JukEWWTwr0SVoOqIY0i0GVZrkjiFIg/7vreKGosF5rAWwtYr7u44m2BVK2WsIAdU+wlBhCRJ6qlxjDXoVIgWBBdieeVPeDHni7pAvexaLAqN5eHuJElIjcUcwzcpRC2xIjcSMkcGwdyEsFdXhiUM9mIzEmFY6jWCuWNIHolFkjC+IFa5c0mchIuqb96v3YsKmN2b4UppieWpxGtN7eTVxmjimpxwUSs8j6KH3q5PLTQhGMf1pDn4NyxGEVOIdjGVuB7ITonCCwxf5qaCExhAWT+r1VVxalgBR3vjoinRAkh7eJJ8Vp2kVnh+G/DZw0/oklAkiXXKLjTSZkD1Ikl1FvQSnEnnlUVRNpdUfrfPQE+uus+bp80AUaI0CgZhbfu6NoF+MNBxqAN97COGEuS7EpziaoMtdD7SRh2PMVOJOrUe240jERKlt3Q+fH4hzKodD4moAcDU+QpJJ4q9cBodFmuFOl8iIzYpFrIFUXmxlWY872nptOTbHtXP8GDQDMHCHg3/GKa6lmKGT62iUZcLNs5PmvM9OKrvXyhS7j1vDsSJzUD2HGtF0Vxoy6QLsZWaBQkOytqv2ntqnU72/rk5bwa+ASrm1iQOLhhmAAAAAElFTkSuQmCC</pixelData>
         </body>
       </item>
     </_items>
     <_size dataType="Int">1</_size>
-    <_version dataType="Int">1</_version>
+    <_version dataType="Int">2</_version>
   </layers>
   <sourcePath dataType="String">Source\Media\Goomba.png</sourcePath>
 </root>

@@ -94,8 +94,8 @@
             <visibilityMask dataType="Enum" type="Duality.Drawing.VisibilityFlag" name="All" value="4294967295" />
           </item>
         </_items>
-        <_size dataType="Int">3</_size>
-        <_version dataType="Int">5</_version>
+        <_size dataType="Int">2</_size>
+        <_version dataType="Int">6</_version>
       </compList>
       <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="2417688086" surrogate="true">
         <header />
@@ -153,15 +153,25 @@
       <active dataType="Bool">true</active>
       <children />
       <compList dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Component]]" id="906981221">
-        <_items dataType="Array" type="Duality.Component[]" id="1300805526" length="4" />
+        <_items dataType="Array" type="Duality.Component[]" id="1300805526" length="4">
+          <item dataType="Struct" type="Dove_Game.Test_Logic.GameController" id="865230959">
+            <active dataType="Bool">true</active>
+            <gameobj dataType="ObjectRef">3855230151</gameobj>
+            <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
+          </item>
+        </_items>
         <_size dataType="Int">1</_size>
-        <_version dataType="Int">3</_version>
+        <_version dataType="Int">5</_version>
       </compList>
       <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="675910248" surrogate="true">
         <header />
         <body>
-          <keys dataType="Array" type="System.Type[]" id="4209320975" />
-          <values dataType="Array" type="Duality.Component[]" id="1208894432" />
+          <keys dataType="Array" type="System.Type[]" id="4209320975">
+            <item dataType="Type" id="3560437678" value="Dove_Game.Test_Logic.GameController" />
+          </keys>
+          <values dataType="Array" type="Duality.Component[]" id="1208894432">
+            <item dataType="ObjectRef">865230959</item>
+          </values>
         </body>
       </compMap>
       <compTransform />
@@ -197,9 +207,14 @@
             <gameobj dataType="ObjectRef">972600633</gameobj>
             <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
           </item>
+          <item dataType="Struct" type="Dove_Game.Scene_Components.Test_World.EndGameOverlay" id="1591997697">
+            <active dataType="Bool">true</active>
+            <gameobj dataType="ObjectRef">972600633</gameobj>
+            <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
+          </item>
         </_items>
         <_size dataType="Int">3</_size>
-        <_version dataType="Int">5</_version>
+        <_version dataType="Int">7</_version>
       </compList>
       <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="1379038824" surrogate="true">
         <header />
@@ -207,10 +222,12 @@
           <keys dataType="Array" type="System.Type[]" id="1524695537">
             <item dataType="ObjectRef">3802289504</item>
             <item dataType="Type" id="2204603310" value="Duality.Components.Renderers.SpriteRenderer" />
+            <item dataType="Type" id="1564298954" value="Dove_Game.Scene_Components.Test_World.EndGameOverlay" />
           </keys>
           <values dataType="Array" type="Duality.Component[]" id="289656800">
             <item dataType="ObjectRef">3332915565</item>
             <item dataType="ObjectRef">2614767201</item>
+            <item dataType="ObjectRef">1591997697</item>
           </values>
         </body>
       </compMap>
@@ -236,15 +253,25 @@
       <active dataType="Bool">true</active>
       <children />
       <compList dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Component]]" id="1665197878">
-        <_items dataType="Array" type="Duality.Component[]" id="2810440544" length="4" />
+        <_items dataType="Array" type="Duality.Component[]" id="2810440544" length="4">
+          <item dataType="Struct" type="Dove_Game.Test_Logic.GameOverController" id="2293393622">
+            <active dataType="Bool">true</active>
+            <gameobj dataType="ObjectRef">2182951952</gameobj>
+            <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
+          </item>
+        </_items>
         <_size dataType="Int">1</_size>
-        <_version dataType="Int">3</_version>
+        <_version dataType="Int">5</_version>
       </compList>
       <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="3260968602" surrogate="true">
         <header />
         <body>
-          <keys dataType="Array" type="System.Type[]" id="370722820" />
-          <values dataType="Array" type="Duality.Component[]" id="2802149270" />
+          <keys dataType="Array" type="System.Type[]" id="370722820">
+            <item dataType="Type" id="925500228" value="Dove_Game.Test_Logic.GameOverController" />
+          </keys>
+          <values dataType="Array" type="Duality.Component[]" id="2802149270">
+            <item dataType="ObjectRef">2293393622</item>
+          </values>
         </body>
       </compMap>
       <compTransform />
@@ -363,8 +390,8 @@
       <children />
       <compList dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Component]]" id="351310185">
         <_items dataType="Array" type="Duality.Component[]" id="2247111950" length="4" />
-        <_size dataType="Int">1</_size>
-        <_version dataType="Int">1</_version>
+        <_size dataType="Int">0</_size>
+        <_version dataType="Int">2</_version>
       </compList>
       <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="649378496" surrogate="true">
         <header />
@@ -390,8 +417,8 @@
       <children />
       <compList dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Component]]" id="1790539652">
         <_items dataType="Array" type="Duality.Component[]" id="459339844" length="4" />
-        <_size dataType="Int">1</_size>
-        <_version dataType="Int">1</_version>
+        <_size dataType="Int">0</_size>
+        <_version dataType="Int">2</_version>
       </compList>
       <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="3030584470" surrogate="true">
         <header />
@@ -416,7 +443,7 @@
       <active dataType="Bool">true</active>
       <children />
       <compList dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Component]]" id="2353699607">
-        <_items dataType="Array" type="Duality.Component[]" id="3448493838" length="4">
+        <_items dataType="Array" type="Duality.Component[]" id="3448493838">
           <item dataType="Struct" type="Duality.Components.Transform" id="3843770777">
             <active dataType="Bool">true</active>
             <angle dataType="Float">0</angle>
@@ -502,9 +529,134 @@
               <_version dataType="Int">2</_version>
             </shapes>
           </item>
+          <item dataType="Struct" type="Dove_Game.Scene_Components.Zelda_World.LinkBossLevelController" id="3859249343">
+            <_boss />
+            <_nextDialog dataType="Struct" type="System.Collections.Generic.List`1[[Dove_Game.Test_Logic.DialogComponent]]" id="3276299279">
+              <_items dataType="Array" type="Dove_Game.Test_Logic.DialogComponent[]" id="1669261230" length="16">
+                <item dataType="Struct" type="Dove_Game.Test_Logic.DialogComponent" id="680513872">
+                  <_x003C_DialogMessage_x003E_k__BackingField dataType="String">Goku: You did good kid.</_x003C_DialogMessage_x003E_k__BackingField>
+                  <_x003C_DialogSprite_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
+                    <contentPath dataType="String">Data\Characters\DialogImage\LinkWorld\LinkCastle\LinkBossTextUG.Material.res</contentPath>
+                  </_x003C_DialogSprite_x003E_k__BackingField>
+                  <_x003C_nextScriptDialog_x003E_k__BackingField dataType="Int">-1</_x003C_nextScriptDialog_x003E_k__BackingField>
+                  <_x003C_PlayerOneDialog_x003E_k__BackingField dataType="Bool">false</_x003C_PlayerOneDialog_x003E_k__BackingField>
+                  <_x003C_PostSceneRef_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Scene]]">
+                    <contentPath />
+                  </_x003C_PostSceneRef_x003E_k__BackingField>
+                </item>
+                <item dataType="Struct" type="Dove_Game.Test_Logic.DialogComponent" id="4109940590">
+                  <_x003C_DialogMessage_x003E_k__BackingField dataType="String">Navi: Thank you! I’m free now! But I have bad news… The darkness seems to be getting stronger and stronger. I don’t think we can stop it now.. It might be too late for us…</_x003C_DialogMessage_x003E_k__BackingField>
+                  <_x003C_DialogSprite_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
+                    <contentPath dataType="String">Data\Characters\DialogImage\LinkWorld\LinkCastle\LinkBossTextUN.Material.res</contentPath>
+                  </_x003C_DialogSprite_x003E_k__BackingField>
+                  <_x003C_nextScriptDialog_x003E_k__BackingField dataType="Int">-1</_x003C_nextScriptDialog_x003E_k__BackingField>
+                  <_x003C_PlayerOneDialog_x003E_k__BackingField dataType="Bool">false</_x003C_PlayerOneDialog_x003E_k__BackingField>
+                  <_x003C_PostSceneRef_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Scene]]">
+                    <contentPath />
+                  </_x003C_PostSceneRef_x003E_k__BackingField>
+                </item>
+                <item dataType="Struct" type="Dove_Game.Test_Logic.DialogComponent" id="842134828">
+                  <_x003C_DialogMessage_x003E_k__BackingField dataType="String">Unknown: What do you mean? There has to be a way…</_x003C_DialogMessage_x003E_k__BackingField>
+                  <_x003C_DialogSprite_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
+                    <contentPath dataType="String">Data\Characters\DialogImage\LinkWorld\LinkCastle\LinkBossTextUN.Material.res</contentPath>
+                  </_x003C_DialogSprite_x003E_k__BackingField>
+                  <_x003C_nextScriptDialog_x003E_k__BackingField dataType="Int">-1</_x003C_nextScriptDialog_x003E_k__BackingField>
+                  <_x003C_PlayerOneDialog_x003E_k__BackingField dataType="Bool">false</_x003C_PlayerOneDialog_x003E_k__BackingField>
+                  <_x003C_PostSceneRef_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Scene]]">
+                    <contentPath />
+                  </_x003C_PostSceneRef_x003E_k__BackingField>
+                </item>
+                <item dataType="Struct" type="Dove_Game.Test_Logic.DialogComponent" id="2930721554">
+                  <_x003C_DialogMessage_x003E_k__BackingField dataType="String">Navi: Maybe if we stop the darkness from it’s roots…</_x003C_DialogMessage_x003E_k__BackingField>
+                  <_x003C_DialogSprite_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
+                    <contentPath dataType="String">Data\Characters\DialogImage\LinkWorld\LinkCastle\LinkBossTextUG.Material.res</contentPath>
+                  </_x003C_DialogSprite_x003E_k__BackingField>
+                  <_x003C_nextScriptDialog_x003E_k__BackingField dataType="Int">-1</_x003C_nextScriptDialog_x003E_k__BackingField>
+                  <_x003C_PlayerOneDialog_x003E_k__BackingField dataType="Bool">false</_x003C_PlayerOneDialog_x003E_k__BackingField>
+                  <_x003C_PostSceneRef_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Scene]]">
+                    <contentPath />
+                  </_x003C_PostSceneRef_x003E_k__BackingField>
+                </item>
+                <item dataType="Struct" type="Dove_Game.Test_Logic.DialogComponent" id="1480106760">
+                  <_x003C_DialogMessage_x003E_k__BackingField dataType="String">Unknown: Where’s that?</_x003C_DialogMessage_x003E_k__BackingField>
+                  <_x003C_DialogSprite_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
+                    <contentPath dataType="String">Data\Characters\DialogImage\LinkWorld\LinkCastle\LinkBossTextUN.Material.res</contentPath>
+                  </_x003C_DialogSprite_x003E_k__BackingField>
+                  <_x003C_nextScriptDialog_x003E_k__BackingField dataType="Int">-1</_x003C_nextScriptDialog_x003E_k__BackingField>
+                  <_x003C_PlayerOneDialog_x003E_k__BackingField dataType="Bool">false</_x003C_PlayerOneDialog_x003E_k__BackingField>
+                  <_x003C_PostSceneRef_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Scene]]">
+                    <contentPath />
+                  </_x003C_PostSceneRef_x003E_k__BackingField>
+                </item>
+                <item dataType="Struct" type="Dove_Game.Test_Logic.DialogComponent" id="3130105958">
+                  <_x003C_DialogMessage_x003E_k__BackingField dataType="String">Navi: An unknown island recently appeared off the coast of Hyrule. It’s entirely consumed by darkness but I heard that he resides there.</_x003C_DialogMessage_x003E_k__BackingField>
+                  <_x003C_DialogSprite_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
+                    <contentPath dataType="String">Data\Characters\DialogImage\LinkWorld\LinkCastle\LinkBossTextUN.Material.res</contentPath>
+                  </_x003C_DialogSprite_x003E_k__BackingField>
+                  <_x003C_nextScriptDialog_x003E_k__BackingField dataType="Int">-1</_x003C_nextScriptDialog_x003E_k__BackingField>
+                  <_x003C_PlayerOneDialog_x003E_k__BackingField dataType="Bool">false</_x003C_PlayerOneDialog_x003E_k__BackingField>
+                  <_x003C_PostSceneRef_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Scene]]">
+                    <contentPath />
+                  </_x003C_PostSceneRef_x003E_k__BackingField>
+                </item>
+                <item dataType="Struct" type="Dove_Game.Test_Logic.DialogComponent" id="1619529924">
+                  <_x003C_DialogMessage_x003E_k__BackingField dataType="String">Unknown: He… Slenderman… We have to stop him! How can we get there?</_x003C_DialogMessage_x003E_k__BackingField>
+                  <_x003C_DialogSprite_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
+                    <contentPath dataType="String">Data\Characters\DialogImage\LinkWorld\LinkCastle\LinkBossTextUN.Material.res</contentPath>
+                  </_x003C_DialogSprite_x003E_k__BackingField>
+                  <_x003C_nextScriptDialog_x003E_k__BackingField dataType="Int">-1</_x003C_nextScriptDialog_x003E_k__BackingField>
+                  <_x003C_PlayerOneDialog_x003E_k__BackingField dataType="Bool">false</_x003C_PlayerOneDialog_x003E_k__BackingField>
+                  <_x003C_PostSceneRef_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Scene]]">
+                    <contentPath />
+                  </_x003C_PostSceneRef_x003E_k__BackingField>
+                </item>
+                <item dataType="Struct" type="Dove_Game.Test_Logic.DialogComponent" id="1281361930">
+                  <_x003C_DialogMessage_x003E_k__BackingField dataType="String">Navi: I don’t think we can…</_x003C_DialogMessage_x003E_k__BackingField>
+                  <_x003C_DialogSprite_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
+                    <contentPath dataType="String">Data\Characters\DialogImage\LinkWorld\LinkCastle\LinkBossTextUN.Material.res</contentPath>
+                  </_x003C_DialogSprite_x003E_k__BackingField>
+                  <_x003C_nextScriptDialog_x003E_k__BackingField dataType="Int">-1</_x003C_nextScriptDialog_x003E_k__BackingField>
+                  <_x003C_PlayerOneDialog_x003E_k__BackingField dataType="Bool">false</_x003C_PlayerOneDialog_x003E_k__BackingField>
+                  <_x003C_PostSceneRef_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Scene]]">
+                    <contentPath />
+                  </_x003C_PostSceneRef_x003E_k__BackingField>
+                </item>
+                <item dataType="Struct" type="Dove_Game.Test_Logic.DialogComponent" id="3708741696">
+                  <_x003C_DialogMessage_x003E_k__BackingField dataType="String">Goku: I can teleport us, everyone gather around.</_x003C_DialogMessage_x003E_k__BackingField>
+                  <_x003C_DialogSprite_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
+                    <contentPath dataType="String">Data\Characters\DialogImage\LinkWorld\LinkCastle\LinkBossTextUG.Material.res</contentPath>
+                  </_x003C_DialogSprite_x003E_k__BackingField>
+                  <_x003C_nextScriptDialog_x003E_k__BackingField dataType="Int">-1</_x003C_nextScriptDialog_x003E_k__BackingField>
+                  <_x003C_PlayerOneDialog_x003E_k__BackingField dataType="Bool">false</_x003C_PlayerOneDialog_x003E_k__BackingField>
+                  <_x003C_PostSceneRef_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Scene]]">
+                    <contentPath />
+                  </_x003C_PostSceneRef_x003E_k__BackingField>
+                </item>
+                <item dataType="Struct" type="Dove_Game.Test_Logic.DialogComponent" id="3210883902">
+                  <_x003C_DialogMessage_x003E_k__BackingField dataType="String">Unknown: No matter what happens, it has been an honor battling alongside you heroes. Let our efforts not be in vain, lets vanquish this evil once and for all!</_x003C_DialogMessage_x003E_k__BackingField>
+                  <_x003C_DialogSprite_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
+                    <contentPath dataType="String">Data\Characters\DialogImage\LinkWorld\LinkCastle\LinkBossTextUG.Material.res</contentPath>
+                  </_x003C_DialogSprite_x003E_k__BackingField>
+                  <_x003C_nextScriptDialog_x003E_k__BackingField dataType="Int">3</_x003C_nextScriptDialog_x003E_k__BackingField>
+                  <_x003C_PlayerOneDialog_x003E_k__BackingField dataType="Bool">false</_x003C_PlayerOneDialog_x003E_k__BackingField>
+                  <_x003C_PostSceneRef_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Scene]]">
+                    <contentPath />
+                  </_x003C_PostSceneRef_x003E_k__BackingField>
+                </item>
+              </_items>
+              <_size dataType="Int">10</_size>
+              <_version dataType="Int">10</_version>
+            </_nextDialog>
+            <_nextScene dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Scene]]">
+              <contentPath dataType="String">Data\Scenes\DialogScenes\LinkWorld\LinkLevelBossPost.Scene.res</contentPath>
+            </_nextScene>
+            <active dataType="Bool">true</active>
+            <gameobj dataType="ObjectRef">1483455845</gameobj>
+            <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
+          </item>
         </_items>
-        <_size dataType="Int">3</_size>
-        <_version dataType="Int">3</_version>
+        <_size dataType="Int">4</_size>
+        <_version dataType="Int">4</_version>
       </compList>
       <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="2364113088" surrogate="true">
         <header />
@@ -513,11 +665,13 @@
             <item dataType="ObjectRef">3802289504</item>
             <item dataType="ObjectRef">2204603310</item>
             <item dataType="ObjectRef">285469582</item>
+            <item dataType="Type" id="287932134" value="Dove_Game.Scene_Components.Zelda_World.LinkBossLevelController" />
           </keys>
           <values dataType="Array" type="Duality.Component[]" id="1548189944">
             <item dataType="ObjectRef">3843770777</item>
             <item dataType="ObjectRef">3125622413</item>
             <item dataType="ObjectRef">251265073</item>
+            <item dataType="ObjectRef">3859249343</item>
           </values>
         </body>
       </compMap>
@@ -657,7 +811,7 @@
       <active dataType="Bool">true</active>
       <children />
       <compList dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Component]]" id="419101847">
-        <_items dataType="Array" type="Duality.Component[]" id="3338038542" length="4">
+        <_items dataType="Array" type="Duality.Component[]" id="3338038542">
           <item dataType="Struct" type="Duality.Components.Transform" id="2479678745">
             <active dataType="Bool">true</active>
             <gameobj dataType="ObjectRef">119363813</gameobj>
@@ -673,9 +827,14 @@
             <gameobj dataType="ObjectRef">119363813</gameobj>
             <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
           </item>
+          <item dataType="Struct" type="Dove_Game.Enemies.Zelda_World.LinkBoss" id="971158884">
+            <active dataType="Bool">true</active>
+            <gameobj dataType="ObjectRef">119363813</gameobj>
+            <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
+          </item>
         </_items>
         <_size dataType="Int">4</_size>
-        <_version dataType="Int">4</_version>
+        <_version dataType="Int">6</_version>
       </compList>
       <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="1091097280" surrogate="true">
         <header />
@@ -684,11 +843,13 @@
             <item dataType="ObjectRef">3802289504</item>
             <item dataType="ObjectRef">2307511328</item>
             <item dataType="ObjectRef">285469582</item>
+            <item dataType="Type" id="3597301990" value="Dove_Game.Enemies.Zelda_World.LinkBoss" />
           </keys>
           <values dataType="Array" type="Duality.Component[]" id="1661413112">
             <item dataType="ObjectRef">2479678745</item>
             <item dataType="ObjectRef">4121766490</item>
             <item dataType="ObjectRef">3182140337</item>
+            <item dataType="ObjectRef">971158884</item>
           </values>
         </body>
       </compMap>
@@ -728,6 +889,47 @@
           <contentPath dataType="String">Data\Prefabs\LinkWorld\LinkBoss.Prefab.res</contentPath>
         </prefab>
       </prefabLink>
+    </item>
+    <item dataType="Struct" type="Duality.GameObject" id="3439379462">
+      <active dataType="Bool">true</active>
+      <children />
+      <compList dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Component]]" id="1680345296">
+        <_items dataType="Array" type="Duality.Component[]" id="2120272572" length="4">
+          <item dataType="Struct" type="Dove_Game.Test_Logic.DrawHealth" id="2297072076">
+            <active dataType="Bool">true</active>
+            <font dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Font]]">
+              <contentPath />
+            </font>
+            <gameobj dataType="ObjectRef">3439379462</gameobj>
+            <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
+            <playerOne dataType="ObjectRef">810237494</playerOne>
+          </item>
+        </_items>
+        <_size dataType="Int">1</_size>
+        <_version dataType="Int">1</_version>
+      </compList>
+      <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="3066020462" surrogate="true">
+        <header />
+        <body>
+          <keys dataType="Array" type="System.Type[]" id="1547834274">
+            <item dataType="Type" id="4280675600" value="Dove_Game.Test_Logic.DrawHealth" />
+          </keys>
+          <values dataType="Array" type="Duality.Component[]" id="1393927434">
+            <item dataType="ObjectRef">2297072076</item>
+          </values>
+        </body>
+      </compMap>
+      <compTransform />
+      <identifier dataType="Struct" type="System.Guid" surrogate="true">
+        <header>
+          <data dataType="Array" type="System.Byte[]" id="3241287250">2IZ16nVPpkKrnWg1yj1OeA==</data>
+        </header>
+        <body />
+      </identifier>
+      <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
+      <name dataType="String">DrawHealth</name>
+      <parent />
+      <prefabLink />
     </item>
   </serializeObj>
   <sourcePath />

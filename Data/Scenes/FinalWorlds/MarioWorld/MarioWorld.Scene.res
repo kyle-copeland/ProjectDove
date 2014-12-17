@@ -5407,33 +5407,6 @@
         </prefab>
       </prefabLink>
     </item>
-    <item dataType="Struct" type="Duality.GameObject" id="1237963161">
-      <active dataType="Bool">true</active>
-      <children />
-      <compList dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Component]]" id="88260283">
-        <_items dataType="Array" type="Duality.Component[]" id="3445309654" length="4" />
-        <_size dataType="Int">0</_size>
-        <_version dataType="Int">2</_version>
-      </compList>
-      <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="1683649576" surrogate="true">
-        <header />
-        <body>
-          <keys dataType="Array" type="System.Type[]" id="2686179537" />
-          <values dataType="Array" type="Duality.Component[]" id="914771360" />
-        </body>
-      </compMap>
-      <compTransform />
-      <identifier dataType="Struct" type="System.Guid" surrogate="true">
-        <header>
-          <data dataType="Array" type="System.Byte[]" id="3764863555">v564vXG3Z0+UfEN0J4h9QQ==</data>
-        </header>
-        <body />
-      </identifier>
-      <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
-      <name dataType="String">DrawHealth</name>
-      <parent />
-      <prefabLink />
-    </item>
     <item dataType="Struct" type="Duality.GameObject" id="3299590012">
       <active dataType="Bool">true</active>
       <children />
@@ -5580,33 +5553,6 @@
           <contentPath dataType="String">Data\Prefabs\MarioWorld\PiranhaPlant.Prefab.res</contentPath>
         </prefab>
       </prefabLink>
-    </item>
-    <item dataType="Struct" type="Duality.GameObject" id="1454582879">
-      <active dataType="Bool">true</active>
-      <children />
-      <compList dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Component]]" id="1756521373">
-        <_items dataType="Array" type="Duality.Component[]" id="1816898278" length="4" />
-        <_size dataType="Int">0</_size>
-        <_version dataType="Int">2</_version>
-      </compList>
-      <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="1793522936" surrogate="true">
-        <header />
-        <body>
-          <keys dataType="Array" type="System.Type[]" id="1954995447" />
-          <values dataType="Array" type="Duality.Component[]" id="3488541248" />
-        </body>
-      </compMap>
-      <compTransform />
-      <identifier dataType="Struct" type="System.Guid" surrogate="true">
-        <header>
-          <data dataType="Array" type="System.Byte[]" id="2172420437">O2K45wsAok6SpLEkPjNfxg==</data>
-        </header>
-        <body />
-      </identifier>
-      <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
-      <name dataType="String">DrawHealth</name>
-      <parent />
-      <prefabLink />
     </item>
     <item dataType="Struct" type="Duality.GameObject" id="4289884357">
       <active dataType="Bool">true</active>
@@ -5784,33 +5730,6 @@
         </prefab>
       </prefabLink>
     </item>
-    <item dataType="Struct" type="Duality.GameObject" id="1229134667">
-      <active dataType="Bool">true</active>
-      <children />
-      <compList dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Component]]" id="1528892473">
-        <_items dataType="Array" type="Duality.Component[]" id="651016398" length="4" />
-        <_size dataType="Int">0</_size>
-        <_version dataType="Int">2</_version>
-      </compList>
-      <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="1620504832" surrogate="true">
-        <header />
-        <body>
-          <keys dataType="Array" type="System.Type[]" id="2742494099" />
-          <values dataType="Array" type="Duality.Component[]" id="1590904568" />
-        </body>
-      </compMap>
-      <compTransform />
-      <identifier dataType="Struct" type="System.Guid" surrogate="true">
-        <header>
-          <data dataType="Array" type="System.Byte[]" id="1887236217">V1122zXZHEaFH0v3j1aLAA==</data>
-        </header>
-        <body />
-      </identifier>
-      <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
-      <name dataType="String">DrawDialog</name>
-      <parent />
-      <prefabLink />
-    </item>
     <item dataType="Struct" type="Duality.GameObject" id="2064306503">
       <active dataType="Bool">true</active>
       <children />
@@ -5986,47 +5905,6 @@
           <contentPath dataType="String">Data\Prefabs\MarioWorld\Brick.Prefab.res</contentPath>
         </prefab>
       </prefabLink>
-    </item>
-    <item dataType="Struct" type="Duality.GameObject" id="1266844568">
-      <active dataType="Bool">true</active>
-      <children />
-      <compList dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Component]]" id="2150972798">
-        <_items dataType="Array" type="Duality.Component[]" id="900078224" length="4">
-          <item dataType="Struct" type="Dove_Game.Test_Logic.DrawHealth" id="124537182">
-            <active dataType="Bool">true</active>
-            <font dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Font]]">
-              <contentPath />
-            </font>
-            <gameobj dataType="ObjectRef">1266844568</gameobj>
-            <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
-            <playerOne dataType="ObjectRef">2386748072</playerOne>
-          </item>
-        </_items>
-        <_size dataType="Int">1</_size>
-        <_version dataType="Int">1</_version>
-      </compList>
-      <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="2648389770" surrogate="true">
-        <header />
-        <body>
-          <keys dataType="Array" type="System.Type[]" id="1927792732">
-            <item dataType="Type" id="2548053188" value="Dove_Game.Test_Logic.DrawHealth" />
-          </keys>
-          <values dataType="Array" type="Duality.Component[]" id="965701398">
-            <item dataType="ObjectRef">124537182</item>
-          </values>
-        </body>
-      </compMap>
-      <compTransform />
-      <identifier dataType="Struct" type="System.Guid" surrogate="true">
-        <header>
-          <data dataType="Array" type="System.Byte[]" id="2680663240">kMr4T3qwc0mf3rQBHk5few==</data>
-        </header>
-        <body />
-      </identifier>
-      <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
-      <name dataType="String">DrawHealth</name>
-      <parent />
-      <prefabLink />
     </item>
     <item dataType="Struct" type="Duality.GameObject" id="1015100690">
       <active dataType="Bool">true</active>
@@ -6824,6 +6702,190 @@
         <obj dataType="ObjectRef">463039616</obj>
         <prefab dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Prefab]]">
           <contentPath dataType="String">Data\Prefabs\MarioWorld\Goomba.Prefab.res</contentPath>
+        </prefab>
+      </prefabLink>
+    </item>
+    <item dataType="Struct" type="Duality.GameObject" id="2417946111">
+      <active dataType="Bool">true</active>
+      <children />
+      <compList dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Component]]" id="1699684861">
+        <_items dataType="Array" type="Duality.Component[]" id="3586926886" length="4">
+          <item dataType="Struct" type="Dove_Game.Test_Logic.DrawHealth" id="1275638725">
+            <active dataType="Bool">true</active>
+            <font dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Font]]">
+              <contentPath />
+            </font>
+            <gameobj dataType="ObjectRef">2417946111</gameobj>
+            <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
+            <playerOne dataType="ObjectRef">2386748072</playerOne>
+          </item>
+        </_items>
+        <_size dataType="Int">1</_size>
+        <_version dataType="Int">1</_version>
+      </compList>
+      <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="2567466936" surrogate="true">
+        <header />
+        <body>
+          <keys dataType="Array" type="System.Type[]" id="4198577815">
+            <item dataType="Type" id="2041500942" value="Dove_Game.Test_Logic.DrawHealth" />
+          </keys>
+          <values dataType="Array" type="Duality.Component[]" id="3493976768">
+            <item dataType="ObjectRef">1275638725</item>
+          </values>
+        </body>
+      </compMap>
+      <compTransform />
+      <identifier dataType="Struct" type="System.Guid" surrogate="true">
+        <header>
+          <data dataType="Array" type="System.Byte[]" id="3112623669">8qO0lqrgjk6O9+av99Zqgw==</data>
+        </header>
+        <body />
+      </identifier>
+      <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
+      <name dataType="String">DrawHealth</name>
+      <parent />
+      <prefabLink />
+    </item>
+    <item dataType="Struct" type="Duality.GameObject" id="3889615337">
+      <active dataType="Bool">true</active>
+      <children />
+      <compList dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Component]]" id="3585530859">
+        <_items dataType="Array" type="Duality.Component[]" id="3750354550" length="4">
+          <item dataType="Struct" type="Dove_Game.Test_Logic.GameController" id="899616145">
+            <active dataType="Bool">true</active>
+            <gameobj dataType="ObjectRef">3889615337</gameobj>
+            <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
+          </item>
+        </_items>
+        <_size dataType="Int">1</_size>
+        <_version dataType="Int">1</_version>
+      </compList>
+      <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="4072826056" surrogate="true">
+        <header />
+        <body>
+          <keys dataType="Array" type="System.Type[]" id="486437953">
+            <item dataType="Type" id="241857966" value="Dove_Game.Test_Logic.GameController" />
+          </keys>
+          <values dataType="Array" type="Duality.Component[]" id="3120829920">
+            <item dataType="ObjectRef">899616145</item>
+          </values>
+        </body>
+      </compMap>
+      <compTransform />
+      <identifier dataType="Struct" type="System.Guid" surrogate="true">
+        <header>
+          <data dataType="Array" type="System.Byte[]" id="1964314259">mZ12A6BnIEyJCYMcKPnXUA==</data>
+        </header>
+        <body />
+      </identifier>
+      <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
+      <name dataType="String">GameController</name>
+      <parent />
+      <prefabLink dataType="Struct" type="Duality.Resources.PrefabLink" id="1983302369">
+        <changes />
+        <obj dataType="ObjectRef">3889615337</obj>
+        <prefab dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Prefab]]">
+          <contentPath dataType="String">Data\Prefabs\PlayerComponents\GameController.Prefab.res</contentPath>
+        </prefab>
+      </prefabLink>
+    </item>
+    <item dataType="Struct" type="Duality.GameObject" id="1176179405">
+      <active dataType="Bool">true</active>
+      <children />
+      <compList dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Component]]" id="1524102911">
+        <_items dataType="Array" type="Duality.Component[]" id="4216150318" length="4">
+          <item dataType="Struct" type="Duality.Components.Transform" id="3536494337">
+            <active dataType="Bool">true</active>
+            <gameobj dataType="ObjectRef">1176179405</gameobj>
+            <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
+          </item>
+          <item dataType="Struct" type="Duality.Components.Renderers.SpriteRenderer" id="2818345973">
+            <active dataType="Bool">true</active>
+            <gameobj dataType="ObjectRef">1176179405</gameobj>
+            <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
+          </item>
+          <item dataType="Struct" type="Dove_Game.Scene_Components.Test_World.EndGameOverlay" id="1795576469">
+            <active dataType="Bool">true</active>
+            <gameobj dataType="ObjectRef">1176179405</gameobj>
+            <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
+          </item>
+        </_items>
+        <_size dataType="Int">3</_size>
+        <_version dataType="Int">3</_version>
+      </compList>
+      <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="2520144736" surrogate="true">
+        <header />
+        <body>
+          <keys dataType="Array" type="System.Type[]" id="515839285">
+            <item dataType="ObjectRef">3653553262</item>
+            <item dataType="ObjectRef">944703434</item>
+            <item dataType="Type" id="2406149110" value="Dove_Game.Scene_Components.Test_World.EndGameOverlay" />
+          </keys>
+          <values dataType="Array" type="Duality.Component[]" id="4092155976">
+            <item dataType="ObjectRef">3536494337</item>
+            <item dataType="ObjectRef">2818345973</item>
+            <item dataType="ObjectRef">1795576469</item>
+          </values>
+        </body>
+      </compMap>
+      <compTransform dataType="ObjectRef">3536494337</compTransform>
+      <identifier dataType="Struct" type="System.Guid" surrogate="true">
+        <header>
+          <data dataType="Array" type="System.Byte[]" id="957735551">Zlyd9obKuk6ej3o8eEMLEQ==</data>
+        </header>
+        <body />
+      </identifier>
+      <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
+      <name dataType="String">GameOver</name>
+      <parent />
+      <prefabLink dataType="Struct" type="Duality.Resources.PrefabLink" id="1126467245">
+        <changes />
+        <obj dataType="ObjectRef">1176179405</obj>
+        <prefab dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Prefab]]">
+          <contentPath dataType="String">Data\Prefabs\PlayerComponents\GameEnd.Prefab.res</contentPath>
+        </prefab>
+      </prefabLink>
+    </item>
+    <item dataType="Struct" type="Duality.GameObject" id="1226415942">
+      <active dataType="Bool">true</active>
+      <children />
+      <compList dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Component]]" id="605509264">
+        <_items dataType="Array" type="Duality.Component[]" id="2075585852" length="4">
+          <item dataType="Struct" type="Dove_Game.Test_Logic.GameOverController" id="1336857612">
+            <active dataType="Bool">true</active>
+            <gameobj dataType="ObjectRef">1226415942</gameobj>
+            <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
+          </item>
+        </_items>
+        <_size dataType="Int">1</_size>
+        <_version dataType="Int">1</_version>
+      </compList>
+      <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="2096037614" surrogate="true">
+        <header />
+        <body>
+          <keys dataType="Array" type="System.Type[]" id="2337948386">
+            <item dataType="Type" id="276615312" value="Dove_Game.Test_Logic.GameOverController" />
+          </keys>
+          <values dataType="Array" type="Duality.Component[]" id="218360458">
+            <item dataType="ObjectRef">1336857612</item>
+          </values>
+        </body>
+      </compMap>
+      <compTransform />
+      <identifier dataType="Struct" type="System.Guid" surrogate="true">
+        <header>
+          <data dataType="Array" type="System.Byte[]" id="359726354">stc0wC3xyUiH6HijnLw1PQ==</data>
+        </header>
+        <body />
+      </identifier>
+      <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
+      <name dataType="String">GameOverController</name>
+      <parent />
+      <prefabLink dataType="Struct" type="Duality.Resources.PrefabLink" id="3801738092">
+        <changes />
+        <obj dataType="ObjectRef">1226415942</obj>
+        <prefab dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Prefab]]">
+          <contentPath dataType="String">Data\Prefabs\PlayerComponents\GameOverController.Prefab.res</contentPath>
         </prefab>
       </prefabLink>
     </item>
