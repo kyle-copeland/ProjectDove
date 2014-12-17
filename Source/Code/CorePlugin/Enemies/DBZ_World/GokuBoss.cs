@@ -41,7 +41,7 @@ namespace Dove_Game.Enemies.DBZ_World
         
         private class Kamehameha : BossAttack
         {
-            private const float chargeupTime = 2000.0f;
+            private const float chargeupTime = 3000.0f;
             private List<int> seqRight = new List<int> { 0, 1 };
             private List<int> seqLeft = new List<int> { 9, 8 };
             private bool hasStarted = false;
