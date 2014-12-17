@@ -78,6 +78,7 @@ namespace Dove_Game.Test_Logic
 
         // Material and resource references for Bullet attacks.
         public static ContentRef<Material> rocketBullet = GameRes.Data.Scenes.Bullets.Rocket_Bullet_Material;
+        public static ContentRef<Material> playerBullet = GameRes.Data.Scenes.Bullets.Bullet2_Material;
         public static ContentRef<BulletBlueprint> BBP_rocketBullet = GameRes.Data.Scenes.SpecialAttacks.RocketBullet_BulletBlueprint;
 
         //Default Bullet

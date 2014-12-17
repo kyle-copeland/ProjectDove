@@ -25,12 +25,12 @@
       <item dataType="Struct" type="Duality.Resources.Pixmap+Layer" id="1485019246" custom="true">
         <body>
           <version dataType="Int">3</version>
-          <pixelData dataType="Array" type="System.Byte[]" id="2204481104">iVBORw0KGgoAAAANSUhEUgAAAC4AAAAYCAYAAACFms+HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHiSURBVFhH1VTBjcJADEwx97h+rh0KoAneFJAP9dADUn65nfF6YzsOcCgrXUYabTzYM86CGOZ5PiRTcYsZsr53mSHry5iKGQ1+Ci/13AMrvyw/MhUzVjDkPgwPnLVO+1+x4mO/XNyGhowmLEVPP3pGgaKAt1FPgPW1BEzTNONEXXXA9ff0o2cUKAriV8iQco4IwhnCbH9XP3pGgaKAg8bscirPCAFvZRS1foa+dxbfw4+eUaAoaDeihltB9bQ31tWPnithQTOGAZ6vX8PjXEaUqDUk3Fg3v+a7EgT8jWkQTGA8nSvNM/VwYzDo5dd8V4LggrfXG7AhMFRjGwaiH7NiUYQOfm1PVyzgDYEYjiHprRWaIMxb7OLndnWFQEMwBI63bzGCMQI0RIPuJ7lNZZ1X7ObndnWFgCEYLidEuRETZkOgG3OlvfHd/NyurhAwyLCFaaAltPL5aPpBeCicX/2L+8jP7eoKgX61DNSvsTyTGqiEhs/Rh/5CzNkbt370rP8WT/3qCzo/t6srFjAAwzCpQU+ZhGXQl7DLNw8w5LWlAberLSgIaB4IbYtZb+YLtOUNMx/U6dL0WwkCNbdsJgF/6VXEGdSZRsQduedKeIFPe9+dicg8wFQ8AlPxCEzF/895+AXTEbuzzDIyzwAAAABJRU5ErkJggg==</pixelData>
+          <pixelData dataType="Array" type="System.Byte[]" id="2204481104">iVBORw0KGgoAAAANSUhEUgAAAC4AAAAYCAYAAACFms+HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIMSURBVFhH7ZfLjcMwDERdzB62n20nBaSJnFNALqknPRjwzauhOQJFU7YcK4cF1oDgnzx6GlIfD/M8D3+xHIIeguNMp8/oNYObRn7S9S0VnHscK70WM46CSyOvYRgtfEtDvo72+G29EHzDRkI/DHxY3YL21oP2FrgPodzfk9vTNM04u5Qp6gfg3fT2wH1KCHSCfQAcZwdv6xeGqOPd9JrADdztom4D/JmChXt1XTpl0ydwXMB76O2C02EC1sD1vY1A6HgvvRDcDKTsMBoE3P1rGK/JaRbcE9pFIIP31mMkV4PTTlN0GFCAna5azLU8X6eOB5eB2UNvD/wGN+mohUYnCMqO2Ahozkv/JaTL0U0vBDdh5dQlDRKQ0AQvopCigbpuiqRkF71iwG/Mt4CQ6e/5vaQIQAHP1CH467JEh8W6nq4JfVpvDxz7kBEwiDaKOGzgmRroDJ4bp/Gt38d002sCV7cLeHYAsCxcjEx9pkvOb/tOp0Qx46jeHnjORzTItLDus1GFzimkgN5xqyfu6xSaoxnpaQerm7looZBZAA3gY6SFNsQcDc+o5xozYz1f5nw38IWea68woeq4nb5c6PPSrp1iLvPsO4PnNVP8YLXaVqcKvbVy+vBu/TgcqbuaHs1g9jr5RyXa79dWzijM8qxxn72qmxeOqnL8ovaT0vwH9M5fzie/+Qf/pLuR9i/TEbuzYpvmZgAAAABJRU5ErkJggg==</pixelData>
         </body>
       </item>
     </_items>
     <_size dataType="Int">1</_size>
-    <_version dataType="Int">1</_version>
+    <_version dataType="Int">2</_version>
   </layers>
   <sourcePath dataType="String">Source\Media\Spike.png</sourcePath>
 </root>

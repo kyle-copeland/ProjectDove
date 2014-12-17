@@ -45,10 +45,14 @@ namespace Dove_Game.Test_Logic
 
         void ICmpUpdatable.OnUpdate()
         {
+            //To skip level
+            //_mainCharacter.GameObj.Transform.Pos = new Vector3(885.0f, _mainCharacter.GameObj.Transform.Pos.Y, _mainCharacter.GameObj.Transform.Pos.Z);
+
             if (_mainCharacter.GameObj.Transform.Pos.Y > 200) // Fallen into Lava
             {
                 _mainCharacter.doDamage(100);
             }
+
 
             // Fireball Dropper
             _fireballDropTimer -= Time.MsPFMult * Time.TimeMult;
@@ -60,7 +64,7 @@ namespace Dove_Game.Test_Logic
                 Fireball fireballController = _fireball.GetComponent<Fireball>();
                 _fireball.Transform.Pos = new OpenTK.Vector3(-1148, 26, 0);
                 this.GameObj.ParentScene.AddObject(_fireball);
-                fireballController.setInitYPosition(200);
+                //fireballController.setInitYPosition(200);
 
             }
 
@@ -70,6 +74,7 @@ namespace Dove_Game.Test_Logic
                 _fireballDropTimer = 1000.0f;
                 _fireballPlaced = false;
             }
+
 
             // Reached Boss Area
             if (_mainCharacter.GameObj.Transform.Pos.X > 590)
@@ -109,7 +114,12 @@ namespace Dove_Game.Test_Logic
                     }
                     else if (_marioAppearTimer < 0 && _marioRise)
                     {
-                        Scene.SwitchTo(GameRes.Data.Scenes.FinalWorlds.MarioWorld.MarioBoss_Scene);
+                        WorldSelectionMap.SceneLoadHandler = delegate(object sender, EventArgs e)
+                        {
+                            DrawDialog.AssignDialogScript(sender, e, DialogScripts.MarioLevelTwoPostBossPre);
+                        };
+                        Scene.Entered += WorldSelectionMap.SceneLoadHandler;
+                        Scene.SwitchTo(GameRes.Data.Scenes.DialogScenes.MarioWorld.MarioLevelTwoPostBossPre_Scene);
                     }
                 }
 
