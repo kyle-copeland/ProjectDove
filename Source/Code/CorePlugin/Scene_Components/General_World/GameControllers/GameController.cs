@@ -75,8 +75,11 @@ namespace Dove_Game.Test_Logic
                 LifeCount--;
                 //Draw GameOverScene and have that scene navigate to start scene when player presses enter.
             }
-            else if(DualityApp.Keyboard[Key.ShiftLeft] && DualityApp.Keyboard[Key.Q])
-                Scene.SwitchTo(ContentRefs.StartScene);
+            else if (DualityApp.Keyboard[Key.ShiftLeft] && DualityApp.Keyboard[Key.Q])
+            {
+                Scene.Current.DisposeLater();
+                Scene.SwitchTo(ContentRefs.WorldMapScene);
+            }
         }
 
         public void OnInit(Component.InitContext context)
@@ -101,7 +104,7 @@ namespace Dove_Game.Test_Logic
         public static void ReloadScene()
         {
             LifeCount = 3;
-            Scene.Current.Dispose();
+            //Scene.Current.DisposeLater();
             Scene.SwitchTo(PrevScene);
         }
     }

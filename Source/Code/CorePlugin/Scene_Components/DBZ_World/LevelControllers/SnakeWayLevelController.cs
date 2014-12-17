@@ -102,7 +102,9 @@ namespace Dove_Game.Test_Logic
 
         public void OnUpdate()
         {
-            LevelCompleted = true;
+            //Skip level code
+            //LevelCompleted = true;
+            
             if (PrevSceneName != Scene.Current.Name)
             {
                 PrevScene = Scene.Current;
@@ -137,6 +139,9 @@ namespace Dove_Game.Test_Logic
                 {
                     var nextEnemy = EnemyList.First().Res.Instantiate();
                     CurrentEnemy = nextEnemy.GetComponent<Enemy>();
+                    var rigidbody = nextEnemy.GetComponent<RigidBody>();
+                    rigidbody.Mass = 30;
+
                     LevelStarted = false;
                     EnemyList.RemoveAt(0);
                     Scene.Current.AddObject(nextEnemy);
@@ -152,7 +157,10 @@ namespace Dove_Game.Test_Logic
             }
 
             else if (DualityApp.Keyboard[Key.ShiftLeft] && DualityApp.Keyboard[Key.Q])
-                Scene.SwitchTo(ContentRefs.StartScene);
+            {
+                Scene.Current.DisposeLater(); 
+                Scene.SwitchTo(ContentRefs.WorldMapScene);
+            }
         }
 
         public void Draw(IDrawDevice device)

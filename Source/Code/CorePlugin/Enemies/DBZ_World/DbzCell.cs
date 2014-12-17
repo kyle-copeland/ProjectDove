@@ -12,7 +12,7 @@ namespace Dove_Game.Enemies.DBZ_World
 {
     [Serializable]
     [RequiredComponent(typeof(RigidBody))]
-    public class DbzCell : Enemy
+    public class DbzCell : RoverAI
     {
         private bool _playerNearby;
 
@@ -96,6 +96,8 @@ namespace Dove_Game.Enemies.DBZ_World
                     }
                 }
             }
+
+            base.OnUpdate();
             //Move(Vector2.UnitX);
         }
 

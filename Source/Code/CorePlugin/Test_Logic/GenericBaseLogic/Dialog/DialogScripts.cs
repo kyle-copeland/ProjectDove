@@ -172,7 +172,7 @@ namespace Dove_Game.Test_Logic
             new DialogComponent(false, "Navi: I don’t think we can…", ContentRefs.LinkCastleUN, null, -1),
             new DialogComponent(false, "Goku: I can teleport us, everyone gather around.", ContentRefs.LinkCastleUG, null, -1),
             
-            new DialogComponent(false, "Unknown: No matter what happens, it has been an honor battling alongside you heroes. Let our efforts not be in vain, lets vanquish this evil once and for all!", ContentRefs.LinkCastleUG, GameRes.Data.Scenes.DialogScenes.FinalWorld.FinalBossPre_Scene, 3)
+            new DialogComponent(false, "Unknown: No matter what happens, it has been an honor battling alongside you heroes. Let our efforts not be in vain, lets vanquish this evil once and for all!", ContentRefs.LinkCastleUG, GameRes.Data.Scenes.DialogScenes.FinalWorld.FinalBossTransition_Scene, 3)
         };
 
         public static List<DialogComponent> FinalBossPre = new List<DialogComponent>

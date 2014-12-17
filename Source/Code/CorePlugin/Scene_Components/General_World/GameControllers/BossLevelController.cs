@@ -45,6 +45,7 @@ namespace Dove_Game.Scene_Components.General_World.GameControllers
                 DrawDialog.AssignDialogScript(sender, e, NextDialog);
             };
             Scene.Entered += WorldSelectionMap.SceneLoadHandler;
+            Scene.Current.DisposeLater();
             Scene.SwitchTo(NextScene);
 
             if (GameController.GamePaused) return;
@@ -64,12 +65,16 @@ namespace Dove_Game.Scene_Components.General_World.GameControllers
                         DrawDialog.AssignDialogScript(sender, e, NextDialog);
                     };
                     Scene.Entered += WorldSelectionMap.SceneLoadHandler;
+                    Scene.Current.DisposeLater();
                     Scene.SwitchTo(NextScene);
                 }
             }
 
             else if (DualityApp.Keyboard[Key.ShiftLeft] && DualityApp.Keyboard[Key.Q])
-                Scene.SwitchTo(ContentRefs.StartScene);
+            {
+                Scene.Current.DisposeLater();
+                Scene.SwitchTo(ContentRefs.WorldMapScene);
+            }
         }
 
         public abstract void OnInit(Component.InitContext context);

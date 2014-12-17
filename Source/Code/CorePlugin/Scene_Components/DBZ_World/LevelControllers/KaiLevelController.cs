@@ -90,7 +90,9 @@ namespace Dove_Game.Test_Logic
 
         public void OnUpdate()
         {
-            CaughtMonkey = true;
+            //Skip level code
+            //CaughtMonkey = true;
+            
             if (PrevSceneName != Scene.Current.Name)
             {
                 PrevScene = Scene.Current;
@@ -117,6 +119,7 @@ namespace Dove_Game.Test_Logic
                         DrawDialog.AssignDialogScript(sender, e, DialogScripts.DbzLevelTwoPost);
                     };
                     Scene.Entered += WorldSelectionMap.SceneLoadHandler;
+                    Scene.Current.DisposeLater();
                     Scene.SwitchTo(GameRes.Data.Scenes.DialogScenes.DbzWorld.DbzLevelTwoPost_Scene);
                 }
             }
@@ -127,13 +130,16 @@ namespace Dove_Game.Test_Logic
                     
                 if (MainCharacter.ElaspedRespawnTime >= MainCharacter.RespawnDelay)
                 {
-                    Scene.Current.Dispose();
+                    Scene.Current.DisposeLater();
                     Scene.SwitchTo(PrevScene);
                 }
             }
 
-            else if (DualityApp.Keyboard[Key.ShiftLeft] && DualityApp.Keyboard[Key.Q])
-                Scene.SwitchTo(ContentRefs.StartScene);
+            if (DualityApp.Keyboard[Key.ShiftLeft] && DualityApp.Keyboard[Key.Q])
+            {
+                Scene.Current.DisposeLater();
+                Scene.SwitchTo(ContentRefs.WorldMapScene);
+            }
 
             TotalTime -= Time.MsPFMult * Time.TimeMult;
         }
@@ -192,7 +198,7 @@ namespace Dove_Game.Test_Logic
 
         public static void ReloadScene()
         {
-            Scene.Current.Dispose();
+            //Scene.Current.DisposeLater();
             Scene.SwitchTo(PrevScene);
         }
 

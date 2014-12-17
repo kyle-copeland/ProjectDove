@@ -193,6 +193,7 @@ namespace Dove_Game.Test_Logic
                     CurrentDialog = null;
                     DialogScript = null;
                     CurrentDialogPos = 0;
+                    Scene.Current.DisposeLater();
                     Scene.SwitchTo(nextScene, true);
                 }
                 

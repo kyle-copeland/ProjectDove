@@ -26,6 +26,7 @@ namespace Dove_Game.Scene_Components.General_World.LevelControllers
                     DrawDialog.AssignDialogScript(senderX, e, NextDialog);
                 };
                 Scene.Entered += WorldSelectionMap.SceneLoadHandler;
+                Scene.Current.DisposeLater();
                 Scene.SwitchTo(NextScene);
             }
 

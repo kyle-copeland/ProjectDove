@@ -6,7 +6,7 @@ using System.Text;
 using Duality;
 using Duality.Components;
 using Duality.Components.Physics;
-
+using Duality.Resources;
 using OpenTK;
 
 namespace Dove_Game
@@ -21,7 +21,19 @@ namespace Dove_Game
             if (DetectPlayerOneNearby())
             {
                 RigidBody r = this.GameObj.RigidBody;
-                r.ApplyLocalForce(Vector2.UnitX * force * -1.0f * Time.TimeMult);
+
+                var player = Scene.Current.FindGameObject<PlayerOne>();
+                if (player != null && player.Transform.Pos.X <= GameObj.Transform.Pos.X)
+                {
+                    CharDirection = Direction.Left;
+                    r.ApplyLocalForce(Vector2.UnitX*force*-1.0f*Time.TimeMult);
+                }
+
+                else
+                {
+                    CharDirection = Direction.Right;
+                    r.ApplyLocalForce(Vector2.UnitX * force * 1.0f * Time.TimeMult);
+                }
             }
             base.OnUpdate();
         }

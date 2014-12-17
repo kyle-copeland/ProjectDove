@@ -117,6 +117,7 @@ namespace Dove_Game.Test_Logic
                             DrawDialog.AssignDialogScript(sender, e, DialogScripts.MarioLevelTwoPostBossPre);
                         };
                         Scene.Entered += WorldSelectionMap.SceneLoadHandler;
+                        Scene.Current.DisposeLater();
                         Scene.SwitchTo(GameRes.Data.Scenes.DialogScenes.MarioWorld.MarioLevelTwoPostBossPre_Scene);
                     }
                 }

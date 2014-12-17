@@ -86,26 +86,31 @@ namespace Dove_Game.Test_Logic
                     List<DialogComponent> nextWorldDialog = new List<DialogComponent>();
                     switch (CurrentWorld.WorldScene.Name)
                     {
-                        case "MarioLevelOnePre":
-                            nextWorldDialog = DialogScripts.MarioLevelOnePre;
-                            break;
                         case "LinkLevelOnePre":
                             nextWorldDialog = DialogScripts.LinkLevelOnePre;
-                            break;
-                        case "FinalBossPre":
-                            nextWorldDialog = DialogScripts.FinalBossPre;
                             break;
                         case "DbzLevelOnePre":
                             nextWorldDialog = DialogScripts.DbzLevelOnePre;
                             break;
+                        case "FinalBossPre":
+                            //nextWorldDialog = DialogScripts.FinalBossPre;
+                            //break;
+                        case "MarioLevelOnePre":
+                            //nextWorldDialog = DialogScripts.MarioLevelOnePre;
+                            break;
                     }
 
-                    SceneLoadHandler = delegate(object sender, EventArgs e)
+                    if (nextWorldDialog.Count > 0)
                     {
-                        DrawDialog.AssignDialogScript(sender, e, nextWorldDialog);
-                    };
+                        SceneLoadHandler = delegate(object sender, EventArgs e)
+                        {
+                            DrawDialog.AssignDialogScript(sender, e, nextWorldDialog);
+                        };
 
-                    Scene.Entered += SceneLoadHandler;
+                        Scene.Entered += SceneLoadHandler;
+                    }
+
+                    Scene.Current.DisposeLater();
                     Scene.SwitchTo(CurrentWorld.WorldScene);
                 }
             }
@@ -149,13 +154,13 @@ namespace Dove_Game.Test_Logic
             WorldList = new List<WorldComponent>()
             {
                 // Mario World
-                new WorldComponent(GameRes.Data.Scenes.DialogScenes.MarioWorld.MarioLevelOnePre_Scene, new Vector2(-330.0f, -223.0f)),
+                new WorldComponent(GameRes.Data.Scenes.DialogScenes.MarioWorld.PeachTransition_Scene, new Vector2(-330.0f, -223.0f)),
 
                 // Link World
                 new WorldComponent(GameRes.Data.Scenes.DialogScenes.LinkWorld.LinkLevelOnePre_Scene, new Vector2(35.0f, -223.0f)),
 
                 // Slenderboss World
-                new WorldComponent(GameRes.Data.Scenes.DialogScenes.FinalWorld.FinalBossPre_Scene, new Vector2(62.0f, -87.0f)),
+                new WorldComponent(GameRes.Data.Scenes.DialogScenes.FinalWorld.FinalBossTransition_Scene, new Vector2(62.0f, -87.0f)),
 
                 // Dbz World
                 new WorldComponent(GameRes.Data.Scenes.DialogScenes.DbzWorld.DbzLevelOnePre_Scene, new Vector2(-200.0f, 92.0f))

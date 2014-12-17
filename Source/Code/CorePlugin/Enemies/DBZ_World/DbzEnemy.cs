@@ -12,7 +12,7 @@ namespace Dove_Game.Enemies.DBZ_World
 {
     [Serializable]
     [RequiredComponent(typeof(RigidBody))]
-    public class DbzEnemy : Enemy
+    public class DbzEnemy : ChargeAI
     {
         private bool _playerNearby;
 
@@ -69,31 +69,32 @@ namespace Dove_Game.Enemies.DBZ_World
                     }
                 }
 
-                if (PlayerNearby && ChargeDelay <= 0f)
-                {
-                    var main = Scene.Current.FindComponent<PlayerOne>();
-                    CharDirection = main.GameObj.Transform.Pos.X > GameObj.Transform.Pos.X ? Direction.Right : Direction.Left;
+                base.OnUpdate();
+                //if (PlayerNearby && ChargeDelay <= 0f)
+                //{
+                //    var main = Scene.Current.FindComponent<PlayerOne>();
+                //    CharDirection = main.GameObj.Transform.Pos.X > GameObj.Transform.Pos.X ? Direction.Right : Direction.Left;
                     
-                    enemySprite.AnimFirstFrame = CharDirection == Direction.Left ? 0 : 6;
+                //    enemySprite.AnimFirstFrame = CharDirection == Direction.Left ? 0 : 6;
 
-                    var offset = main.CharDirection == Direction.Right ? -30.0f : 30.0f;
-                    GameObj.RigidBody.ApplyLocalForce(Vector2.UnitX*offset);
-                    ChargeDelay = DelayTime;
+                //    var offset = main.CharDirection == Direction.Right ? -30.0f : 30.0f;
+                //    GameObj.RigidBody.ApplyLocalForce(Vector2.UnitX*offset);
+                //    ChargeDelay = DelayTime;
+                //}
+
+                //else
+                //{
+                if (CharDirection == Direction.Left)
+                {
+                    enemySprite.AnimFirstFrame = 3;
+                    //GameObj.RigidBody.ApplyWorldImpulse(Vector2.UnitX * -1.4f);
                 }
-
                 else
                 {
-                    if (CharDirection == Direction.Left)
-                    {
-                        enemySprite.AnimFirstFrame = 3;
-                        GameObj.RigidBody.ApplyWorldImpulse(Vector2.UnitX * -1.4f);
-                    }
-                    else
-                    {
-                        enemySprite.AnimFirstFrame = 9;
-                        GameObj.RigidBody.ApplyWorldImpulse(Vector2.UnitX * 1.4f);
-                    }
+                    enemySprite.AnimFirstFrame = 9;
+                    //GameObj.RigidBody.ApplyWorldImpulse(Vector2.UnitX * 1.4f);
                 }
+                //}
                 //Move(Vector2.UnitX);
             }
         }

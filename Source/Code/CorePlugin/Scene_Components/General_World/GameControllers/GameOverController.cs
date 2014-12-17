@@ -104,6 +104,7 @@ namespace Dove_Game.Test_Logic
             if (ResetGame)
             {
                 ResetGame = false;
+                Scene.Current.DisposeLater(); 
                 Scene.SwitchTo(ContentRefs.WorldMapScene);
             }
 

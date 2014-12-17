@@ -9,9 +9,9 @@
   <soundDopplerFactor dataType="Float">1</soundDopplerFactor>
   <speedOfSound dataType="Float">360</speedOfSound>
   <startScene dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Scene]]">
-    <contentPath dataType="String">Data\Scenes\DialogScenes\MarioWorld\PeachTransition.Scene.res</contentPath>
+    <contentPath dataType="String">Data\Scenes\FinalWorlds\WorldMap.Scene.res</contentPath>
   </startScene>
-  <version dataType="UInt">24</version>
+  <version dataType="UInt">63</version>
   <websiteUrl dataType="String">http://www.adamslair.net</websiteUrl>
 </root>
 <!-- XmlFormatterBase Document Separator -->

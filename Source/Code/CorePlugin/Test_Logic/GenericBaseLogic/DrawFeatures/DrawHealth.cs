@@ -51,7 +51,7 @@ namespace Dove_Game.Test_Logic
             else
             {
                 // Draw health and info of player one
-                canvas.State.ColorTint = ColorRgba.VeryLightGrey.WithAlpha(0.5f);
+                canvas.State.ColorTint = ColorRgba.Green.WithAlpha(0.5f);
                 if (playerOne.HealthPoints > 0.0f)
                 {
                     // Draw a health bar when alive

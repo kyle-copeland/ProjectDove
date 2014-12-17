@@ -143,12 +143,12 @@
             <parentTransform />
             <pos dataType="Struct" type="OpenTK.Vector3">
               <X dataType="Float">-783</X>
-              <Y dataType="Float">107.268318</Y>
+              <Y dataType="Float">170</Y>
               <Z dataType="Float">-70.75617</Z>
             </pos>
             <posAbs dataType="Struct" type="OpenTK.Vector3">
               <X dataType="Float">-783</X>
-              <Y dataType="Float">107.268318</Y>
+              <Y dataType="Float">170</Y>
               <Z dataType="Float">-70.75617</Z>
             </posAbs>
             <scale dataType="Float">1</scale>

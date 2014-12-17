@@ -22,6 +22,8 @@ namespace Dove_Game.Scene_Components.Test_World
                 //};
 
                 //Scene.Entered += WorldSelectionMap.SceneLoadHandler;
+
+                Scene.Current.DisposeLater(); 
                 Scene.SwitchTo(GameRes.Data.Scenes.DialogScenes.FinalWorld.FirstWorldIntro_Scene);
             }
         }
