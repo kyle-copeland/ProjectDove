@@ -415,6 +415,7 @@ namespace GameRes
 				public static Duality.ContentRef<Duality.Resources.Prefab> QuestionBox_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\MarioWorld\QuestionBox.Prefab.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Prefab> SolidBrickCastle_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\MarioWorld\SolidBrickCastle.Prefab.res"); }}
 				public static Duality.ContentRef<Duality.Resources.Prefab> Thwomp_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\MarioWorld\Thwomp.Prefab.res"); }}
+				public static Duality.ContentRef<Duality.Resources.Prefab> ZeldaHearts_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\MarioWorld\ZeldaHearts.Prefab.res"); }}
 				public static void LoadAll() {
 					BossMario__1__Prefab.MakeAvailable();
 					Brick_Prefab.MakeAvailable();
@@ -425,6 +426,7 @@ namespace GameRes
 					QuestionBox_Prefab.MakeAvailable();
 					SolidBrickCastle_Prefab.MakeAvailable();
 					Thwomp_Prefab.MakeAvailable();
+					ZeldaHearts_Prefab.MakeAvailable();
 				}
 			}
 			public static class PlayerComponents {
